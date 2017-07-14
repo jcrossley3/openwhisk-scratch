@@ -1,0 +1,1276 @@
+Waiting for couchdb to be available
+.Waiting for controller to be available
+...[2017-07-14T19:52:18.335Z] [INFO] Slf4jLogger started 
+.[2017-07-14T19:52:19.249Z] [INFO] [??] [Config] environment set value for db.whisk.actions 
+[2017-07-14T19:52:19.261Z] [INFO] [??] [Config] environment set value for db.protocol 
+[2017-07-14T19:52:19.262Z] [INFO] [??] [Config] environment set value for consulserver.host 
+[2017-07-14T19:52:19.270Z] [INFO] [??] [Config] environment set value for whisk.version.date 
+[2017-07-14T19:52:19.271Z] [INFO] [??] [Config] environment set value for defaultLimits.actions.invokes.concurrentInSystem 
+[2017-07-14T19:52:19.274Z] [INFO] [??] [Config] environment set value for db.port 
+[2017-07-14T19:52:19.274Z] [INFO] [??] [Config] environment set value for whisk.version.buildno 
+[2017-07-14T19:52:19.274Z] [INFO] [??] [Config] environment set value for db.whisk.activations 
+[2017-07-14T19:52:19.278Z] [INFO] [??] [Config] environment set value for db.username 
+[2017-07-14T19:52:19.278Z] [INFO] [??] [Config] environment set value for defaultLimits.actions.sequence.maxLength 
+[2017-07-14T19:52:19.283Z] [INFO] [??] [Config] environment set value for defaultLimits.actions.invokes.perMinute 
+[2017-07-14T19:52:19.292Z] [INFO] [??] [Config] environment set value for db.whisk.auths 
+[2017-07-14T19:52:19.295Z] [INFO] [??] [Config] environment set value for defaultLimits.actions.invokes.concurrent 
+[2017-07-14T19:52:19.299Z] [INFO] [??] [Config] environment set value for loadbalancer.activationCountBeforeNextInvoker 
+[2017-07-14T19:52:19.300Z] [INFO] [??] [Config] environment set value for kafka.host.port 
+[2017-07-14T19:52:19.302Z] [INFO] [??] [Config] environment set value for runtimes.manifest 
+[2017-07-14T19:52:19.302Z] [INFO] [??] [Config] environment set value for consul.host.port4 
+[2017-07-14T19:52:19.306Z] [INFO] [??] [Config] environment set value for defaultLimits.triggers.fires.perMinute 
+[2017-07-14T19:52:19.306Z] [INFO] [??] [Config] environment set value for db.host 
+[2017-07-14T19:52:19.309Z] [INFO] [??] [Config] environment set value for port 
+[2017-07-14T19:52:19.310Z] [INFO] [??] [Config] environment set value for kafka.host 
+[2017-07-14T19:52:19.310Z] [INFO] [??] [Config] environment set value for db.password 
+[2017-07-14T19:52:19.328Z] [INFO] [??] [Config] environment set value for db.provider 
+[2017-07-14T19:52:19.341Z] [INFO] [??] [Config] environment set value for limits.triggers.fires.perMinute 
+[2017-07-14T19:52:19.352Z] [INFO] [??] [Config] environment set value for limits.actions.invokes.concurrent 
+[2017-07-14T19:52:19.365Z] [INFO] [??] [Config] environment set value for limits.actions.invokes.perMinute 
+[2017-07-14T19:52:19.370Z] [INFO] [??] [Config] environment set value for limits.actions.invokes.concurrentInSystem 
+[2017-07-14T19:52:19.379Z] [INFO] [??] [WhiskConfig] reading properties from consul at consul.openwhisk:8500 
+....................................................[2017-07-14T19:53:25.041Z] [WARN] [??] [WhiskConfig] failed to read properties from consul: Futures timed out after [1 minute] 
+[2017-07-14T19:53:25.823Z] [INFO] [#sid_130] [Controller] starting controller instance 0 [marker:controller_startup0_count:66536] 
+.[2017-07-14T19:53:26.934Z] [INFO] [??] [LoadBalancerService] blackboxFraction = 0.1 
+[2017-07-14T19:53:26.935Z] [INFO] [??] [LoadBalancerService] activationCountBeforeNextInvoker = 10 
+..[2017-07-14T19:53:28.963Z] [INFO] [#sid_120] [WhiskAction] [GET] serving from datastore: id: whisk.system/invokerHealthTestAction [marker:database_cacheMiss_count:69812] 
+[2017-07-14T19:53:28.963Z] [INFO] [#sid_120] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:69812] 
+[2017-07-14T19:53:29.682Z] [INFO] [#sid_120] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks', document: 'id: whisk.system/invokerHealthTestAction'; not found. [marker:database_getDocument_finish:70526:710] 
+[2017-07-14T19:53:29.695Z] [INFO] [#sid_120] [WhiskAction] invalidating id: whisk.system/invokerHealthTestAction 
+[2017-07-14T19:53:29.731Z] [INFO] [#sid_120] [WhiskAction] write initiated on new cache entry 
+[2017-07-14T19:53:29.778Z] [INFO] [#sid_120] [CouchDbRestStore] [PUT] 'openwhisk_kube_whisks' saving document: 'id: whisk.system/invokerHealthTestAction, rev: null' [marker:database_saveDocument_start:70626] 
+[2017-07-14T19:53:29.902Z] [INFO] Bound to /0.0.0.0:8080 
+[2017-07-14T19:53:29.938Z] [INFO] [#sid_120] [LoadBalancerService] test action for invoker health now exists 
+[2017-07-14T19:53:30.546Z] [INFO] [#sid_130] [RateThrottler] actions per minute: maxPerMinute = 60 
+[2017-07-14T19:53:30.546Z] [INFO] [#sid_130] [RateThrottler] triggers per minute: maxPerMinute = 60 
+[2017-07-14T19:53:30.546Z] [INFO] [??] [ActivationThrottler] concurrencyLimit = 30, systemOverloadLimit = 5000 
+[2017-07-14T19:53:30.699Z] [INFO] [#sid_120] [CouchDbRestStore] [PUT] 'openwhisk_kube_whisks' completed document: 'id: whisk.system/invokerHealthTestAction, rev: null', response: '{"ok":true,"id":"whisk.system/invokerHealthTestAction","rev":"1-c29c688e79f7332d6db3b1c2adcac9b4"}' [marker:database_saveDocument_finish:71545:916] 
+[2017-07-14T19:53:30.743Z] [INFO] [#sid_120] [WhiskAction] write all done, caching id: whisk.system/invokerHealthTestAction Cached 
+[2017-07-14T19:53:31.334Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T19:53:31.340Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+.[2017-07-14T19:53:31.832Z] [INFO] [??] [ActionsApi] actionSequenceLimit '50' 
+[2017-07-14T19:53:32.333Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/0#1653767672] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T19:53:32.337Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/1#-908952453] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+Running postdeploy
+/openwhisk/ansible /
+
+PLAY [localhost] ***************************************************************
+
+TASK [Gathering Facts] *********************************************************
+Friday 14 July 2017  19:53:37 +0000 (0:00:00.468)       0:00:00.468 *********** 
+ok: [localhost]
+
+TASK [find the ip of docker-machine] *******************************************
+Friday 14 July 2017  19:53:44 +0000 (0:00:07.592)       0:00:08.061 *********** 
+skipping: [localhost]
+
+TASK [get the docker-machine ip] ***********************************************
+Friday 14 July 2017  19:53:44 +0000 (0:00:00.054)       0:00:08.115 *********** 
+skipping: [localhost]
+
+TASK [gen hosts for docker-machine] ********************************************
+Friday 14 July 2017  19:53:44 +0000 (0:00:00.085)       0:00:08.201 *********** 
+skipping: [localhost]
+
+TASK [add new db host on-the-fly] **********************************************
+Friday 14 July 2017  19:53:44 +0000 (0:00:00.075)       0:00:08.277 *********** 
+skipping: [localhost]
+
+TASK [check if db_local.ini exists?] *******************************************
+Friday 14 July 2017  19:53:45 +0000 (0:00:00.041)       0:00:08.318 *********** 
+ok: [localhost]
+
+TASK [prepare db_local.ini] ****************************************************
+Friday 14 July 2017  19:53:46 +0000 (0:00:01.255)       0:00:09.574 *********** 
+changed: [localhost -> localhost]
+
+TASK [gen untrusted certificate for host] **************************************
+Friday 14 July 2017  19:53:48 +0000 (0:00:02.305)       0:00:11.879 *********** 
+changed: [localhost -> localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+
+Friday 14 July 2017  19:53:50 +0000 (0:00:01.963)       0:00:13.842 *********** 
+=============================================================================== 
+Gathering Facts --------------------------------------------------------- 7.59s
+prepare db_local.ini ---------------------------------------------------- 2.30s
+gen untrusted certificate for host -------------------------------------- 1.96s
+check if db_local.ini exists? ------------------------------------------- 1.26s
+get the docker-machine ip ----------------------------------------------- 0.09s
+gen hosts for docker-machine -------------------------------------------- 0.08s
+find the ip of docker-machine ------------------------------------------- 0.05s
+add new db host on-the-fly ---------------------------------------------- 0.04s
+
+PLAY [ansible] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+Friday 14 July 2017  19:53:51 +0000 (0:00:00.472)       0:00:14.315 *********** 
+ok: [ansible]
+
+TASK [write whisk.properties template to openwhisk_home] ***********************
+Friday 14 July 2017  19:54:02 +0000 (0:00:11.715)       0:00:26.030 *********** 
+changed: [ansible]
+
+PLAY [ansible] *****************************************************************
+
+TASK [Gathering Facts] *********************************************************
+Friday 14 July 2017  19:54:04 +0000 (0:00:02.216)       0:00:28.247 *********** 
+ok: [ansible]
+
+TASK [include] *****************************************************************
+Friday 14 July 2017  19:54:06 +0000 (0:00:01.266)       0:00:29.514 *********** 
+included: /openwhisk/ansible/tasks/installOpenwhiskCatalog.yml for ansible
+
+TASK [set_fact] ****************************************************************
+Friday 14 July 2017  19:54:06 +0000 (0:00:00.220)       0:00:29.734 *********** 
+ok: [ansible]
+
+TASK [set_fact] ****************************************************************
+Friday 14 July 2017  19:54:06 +0000 (0:00:00.037)       0:00:29.771 *********** 
+ok: [ansible]
+
+TASK [set_fact] ****************************************************************
+Friday 14 July 2017  19:54:06 +0000 (0:00:00.042)       0:00:29.814 *********** 
+ok: [ansible]
+
+TASK [ensure catalog_location directory exists] ********************************
+Friday 14 July 2017  19:54:06 +0000 (0:00:00.066)       0:00:29.880 *********** 
+changed: [ansible]
+
+TASK [download the catalog repository to the catalog location if necessary] ****
+Friday 14 July 2017  19:54:07 +0000 (0:00:00.453)       0:00:30.334 *********** 
+changed: [ansible]
+
+TASK [install the catalog from the catalog location] ***************************
+Friday 14 July 2017  19:54:15 +0000 (0:00:08.472)       0:00:38.806 *********** 
+fatal: [ansible]: FAILED! => {"changed": true, "cmd": "./installCatalog.sh 789c46b1-71f6-4ed5-8c54-816aa4f8c502:abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP http://localhost:8080 /whisk.system /openwhisk/bin/wsk", "delta": "0:00:01.383108", "end": "2017-07-14 19:54:18.241121", "failed": true, "rc": 7, "start": "2017-07-14 19:54:16.858013", "stderr": "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory\n/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "stderr_lines": ["/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory", "/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory"], "stdout": "Installing OpenWhisk packages\nInstalling package installCombinators.sh with pid 584\nInstalling package installGit.sh with pid 585\nInstalling package installSlack.sh with pid 586\nInstalling package installSystem.sh with pid 594\nInstalling package installWatson.sh with pid 596\nInstalling package installWeather.sh with pid 597\nInstalling package installWebSocket.sh with pid 598\nInstalling Git package.\nCreating package github with pid 606\nInstalling Slack package.\n606 finished with status 127\nInstalling github/webhook with pid 616\n616 finished with status 127\nGit package ERRORS = 2\nInstalling whisk.system entities.\nCreating package utils with pid 630\nCreating package samples with pid 631\nCreating package slack with pid 632\n632 finished with status 127\nInstalling slack/post with pid 633\n630 finished with status 127\n631 finished with status 127\nInstalling utils/echo with pid 635\nInstalling utils/cat with pid 636\nInstalling utils/smash with pid 637\nInstalling utils/split with pid 638\nInstalling utils/sort with pid 639\nInstalling utils/head with pid 640\nInstalling utils/date with pid 641\nInstalling Weather package.\nCreating package weather with pid 642\n642 finished with status 127\nInstalling weather/forecast with pid 643\n643 finished with status 127\nWeather package ERRORS = 2\nInstalling utils/namespace with pid 644\nInstalling utils/hosturl with pid 645\nInstalling samples/helloWorld with pid 646\nInstalling samples/greeting with pid 647\nInstalling samples/wordCount with pid 648\n633 finished with status 127\nSlack package ERRORS = 2\nInstalling Watson package.\nCreating package watson-translator with pid 650\nCreating package watson-speechToText with pid 651\nCreating package watson-textToSpeech with pid 652\nInstalling action combinator package.\nCreating package combinators with pid 656\n650 finished with status 127\n651 finished with status 127\n652 finished with status 127\n656 finished with status 127\nInstalling combinators/eca with pid 657\nInstalling combinators/forwarder with pid 658\nInstalling watson-speechToText/speechToText with pid 659\nInstalling combinators/retry with pid 660\nInstalling watson-translator/translator with pid 661\nInstalling combinators/trycatch with pid 662\nInstalling watson-translator/languageId with pid 663\n657 finished with status 127\nInstalling watson-textToSpeech/textToSpeech with pid 664\nInstalling samples/curl with pid 665\n635 finished with status 127\n636 finished with status 127\n637 finished with status 127\n638 finished with status 127\n639 finished with status 127\n640 finished with status 127\n641 finished with status 127\n644 finished with status 127\n645 finished with status 127\n646 finished with status 127\n647 finished with status 127\n648 finished with status 127\nInstalling WebSocket package.\nCreating package websocket with pid 666\n665 finished with status 127\nwhisk.system entities ERRORS = 15\n659 finished with status 127\n661 finished with status 127\n663 finished with status 127\n664 finished with status 127\nWatson package ERRORS = 7\n666 finished with status 127\nInstalling websocket/send with pid 667\n667 finished with status 127\nWebSocket package ERRORS = 2\n658 finished with status 127\n660 finished with status 127\n662 finished with status 127\ncombinator package ERRORS = 5\n584 finished with status 5\n585 finished with status 2\n586 finished with status 2\n594 finished with status 15\n596 finished with status 7\n597 finished with status 2\n598 finished with status 2\nopen catalog ERRORS = 7", "stdout_lines": ["Installing OpenWhisk packages", "Installing package installCombinators.sh with pid 584", "Installing package installGit.sh with pid 585", "Installing package installSlack.sh with pid 586", "Installing package installSystem.sh with pid 594", "Installing package installWatson.sh with pid 596", "Installing package installWeather.sh with pid 597", "Installing package installWebSocket.sh with pid 598", "Installing Git package.", "Creating package github with pid 606", "Installing Slack package.", "606 finished with status 127", "Installing github/webhook with pid 616", "616 finished with status 127", "Git package ERRORS = 2", "Installing whisk.system entities.", "Creating package utils with pid 630", "Creating package samples with pid 631", "Creating package slack with pid 632", "632 finished with status 127", "Installing slack/post with pid 633", "630 finished with status 127", "631 finished with status 127", "Installing utils/echo with pid 635", "Installing utils/cat with pid 636", "Installing utils/smash with pid 637", "Installing utils/split with pid 638", "Installing utils/sort with pid 639", "Installing utils/head with pid 640", "Installing utils/date with pid 641", "Installing Weather package.", "Creating package weather with pid 642", "642 finished with status 127", "Installing weather/forecast with pid 643", "643 finished with status 127", "Weather package ERRORS = 2", "Installing utils/namespace with pid 644", "Installing utils/hosturl with pid 645", "Installing samples/helloWorld with pid 646", "Installing samples/greeting with pid 647", "Installing samples/wordCount with pid 648", "633 finished with status 127", "Slack package ERRORS = 2", "Installing Watson package.", "Creating package watson-translator with pid 650", "Creating package watson-speechToText with pid 651", "Creating package watson-textToSpeech with pid 652", "Installing action combinator package.", "Creating package combinators with pid 656", "650 finished with status 127", "651 finished with status 127", "652 finished with status 127", "656 finished with status 127", "Installing combinators/eca with pid 657", "Installing combinators/forwarder with pid 658", "Installing watson-speechToText/speechToText with pid 659", "Installing combinators/retry with pid 660", "Installing watson-translator/translator with pid 661", "Installing combinators/trycatch with pid 662", "Installing watson-translator/languageId with pid 663", "657 finished with status 127", "Installing watson-textToSpeech/textToSpeech with pid 664", "Installing samples/curl with pid 665", "635 finished with status 127", "636 finished with status 127", "637 finished with status 127", "638 finished with status 127", "639 finished with status 127", "640 finished with status 127", "641 finished with status 127", "644 finished with status 127", "645 finished with status 127", "646 finished with status 127", "647 finished with status 127", "648 finished with status 127", "Installing WebSocket package.", "Creating package websocket with pid 666", "665 finished with status 127", "whisk.system entities ERRORS = 15", "659 finished with status 127", "661 finished with status 127", "663 finished with status 127", "664 finished with status 127", "Watson package ERRORS = 7", "666 finished with status 127", "Installing websocket/send with pid 667", "667 finished with status 127", "WebSocket package ERRORS = 2", "658 finished with status 127", "660 finished with status 127", "662 finished with status 127", "combinator package ERRORS = 5", "584 finished with status 5", "585 finished with status 2", "586 finished with status 2", "594 finished with status 15", "596 finished with status 7", "597 finished with status 2", "598 finished with status 2", "open catalog ERRORS = 7"]}
+[FAILED]
+> ./installCatalog.sh 789c46b1-71f6-4ed5-8c54-816aa4f8c502:abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP http://localhost:8080 /whisk.system /openwhisk/bin/wsk
+Installing OpenWhisk packages
+Installing package installCombinators.sh with pid 584
+Installing package installGit.sh with pid 585
+Installing package installSlack.sh with pid 586
+Installing package installSystem.sh with pid 594
+Installing package installWatson.sh with pid 596
+Installing package installWeather.sh with pid 597
+Installing package installWebSocket.sh with pid 598
+Installing Git package.
+Creating package github with pid 606
+Installing Slack package.
+606 finished with status 127
+Installing github/webhook with pid 616
+616 finished with status 127
+Git package ERRORS = 2
+Installing whisk.system entities.
+Creating package utils with pid 630
+Creating package samples with pid 631
+Creating package slack with pid 632
+632 finished with status 127
+Installing slack/post with pid 633
+630 finished with status 127
+631 finished with status 127
+Installing utils/echo with pid 635
+Installing utils/cat with pid 636
+Installing utils/smash with pid 637
+Installing utils/split with pid 638
+Installing utils/sort with pid 639
+Installing utils/head with pid 640
+Installing utils/date with pid 641
+Installing Weather package.
+Creating package weather with pid 642
+642 finished with status 127
+Installing weather/forecast with pid 643
+643 finished with status 127
+Weather package ERRORS = 2
+Installing utils/namespace with pid 644
+Installing utils/hosturl with pid 645
+Installing samples/helloWorld with pid 646
+Installing samples/greeting with pid 647
+Installing samples/wordCount with pid 648
+633 finished with status 127
+Slack package ERRORS = 2
+Installing Watson package.
+Creating package watson-translator with pid 650
+Creating package watson-speechToText with pid 651
+Creating package watson-textToSpeech with pid 652
+Installing action combinator package.
+Creating package combinators with pid 656
+650 finished with status 127
+651 finished with status 127
+652 finished with status 127
+656 finished with status 127
+Installing combinators/eca with pid 657
+Installing combinators/forwarder with pid 658
+Installing watson-speechToText/speechToText with pid 659
+Installing combinators/retry with pid 660
+Installing watson-translator/translator with pid 661
+Installing combinators/trycatch with pid 662
+Installing watson-translator/languageId with pid 663
+657 finished with status 127
+Installing watson-textToSpeech/textToSpeech with pid 664
+Installing samples/curl with pid 665
+635 finished with status 127
+636 finished with status 127
+637 finished with status 127
+638 finished with status 127
+639 finished with status 127
+640 finished with status 127
+641 finished with status 127
+644 finished with status 127
+645 finished with status 127
+646 finished with status 127
+647 finished with status 127
+648 finished with status 127
+Installing WebSocket package.
+Creating package websocket with pid 666
+665 finished with status 127
+whisk.system entities ERRORS = 15
+659 finished with status 127
+661 finished with status 127
+663 finished with status 127
+664 finished with status 127
+Watson package ERRORS = 7
+666 finished with status 127
+Installing websocket/send with pid 667
+667 finished with status 127
+WebSocket package ERRORS = 2
+658 finished with status 127
+660 finished with status 127
+662 finished with status 127
+combinator package ERRORS = 5
+584 finished with status 5
+585 finished with status 2
+586 finished with status 2
+594 finished with status 15
+596 finished with status 7
+597 finished with status 2
+598 finished with status 2
+open catalog ERRORS = 7
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 19: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+/openwhisk-catalog/packages/util.sh: line 31: /whisk.system: No such file or directory
+
+PLAY RECAP *********************************************************************
+ansible                    : ok=9    changed=3    unreachable=0    failed=1   
+localhost                  : ok=4    changed=2    unreachable=0    failed=0   
+
+Friday 14 July 2017  19:54:18 +0000 (0:00:02.781)       0:00:41.588 *********** 
+=============================================================================== 
+gen untrusted certificate for host ----------------------------------- 1500062029.05s
+Gathering Facts -------------------------------------------------------- 11.72s
+download the catalog repository to the catalog location if necessary ---- 8.47s
+Gathering Facts --------------------------------------------------------- 7.59s
+install the catalog from the catalog location --------------------------- 2.78s
+prepare db_local.ini ---------------------------------------------------- 2.30s
+write whisk.properties template to openwhisk_home ----------------------- 2.22s
+Gathering Facts --------------------------------------------------------- 1.27s
+check if db_local.ini exists? ------------------------------------------- 1.26s
+ensure catalog_location directory exists -------------------------------- 0.45s
+include ----------------------------------------------------------------- 0.22s
+get the docker-machine ip ----------------------------------------------- 0.09s
+gen hosts for docker-machine -------------------------------------------- 0.08s
+set_fact ---------------------------------------------------------------- 0.07s
+find the ip of docker-machine ------------------------------------------- 0.05s
+set_fact ---------------------------------------------------------------- 0.04s
+add new db host on-the-fly ---------------------------------------------- 0.04s
+set_fact ---------------------------------------------------------------- 0.04s
+/
+/controller/bin/controller
+[2017-07-14T19:54:55.805Z] [INFO] [#sid_121] [InvokerPool] registered a new invoker: invoker0 
+[2017-07-14T19:55:00.776Z] [WARN] [#sid_121] [InvokerActor] invoker0 is unhealthy [marker:loadbalancer_invokerUnhealthy_count:161612] 
+[2017-07-14T19:55:01.119Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '07df787725934f1fa49860328e1b531b' [marker:controller_kafka_start:161968] 
+[2017-07-14T19:55:01.518Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: UnHealthy 
+[2017-07-14T19:55:01.937Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][0] [marker:controller_kafka_finish:162768:799] 
+[2017-07-14T19:55:09.432Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '07df787725934f1fa49860328e1b531b' 
+[2017-07-14T19:55:09.435Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '07df787725934f1fa49860328e1b531b' which has no entry 
+[2017-07-14T19:55:09.437Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'cdd2b091fed04278801ed27076e94b3c' [marker:controller_kafka_start:170287] 
+[2017-07-14T19:55:09.449Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][1] [marker:controller_kafka_finish:170298:11] 
+[2017-07-14T19:55:09.929Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'cdd2b091fed04278801ed27076e94b3c' 
+[2017-07-14T19:55:09.931Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'cdd2b091fed04278801ed27076e94b3c' which has no entry 
+[2017-07-14T19:55:09.937Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'b85d8906aa04487f85a2ec626b858ab0' [marker:controller_kafka_start:170783] 
+[2017-07-14T19:55:09.949Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][2] [marker:controller_kafka_finish:170797:9] 
+[2017-07-14T19:55:11.320Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'b85d8906aa04487f85a2ec626b858ab0' 
+[2017-07-14T19:55:11.326Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'b85d8906aa04487f85a2ec626b858ab0' which has no entry 
+[2017-07-14T19:55:11.332Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'eb34ade336d94fe89ae6111a856b2e45' [marker:controller_kafka_start:172179] 
+[2017-07-14T19:55:11.430Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][3] [marker:controller_kafka_finish:172279:99] 
+[2017-07-14T19:55:11.876Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'eb34ade336d94fe89ae6111a856b2e45' 
+[2017-07-14T19:55:11.885Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'eb34ade336d94fe89ae6111a856b2e45' which has no entry 
+[2017-07-14T19:55:11.885Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '1909e7aee8894e79a16ef5d984bfd61f' [marker:controller_kafka_start:172726] 
+[2017-07-14T19:55:11.892Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][4] [marker:controller_kafka_finish:172741:12] 
+[2017-07-14T19:55:12.113Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '1909e7aee8894e79a16ef5d984bfd61f' 
+[2017-07-14T19:55:12.117Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '1909e7aee8894e79a16ef5d984bfd61f' which has no entry 
+[2017-07-14T19:55:12.119Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'ab7043961df445cda936b3306008b524' [marker:controller_kafka_start:172965] 
+[2017-07-14T19:55:12.122Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][5] [marker:controller_kafka_finish:172972:6] 
+[2017-07-14T19:55:12.216Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'ab7043961df445cda936b3306008b524' 
+[2017-07-14T19:55:12.230Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'ab7043961df445cda936b3306008b524' which has no entry 
+[2017-07-14T19:55:12.232Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'dcb0dec028654080bc1cb89ec97c6246' [marker:controller_kafka_start:173080] 
+[2017-07-14T19:55:12.237Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][6] [marker:controller_kafka_finish:173085:4] 
+[2017-07-14T19:55:12.351Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'dcb0dec028654080bc1cb89ec97c6246' 
+[2017-07-14T19:55:12.362Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'dcb0dec028654080bc1cb89ec97c6246' which has no entry 
+[2017-07-14T19:55:12.366Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '2f2dee1b8d2c4b1fb93404294c280c02' [marker:controller_kafka_start:173181] 
+[2017-07-14T19:55:12.368Z] [INFO] [#sid_121] [InvokerActor] invoker0 is healthy 
+[2017-07-14T19:55:12.372Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][7] [marker:controller_kafka_finish:173204:21] 
+[2017-07-14T19:55:12.377Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Healthy 
+[2017-07-14T19:55:12.502Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '2f2dee1b8d2c4b1fb93404294c280c02' 
+[2017-07-14T19:55:12.529Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '2f2dee1b8d2c4b1fb93404294c280c02' which has no entry 
+[2017-07-14T20:09:54.238Z] [INFO] [#tid_4] GET /api/v1/namespaces/_/  
+[2017-07-14T20:09:54.275Z] [INFO] [#tid_4] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:09:54.427Z] [INFO] [#tid_4] [Identity] [GET] serving from datastore: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheMiss_count:262] 
+[2017-07-14T20:09:54.441Z] [INFO] [#tid_4] [CouchDbRestStore] [QUERY] 'openwhisk_kube_subjects' searching 'subjects/identities List(789c46b1-71f6-4ed5-8c54-816aa4f8c502, abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP):List(789c46b1-71f6-4ed5-8c54-816aa4f8c502, abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP)' [marker:database_queryView_start:284] 
+[2017-07-14T20:09:56.159Z] [INFO] [#tid_4] [CouchDbRestStore] [QUERY] 'openwhisk_kube_subjects' completed: matched 1 [marker:database_queryView_finish:2009:1720] 
+[2017-07-14T20:09:56.172Z] [INFO] [#tid_4] [RestAPIVersion] authentication valid 
+[2017-07-14T20:09:56.321Z] [INFO] [#tid_4] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'READ' for 'namespaces/whisk.system' 
+[2017-07-14T20:09:56.355Z] [INFO] [#tid_4] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:09:56.362Z] [INFO] [#tid_4] [CouchDbRestStore] [QUERY] 'openwhisk_kube_whisks' searching 'whisks/entities List(whisk.system):List(whisk.system, ￰)' [marker:database_queryView_start:2211] 
+[2017-07-14T20:09:56.482Z] [INFO] [#tid_4] [CouchDbRestStore] [QUERY] 'openwhisk_kube_whisks' completed: matched 1 [marker:database_queryView_finish:2329:117] 
+[2017-07-14T20:09:56.602Z] [INFO] [#tid_4] [BasicHttpService] [marker:http_get.200_count:2452:2452] 
+[2017-07-14T20:10:58.151Z] [INFO] [#tid_5] PUT /api/v1/namespaces/_/actions/hi overwrite=false 
+[2017-07-14T20:10:58.157Z] [INFO] [#tid_5] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:10:58.182Z] [INFO] [#tid_5] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:34] 
+[2017-07-14T20:10:58.184Z] [INFO] [#tid_5] [RestAPIVersion] authentication valid 
+[2017-07-14T20:10:58.261Z] [INFO] [#tid_5] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'PUT' for 'actions/whisk.system/hi' 
+[2017-07-14T20:10:58.289Z] [INFO] [#tid_5] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:10:58.607Z] [INFO] [#tid_5] [WhiskAction] [GET] serving from datastore: id: whisk.system/hi [marker:database_cacheMiss_count:460] 
+[2017-07-14T20:10:58.608Z] [INFO] [#tid_5] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/hi' [marker:database_getDocument_start:462] 
+[2017-07-14T20:10:58.963Z] [INFO] [#tid_5] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks', document: 'id: whisk.system/hi'; not found. [marker:database_getDocument_finish:818:355] 
+[2017-07-14T20:10:58.969Z] [INFO] [#tid_5] [WhiskAction] invalidating id: whisk.system/hi 
+[2017-07-14T20:10:58.970Z] [INFO] [#tid_5] [ActionsApi] [PUT] entity does not exist, will try to create it 
+[2017-07-14T20:10:59.012Z] [INFO] [#tid_5] [ActionsApi] [PUT] entity created/updated, writing back to datastore 
+[2017-07-14T20:10:59.017Z] [INFO] [#tid_5] [WhiskAction] write initiated on new cache entry 
+[2017-07-14T20:10:59.044Z] [INFO] [#tid_5] [CouchDbRestStore] [PUT] 'openwhisk_kube_whisks' saving document: 'id: whisk.system/hi, rev: null' [marker:database_saveDocument_start:899] 
+[2017-07-14T20:10:59.121Z] [INFO] [#tid_5] [CouchDbRestStore] [PUT] 'openwhisk_kube_whisks' completed document: 'id: whisk.system/hi, rev: null', response: '{"ok":true,"id":"whisk.system/hi","rev":"1-3f21277e95c4bfab85a5bb7b58c08cd5"}' [marker:database_saveDocument_finish:976:76] 
+[2017-07-14T20:10:59.133Z] [INFO] [#tid_5] [WhiskAction] write all done, caching id: whisk.system/hi Cached 
+[2017-07-14T20:10:59.137Z] [INFO] [#tid_5] [ActionsApi] [PUT] entity success 
+[2017-07-14T20:10:59.147Z] [INFO] [#tid_5] [BasicHttpService] [marker:http_put.200_count:1002:1002] 
+[2017-07-14T20:11:03.618Z] [INFO] [#tid_6] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:11:03.653Z] [INFO] [#tid_6] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:11:03.667Z] [INFO] [#tid_6] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:2] 
+[2017-07-14T20:11:03.667Z] [INFO] [#tid_6] [RestAPIVersion] authentication valid 
+[2017-07-14T20:11:03.668Z] [INFO] [#tid_6] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:11:03.683Z] [INFO] [#tid_6] [RateThrottler] subject = whisk.system, rate = 1, below limit = true 
+[2017-07-14T20:11:03.687Z] [INFO] [#tid_6] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:11:03.777Z] [INFO] [#tid_6] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:160] 
+[2017-07-14T20:11:03.778Z] [INFO] [#tid_6] [ActionsApi] [GET] entity success 
+[2017-07-14T20:11:03.804Z] [INFO] [#tid_6] [ActionsApi] [marker:controller_blockingActivation_start:186] 
+[2017-07-14T20:11:03.811Z] [INFO] [#tid_6] [ActionsApi] [POST] action activation id: d1bde34fb3ad4f819fcfd4e00ae722c2 [marker:controller_loadbalancer_start:188] 
+[2017-07-14T20:11:03.879Z] [INFO] [#tid_6] [LoadBalancerService] posting topic 'invoker0' with activation id 'd1bde34fb3ad4f819fcfd4e00ae722c2' [marker:controller_kafka_start:259] 
+[2017-07-14T20:11:03.914Z] [INFO] [#tid_6] [LoadBalancerService] posted to invoker0[0][8] [marker:controller_kafka_finish:292:31] 
+[2017-07-14T20:11:03.916Z] [INFO] [#tid_6] [ActionsApi] [marker:controller_loadbalancer_finish:296:97] 
+[2017-07-14T20:11:03.967Z] [INFO] [#tid_6] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:11:07.411Z] [INFO] [#tid_6] [LoadBalancerService] received active ack for 'd1bde34fb3ad4f819fcfd4e00ae722c2' 
+[2017-07-14T20:11:07.511Z] [INFO] [#tid_6] [ActionsApi] [marker:controller_blockingActivation_finish:3878:3690] 
+[2017-07-14T20:11:07.523Z] [INFO] [#tid_6] [LoadBalancerService] processed active response for 'd1bde34fb3ad4f819fcfd4e00ae722c2' 
+[2017-07-14T20:11:07.528Z] [INFO] [#tid_6] [BasicHttpService] [marker:http_post.200_count:3911:3911] 
+[2017-07-14T20:11:44.592Z] [INFO] [#tid_7] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:11:44.603Z] [INFO] [#tid_7] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:11:44.604Z] [INFO] [#tid_7] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:14] 
+[2017-07-14T20:11:44.605Z] [INFO] [#tid_7] [RestAPIVersion] authentication valid 
+[2017-07-14T20:11:44.623Z] [INFO] [#tid_7] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:11:44.628Z] [INFO] [#tid_7] [RateThrottler] subject = whisk.system, rate = 2, below limit = true 
+[2017-07-14T20:11:44.628Z] [INFO] [#tid_7] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:11:44.630Z] [INFO] [#tid_7] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:39] 
+[2017-07-14T20:11:44.630Z] [INFO] [#tid_7] [ActionsApi] [GET] entity success 
+[2017-07-14T20:11:44.631Z] [INFO] [#tid_7] [ActionsApi] [marker:controller_blockingActivation_start:40] 
+[2017-07-14T20:11:44.631Z] [INFO] [#tid_7] [ActionsApi] [POST] action activation id: a6a5bcaf0a0448fab259a224258bc42a [marker:controller_loadbalancer_start:40] 
+[2017-07-14T20:11:44.644Z] [INFO] [#tid_7] [LoadBalancerService] posting topic 'invoker0' with activation id 'a6a5bcaf0a0448fab259a224258bc42a' [marker:controller_kafka_start:54] 
+[2017-07-14T20:11:44.654Z] [INFO] [#tid_7] [LoadBalancerService] posted to invoker0[0][9] [marker:controller_kafka_finish:64:10] 
+[2017-07-14T20:11:44.655Z] [INFO] [#tid_7] [ActionsApi] [marker:controller_loadbalancer_finish:64:24] 
+[2017-07-14T20:11:44.655Z] [INFO] [#tid_7] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:11:45.299Z] [INFO] [#tid_7] [LoadBalancerService] received active ack for 'a6a5bcaf0a0448fab259a224258bc42a' 
+[2017-07-14T20:11:45.301Z] [INFO] [#tid_7] [LoadBalancerService] processed active response for 'a6a5bcaf0a0448fab259a224258bc42a' 
+[2017-07-14T20:11:45.314Z] [INFO] [#tid_7] [ActionsApi] [marker:controller_blockingActivation_finish:708:667] 
+[2017-07-14T20:11:45.316Z] [INFO] [#tid_7] [BasicHttpService] [marker:http_post.200_count:726:726] 
+[2017-07-14T20:12:01.723Z] [INFO] [#tid_8] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:01.727Z] [INFO] [#tid_8] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:01.734Z] [INFO] [#tid_8] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:6] 
+[2017-07-14T20:12:01.756Z] [INFO] [#tid_9] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:01.764Z] [INFO] [#tid_8] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:01.774Z] [INFO] [#tid_8] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:01.776Z] [INFO] [#tid_8] [RateThrottler] subject = whisk.system, rate = 1, below limit = true 
+[2017-07-14T20:12:01.777Z] [INFO] [#tid_8] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:01.778Z] [INFO] [#tid_8] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:61] 
+[2017-07-14T20:12:01.781Z] [INFO] [#tid_8] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:01.786Z] [INFO] [#tid_8] [ActionsApi] [marker:controller_blockingActivation_start:67] 
+[2017-07-14T20:12:01.788Z] [INFO] [#tid_8] [ActionsApi] [POST] action activation id: 792808db29214d12bde2cc94174991df [marker:controller_loadbalancer_start:70] 
+[2017-07-14T20:12:01.793Z] [INFO] [#tid_8] [LoadBalancerService] posting topic 'invoker0' with activation id '792808db29214d12bde2cc94174991df' [marker:controller_kafka_start:72] 
+[2017-07-14T20:12:01.836Z] [INFO] [#tid_8] [LoadBalancerService] posted to invoker0[0][10] [marker:controller_kafka_finish:113:37] 
+[2017-07-14T20:12:01.837Z] [INFO] [#tid_8] [ActionsApi] [marker:controller_loadbalancer_finish:113:43] 
+[2017-07-14T20:12:01.854Z] [INFO] [#tid_9] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:01.863Z] [INFO] [#tid_8] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:01.877Z] [INFO] [#tid_9] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:140] 
+[2017-07-14T20:12:01.884Z] [INFO] [#tid_9] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:01.886Z] [INFO] [#tid_9] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:01.925Z] [INFO] [#tid_10] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:01.983Z] [INFO] [#tid_10] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:01.984Z] [INFO] [#tid_10] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:39] 
+[2017-07-14T20:12:01.985Z] [INFO] [#tid_10] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:01.987Z] [INFO] [#tid_9] [RateThrottler] subject = whisk.system, rate = 2, below limit = true 
+[2017-07-14T20:12:02.003Z] [INFO] [#tid_9] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.003Z] [INFO] [#tid_11] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.035Z] [INFO] [#tid_11] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.047Z] [INFO] [#tid_11] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:16] 
+[2017-07-14T20:12:02.051Z] [INFO] [#tid_11] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.079Z] [INFO] [#tid_12] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.110Z] [INFO] [#tid_10] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.114Z] [INFO] [#tid_10] [RateThrottler] subject = whisk.system, rate = 3, below limit = true 
+[2017-07-14T20:12:02.130Z] [INFO] [#tid_10] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.135Z] [INFO] [#tid_11] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.145Z] [INFO] [#tid_11] [RateThrottler] subject = whisk.system, rate = 4, below limit = true 
+[2017-07-14T20:12:02.270Z] [INFO] [#tid_11] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.337Z] [INFO] [#tid_12] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.341Z] [INFO] [#tid_12] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:25] 
+[2017-07-14T20:12:02.345Z] [INFO] [#tid_11] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:74] 
+[2017-07-14T20:12:02.345Z] [INFO] [#tid_13] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.347Z] [INFO] [#tid_12] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.349Z] [INFO] [#tid_11] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.350Z] [INFO] [#tid_13] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.353Z] [INFO] [#tid_11] [ActionsApi] [marker:controller_blockingActivation_start:84] 
+[2017-07-14T20:12:02.354Z] [INFO] [#tid_11] [ActionsApi] [POST] action activation id: ced9b5ce90d749f8995fce34bbdf2de2 [marker:controller_loadbalancer_start:97] 
+[2017-07-14T20:12:02.359Z] [INFO] [#tid_13] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:26] 
+[2017-07-14T20:12:02.462Z] [INFO] [#tid_13] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.469Z] [INFO] [#tid_13] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.469Z] [INFO] [#tid_13] [RateThrottler] subject = whisk.system, rate = 5, below limit = true 
+[2017-07-14T20:12:02.469Z] [INFO] [#tid_12] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.477Z] [INFO] [#tid_12] [RateThrottler] subject = whisk.system, rate = 6, below limit = true 
+[2017-07-14T20:12:02.478Z] [INFO] [#tid_12] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.478Z] [INFO] [#tid_10] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:180] 
+[2017-07-14T20:12:02.479Z] [INFO] [#tid_10] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.479Z] [INFO] [#tid_10] [ActionsApi] [marker:controller_blockingActivation_start:181] 
+[2017-07-14T20:12:02.480Z] [INFO] [#tid_10] [ActionsApi] [POST] action activation id: 0bcec6f966b64451b1ed089beeeb6466 [marker:controller_loadbalancer_start:181] 
+[2017-07-14T20:12:02.480Z] [INFO] [#tid_11] [LoadBalancerService] posting topic 'invoker0' with activation id 'ced9b5ce90d749f8995fce34bbdf2de2' [marker:controller_kafka_start:102] 
+[2017-07-14T20:12:02.480Z] [INFO] [#tid_10] [LoadBalancerService] posting topic 'invoker0' with activation id '0bcec6f966b64451b1ed089beeeb6466' [marker:controller_kafka_start:190] 
+[2017-07-14T20:12:02.483Z] [INFO] [#tid_12] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:86] 
+[2017-07-14T20:12:02.539Z] [INFO] [#tid_12] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.539Z] [INFO] [#tid_14] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.539Z] [INFO] [#tid_14] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.540Z] [INFO] [#tid_13] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.540Z] [INFO] [#tid_12] [ActionsApi] [marker:controller_blockingActivation_start:87] 
+[2017-07-14T20:12:02.540Z] [INFO] [#tid_15] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.541Z] [INFO] [#tid_15] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.541Z] [INFO] [#tid_9] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:382] 
+[2017-07-14T20:12:02.541Z] [INFO] [#tid_9] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.541Z] [INFO] [#tid_9] [ActionsApi] [marker:controller_blockingActivation_start:383] 
+[2017-07-14T20:12:02.542Z] [INFO] [#tid_16] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.542Z] [INFO] [#tid_12] [ActionsApi] [POST] action activation id: 995138473de54e928b8d6092f3772b8d [marker:controller_loadbalancer_start:96] 
+[2017-07-14T20:12:02.543Z] [INFO] [#tid_14] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:46] 
+[2017-07-14T20:12:02.543Z] [INFO] [#tid_14] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.543Z] [INFO] [#tid_13] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:75] 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_13] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_16] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_9] [ActionsApi] [POST] action activation id: e770354201b44349bf27823b6bc22d23 [marker:controller_loadbalancer_start:383] 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_16] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:25] 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_16] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.544Z] [INFO] [#tid_15] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:32] 
+[2017-07-14T20:12:02.545Z] [INFO] [#tid_15] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.546Z] [INFO] [#tid_13] [ActionsApi] [marker:controller_blockingActivation_start:102] 
+[2017-07-14T20:12:02.548Z] [INFO] [#tid_13] [ActionsApi] [POST] action activation id: bcb01cc6fa93444185e6706a965a6fd5 [marker:controller_loadbalancer_start:109] 
+[2017-07-14T20:12:02.548Z] [INFO] [#tid_14] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.549Z] [INFO] [#tid_14] [RateThrottler] subject = whisk.system, rate = 7, below limit = true 
+[2017-07-14T20:12:02.549Z] [INFO] [#tid_14] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.550Z] [INFO] [#tid_17] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:12:02.551Z] [INFO] [#tid_12] [LoadBalancerService] posting topic 'invoker0' with activation id '995138473de54e928b8d6092f3772b8d' [marker:controller_kafka_start:196] 
+[2017-07-14T20:12:02.551Z] [INFO] [#tid_15] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.552Z] [INFO] [#tid_15] [RateThrottler] subject = whisk.system, rate = 8, below limit = true 
+[2017-07-14T20:12:02.552Z] [INFO] [#tid_15] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.552Z] [INFO] [#tid_16] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.552Z] [INFO] [#tid_17] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:12:02.553Z] [INFO] [#tid_16] [RateThrottler] subject = whisk.system, rate = 9, below limit = true 
+[2017-07-14T20:12:02.553Z] [INFO] [#tid_13] [LoadBalancerService] posting topic 'invoker0' with activation id 'bcb01cc6fa93444185e6706a965a6fd5' [marker:controller_kafka_start:180] 
+[2017-07-14T20:12:02.553Z] [INFO] [#tid_16] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.588Z] [INFO] [#tid_9] [LoadBalancerService] posting topic 'invoker0' with activation id 'e770354201b44349bf27823b6bc22d23' [marker:controller_kafka_start:532] 
+[2017-07-14T20:12:02.588Z] [INFO] [#tid_17] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:110] 
+[2017-07-14T20:12:02.589Z] [INFO] [#tid_17] [RestAPIVersion] authentication valid 
+[2017-07-14T20:12:02.595Z] [INFO] [#tid_11] [LoadBalancerService] posted to invoker0[0][11] [marker:controller_kafka_finish:301:199] 
+[2017-07-14T20:12:02.601Z] [INFO] [#tid_11] [ActionsApi] [marker:controller_loadbalancer_finish:301:203] 
+[2017-07-14T20:12:02.601Z] [INFO] [#tid_11] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.603Z] [INFO] [#tid_15] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:185] 
+[2017-07-14T20:12:02.607Z] [INFO] [#tid_15] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.608Z] [INFO] [#tid_16] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:169] 
+[2017-07-14T20:12:02.610Z] [INFO] [#tid_16] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.610Z] [INFO] [#tid_10] [LoadBalancerService] posted to invoker0[0][12] [marker:controller_kafka_finish:447:254] 
+[2017-07-14T20:12:02.611Z] [INFO] [#tid_10] [ActionsApi] [marker:controller_loadbalancer_finish:447:266] 
+[2017-07-14T20:12:02.611Z] [INFO] [#tid_17] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:12:02.611Z] [INFO] [#tid_10] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.611Z] [INFO] [#tid_17] [RateThrottler] subject = whisk.system, rate = 10, below limit = true 
+[2017-07-14T20:12:02.611Z] [INFO] [#tid_17] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_17] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:193] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_17] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_15] [ActionsApi] [marker:controller_blockingActivation_start:199] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_15] [ActionsApi] [POST] action activation id: 6bf7844da9a849c88bb35686fe7f74d1 [marker:controller_loadbalancer_start:255] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_14] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:168] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_17] [ActionsApi] [marker:controller_blockingActivation_start:198] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_17] [ActionsApi] [POST] action activation id: cc44e7a054814aada5cff59580df0056 [marker:controller_loadbalancer_start:200] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_16] [ActionsApi] [marker:controller_blockingActivation_start:193] 
+[2017-07-14T20:12:02.612Z] [INFO] [#tid_16] [ActionsApi] [POST] action activation id: 326a1c1cb8354e62843afd3b7f4ee43a [marker:controller_loadbalancer_start:259] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_14] [ActionsApi] [GET] entity success 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_14] [ActionsApi] [marker:controller_blockingActivation_start:286] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_14] [ActionsApi] [POST] action activation id: ce938fdc19554a798f9727889a0453ba [marker:controller_loadbalancer_start:286] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_17] [LoadBalancerService] posting topic 'invoker0' with activation id 'cc44e7a054814aada5cff59580df0056' [marker:controller_kafka_start:209] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_14] [LoadBalancerService] posting topic 'invoker0' with activation id 'ce938fdc19554a798f9727889a0453ba' [marker:controller_kafka_start:288] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_15] [LoadBalancerService] posting topic 'invoker0' with activation id '6bf7844da9a849c88bb35686fe7f74d1' [marker:controller_kafka_start:264] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_16] [LoadBalancerService] posting topic 'invoker0' with activation id '326a1c1cb8354e62843afd3b7f4ee43a' [marker:controller_kafka_start:366] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_13] [LoadBalancerService] posted to invoker0[0][13] [marker:controller_kafka_finish:443:254] 
+[2017-07-14T20:12:02.613Z] [INFO] [#tid_13] [ActionsApi] [marker:controller_loadbalancer_finish:444:335] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_12] [LoadBalancerService] posted to invoker0[0][14] [marker:controller_kafka_finish:480:283] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_9] [LoadBalancerService] posted to invoker0[0][15] [marker:controller_kafka_finish:764:232] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_12] [ActionsApi] [marker:controller_loadbalancer_finish:481:364] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_9] [ActionsApi] [marker:controller_loadbalancer_finish:764:361] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_9] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_15] [LoadBalancerService] posted to invoker0[0][16] [marker:controller_kafka_finish:395:123] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_15] [ActionsApi] [marker:controller_loadbalancer_finish:395:139] 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_12] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_13] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.614Z] [INFO] [#tid_15] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_17] [LoadBalancerService] posted to invoker0[0][17] [marker:controller_kafka_finish:351:142] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_14] [LoadBalancerService] posted to invoker0[0][18] [marker:controller_kafka_finish:449:161] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_14] [ActionsApi] [marker:controller_loadbalancer_finish:449:163] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_17] [ActionsApi] [marker:controller_loadbalancer_finish:369:169] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_17] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_14] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_16] [LoadBalancerService] posted to invoker0[0][19] [marker:controller_kafka_finish:428:62] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_16] [ActionsApi] [marker:controller_loadbalancer_finish:428:169] 
+[2017-07-14T20:12:02.615Z] [INFO] [#tid_16] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:12:02.810Z] [INFO] [#tid_8] [LoadBalancerService] received active ack for '792808db29214d12bde2cc94174991df' 
+[2017-07-14T20:12:02.816Z] [INFO] [#tid_8] [LoadBalancerService] processed active response for '792808db29214d12bde2cc94174991df' 
+[2017-07-14T20:12:02.819Z] [INFO] [#tid_8] [ActionsApi] [marker:controller_blockingActivation_finish:1097:1028] 
+[2017-07-14T20:12:02.822Z] [INFO] [#tid_8] [BasicHttpService] [marker:http_post.200_count:1097:1097] 
+[2017-07-14T20:12:04.503Z] [INFO] [#tid_17] [LoadBalancerService] received active ack for 'cc44e7a054814aada5cff59580df0056' 
+[2017-07-14T20:12:04.510Z] [INFO] [#tid_17] [ActionsApi] [marker:controller_blockingActivation_finish:2345:2145] 
+[2017-07-14T20:12:04.529Z] [INFO] [#tid_17] [BasicHttpService] [marker:http_post.200_count:2356:2359] 
+[2017-07-14T20:12:04.544Z] [INFO] [#tid_17] [LoadBalancerService] processed active response for 'cc44e7a054814aada5cff59580df0056' 
+[2017-07-14T20:12:05.237Z] [INFO] [#tid_11] [LoadBalancerService] received active ack for 'ced9b5ce90d749f8995fce34bbdf2de2' 
+[2017-07-14T20:12:05.238Z] [INFO] [#tid_11] [ActionsApi] [marker:controller_blockingActivation_finish:3268:3171] 
+[2017-07-14T20:12:05.246Z] [INFO] [#tid_11] [BasicHttpService] [marker:http_post.200_count:3273:3273] 
+[2017-07-14T20:12:05.263Z] [INFO] [#tid_11] [LoadBalancerService] processed active response for 'ced9b5ce90d749f8995fce34bbdf2de2' 
+[2017-07-14T20:12:15.299Z] [WARN] [#sid_121] [InvokerActor] invoker0 is offline [marker:loadbalancer_invokerOffline_count:1196145] 
+[2017-07-14T20:12:15.458Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Offline 
+[2017-07-14T20:12:15.736Z] [INFO] [#tid_13] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:15.737Z] [INFO] [#tid_14] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:15.737Z] [INFO] [#tid_14] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/ce938fdc19554a798f9727889a0453ba' [marker:database_getDocument_start:13564] 
+[2017-07-14T20:12:15.737Z] [INFO] [#tid_13] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/bcb01cc6fa93444185e6706a965a6fd5' [marker:database_getDocument_start:13628] 
+[2017-07-14T20:12:15.743Z] [INFO] [#tid_15] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:15.985Z] [INFO] [#tid_15] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/6bf7844da9a849c88bb35686fe7f74d1' [marker:database_getDocument_start:13578] 
+[2017-07-14T20:12:16.040Z] [INFO] [#tid_12] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:16.220Z] [INFO] [#tid_12] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/995138473de54e928b8d6092f3772b8d' [marker:database_getDocument_start:13738] 
+[2017-07-14T20:12:16.238Z] [INFO] [#tid_16] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:16.769Z] [INFO] [#tid_16] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/326a1c1cb8354e62843afd3b7f4ee43a' [marker:database_getDocument_start:13641] 
+[2017-07-14T20:12:16.773Z] [INFO] [#tid_10] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:16.779Z] [INFO] [#tid_10] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/0bcec6f966b64451b1ed089beeeb6466' [marker:database_getDocument_start:13868] 
+[2017-07-14T20:12:16.789Z] [INFO] [#tid_9] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:12:16.791Z] [INFO] [#tid_9] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/e770354201b44349bf27823b6bc22d23' [marker:database_getDocument_start:14051] 
+[2017-07-14T20:12:16.792Z] [INFO] [#sid_121] [LoadBalancerService] cleared load balancer state for invoker0 
+[2017-07-14T20:12:16.800Z] [WARN] [#sid_121] [InvokerActor] invoker0 is unhealthy [marker:loadbalancer_invokerUnhealthy_count:1197002] 
+[2017-07-14T20:12:16.803Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '031864a6832744149c81be1fb727111f' [marker:controller_kafka_start:1197003] 
+[2017-07-14T20:12:16.805Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: UnHealthy 
+[2017-07-14T20:12:18.864Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][20] [marker:controller_kafka_finish:1199669:2666] 
+[2017-07-14T20:12:31.293Z] [WARN] [#sid_121] [InvokerActor] invoker0 is offline [marker:loadbalancer_invokerOffline_count:1212142] 
+[2017-07-14T20:12:44.172Z] [INFO] [#sid_121] [LoadBalancerService] cleared load balancer state for invoker0 
+[2017-07-14T20:12:44.190Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Offline 
+[2017-07-14T20:12:44.727Z] [INFO] Message [spray.io.TickGenerator$Tick$] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/12#-47223542] was not delivered. [3] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:12:45.583Z] [WARN] [#sid_121] [InvokerActor] invoker0 is unhealthy [marker:loadbalancer_invokerUnhealthy_count:1226421] 
+[2017-07-14T20:12:46.265Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '4a40f843e67c457a8757d7ba88b39a83' [marker:controller_kafka_start:1227102] 
+[2017-07-14T20:12:46.317Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: UnHealthy 
+[2017-07-14T20:12:47.238Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][21] [marker:controller_kafka_finish:1228042:930] 
+[2017-07-14T20:12:49.017Z] [INFO] [#tid_16] [LoadBalancerService] received active ack for '326a1c1cb8354e62843afd3b7f4ee43a' 
+[2017-07-14T20:12:49.034Z] [WARN] [#tid_16] [LoadBalancerService] processed active response for '326a1c1cb8354e62843afd3b7f4ee43a' which has no entry 
+[2017-07-14T20:12:49.060Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '031864a6832744149c81be1fb727111f' 
+[2017-07-14T20:12:49.082Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '031864a6832744149c81be1fb727111f' which has no entry 
+[2017-07-14T20:12:49.109Z] [INFO] [#sid_121] [InvokerActor] invoker0 is healthy 
+[2017-07-14T20:12:49.111Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'dd0c4d2dbd204649bcb2dcfa265697ec' [marker:controller_kafka_start:1229873] 
+[2017-07-14T20:12:49.112Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][22] [marker:controller_kafka_finish:1229944:64] 
+[2017-07-14T20:12:49.170Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Healthy 
+[2017-07-14T20:12:52.621Z] [INFO] [#tid_9] [LoadBalancerService] received active ack for 'e770354201b44349bf27823b6bc22d23' 
+[2017-07-14T20:12:52.628Z] [WARN] [#tid_9] [LoadBalancerService] processed active response for 'e770354201b44349bf27823b6bc22d23' which has no entry 
+[2017-07-14T20:12:57.319Z] [INFO] [#tid_10] [LoadBalancerService] received active ack for '0bcec6f966b64451b1ed089beeeb6466' 
+[2017-07-14T20:12:57.328Z] [WARN] [#tid_10] [LoadBalancerService] processed active response for '0bcec6f966b64451b1ed089beeeb6466' which has no entry 
+[2017-07-14T20:12:57.375Z] [INFO] [#tid_13] [LoadBalancerService] received active ack for 'bcb01cc6fa93444185e6706a965a6fd5' 
+[2017-07-14T20:12:57.382Z] [WARN] [#tid_13] [LoadBalancerService] processed active response for 'bcb01cc6fa93444185e6706a965a6fd5' which has no entry 
+[2017-07-14T20:13:00.832Z] [INFO] [#tid_14] [LoadBalancerService] received active ack for 'ce938fdc19554a798f9727889a0453ba' 
+[2017-07-14T20:13:00.850Z] [WARN] [#tid_14] [LoadBalancerService] processed active response for 'ce938fdc19554a798f9727889a0453ba' which has no entry 
+[2017-07-14T20:13:00.881Z] [INFO] [#tid_12] [LoadBalancerService] received active ack for '995138473de54e928b8d6092f3772b8d' 
+[2017-07-14T20:13:00.886Z] [WARN] [#tid_12] [LoadBalancerService] processed active response for '995138473de54e928b8d6092f3772b8d' which has no entry 
+[2017-07-14T20:13:02.448Z] [INFO] [#tid_10] [ActionsApi] [marker:controller_blockingActivation_finish:60552:60368] 
+[2017-07-14T20:13:02.533Z] [INFO] [#tid_9] [ActionsApi] [marker:controller_blockingActivation_finish:60803:60420] 
+[2017-07-14T20:13:02.550Z] [INFO] [#tid_12] [ActionsApi] [marker:controller_blockingActivation_finish:60523:60427] 
+[2017-07-14T20:13:02.883Z] [INFO] [#tid_15] [ActionsApi] [marker:controller_blockingActivation_finish:60463:60208] 
+[2017-07-14T20:13:02.904Z] [INFO] [#tid_9] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:02.905Z] [INFO] [#tid_15] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:02.906Z] [INFO] [#tid_10] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:02.932Z] [INFO] [#tid_14] [ActionsApi] [marker:controller_blockingActivation_finish:60810:60522] 
+[2017-07-14T20:13:03.087Z] [INFO] [#tid_12] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:03.096Z] [INFO] [#tid_13] [ActionsApi] [marker:controller_blockingActivation_finish:60544:60393] 
+[2017-07-14T20:13:03.114Z] [INFO] [#tid_14] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:03.283Z] [INFO] [#tid_13] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:03.682Z] [INFO] [#tid_16] [ActionsApi] [marker:controller_blockingActivation_finish:61237:60916] 
+[2017-07-14T20:13:03.690Z] [INFO] [#tid_9] [BasicHttpService] [marker:http_post.202_count:61932:61932] 
+[2017-07-14T20:13:03.700Z] [INFO] [#tid_12] [BasicHttpService] [marker:http_post.202_count:61656:61656] 
+[2017-07-14T20:13:03.704Z] [INFO] [#tid_10] [BasicHttpService] [marker:http_post.202_count:61771:61772] 
+[2017-07-14T20:13:03.722Z] [INFO] [#tid_15] [BasicHttpService] [marker:http_post.202_count:61577:61577] 
+[2017-07-14T20:13:03.723Z] [INFO] [#tid_13] [BasicHttpService] [marker:http_post.202_count:61627:61627] 
+[2017-07-14T20:13:03.728Z] [INFO] [#tid_14] [BasicHttpService] [marker:http_post.202_count:61589:61589] 
+[2017-07-14T20:13:03.795Z] [INFO] [#tid_16] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:13:03.860Z] [INFO] [#tid_16] [BasicHttpService] [marker:http_post.202_count:61606:61606] 
+[2017-07-14T20:13:04.094Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'dd0c4d2dbd204649bcb2dcfa265697ec' 
+[2017-07-14T20:13:04.106Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'dd0c4d2dbd204649bcb2dcfa265697ec' which has no entry 
+[2017-07-14T20:13:04.217Z] [INFO] [#tid_15] [LoadBalancerService] received active ack for '6bf7844da9a849c88bb35686fe7f74d1' 
+[2017-07-14T20:13:04.392Z] [WARN] [#tid_15] [LoadBalancerService] processed active response for '6bf7844da9a849c88bb35686fe7f74d1' which has no entry 
+[2017-07-14T20:13:06.294Z] [INFO] [#tid_18] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:06.359Z] [INFO] [#tid_18] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:06.454Z] [INFO] [#tid_18] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:583] 
+[2017-07-14T20:13:06.473Z] [INFO] [#tid_18] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:06.621Z] [INFO] [#tid_18] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:06.685Z] [INFO] [#tid_18] [RateThrottler] subject = whisk.system, rate = 1, below limit = true 
+[2017-07-14T20:13:06.704Z] [INFO] [#tid_18] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:06.995Z] [INFO] [#tid_18] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:1120] 
+[2017-07-14T20:13:07.002Z] [INFO] [#tid_18] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:07.037Z] [INFO] [#tid_18] [ActionsApi] [marker:controller_blockingActivation_start:1150] 
+[2017-07-14T20:13:07.050Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '4a40f843e67c457a8757d7ba88b39a83' 
+[2017-07-14T20:13:07.057Z] [INFO] [#tid_18] [ActionsApi] [POST] action activation id: 0342d3eabb664f249a3535989af596ac [marker:controller_loadbalancer_start:1173] 
+[2017-07-14T20:13:07.061Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '4a40f843e67c457a8757d7ba88b39a83' which has no entry 
+[2017-07-14T20:13:07.152Z] [INFO] [#tid_18] [LoadBalancerService] posting topic 'invoker0' with activation id '0342d3eabb664f249a3535989af596ac' [marker:controller_kafka_start:1265] 
+[2017-07-14T20:13:07.275Z] [INFO] [#tid_18] [LoadBalancerService] posted to invoker0[0][23] [marker:controller_kafka_finish:1370:103] 
+[2017-07-14T20:13:07.283Z] [INFO] [#tid_18] [ActionsApi] [marker:controller_loadbalancer_finish:1407:220] 
+[2017-07-14T20:13:07.305Z] [INFO] [#tid_18] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:09.528Z] [INFO] [#tid_18] [LoadBalancerService] received active ack for '0342d3eabb664f249a3535989af596ac' 
+[2017-07-14T20:13:09.540Z] [INFO] [#tid_18] [ActionsApi] [marker:controller_blockingActivation_finish:3669:2499] 
+[2017-07-14T20:13:09.552Z] [INFO] [#tid_18] [BasicHttpService] [marker:http_post.200_count:3670:3670] 
+[2017-07-14T20:13:09.671Z] [INFO] [#tid_18] [LoadBalancerService] processed active response for '0342d3eabb664f249a3535989af596ac' 
+[2017-07-14T20:13:12.982Z] [INFO] [#tid_16] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/326a1c1cb8354e62843afd3b7f4ee43a' [marker:database_getDocument_finish:70871:57230] 
+[2017-07-14T20:13:13.016Z] [INFO] [#tid_15] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/6bf7844da9a849c88bb35686fe7f74d1' [marker:database_getDocument_finish:70881:57269] 
+[2017-07-14T20:13:13.028Z] [INFO] [#tid_12] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/995138473de54e928b8d6092f3772b8d' [marker:database_getDocument_finish:70974:57236] 
+[2017-07-14T20:13:13.052Z] [INFO] [#tid_14] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/ce938fdc19554a798f9727889a0453ba' [marker:database_getDocument_finish:70947:57382] 
+[2017-07-14T20:13:13.077Z] [INFO] [#tid_13] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/bcb01cc6fa93444185e6706a965a6fd5' [marker:database_getDocument_finish:70999:57367] 
+[2017-07-14T20:13:13.088Z] [INFO] [#tid_9] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/e770354201b44349bf27823b6bc22d23' [marker:database_getDocument_finish:71353:57192] 
+[2017-07-14T20:13:13.095Z] [INFO] [#tid_10] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/0bcec6f966b64451b1ed089beeeb6466' [marker:database_getDocument_finish:71198:57330] 
+[2017-07-14T20:13:20.478Z] [INFO] [#tid_19] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.479Z] [INFO] [#tid_19] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:20.480Z] [INFO] [#tid_19] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:2] 
+[2017-07-14T20:13:20.480Z] [INFO] [#tid_19] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:20.500Z] [INFO] [#tid_20] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.502Z] [INFO] [#tid_19] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:20.502Z] [INFO] [#tid_19] [RateThrottler] subject = whisk.system, rate = 2, below limit = true 
+[2017-07-14T20:13:20.504Z] [INFO] [#tid_19] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:20.507Z] [INFO] [#tid_20] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:20.508Z] [INFO] [#tid_20] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:16] 
+[2017-07-14T20:13:20.512Z] [INFO] [#tid_20] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:20.517Z] [INFO] [#tid_20] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:20.533Z] [INFO] [#tid_20] [RateThrottler] subject = whisk.system, rate = 3, below limit = true 
+[2017-07-14T20:13:20.575Z] [INFO] [#tid_20] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:20.576Z] [INFO] [#tid_21] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.579Z] [INFO] [#tid_19] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:33] 
+[2017-07-14T20:13:20.586Z] [INFO] [#tid_19] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:20.588Z] [INFO] [#tid_20] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:22] 
+[2017-07-14T20:13:20.589Z] [INFO] [#tid_20] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:20.590Z] [INFO] [#tid_20] [ActionsApi] [marker:controller_blockingActivation_start:23] 
+[2017-07-14T20:13:20.593Z] [INFO] [#tid_21] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:20.594Z] [INFO] [#tid_19] [ActionsApi] [marker:controller_blockingActivation_start:35] 
+[2017-07-14T20:13:20.595Z] [INFO] [#tid_20] [ActionsApi] [POST] action activation id: d7a9635f6a3a4250b46dd2f50e219e8a [marker:controller_loadbalancer_start:25] 
+[2017-07-14T20:13:20.596Z] [INFO] [#tid_20] [LoadBalancerService] posting topic 'invoker0' with activation id 'd7a9635f6a3a4250b46dd2f50e219e8a' [marker:controller_kafka_start:27] 
+[2017-07-14T20:13:20.597Z] [INFO] [#tid_19] [ActionsApi] [POST] action activation id: b1ace4059fc94fdf8804e7638e499b47 [marker:controller_loadbalancer_start:38] 
+[2017-07-14T20:13:20.602Z] [INFO] [#tid_20] [LoadBalancerService] posted to invoker0[0][24] [marker:controller_kafka_finish:35:8] 
+[2017-07-14T20:13:20.641Z] [INFO] [#tid_20] [ActionsApi] [marker:controller_loadbalancer_finish:36:10] 
+[2017-07-14T20:13:20.656Z] [INFO] [#tid_20] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:20.679Z] [INFO] [#tid_19] [LoadBalancerService] posting topic 'invoker0' with activation id 'b1ace4059fc94fdf8804e7638e499b47' [marker:controller_kafka_start:67] 
+[2017-07-14T20:13:20.711Z] [INFO] [#tid_21] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:33] 
+[2017-07-14T20:13:20.712Z] [INFO] [#tid_21] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:20.716Z] [INFO] [#tid_19] [LoadBalancerService] posted to invoker0[0][25] [marker:controller_kafka_finish:87:18] 
+[2017-07-14T20:13:20.717Z] [INFO] [#tid_22] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.724Z] [INFO] [#tid_19] [ActionsApi] [marker:controller_loadbalancer_finish:88:48] 
+[2017-07-14T20:13:20.738Z] [INFO] [#tid_22] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:20.745Z] [INFO] [#tid_19] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:20.748Z] [INFO] [#tid_22] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:6] 
+[2017-07-14T20:13:20.759Z] [INFO] [#tid_21] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:20.759Z] [INFO] [#tid_21] [RateThrottler] subject = whisk.system, rate = 4, below limit = true 
+[2017-07-14T20:13:20.759Z] [INFO] [#tid_21] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:20.770Z] [INFO] [#tid_22] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:20.779Z] [INFO] [#tid_23] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.781Z] [INFO] [#tid_23] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:20.793Z] [INFO] [#tid_23] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:7] 
+[2017-07-14T20:13:20.800Z] [INFO] [#tid_23] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:20.818Z] [INFO] [#tid_24] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:20.916Z] [INFO] [#tid_23] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:20.923Z] [INFO] [#tid_24] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:21.058Z] [INFO] [#tid_23] [RateThrottler] subject = whisk.system, rate = 5, below limit = true 
+[2017-07-14T20:13:21.128Z] [INFO] [#tid_23] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:21.132Z] [INFO] [#tid_24] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:5] 
+[2017-07-14T20:13:21.132Z] [INFO] [#tid_24] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:21.141Z] [INFO] [#tid_22] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:21.146Z] [INFO] [#tid_22] [RateThrottler] subject = whisk.system, rate = 6, below limit = true 
+[2017-07-14T20:13:21.149Z] [INFO] [#tid_23] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:32] 
+[2017-07-14T20:13:21.187Z] [INFO] [#tid_22] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:21.187Z] [INFO] [#tid_24] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:21.187Z] [INFO] [#tid_25] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:21.265Z] [INFO] [#tid_23] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:21.296Z] [INFO] [#tid_24] [RateThrottler] subject = whisk.system, rate = 7, below limit = true 
+[2017-07-14T20:13:21.301Z] [INFO] [#tid_21] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:110] 
+[2017-07-14T20:13:21.923Z] [INFO] [#tid_21] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:22.252Z] [INFO] [#tid_21] [ActionsApi] [marker:controller_blockingActivation_start:185] 
+[2017-07-14T20:13:22.293Z] [INFO] [#tid_21] [ActionsApi] [POST] action activation id: 4b29c10f4c9b4054a18383268ba84ecd [marker:controller_loadbalancer_start:185] 
+[2017-07-14T20:13:22.303Z] [INFO] [#tid_25] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:22.306Z] [INFO] [#tid_26] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:22.307Z] [INFO] [#tid_26] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:22.633Z] [INFO] [#tid_24] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:22.902Z] [INFO] [#tid_25] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:37] 
+[2017-07-14T20:13:22.904Z] [INFO] [#tid_25] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:22.942Z] [INFO] [#tid_26] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:13] 
+[2017-07-14T20:13:23.510Z] [INFO] [#tid_26] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:23.518Z] [INFO] [#tid_23] [ActionsApi] [marker:controller_blockingActivation_start:63] 
+[2017-07-14T20:13:23.531Z] [INFO] [#tid_22] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:162] 
+[2017-07-14T20:13:23.533Z] [INFO] [#tid_25] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:23.534Z] [INFO] [#tid_22] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:23.545Z] [INFO] [#tid_26] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:23.570Z] [INFO] [#tid_24] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:122] 
+[2017-07-14T20:13:23.603Z] [INFO] [#tid_24] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:23.713Z] [INFO] [#tid_24] [ActionsApi] [marker:controller_blockingActivation_start:123] 
+[2017-07-14T20:13:23.726Z] [INFO] [#tid_24] [ActionsApi] [POST] action activation id: d7affb96fddb4411a1ae3735665edde6 [marker:controller_loadbalancer_start:123] 
+[2017-07-14T20:13:23.733Z] [INFO] [#tid_21] [LoadBalancerService] posting topic 'invoker0' with activation id '4b29c10f4c9b4054a18383268ba84ecd' [marker:controller_kafka_start:235] 
+[2017-07-14T20:13:23.773Z] [INFO] [#tid_25] [RateThrottler] subject = whisk.system, rate = 8, below limit = true 
+[2017-07-14T20:13:23.778Z] [INFO] [#tid_22] [ActionsApi] [marker:controller_blockingActivation_start:169] 
+[2017-07-14T20:13:23.785Z] [INFO] [#tid_25] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:23.789Z] [INFO] [#tid_22] [ActionsApi] [POST] action activation id: d84e44cd238646c7a9bf4ba78d3f7e39 [marker:controller_loadbalancer_start:183] 
+[2017-07-14T20:13:23.806Z] [INFO] [#tid_23] [ActionsApi] [POST] action activation id: d4df420da4db4ee0ab018b4f15a8d58f [marker:controller_loadbalancer_start:107] 
+[2017-07-14T20:13:23.807Z] [INFO] [#tid_22] [LoadBalancerService] posting topic 'invoker0' with activation id 'd84e44cd238646c7a9bf4ba78d3f7e39' [marker:controller_kafka_start:189] 
+[2017-07-14T20:13:23.811Z] [INFO] [#tid_26] [RateThrottler] subject = whisk.system, rate = 9, below limit = true 
+[2017-07-14T20:13:23.815Z] [INFO] [#tid_26] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:23.819Z] [INFO] [#tid_25] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:108] 
+[2017-07-14T20:13:23.859Z] [INFO] [#tid_25] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:23.866Z] [INFO] [#tid_24] [LoadBalancerService] posting topic 'invoker0' with activation id 'd7affb96fddb4411a1ae3735665edde6' [marker:controller_kafka_start:164] 
+[2017-07-14T20:13:23.884Z] [INFO] [#tid_23] [LoadBalancerService] posting topic 'invoker0' with activation id 'd4df420da4db4ee0ab018b4f15a8d58f' [marker:controller_kafka_start:165] 
+[2017-07-14T20:13:23.907Z] [INFO] [#tid_27] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:23.948Z] [INFO] [#tid_25] [ActionsApi] [marker:controller_blockingActivation_start:109] 
+[2017-07-14T20:13:23.951Z] [INFO] [#tid_27] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:23.952Z] [INFO] [#tid_28] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:13:23.957Z] [INFO] [#tid_28] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:13:23.959Z] [INFO] [#tid_27] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:58] 
+[2017-07-14T20:13:23.964Z] [INFO] [#tid_22] [LoadBalancerService] posted to invoker0[0][26] [marker:controller_kafka_finish:357:161] 
+[2017-07-14T20:13:23.968Z] [INFO] [#tid_22] [ActionsApi] [marker:controller_loadbalancer_finish:360:175] 
+[2017-07-14T20:13:23.969Z] [INFO] [#tid_25] [ActionsApi] [POST] action activation id: 98501c08eaac4171a4a558f16aa7f1c0 [marker:controller_loadbalancer_start:147] 
+[2017-07-14T20:13:23.971Z] [INFO] [#tid_21] [LoadBalancerService] posted to invoker0[0][27] [marker:controller_kafka_finish:489:254] 
+[2017-07-14T20:13:23.974Z] [INFO] [#tid_26] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:315] 
+[2017-07-14T20:13:23.977Z] [INFO] [#tid_28] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:11] 
+[2017-07-14T20:13:23.983Z] [INFO] [#tid_21] [ActionsApi] [marker:controller_loadbalancer_finish:489:304] 
+[2017-07-14T20:13:23.995Z] [INFO] [#tid_26] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:23.996Z] [INFO] [#tid_27] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:23.997Z] [INFO] [#tid_22] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:23.997Z] [INFO] [#tid_26] [ActionsApi] [marker:controller_blockingActivation_start:357] 
+[2017-07-14T20:13:24.075Z] [INFO] [#tid_25] [LoadBalancerService] posting topic 'invoker0' with activation id '98501c08eaac4171a4a558f16aa7f1c0' [marker:controller_kafka_start:375] 
+[2017-07-14T20:13:24.079Z] [INFO] [#tid_26] [ActionsApi] [POST] action activation id: aa5f43ef793c410ebd051a81765f1b30 [marker:controller_loadbalancer_start:359] 
+[2017-07-14T20:13:24.082Z] [INFO] [#tid_28] [RestAPIVersion] authentication valid 
+[2017-07-14T20:13:24.083Z] [INFO] [#tid_21] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.084Z] [INFO] [#tid_27] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:24.084Z] [INFO] [#tid_27] [RateThrottler] subject = whisk.system, rate = 10, below limit = true 
+[2017-07-14T20:13:24.091Z] [INFO] [#tid_27] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:24.116Z] [INFO] [#tid_26] [LoadBalancerService] posting topic 'invoker0' with activation id 'aa5f43ef793c410ebd051a81765f1b30' [marker:controller_kafka_start:443] 
+[2017-07-14T20:13:24.148Z] [INFO] [#tid_23] [LoadBalancerService] posted to invoker0[0][28] [marker:controller_kafka_finish:416:237] 
+[2017-07-14T20:13:24.154Z] [INFO] [#tid_27] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:367] 
+[2017-07-14T20:13:24.165Z] [INFO] [#tid_27] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:24.168Z] [INFO] [#tid_23] [ActionsApi] [marker:controller_loadbalancer_finish:564:402] 
+[2017-07-14T20:13:24.175Z] [INFO] [#tid_23] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.181Z] [INFO] [#tid_27] [ActionsApi] [marker:controller_blockingActivation_start:393] 
+[2017-07-14T20:13:24.182Z] [INFO] [#tid_28] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:13:24.183Z] [INFO] [#tid_27] [ActionsApi] [POST] action activation id: 1aaa7d85237e4ea5b8876488cb0dee62 [marker:controller_loadbalancer_start:486] 
+[2017-07-14T20:13:24.183Z] [INFO] [#tid_28] [RateThrottler] subject = whisk.system, rate = 11, below limit = true 
+[2017-07-14T20:13:24.184Z] [INFO] [#tid_24] [LoadBalancerService] posted to invoker0[0][29] [marker:controller_kafka_finish:1341:1177] 
+[2017-07-14T20:13:24.184Z] [INFO] [#tid_24] [ActionsApi] [marker:controller_loadbalancer_finish:1342:1212] 
+[2017-07-14T20:13:24.185Z] [INFO] [#tid_24] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.189Z] [INFO] [#tid_25] [LoadBalancerService] posted to invoker0[0][30] [marker:controller_kafka_finish:1304:911] 
+[2017-07-14T20:13:24.304Z] [INFO] [#tid_25] [ActionsApi] [marker:controller_loadbalancer_finish:1309:986] 
+[2017-07-14T20:13:24.305Z] [INFO] [#tid_25] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.312Z] [INFO] [#tid_28] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:13:24.321Z] [INFO] [#tid_26] [LoadBalancerService] posted to invoker0[0][31] [marker:controller_kafka_finish:1352:908] 
+[2017-07-14T20:13:24.337Z] [INFO] [#tid_26] [ActionsApi] [marker:controller_loadbalancer_finish:1352:981] 
+[2017-07-14T20:13:24.337Z] [INFO] [#tid_26] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.338Z] [INFO] [#tid_20] [LoadBalancerService] received active ack for 'd7a9635f6a3a4250b46dd2f50e219e8a' 
+[2017-07-14T20:13:24.340Z] [INFO] [#tid_20] [LoadBalancerService] processed active response for 'd7a9635f6a3a4250b46dd2f50e219e8a' 
+[2017-07-14T20:13:24.354Z] [INFO] [#tid_20] [ActionsApi] [marker:controller_blockingActivation_finish:1825:1799] 
+[2017-07-14T20:13:24.363Z] [INFO] [#tid_20] [BasicHttpService] [marker:http_post.200_count:1980:1980] 
+[2017-07-14T20:13:24.498Z] [INFO] [#tid_27] [LoadBalancerService] posting topic 'invoker0' with activation id '1aaa7d85237e4ea5b8876488cb0dee62' [marker:controller_kafka_start:1233] 
+[2017-07-14T20:13:24.511Z] [INFO] [#tid_28] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:2649] 
+[2017-07-14T20:13:24.512Z] [INFO] [#tid_28] [ActionsApi] [GET] entity success 
+[2017-07-14T20:13:24.528Z] [INFO] [#tid_28] [ActionsApi] [marker:controller_blockingActivation_start:2735] 
+[2017-07-14T20:13:24.532Z] [INFO] [#tid_28] [ActionsApi] [POST] action activation id: 79c9be8627814a1fa9c33aa80ccac4f2 [marker:controller_loadbalancer_start:2737] 
+[2017-07-14T20:13:24.539Z] [INFO] [#tid_27] [LoadBalancerService] posted to invoker0[0][32] [marker:controller_kafka_finish:2809:972] 
+[2017-07-14T20:13:24.541Z] [INFO] [#tid_27] [ActionsApi] [marker:controller_loadbalancer_finish:2816:2311] 
+[2017-07-14T20:13:24.554Z] [INFO] [#tid_19] [LoadBalancerService] received active ack for 'b1ace4059fc94fdf8804e7638e499b47' 
+[2017-07-14T20:13:24.555Z] [INFO] [#tid_19] [ActionsApi] [marker:controller_blockingActivation_finish:3120:3082] 
+[2017-07-14T20:13:24.555Z] [INFO] [#tid_19] [BasicHttpService] [marker:http_post.200_count:3121:3121] 
+[2017-07-14T20:13:24.555Z] [INFO] [#tid_28] [LoadBalancerService] posting topic 'invoker0' with activation id '79c9be8627814a1fa9c33aa80ccac4f2' [marker:controller_kafka_start:2770] 
+[2017-07-14T20:13:24.573Z] [INFO] [#tid_27] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.611Z] [INFO] [#tid_19] [LoadBalancerService] processed active response for 'b1ace4059fc94fdf8804e7638e499b47' 
+[2017-07-14T20:13:24.771Z] [INFO] [#tid_28] [LoadBalancerService] posted to invoker0[0][33] [marker:controller_kafka_finish:2833:63] 
+[2017-07-14T20:13:24.788Z] [INFO] [#tid_28] [ActionsApi] [marker:controller_loadbalancer_finish:2834:86] 
+[2017-07-14T20:13:24.800Z] [INFO] [#tid_28] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:13:24.803Z] [INFO] [#tid_21] [LoadBalancerService] received active ack for '4b29c10f4c9b4054a18383268ba84ecd' 
+[2017-07-14T20:13:25.285Z] [INFO] [#tid_21] [ActionsApi] [marker:controller_blockingActivation_finish:3167:2982] 
+[2017-07-14T20:13:25.287Z] [INFO] [#tid_21] [BasicHttpService] [marker:http_post.200_count:3168:3168] 
+[2017-07-14T20:13:25.454Z] [INFO] [#tid_21] [LoadBalancerService] processed active response for '4b29c10f4c9b4054a18383268ba84ecd' 
+[2017-07-14T20:13:25.950Z] [INFO] [#tid_23] [LoadBalancerService] received active ack for 'd4df420da4db4ee0ab018b4f15a8d58f' 
+[2017-07-14T20:13:25.962Z] [INFO] [#tid_23] [ActionsApi] [marker:controller_blockingActivation_finish:5324:5217] 
+[2017-07-14T20:13:25.968Z] [INFO] [#tid_23] [BasicHttpService] [marker:http_post.200_count:5327:5327] 
+[2017-07-14T20:13:25.968Z] [INFO] [#tid_23] [LoadBalancerService] processed active response for 'd4df420da4db4ee0ab018b4f15a8d58f' 
+[2017-07-14T20:13:37.947Z] [WARN] [#sid_121] [InvokerActor] invoker0 is offline [marker:loadbalancer_invokerOffline_count:1278796] 
+[2017-07-14T20:13:38.097Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Offline 
+[2017-07-14T20:13:38.146Z] [INFO] [#tid_25] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.164Z] [INFO] [#tid_22] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.171Z] [INFO] [#tid_22] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39' [marker:database_getDocument_start:17532] 
+[2017-07-14T20:13:38.180Z] [INFO] [#tid_25] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/98501c08eaac4171a4a558f16aa7f1c0' [marker:database_getDocument_start:17427] 
+[2017-07-14T20:13:38.181Z] [INFO] [#tid_26] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.208Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:17430] 
+[2017-07-14T20:13:38.217Z] [INFO] [#tid_28] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.219Z] [INFO] [#tid_24] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.229Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:17301] 
+[2017-07-14T20:13:38.265Z] [INFO] [#tid_27] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:13:38.274Z] [INFO] [#tid_24] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/d7affb96fddb4411a1ae3735665edde6' [marker:database_getDocument_start:17515] 
+[2017-07-14T20:13:38.274Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:17354] 
+[2017-07-14T20:13:38.279Z] [INFO] [#sid_121] [LoadBalancerService] cleared load balancer state for invoker0 
+[2017-07-14T20:13:38.383Z] [INFO] [#tid_24] [LoadBalancerService] received active ack for 'd7affb96fddb4411a1ae3735665edde6' 
+[2017-07-14T20:13:38.385Z] [WARN] [#tid_24] [LoadBalancerService] processed active response for 'd7affb96fddb4411a1ae3735665edde6' which has no entry 
+[2017-07-14T20:13:38.387Z] [INFO] [#tid_25] [LoadBalancerService] received active ack for '98501c08eaac4171a4a558f16aa7f1c0' 
+[2017-07-14T20:13:38.395Z] [WARN] [#tid_25] [LoadBalancerService] processed active response for '98501c08eaac4171a4a558f16aa7f1c0' which has no entry 
+[2017-07-14T20:13:38.400Z] [WARN] [#sid_121] [InvokerActor] invoker0 is unhealthy [marker:loadbalancer_invokerUnhealthy_count:1279248] 
+[2017-07-14T20:13:38.403Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '15a047aa47214323b032d5f3b7e2b286' [marker:controller_kafka_start:1279250] 
+[2017-07-14T20:13:38.414Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: UnHealthy 
+[2017-07-14T20:13:38.495Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][34] [marker:controller_kafka_finish:1279288:38] 
+[2017-07-14T20:13:38.695Z] [INFO] [#tid_25] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/98501c08eaac4171a4a558f16aa7f1c0' [marker:database_getDocument_finish:18015:588] 
+[2017-07-14T20:13:38.771Z] [INFO] [#tid_25] [ActionsApi] [marker:controller_blockingActivation_finish:18016:17869] 
+[2017-07-14T20:13:38.850Z] [INFO] [#tid_25] [BasicHttpService] [marker:http_post.200_count:18102:18102] 
+[2017-07-14T20:13:38.880Z] [INFO] [#tid_22] [LoadBalancerService] received active ack for 'd84e44cd238646c7a9bf4ba78d3f7e39' 
+[2017-07-14T20:13:38.910Z] [WARN] [#tid_22] [LoadBalancerService] processed active response for 'd84e44cd238646c7a9bf4ba78d3f7e39' which has no entry 
+[2017-07-14T20:13:38.919Z] [INFO] [#sid_121] [InvokerActor] invoker0 is healthy 
+[2017-07-14T20:13:38.922Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '1ae62f04fbe745ceb02a0794fc0f6f1e' [marker:controller_kafka_start:1279735] 
+[2017-07-14T20:13:38.936Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Healthy 
+[2017-07-14T20:13:38.938Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][35] [marker:controller_kafka_finish:1279749:13] 
+[2017-07-14T20:13:38.994Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:18201:846] 
+[2017-07-14T20:13:39.020Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:18191:889] 
+[2017-07-14T20:13:39.022Z] [INFO] [#tid_22] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39'; not found. [marker:database_getDocument_finish:18457:924] 
+[2017-07-14T20:13:39.432Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:18733:1303] 
+[2017-07-14T20:13:39.513Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:18731] 
+[2017-07-14T20:13:39.548Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:18709] 
+[2017-07-14T20:13:39.553Z] [INFO] [#tid_22] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39' [marker:database_getDocument_start:18981] 
+[2017-07-14T20:13:40.190Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:19486] 
+[2017-07-14T20:13:41.438Z] [INFO] [#tid_24] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/d7affb96fddb4411a1ae3735665edde6' [marker:database_getDocument_finish:20502:2982] 
+[2017-07-14T20:13:41.495Z] [INFO] [#tid_24] [ActionsApi] [marker:controller_blockingActivation_finish:20852:20729] 
+[2017-07-14T20:13:41.647Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:20861:2129] 
+[2017-07-14T20:13:42.542Z] [INFO] [#tid_24] [BasicHttpService] [marker:http_post.200_count:20980:20980] 
+[2017-07-14T20:13:42.842Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:21384] 
+[2017-07-14T20:13:43.129Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:22145:2653] 
+[2017-07-14T20:13:44.192Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:22012:3274] 
+[2017-07-14T20:13:44.539Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:23288] 
+[2017-07-14T20:13:44.647Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:23789] 
+[2017-07-14T20:13:44.836Z] [INFO] [#tid_22] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39' [marker:database_getDocument_finish:23950:4967] 
+[2017-07-14T20:13:45.767Z] [INFO] [#tid_22] [ActionsApi] [marker:controller_blockingActivation_finish:25200:25017] 
+[2017-07-14T20:13:45.795Z] [INFO] [#tid_22] [BasicHttpService] [marker:http_post.200_count:25205:25205] 
+[2017-07-14T20:13:46.688Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:25898:3837] 
+[2017-07-14T20:13:46.716Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:25872:2584] 
+[2017-07-14T20:13:47.010Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:26311:2469] 
+[2017-07-14T20:13:47.637Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:26418] 
+[2017-07-14T20:13:47.787Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:26936] 
+[2017-07-14T20:13:47.806Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:27068] 
+[2017-07-14T20:13:47.853Z] [INFO] [#tid_28] [LoadBalancerService] received active ack for '79c9be8627814a1fa9c33aa80ccac4f2' 
+[2017-07-14T20:13:47.865Z] [WARN] [#tid_28] [LoadBalancerService] processed active response for '79c9be8627814a1fa9c33aa80ccac4f2' which has no entry 
+[2017-07-14T20:13:48.836Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:28043:1624] 
+[2017-07-14T20:13:49.682Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:28899] 
+[2017-07-14T20:13:50.257Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:29533:2443] 
+[2017-07-14T20:13:50.288Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:29454:2499] 
+[2017-07-14T20:13:50.829Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:29994] 
+[2017-07-14T20:13:50.831Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:30125] 
+[2017-07-14T20:13:50.990Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:30140:1239] 
+[2017-07-14T20:13:51.311Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:30482:487] 
+[2017-07-14T20:13:51.679Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:30894] 
+[2017-07-14T20:13:51.697Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:30993:863] 
+[2017-07-14T20:13:51.873Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:31068:174] 
+[2017-07-14T20:13:52.011Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:31161] 
+[2017-07-14T20:13:52.468Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:31676] 
+[2017-07-14T20:13:52.610Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2'; not found. [marker:database_getDocument_finish:31775:613] 
+[2017-07-14T20:13:52.671Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:31888:199] 
+[2017-07-14T20:13:52.747Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:31995] 
+[2017-07-14T20:13:52.861Z] [INFO] [#tid_26] [LoadBalancerService] received active ack for 'aa5f43ef793c410ebd051a81765f1b30' 
+[2017-07-14T20:13:52.910Z] [WARN] [#tid_26] [LoadBalancerService] processed active response for 'aa5f43ef793c410ebd051a81765f1b30' which has no entry 
+[2017-07-14T20:13:52.977Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:32267:240] 
+[2017-07-14T20:13:53.124Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_start:32294] 
+[2017-07-14T20:13:53.175Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:32391] 
+[2017-07-14T20:13:53.315Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:32530:138] 
+[2017-07-14T20:13:53.340Z] [INFO] [#tid_28] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2' [marker:database_getDocument_finish:32407:112] 
+[2017-07-14T20:13:53.369Z] [INFO] [#tid_28] [ActionsApi] [marker:controller_blockingActivation_finish:32525:29789] 
+[2017-07-14T20:13:53.385Z] [INFO] [#tid_28] [BasicHttpService] [marker:http_post.200_count:32545:32547] 
+[2017-07-14T20:13:53.509Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:32789] 
+[2017-07-14T20:13:53.735Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:33009:207] 
+[2017-07-14T20:13:53.825Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:33036] 
+[2017-07-14T20:13:54.040Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:33243:201] 
+[2017-07-14T20:13:54.297Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:33595] 
+[2017-07-14T20:13:54.447Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:33748:148] 
+[2017-07-14T20:13:54.560Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:33770] 
+[2017-07-14T20:13:54.689Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:33902:127] 
+[2017-07-14T20:13:54.961Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:34253] 
+[2017-07-14T20:13:55.211Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:34429] 
+[2017-07-14T20:13:55.892Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:34352:85] 
+[2017-07-14T20:13:55.903Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:34601:172] 
+[2017-07-14T20:13:56.297Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:35195] 
+[2017-07-14T20:13:56.634Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:35119] 
+[2017-07-14T20:13:57.260Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:36479:1360] 
+[2017-07-14T20:13:57.291Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:36587:1385] 
+[2017-07-14T20:13:57.785Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:36989] 
+[2017-07-14T20:13:57.808Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:37096] 
+[2017-07-14T20:13:58.581Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:37625:622] 
+[2017-07-14T20:13:58.745Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:38023:914] 
+[2017-07-14T20:13:58.918Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:38135] 
+[2017-07-14T20:13:59.161Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:38375:239] 
+[2017-07-14T20:13:59.251Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:38548] 
+[2017-07-14T20:13:59.444Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:38736:187] 
+[2017-07-14T20:13:59.678Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:38885] 
+[2017-07-14T20:13:59.948Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:39249] 
+[2017-07-14T20:13:59.976Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:39193:307] 
+[2017-07-14T20:14:00.472Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:39719:469] 
+[2017-07-14T20:14:00.567Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:39707] 
+[2017-07-14T20:14:01.304Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:40522:753] 
+[2017-07-14T20:14:01.330Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:40617] 
+[2017-07-14T20:14:01.701Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30'; not found. [marker:database_getDocument_finish:40990:357] 
+[2017-07-14T20:14:01.854Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:41042] 
+[2017-07-14T20:14:01.917Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:41134:60] 
+[2017-07-14T20:14:02.210Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_start:41509] 
+[2017-07-14T20:14:02.449Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:41651] 
+[2017-07-14T20:14:02.497Z] [INFO] [#tid_26] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30' [marker:database_getDocument_finish:41723:213] 
+[2017-07-14T20:14:02.645Z] [INFO] [#tid_26] [ActionsApi] [marker:controller_blockingActivation_finish:41805:41446] 
+[2017-07-14T20:14:02.677Z] [INFO] [#tid_26] [BasicHttpService] [marker:http_post.200_count:41971:41971] 
+[2017-07-14T20:14:02.690Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations', document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62'; not found. [marker:database_getDocument_finish:41901:242] 
+[2017-07-14T20:14:02.924Z] [INFO] [#tid_27] [LoadBalancerService] received active ack for '1aaa7d85237e4ea5b8876488cb0dee62' 
+[2017-07-14T20:14:02.927Z] [WARN] [#tid_27] [LoadBalancerService] processed active response for '1aaa7d85237e4ea5b8876488cb0dee62' which has no entry 
+[2017-07-14T20:14:02.998Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '1ae62f04fbe745ceb02a0794fc0f6f1e' 
+[2017-07-14T20:14:03.011Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '1ae62f04fbe745ceb02a0794fc0f6f1e' which has no entry 
+[2017-07-14T20:14:03.036Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '15a047aa47214323b032d5f3b7e2b286' 
+[2017-07-14T20:14:03.040Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '15a047aa47214323b032d5f3b7e2b286' which has no entry 
+[2017-07-14T20:14:03.192Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_start:42402] 
+[2017-07-14T20:14:03.263Z] [INFO] [#tid_27] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62' [marker:database_getDocument_finish:42479:71] 
+[2017-07-14T20:14:03.271Z] [INFO] [#tid_27] [ActionsApi] [marker:controller_blockingActivation_finish:42489:42003] 
+[2017-07-14T20:14:03.279Z] [INFO] [#tid_27] [BasicHttpService] [marker:http_post.200_count:42492:42492] 
+[2017-07-14T20:14:39.405Z] [INFO] [#tid_29] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.411Z] [INFO] [#tid_29] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.419Z] [INFO] [#tid_29] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:10] 
+[2017-07-14T20:14:39.419Z] [INFO] [#tid_29] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.441Z] [INFO] [#tid_30] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.463Z] [INFO] [#tid_29] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.465Z] [INFO] [#tid_29] [RateThrottler] subject = whisk.system, rate = 1, below limit = true 
+[2017-07-14T20:14:39.469Z] [INFO] [#tid_30] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.475Z] [INFO] [#tid_30] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:33] 
+[2017-07-14T20:14:39.480Z] [INFO] [#tid_30] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.483Z] [INFO] [#tid_29] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:39.485Z] [INFO] [#tid_29] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:77] 
+[2017-07-14T20:14:39.488Z] [INFO] [#tid_29] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:39.491Z] [INFO] [#tid_30] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.495Z] [INFO] [#tid_30] [RateThrottler] subject = whisk.system, rate = 2, below limit = true 
+[2017-07-14T20:14:39.501Z] [INFO] [#tid_29] [ActionsApi] [marker:controller_blockingActivation_start:81] 
+[2017-07-14T20:14:39.505Z] [INFO] [#tid_29] [ActionsApi] [POST] action activation id: 6d322449955d40e5935756a1a4991355 [marker:controller_loadbalancer_start:85] 
+[2017-07-14T20:14:39.509Z] [INFO] [#tid_29] [LoadBalancerService] posting topic 'invoker0' with activation id '6d322449955d40e5935756a1a4991355' [marker:controller_kafka_start:86] 
+[2017-07-14T20:14:39.515Z] [INFO] [#tid_30] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:39.516Z] [INFO] [#tid_31] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.519Z] [INFO] [#tid_31] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.528Z] [INFO] [#tid_30] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:77] 
+[2017-07-14T20:14:39.551Z] [INFO] [#tid_30] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:39.554Z] [INFO] [#tid_32] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.557Z] [INFO] [#tid_31] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:47] 
+[2017-07-14T20:14:39.558Z] [INFO] [#tid_31] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.558Z] [INFO] [#tid_30] [ActionsApi] [marker:controller_blockingActivation_start:82] 
+[2017-07-14T20:14:39.561Z] [INFO] [#tid_32] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.578Z] [INFO] [#tid_30] [ActionsApi] [POST] action activation id: df2ebfeac5c84b7796befa0dd1218205 [marker:controller_loadbalancer_start:84] 
+[2017-07-14T20:14:39.595Z] [INFO] [#tid_32] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:8] 
+[2017-07-14T20:14:39.601Z] [INFO] [#tid_31] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.608Z] [INFO] [#tid_32] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.609Z] [INFO] [#tid_31] [RateThrottler] subject = whisk.system, rate = 3, below limit = true 
+[2017-07-14T20:14:39.612Z] [INFO] [#tid_32] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.612Z] [INFO] [#tid_32] [RateThrottler] subject = whisk.system, rate = 4, below limit = true 
+[2017-07-14T20:14:39.613Z] [INFO] [#tid_31] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:39.615Z] [INFO] [#tid_32] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:39.707Z] [INFO] [#tid_32] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:30] 
+[2017-07-14T20:14:39.710Z] [INFO] [#tid_31] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:74] 
+[2017-07-14T20:14:39.711Z] [INFO] [#tid_30] [LoadBalancerService] posting topic 'invoker0' with activation id 'df2ebfeac5c84b7796befa0dd1218205' [marker:controller_kafka_start:107] 
+[2017-07-14T20:14:39.712Z] [INFO] [#tid_32] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:39.718Z] [INFO] [#tid_33] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.725Z] [INFO] [#tid_31] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:39.730Z] [INFO] [#tid_33] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.732Z] [INFO] [#tid_32] [ActionsApi] [marker:controller_blockingActivation_start:31] 
+[2017-07-14T20:14:39.736Z] [INFO] [#tid_31] [ActionsApi] [marker:controller_blockingActivation_start:77] 
+[2017-07-14T20:14:39.743Z] [INFO] [#tid_31] [ActionsApi] [POST] action activation id: 2365d6b4f17a4401973af03d5ee24803 [marker:controller_loadbalancer_start:79] 
+[2017-07-14T20:14:39.782Z] [INFO] [#tid_33] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:24] 
+[2017-07-14T20:14:39.796Z] [INFO] [#tid_34] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.796Z] [INFO] [#tid_33] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.797Z] [INFO] [#tid_32] [ActionsApi] [POST] action activation id: c951e1292e1c4e8ca12bb7e566393381 [marker:controller_loadbalancer_start:38] 
+[2017-07-14T20:14:39.797Z] [INFO] [#tid_34] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.881Z] [INFO] [#tid_31] [LoadBalancerService] posting topic 'invoker0' with activation id '2365d6b4f17a4401973af03d5ee24803' [marker:controller_kafka_start:88] 
+[2017-07-14T20:14:39.910Z] [INFO] [#tid_34] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:15] 
+[2017-07-14T20:14:39.910Z] [INFO] [#tid_34] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.911Z] [INFO] [#tid_32] [LoadBalancerService] posting topic 'invoker0' with activation id 'c951e1292e1c4e8ca12bb7e566393381' [marker:controller_kafka_start:57] 
+[2017-07-14T20:14:39.917Z] [INFO] [#tid_35] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.917Z] [INFO] [#tid_35] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.924Z] [INFO] [#tid_33] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.927Z] [INFO] [#tid_36] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:39.931Z] [INFO] [#tid_33] [RateThrottler] subject = whisk.system, rate = 5, below limit = true 
+[2017-07-14T20:14:39.944Z] [INFO] [#tid_36] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:39.962Z] [INFO] [#tid_34] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:39.978Z] [INFO] [#tid_35] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:53] 
+[2017-07-14T20:14:39.981Z] [INFO] [#tid_35] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:39.985Z] [INFO] [#tid_33] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.013Z] [INFO] [#tid_34] [RateThrottler] subject = whisk.system, rate = 6, below limit = true 
+[2017-07-14T20:14:40.017Z] [INFO] [#tid_35] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:40.022Z] [INFO] [#tid_35] [RateThrottler] subject = whisk.system, rate = 7, below limit = true 
+[2017-07-14T20:14:40.024Z] [INFO] [#tid_35] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.029Z] [INFO] [#tid_37] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:40.035Z] [INFO] [#tid_34] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.054Z] [INFO] [#tid_37] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:40.065Z] [INFO] [#tid_35] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:67] 
+[2017-07-14T20:14:40.070Z] [INFO] [#tid_33] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:102] 
+[2017-07-14T20:14:40.083Z] [INFO] [#tid_35] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.085Z] [INFO] [#tid_33] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.092Z] [INFO] [#tid_36] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:37] 
+[2017-07-14T20:14:40.096Z] [INFO] [#tid_36] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:40.099Z] [INFO] [#tid_33] [ActionsApi] [marker:controller_blockingActivation_start:109] 
+[2017-07-14T20:14:40.103Z] [INFO] [#tid_33] [ActionsApi] [POST] action activation id: c5d0898b214648ec9d8c846944fe88bc [marker:controller_loadbalancer_start:110] 
+[2017-07-14T20:14:40.111Z] [INFO] [#tid_35] [ActionsApi] [marker:controller_blockingActivation_start:69] 
+[2017-07-14T20:14:40.114Z] [INFO] [#tid_36] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:40.116Z] [INFO] [#tid_36] [RateThrottler] subject = whisk.system, rate = 8, below limit = true 
+[2017-07-14T20:14:40.119Z] [INFO] [#tid_36] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.119Z] [INFO] [#tid_35] [ActionsApi] [POST] action activation id: 3df919717a7d4a48b31ca7cc75305602 [marker:controller_loadbalancer_start:83] 
+[2017-07-14T20:14:40.120Z] [INFO] [#tid_34] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:102] 
+[2017-07-14T20:14:40.125Z] [INFO] [#tid_34] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.129Z] [INFO] [#tid_37] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:38] 
+[2017-07-14T20:14:40.132Z] [INFO] [#tid_37] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:40.133Z] [INFO] [#tid_36] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:61] 
+[2017-07-14T20:14:40.138Z] [INFO] [#tid_36] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.140Z] [INFO] [#tid_38] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:14:40.148Z] [INFO] [#tid_34] [ActionsApi] [marker:controller_blockingActivation_start:113] 
+[2017-07-14T20:14:40.150Z] [INFO] [#tid_34] [ActionsApi] [POST] action activation id: 512a19a4ff13439c80846500144492ef [marker:controller_loadbalancer_start:114] 
+[2017-07-14T20:14:40.154Z] [INFO] [#tid_38] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:14:40.157Z] [INFO] [#tid_36] [ActionsApi] [marker:controller_blockingActivation_start:65] 
+[2017-07-14T20:14:40.159Z] [INFO] [#tid_36] [ActionsApi] [POST] action activation id: 551c8ac3882c479aa99262ecb3474d49 [marker:controller_loadbalancer_start:66] 
+[2017-07-14T20:14:40.161Z] [INFO] [#tid_33] [LoadBalancerService] posting topic 'invoker0' with activation id 'c5d0898b214648ec9d8c846944fe88bc' [marker:controller_kafka_start:135] 
+[2017-07-14T20:14:40.163Z] [INFO] [#tid_35] [LoadBalancerService] posting topic 'invoker0' with activation id '3df919717a7d4a48b31ca7cc75305602' [marker:controller_kafka_start:99] 
+[2017-07-14T20:14:40.164Z] [INFO] [#tid_34] [LoadBalancerService] posting topic 'invoker0' with activation id '512a19a4ff13439c80846500144492ef' [marker:controller_kafka_start:121] 
+[2017-07-14T20:14:40.166Z] [INFO] [#tid_36] [LoadBalancerService] posting topic 'invoker0' with activation id '551c8ac3882c479aa99262ecb3474d49' [marker:controller_kafka_start:83] 
+[2017-07-14T20:14:40.167Z] [INFO] [#tid_37] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:40.178Z] [INFO] [#tid_37] [RateThrottler] subject = whisk.system, rate = 9, below limit = true 
+[2017-07-14T20:14:40.182Z] [INFO] [#tid_37] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.182Z] [INFO] [#tid_37] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:93] 
+[2017-07-14T20:14:40.185Z] [INFO] [#tid_37] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.192Z] [INFO] [#tid_37] [ActionsApi] [marker:controller_blockingActivation_start:94] 
+[2017-07-14T20:14:40.216Z] [INFO] [#tid_37] [ActionsApi] [POST] action activation id: 15d8e32f10e84ddabe24bf4b9914dd9b [marker:controller_loadbalancer_start:94] 
+[2017-07-14T20:14:40.394Z] [INFO] [#tid_37] [LoadBalancerService] posting topic 'invoker0' with activation id '15d8e32f10e84ddabe24bf4b9914dd9b' [marker:controller_kafka_start:111] 
+[2017-07-14T20:14:40.395Z] [INFO] [#tid_38] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:140] 
+[2017-07-14T20:14:40.397Z] [INFO] [#tid_38] [RestAPIVersion] authentication valid 
+[2017-07-14T20:14:40.407Z] [INFO] [#tid_38] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:14:40.415Z] [INFO] [#tid_38] [RateThrottler] subject = whisk.system, rate = 10, below limit = true 
+[2017-07-14T20:14:40.418Z] [INFO] [#tid_38] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:14:40.422Z] [INFO] [#tid_38] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:143] 
+[2017-07-14T20:14:40.429Z] [INFO] [#tid_38] [ActionsApi] [GET] entity success 
+[2017-07-14T20:14:40.486Z] [INFO] [#tid_38] [ActionsApi] [marker:controller_blockingActivation_start:146] 
+[2017-07-14T20:14:40.506Z] [INFO] [#tid_38] [ActionsApi] [POST] action activation id: e02e139c5a9e4d189264d6ffff5d2e9a [marker:controller_loadbalancer_start:147] 
+[2017-07-14T20:14:40.542Z] [INFO] [#tid_30] [LoadBalancerService] posted to invoker0[0][37] [marker:controller_kafka_finish:422:314] 
+[2017-07-14T20:14:40.556Z] [INFO] [#tid_30] [ActionsApi] [marker:controller_loadbalancer_finish:427:342] 
+[2017-07-14T20:14:40.561Z] [INFO] [#tid_29] [LoadBalancerService] posted to invoker0[0][36] [marker:controller_kafka_finish:464:378] 
+[2017-07-14T20:14:40.567Z] [INFO] [#tid_29] [ActionsApi] [marker:controller_loadbalancer_finish:465:380] 
+[2017-07-14T20:14:40.582Z] [INFO] [#tid_29] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.584Z] [INFO] [#tid_31] [LoadBalancerService] posted to invoker0[0][38] [marker:controller_kafka_finish:403:315] 
+[2017-07-14T20:14:40.585Z] [INFO] [#tid_31] [ActionsApi] [marker:controller_loadbalancer_finish:403:324] 
+[2017-07-14T20:14:40.586Z] [INFO] [#tid_33] [LoadBalancerService] posted to invoker0[0][41] [marker:controller_kafka_finish:365:230] 
+[2017-07-14T20:14:40.588Z] [INFO] [#tid_35] [LoadBalancerService] posted to invoker0[0][40] [marker:controller_kafka_finish:331:231] 
+[2017-07-14T20:14:40.590Z] [INFO] [#tid_35] [ActionsApi] [marker:controller_loadbalancer_finish:332:246] 
+[2017-07-14T20:14:40.603Z] [INFO] [#tid_36] [LoadBalancerService] posted to invoker0[0][42] [marker:controller_kafka_finish:301:217] 
+[2017-07-14T20:14:40.614Z] [INFO] [#tid_33] [ActionsApi] [marker:controller_loadbalancer_finish:365:247] 
+[2017-07-14T20:14:40.615Z] [INFO] [#tid_35] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.667Z] [INFO] [#tid_37] [LoadBalancerService] posted to invoker0[0][43] [marker:controller_kafka_finish:288:176] 
+[2017-07-14T20:14:40.674Z] [INFO] [#tid_37] [ActionsApi] [marker:controller_loadbalancer_finish:288:193] 
+[2017-07-14T20:14:40.681Z] [INFO] [#tid_38] [LoadBalancerService] posting topic 'invoker0' with activation id 'e02e139c5a9e4d189264d6ffff5d2e9a' [marker:controller_kafka_start:241] 
+[2017-07-14T20:14:40.682Z] [INFO] [#tid_36] [ActionsApi] [marker:controller_loadbalancer_finish:302:235] 
+[2017-07-14T20:14:40.683Z] [INFO] [#tid_33] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.684Z] [INFO] [#tid_32] [LoadBalancerService] posted to invoker0[0][39] [marker:controller_kafka_finish:396:329] 
+[2017-07-14T20:14:40.685Z] [INFO] [#tid_32] [ActionsApi] [marker:controller_loadbalancer_finish:396:353] 
+[2017-07-14T20:14:40.686Z] [INFO] [#tid_36] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.686Z] [INFO] [#tid_32] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.687Z] [INFO] [#tid_37] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.689Z] [INFO] [#tid_34] [LoadBalancerService] posted to invoker0[0][44] [marker:controller_kafka_finish:382:261] 
+[2017-07-14T20:14:40.690Z] [INFO] [#tid_31] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.691Z] [INFO] [#tid_34] [ActionsApi] [marker:controller_loadbalancer_finish:384:270] 
+[2017-07-14T20:14:40.691Z] [INFO] [#tid_38] [LoadBalancerService] posted to invoker0[0][45] [marker:controller_kafka_finish:277:29] 
+[2017-07-14T20:14:40.692Z] [INFO] [#tid_34] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.693Z] [INFO] [#tid_30] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.693Z] [INFO] [#tid_38] [ActionsApi] [marker:controller_loadbalancer_finish:279:132] 
+[2017-07-14T20:14:40.711Z] [INFO] [#tid_38] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:14:40.725Z] [INFO] [#tid_29] [LoadBalancerService] received active ack for '6d322449955d40e5935756a1a4991355' 
+[2017-07-14T20:14:40.728Z] [INFO] [#tid_29] [ActionsApi] [marker:controller_blockingActivation_finish:1249:1165] 
+[2017-07-14T20:14:40.750Z] [INFO] [#tid_29] [BasicHttpService] [marker:http_post.200_count:1254:1254] 
+[2017-07-14T20:14:40.753Z] [INFO] [#tid_29] [LoadBalancerService] processed active response for '6d322449955d40e5935756a1a4991355' 
+[2017-07-14T20:14:40.765Z] [INFO] [#tid_30] [LoadBalancerService] received active ack for 'df2ebfeac5c84b7796befa0dd1218205' 
+[2017-07-14T20:14:40.768Z] [INFO] [#tid_30] [ActionsApi] [marker:controller_blockingActivation_finish:1279:1196] 
+[2017-07-14T20:14:40.769Z] [INFO] [#tid_30] [BasicHttpService] [marker:http_post.200_count:1280:1280] 
+[2017-07-14T20:14:40.774Z] [INFO] [#tid_30] [LoadBalancerService] processed active response for 'df2ebfeac5c84b7796befa0dd1218205' 
+[2017-07-14T20:14:40.985Z] [INFO] [#tid_34] [LoadBalancerService] received active ack for '512a19a4ff13439c80846500144492ef' 
+[2017-07-14T20:14:40.996Z] [INFO] [#tid_34] [ActionsApi] [marker:controller_blockingActivation_finish:1442:1328] 
+[2017-07-14T20:14:41.013Z] [INFO] [#tid_34] [BasicHttpService] [marker:http_post.200_count:1451:1451] 
+[2017-07-14T20:14:41.028Z] [INFO] [#tid_34] [LoadBalancerService] processed active response for '512a19a4ff13439c80846500144492ef' 
+[2017-07-14T20:14:56.011Z] [WARN] [#sid_121] [InvokerActor] invoker0 is offline [marker:loadbalancer_invokerOffline_count:1356824] 
+[2017-07-14T20:14:56.080Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Offline 
+[2017-07-14T20:14:58.293Z] [INFO] [#tid_38] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:58.334Z] [INFO] [#tid_35] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:58.345Z] [INFO] [#tid_35] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/3df919717a7d4a48b31ca7cc75305602' [marker:database_getDocument_start:18764] 
+[2017-07-14T20:14:58.354Z] [INFO] [#tid_37] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:58.403Z] [INFO] [#tid_37] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/15d8e32f10e84ddabe24bf4b9914dd9b' [marker:database_getDocument_start:18730] 
+[2017-07-14T20:14:58.413Z] [INFO] [#tid_32] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:58.416Z] [INFO] [#tid_32] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/c951e1292e1c4e8ca12bb7e566393381' [marker:database_getDocument_start:18894] 
+[2017-07-14T20:14:58.427Z] [INFO] [#tid_38] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/e02e139c5a9e4d189264d6ffff5d2e9a' [marker:database_getDocument_start:18742] 
+[2017-07-14T20:14:58.434Z] [INFO] [#tid_36] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:58.442Z] [INFO] [#tid_36] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/551c8ac3882c479aa99262ecb3474d49' [marker:database_getDocument_start:18838] 
+[2017-07-14T20:14:58.927Z] [INFO] [#tid_31] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:59.103Z] [INFO] [#tid_31] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/2365d6b4f17a4401973af03d5ee24803' [marker:database_getDocument_start:18995] 
+[2017-07-14T20:14:59.154Z] [INFO] [#tid_33] [ActionsApi] [POST] switching to poll db, active ack exception: Invoker invoker0 restarted 
+[2017-07-14T20:14:59.263Z] [INFO] [#sid_121] [LoadBalancerService] cleared load balancer state for invoker0 
+[2017-07-14T20:14:59.498Z] [INFO] [#tid_33] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' finding document: 'id: whisk.system/c5d0898b214648ec9d8c846944fe88bc' [marker:database_getDocument_start:19390] 
+[2017-07-14T20:15:01.194Z] [WARN] [#sid_121] [InvokerActor] invoker0 is unhealthy [marker:loadbalancer_invokerUnhealthy_count:1362030] 
+[2017-07-14T20:15:01.227Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id '8e74f60cea494f3ea7cc3f5eb50294ef' [marker:controller_kafka_start:1362071] 
+[2017-07-14T20:15:01.251Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: UnHealthy 
+[2017-07-14T20:15:01.453Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][46] [marker:controller_kafka_finish:1362301:228] 
+[2017-07-14T20:15:02.412Z] [INFO] [#tid_33] [LoadBalancerService] received active ack for 'c5d0898b214648ec9d8c846944fe88bc' 
+[2017-07-14T20:15:02.419Z] [WARN] [#tid_33] [LoadBalancerService] processed active response for 'c5d0898b214648ec9d8c846944fe88bc' which has no entry 
+[2017-07-14T20:15:02.425Z] [INFO] [#sid_121] [LoadBalancerService] posting topic 'invoker0' with activation id 'c115016f05bf4129a91690b1a6e04799' [marker:controller_kafka_start:1363274] 
+[2017-07-14T20:15:02.431Z] [INFO] [#sid_121] [InvokerActor] invoker0 is healthy 
+[2017-07-14T20:15:02.639Z] [INFO] [#sid_121] [LoadBalancerService] posted to invoker0[0][47] [marker:controller_kafka_finish:1363285:10] 
+[2017-07-14T20:15:02.661Z] [INFO] [#sid_121] [InvokerPool] invoker status changed to invoker0: Healthy 
+[2017-07-14T20:15:21.582Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:21.774Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:21.931Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:21.932Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:28.711Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:30.225Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:30.230Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:30.246Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/41#-1084162951] was not delivered. [4] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:30.267Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:30.271Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/42#766154226] was not delivered. [5] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:30.281Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/43#1024772821] was not delivered. [6] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:30.294Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/44#-148376744] was not delivered. [7] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:30.305Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/45#-1450655209] was not delivered. [8] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:30.340Z] [INFO] Message [akka.io.Tcp$Register] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/user/IO-HTTP/listener-0/46#-777505100] was not delivered. [9] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:32.471Z] [INFO] Message [akka.actor.ReceiveTimeout$] from Actor[akka://controller-actor-system/deadLetters] to Actor[akka://controller-actor-system/system/IO-TCP/selectors/$a/146#-999169414] was not delivered. [10] dead letters encountered, no more dead letters will be logged. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T20:15:33.113Z] [INFO] [#tid_37] [LoadBalancerService] received active ack for '15d8e32f10e84ddabe24bf4b9914dd9b' 
+[2017-07-14T20:15:33.437Z] [WARN] [#tid_37] [LoadBalancerService] processed active response for '15d8e32f10e84ddabe24bf4b9914dd9b' which has no entry 
+[2017-07-14T20:15:34.787Z] [INFO] [#tid_38] [LoadBalancerService] received active ack for 'e02e139c5a9e4d189264d6ffff5d2e9a' 
+[2017-07-14T20:15:34.844Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.056Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.123Z] [WARN] [#tid_38] [LoadBalancerService] processed active response for 'e02e139c5a9e4d189264d6ffff5d2e9a' which has no entry 
+[2017-07-14T20:15:35.249Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.424Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.453Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.471Z] [INFO] [#tid_36] [LoadBalancerService] received active ack for '551c8ac3882c479aa99262ecb3474d49' 
+[2017-07-14T20:15:35.473Z] [INFO] [#tid_39] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:15:35.491Z] [WARN] [#tid_36] [LoadBalancerService] processed active response for '551c8ac3882c479aa99262ecb3474d49' which has no entry 
+[2017-07-14T20:15:35.525Z] [INFO] [#tid_31] [LoadBalancerService] received active ack for '2365d6b4f17a4401973af03d5ee24803' 
+[2017-07-14T20:15:35.546Z] [WARN] [#tid_31] [LoadBalancerService] processed active response for '2365d6b4f17a4401973af03d5ee24803' which has no entry 
+[2017-07-14T20:15:35.579Z] [INFO] [#tid_39] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:15:35.651Z] [INFO] [#tid_35] [LoadBalancerService] received active ack for '3df919717a7d4a48b31ca7cc75305602' 
+[2017-07-14T20:15:35.665Z] [WARN] [#tid_35] [LoadBalancerService] processed active response for '3df919717a7d4a48b31ca7cc75305602' which has no entry 
+[2017-07-14T20:15:35.735Z] [INFO] [#tid_32] [LoadBalancerService] received active ack for 'c951e1292e1c4e8ca12bb7e566393381' 
+[2017-07-14T20:15:35.746Z] [WARN] [#tid_32] [LoadBalancerService] processed active response for 'c951e1292e1c4e8ca12bb7e566393381' which has no entry 
+[2017-07-14T20:15:35.857Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:35.865Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:36.192Z] [INFO] [#tid_39] [Identity] [GET] serving from datastore: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheMiss_count:2929] 
+[2017-07-14T20:15:36.225Z] [INFO] [#tid_39] [CouchDbRestStore] [QUERY] 'openwhisk_kube_subjects' searching 'subjects/identities List(789c46b1-71f6-4ed5-8c54-816aa4f8c502, abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP):List(789c46b1-71f6-4ed5-8c54-816aa4f8c502, abczO3xZCLrMN6v2BKK1dXYFpXlPkccOFqm12CdAsMgRU4VrNZ9lyGVCGuMDGIwP)' [marker:database_queryView_start:2929] 
+[2017-07-14T20:15:36.249Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:36.271Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:36.277Z] [INFO] [#tid_40] POST /api/v1/namespaces/_/actions/hi blocking=true&result=true 
+[2017-07-14T20:15:36.334Z] [WARN] Configured registration timeout of 1 second expired, stopping 
+[2017-07-14T20:15:36.334Z] [INFO] [#tid_40] [RestAPIVersion] authenticate: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 
+[2017-07-14T20:15:36.545Z] [INFO] [#tid_40] [Identity] [GET] serving from cache: 789c46b1-71f6-4ed5-8c54-816aa4f8c502 [marker:database_cacheHit_count:434] 
+[2017-07-14T20:15:39.958Z] [INFO] [#tid_31] [ActionsApi] [marker:controller_blockingActivation_finish:60485:60406] 
+[2017-07-14T20:15:39.970Z] [INFO] [#tid_35] [ActionsApi] [marker:controller_blockingActivation_finish:60390:60307] 
+[2017-07-14T20:15:40.016Z] [INFO] [#tid_32] [ActionsApi] [marker:controller_blockingActivation_finish:60439:60404] 
+[2017-07-14T20:15:40.021Z] [INFO] [#tid_36] [ActionsApi] [marker:controller_blockingActivation_finish:60362:60296] 
+[2017-07-14T20:15:40.044Z] [INFO] [#tid_33] [ActionsApi] [marker:controller_blockingActivation_finish:60424:60314] 
+[2017-07-14T20:15:40.057Z] [INFO] [#tid_37] [ActionsApi] [marker:controller_blockingActivation_finish:60339:60245] 
+[2017-07-14T20:15:40.105Z] [INFO] [#tid_32] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.192Z] [INFO] [#tid_31] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.195Z] [INFO] [#tid_35] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.657Z] [INFO] [#tid_37] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.774Z] [INFO] [#tid_36] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.783Z] [INFO] [#tid_33] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.798Z] [INFO] [#tid_35] [BasicHttpService] [marker:http_post.202_count:60483:60483] 
+[2017-07-14T20:15:40.805Z] [INFO] [#tid_38] [ActionsApi] [marker:controller_blockingActivation_finish:60392:60246] 
+[2017-07-14T20:15:40.822Z] [INFO] [#tid_38] [ActionsApi] [POST] action activation waiting period expired 
+[2017-07-14T20:15:40.823Z] [INFO] [#tid_37] [BasicHttpService] [marker:http_post.202_count:60438:60438] 
+[2017-07-14T20:15:40.824Z] [INFO] [#tid_32] [BasicHttpService] [marker:http_post.202_count:60537:60537] 
+[2017-07-14T20:15:40.826Z] [INFO] [#tid_36] [BasicHttpService] [marker:http_post.202_count:60452:60452] 
+[2017-07-14T20:15:40.830Z] [INFO] [#tid_38] [BasicHttpService] [marker:http_post.202_count:60395:60395] 
+[2017-07-14T20:15:40.831Z] [INFO] [#tid_33] [BasicHttpService] [marker:http_post.202_count:60525:60525] 
+[2017-07-14T20:15:40.834Z] [INFO] [#tid_31] [BasicHttpService] [marker:http_post.202_count:60586:60586] 
+[2017-07-14T20:15:40.835Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for '8e74f60cea494f3ea7cc3f5eb50294ef' 
+[2017-07-14T20:15:40.837Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for '8e74f60cea494f3ea7cc3f5eb50294ef' which has no entry 
+[2017-07-14T20:15:40.839Z] [INFO] [#sid_121] [LoadBalancerService] received active ack for 'c115016f05bf4129a91690b1a6e04799' 
+[2017-07-14T20:15:40.840Z] [WARN] [#sid_121] [LoadBalancerService] processed active response for 'c115016f05bf4129a91690b1a6e04799' which has no entry 
+[2017-07-14T20:15:47.440Z] [INFO] [#tid_32] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/c951e1292e1c4e8ca12bb7e566393381' [marker:database_getDocument_finish:67924:49017] 
+[2017-07-14T20:15:47.440Z] [INFO] [#tid_35] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/3df919717a7d4a48b31ca7cc75305602' [marker:database_getDocument_finish:67874:49108] 
+[2017-07-14T20:15:47.465Z] [INFO] [#tid_38] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/e02e139c5a9e4d189264d6ffff5d2e9a' [marker:database_getDocument_finish:67807:49046] 
+[2017-07-14T20:15:47.504Z] [INFO] [#tid_33] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/c5d0898b214648ec9d8c846944fe88bc' [marker:database_getDocument_finish:67975:48581] 
+[2017-07-14T20:15:47.514Z] [INFO] [#tid_31] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/2365d6b4f17a4401973af03d5ee24803' [marker:database_getDocument_finish:68044:49048] 
+[2017-07-14T20:15:47.556Z] [INFO] [#tid_37] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/15d8e32f10e84ddabe24bf4b9914dd9b' [marker:database_getDocument_finish:67942:49197] 
+[2017-07-14T20:15:47.560Z] [INFO] [#tid_36] [CouchDbRestStore] [GET] 'openwhisk_kube_activations' completed: found document 'id: whisk.system/551c8ac3882c479aa99262ecb3474d49' [marker:database_getDocument_finish:67963:49113] 
+[2017-07-14T20:15:47.576Z] [INFO] [#tid_39] [CouchDbRestStore] [QUERY] 'openwhisk_kube_subjects' completed: matched 1 [marker:database_queryView_finish:14410:11479] 
+[2017-07-14T20:15:47.587Z] [INFO] [#tid_39] [RestAPIVersion] authentication valid 
+[2017-07-14T20:15:47.587Z] [INFO] [#tid_40] [RestAPIVersion] authentication valid 
+[2017-07-14T20:15:47.615Z] [INFO] [#tid_39] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:15:47.618Z] [INFO] [#tid_39] [RateThrottler] subject = whisk.system, rate = 1, below limit = true 
+[2017-07-14T20:15:47.637Z] [INFO] [#tid_40] [LocalEntitlementProvider] checking user 'whisk.system' has privilege 'ACTIVATE' for 'actions/whisk.system/hi' 
+[2017-07-14T20:15:47.638Z] [INFO] [#tid_40] [RateThrottler] subject = whisk.system, rate = 2, below limit = true 
+[2017-07-14T20:15:47.645Z] [INFO] [#tid_39] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:15:47.663Z] [INFO] [#tid_40] [LocalEntitlementProvider] authorized 
+[2017-07-14T20:15:47.723Z] [INFO] [#tid_39] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:14572] 
+[2017-07-14T20:15:47.724Z] [INFO] [#tid_40] [WhiskAction] [GET] serving from cache: id: whisk.system/hi [marker:database_cacheHit_count:11633] 
+[2017-07-14T20:15:47.725Z] [INFO] [#tid_39] [ActionsApi] [GET] entity success 
+[2017-07-14T20:15:47.732Z] [INFO] [#tid_40] [ActionsApi] [GET] entity success 
+[2017-07-14T20:15:47.744Z] [INFO] [#tid_39] [ActionsApi] [marker:controller_blockingActivation_start:14593] 
+[2017-07-14T20:15:47.784Z] [INFO] [#tid_39] [ActionsApi] [POST] action activation id: 65a7b1fb05064b55a7e38212c1906b25 [marker:controller_loadbalancer_start:14594] 
+[2017-07-14T20:15:47.786Z] [INFO] [#tid_40] [ActionsApi] [marker:controller_blockingActivation_start:11696] 
+[2017-07-14T20:15:47.794Z] [INFO] [#tid_40] [ActionsApi] [POST] action activation id: 8ae10b2f441440ee8918879d4df49b28 [marker:controller_loadbalancer_start:11700] 
+[2017-07-14T20:15:47.810Z] [INFO] [#tid_40] [LoadBalancerService] posting topic 'invoker0' with activation id '8ae10b2f441440ee8918879d4df49b28' [marker:controller_kafka_start:11714] 
+[2017-07-14T20:15:47.818Z] [INFO] [#tid_39] [LoadBalancerService] posting topic 'invoker0' with activation id '65a7b1fb05064b55a7e38212c1906b25' [marker:controller_kafka_start:14668] 
+[2017-07-14T20:15:47.832Z] [INFO] [#tid_39] [LoadBalancerService] posted to invoker0[0][49] [marker:controller_kafka_finish:14681:13] 
+[2017-07-14T20:15:47.835Z] [INFO] [#tid_40] [LoadBalancerService] posted to invoker0[0][48] [marker:controller_kafka_finish:11741:25] 
+[2017-07-14T20:15:47.840Z] [INFO] [#tid_40] [ActionsApi] [marker:controller_loadbalancer_finish:11742:40] 
+[2017-07-14T20:15:47.841Z] [INFO] [#tid_40] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:15:47.939Z] [INFO] [#tid_39] [ActionsApi] [marker:controller_loadbalancer_finish:14681:47] 
+[2017-07-14T20:15:47.940Z] [INFO] [#tid_39] [ActionsApi] [POST] action activation will block on result up to 60 seconds 
+[2017-07-14T20:15:49.529Z] [INFO] [#tid_40] [LoadBalancerService] received active ack for '8ae10b2f441440ee8918879d4df49b28' 
+[2017-07-14T20:15:49.531Z] [INFO] [#tid_40] [LoadBalancerService] processed active response for '8ae10b2f441440ee8918879d4df49b28' 
+[2017-07-14T20:15:49.542Z] [INFO] [#tid_40] [ActionsApi] [marker:controller_blockingActivation_finish:13439:1743] 
+[2017-07-14T20:15:49.554Z] [INFO] [#tid_40] [BasicHttpService] [marker:http_post.200_count:13451:13451] 
+[2017-07-14T20:15:49.696Z] [INFO] [#tid_39] [LoadBalancerService] received active ack for '65a7b1fb05064b55a7e38212c1906b25' 
+[2017-07-14T20:15:49.708Z] [INFO] [#tid_39] [ActionsApi] [marker:controller_blockingActivation_finish:16552:1958] 
+[2017-07-14T20:15:49.709Z] [INFO] [#tid_39] [BasicHttpService] [marker:http_post.200_count:16556:16556] 
+[2017-07-14T20:15:49.710Z] [INFO] [#tid_39] [LoadBalancerService] processed active response for '65a7b1fb05064b55a7e38212c1906b25' 

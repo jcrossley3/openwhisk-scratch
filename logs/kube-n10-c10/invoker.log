@@ -1,0 +1,1165 @@
+Waiting for controller to be available
+.[2017-07-14T13:38:38.136Z] [INFO] Slf4jLogger started 
+[2017-07-14T13:38:38.216Z] [INFO] [??] [Config] environment set value for db.whisk.actions 
+[2017-07-14T13:38:38.223Z] [INFO] [??] [Config] environment set value for db.protocol 
+[2017-07-14T13:38:38.228Z] [INFO] [??] [Config] environment set value for consulserver.host 
+[2017-07-14T13:38:38.232Z] [INFO] [??] [Config] environment set value for docker.image.prefix 
+[2017-07-14T13:38:38.233Z] [INFO] [??] [Config] environment set value for invoker.container.network 
+[2017-07-14T13:38:38.236Z] [INFO] [??] [Config] environment set value for whisk.version.date 
+[2017-07-14T13:38:38.236Z] [INFO] [??] [Config] environment set value for whisk.api.host.name 
+[2017-07-14T13:38:38.237Z] [INFO] [??] [Config] environment set value for db.port 
+[2017-07-14T13:38:38.237Z] [INFO] [??] [Config] environment set value for whisk.version.buildno 
+[2017-07-14T13:38:38.237Z] [INFO] [??] [Config] environment set value for db.username 
+[2017-07-14T13:38:38.238Z] [INFO] [??] [Config] environment set value for db.whisk.activations 
+[2017-07-14T13:38:38.238Z] [INFO] [??] [Config] environment set value for docker.registry 
+[2017-07-14T13:38:38.238Z] [INFO] [??] [Config] environment set value for invoker.useReactivePool 
+[2017-07-14T13:38:38.239Z] [INFO] [??] [Config] environment set value for db.whisk.auths 
+[2017-07-14T13:38:38.239Z] [INFO] [??] [Config] environment set value for whisk.logs.dir 
+[2017-07-14T13:38:38.240Z] [INFO] [??] [Config] environment set value for invoker.useKubernetes 
+[2017-07-14T13:38:38.240Z] [INFO] [??] [Config] environment set value for runtimes.manifest 
+[2017-07-14T13:38:38.240Z] [INFO] [??] [Config] environment set value for kafka.host.port 
+[2017-07-14T13:38:38.241Z] [INFO] [??] [Config] environment set value for consul.host.port4 
+[2017-07-14T13:38:38.241Z] [INFO] [??] [Config] environment set value for db.host 
+[2017-07-14T13:38:38.244Z] [INFO] [??] [Config] environment set value for port 
+[2017-07-14T13:38:38.245Z] [INFO] [??] [Config] environment set value for db.provider 
+[2017-07-14T13:38:38.249Z] [INFO] [??] [Config] environment set value for db.password 
+[2017-07-14T13:38:38.253Z] [INFO] [??] [Config] environment set value for kafka.host 
+[2017-07-14T13:38:38.257Z] [INFO] [??] [WhiskConfig] reading properties from consul at consul.openwhisk:8500 
+[2017-07-14T13:39:39.229Z] [WARN] [??] [WhiskConfig] failed to read properties from consul: Futures timed out after [1 minute] 
+[2017-07-14T13:39:39.987Z] [INFO] [??] [InvokerReactive] using whisk.core.containerpool.kubernetes.KubernetesContainerFactory@4943defe 
+[2017-07-14T13:39:39.996Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod -l invoker=invoker0 [marker:invoker_kubectl.delete_start:61794] 
+[2017-07-14T13:39:40.578Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:62381:579] 
+[2017-07-14T13:39:40.605Z] [INFO] [??] [ContainerPool] pre-warming 2 nodejs:6 containers 
+[2017-07-14T13:39:40.611Z] [INFO] [??] [Invoker] using whisk.core.invoker.InvokerReactive@1bdbf9be 
+[2017-07-14T13:39:41.031Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-2-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:62833] 
+[2017-07-14T13:39:41.051Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-1-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:62844] 
+[2017-07-14T13:39:42.055Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][0 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T13:39:42.242Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:678917] 
+[2017-07-14T13:39:42.255Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 9252053d8a2448459950caf580576b4a 
+[2017-07-14T13:39:42.256Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:42.298Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:678977] 
+[2017-07-14T13:39:42.343Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:64145:1310] 
+[2017-07-14T13:39:42.362Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-2-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:64164] 
+[2017-07-14T13:39:42.621Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:64422:1573] 
+[2017-07-14T13:39:42.621Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-1-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:64423] 
+[2017-07-14T13:39:43.103Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:64903:738] 
+[2017-07-14T13:39:43.119Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-2-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:64903] 
+[2017-07-14T13:39:43.400Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:680074:1096] 
+[2017-07-14T13:39:43.533Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl run wsk-3-whisksystem-invokerhealthtestaction --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:680176] 
+[2017-07-14T13:39:43.596Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:65399:976] 
+[2017-07-14T13:39:43.596Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-1-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:65399] 
+[2017-07-14T13:39:46.941Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:68738:3817] 
+[2017-07-14T13:39:47.339Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.run_finish:684019:3843] 
+[2017-07-14T13:39:47.342Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:69142:3743] 
+[2017-07-14T13:39:47.343Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl label pod wsk-3-whisksystem-invokerhealthtestaction invoker=invoker0 [marker:invoker_kubectl.label_start:684019] 
+[2017-07-14T13:39:47.468Z] [INFO] Bound to /0.0.0.0:8080 
+[2017-07-14T13:39:47.471Z] [INFO] Message [akka.io.Tcp$Bound] from Actor[akka://invoker-actor-system/user/IO-HTTP/listener-0#-1416794252] to Actor[akka://invoker-actor-system/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T13:39:47.594Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.label_finish:684273:254] 
+[2017-07-14T13:39:47.595Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl get pod wsk-3-whisksystem-invokerhealthtestaction --template {{.status.podIP}} [marker:invoker_kubectl.get_start:684274] 
+[2017-07-14T13:39:47.866Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.get_finish:684545:271] 
+[2017-07-14T13:39:47.969Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl get pod wsk-3-whisksystem-invokerhealthtestaction --template {{.status.podIP}} [marker:invoker_kubectl.get_start:684646] 
+[2017-07-14T13:39:48.754Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.get_finish:685430:783] 
+[2017-07-14T13:39:48.760Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-3-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:685440] 
+[2017-07-14T13:39:49.351Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:686029:525] 
+[2017-07-14T13:39:49.353Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-3-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:686033] 
+[2017-07-14T13:39:49.392Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:686066:33] 
+[2017-07-14T13:39:49.442Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-3-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.logs_start:686122] 
+[2017-07-14T13:39:49.559Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 9252053d8a2448459950caf580576b4a 
+[2017-07-14T13:39:50.477Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][1 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T13:39:50.481Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:687160] 
+[2017-07-14T13:39:50.482Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system a4ba7c97f93b4bc3acbdc44b1c8cad92 
+[2017-07-14T13:39:50.483Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:50.483Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:687161] 
+[2017-07-14T13:39:50.546Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:687225:64] 
+[2017-07-14T13:39:50.550Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-4-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:72351] 
+[2017-07-14T13:39:50.551Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-1-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:687228] 
+[2017-07-14T13:39:51.027Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:687698:1575] 
+[2017-07-14T13:39:51.044Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:39:51.048Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/9252053d8a2448459950caf580576b4a, rev: null' [marker:database_saveDocument_start:687728] 
+[2017-07-14T13:39:51.112Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:687785:557] 
+[2017-07-14T13:39:51.115Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-1-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:687786] 
+[2017-07-14T13:39:51.133Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:687812:26] 
+[2017-07-14T13:39:51.135Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-1-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:687813] 
+[2017-07-14T13:39:51.144Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation a4ba7c97f93b4bc3acbdc44b1c8cad92 
+[2017-07-14T13:39:51.162Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][2 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T13:39:51.164Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:687844] 
+[2017-07-14T13:39:51.165Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 4540e1c200a349dfb7cc2eb6d3a51d92 
+[2017-07-14T13:39:51.165Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:51.166Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:687845] 
+[2017-07-14T13:39:51.171Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T13:39:51.187Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/9252053d8a2448459950caf580576b4a, rev: null', response: '{"ok":true,"id":"whisk.system/9252053d8a2448459950caf580576b4a","rev":"1-bd15bc1a6b9d08276008a1d2047b7b5a"}' [marker:database_saveDocument_finish:687866:137] 
+[2017-07-14T13:39:51.188Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:39:51.195Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:687875:30] 
+[2017-07-14T13:39:51.201Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-3-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:687878] 
+[2017-07-14T13:39:51.209Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:687888:10] 
+[2017-07-14T13:39:51.212Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-3-whisksystem-invokerhealthtestaction --since-time 2017-07-14T13:39:49.374673176Z [marker:invoker_kubectl.logs_start:687891] 
+[2017-07-14T13:39:51.215Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 4540e1c200a349dfb7cc2eb6d3a51d92 
+[2017-07-14T13:39:51.285Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][3 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T13:39:51.286Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:687965] 
+[2017-07-14T13:39:51.287Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system ba8b16276ad443dc9a2615affd9e9015 
+[2017-07-14T13:39:51.288Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:51.288Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:687966] 
+[2017-07-14T13:39:51.354Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:688033:67] 
+[2017-07-14T13:39:51.356Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-2-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:688035] 
+[2017-07-14T13:39:51.469Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-5-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:73264] 
+[2017-07-14T13:39:51.506Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:688184:149] 
+[2017-07-14T13:39:51.510Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-2-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:688188] 
+[2017-07-14T13:39:51.539Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:688218:26] 
+[2017-07-14T13:39:51.544Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-2-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:688223] 
+[2017-07-14T13:39:51.676Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation ba8b16276ad443dc9a2615affd9e9015 
+[2017-07-14T13:39:51.732Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][4 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T13:39:51.739Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:688417] 
+[2017-07-14T13:39:51.739Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system f800d594b04f41dc8432f8965862a484 
+[2017-07-14T13:39:51.740Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:51.740Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:688418] 
+[2017-07-14T13:39:51.925Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:73727:1376] 
+[2017-07-14T13:39:51.925Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-4-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:73727] 
+[2017-07-14T13:39:51.939Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:688618:200] 
+[2017-07-14T13:39:51.945Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl run wsk-6-whisksystem-invokerhealthtestaction --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:688623] 
+[2017-07-14T13:39:53.164Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:689842:1618] 
+[2017-07-14T13:39:53.165Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:39:53.165Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ba8b16276ad443dc9a2615affd9e9015, rev: null' [marker:database_saveDocument_start:689843] 
+[2017-07-14T13:39:53.193Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ba8b16276ad443dc9a2615affd9e9015, rev: null', response: '{"ok":true,"id":"whisk.system/ba8b16276ad443dc9a2615affd9e9015","rev":"1-fb68caa936ac6935f7d81284ac497c7b"}' [marker:database_saveDocument_finish:689873:30] 
+[2017-07-14T13:39:53.194Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:39:53.245Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:75047:1775] 
+[2017-07-14T13:39:53.245Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-5-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:75047] 
+[2017-07-14T13:39:53.878Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:690558:2666] 
+[2017-07-14T13:39:53.880Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:39:53.896Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/4540e1c200a349dfb7cc2eb6d3a51d92, rev: null' [marker:database_saveDocument_start:690575] 
+[2017-07-14T13:39:53.955Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T13:39:53.997Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/4540e1c200a349dfb7cc2eb6d3a51d92, rev: null', response: '{"ok":true,"id":"whisk.system/4540e1c200a349dfb7cc2eb6d3a51d92","rev":"1-f5a9bdaad24cc0d0a4c872fc0698bbb7"}' [marker:database_saveDocument_finish:690673:98] 
+[2017-07-14T13:39:54.005Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:39:54.091Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:690770:2956] 
+[2017-07-14T13:39:54.091Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:39:54.096Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a4ba7c97f93b4bc3acbdc44b1c8cad92, rev: null' [marker:database_saveDocument_start:690776] 
+[2017-07-14T13:39:54.138Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a4ba7c97f93b4bc3acbdc44b1c8cad92, rev: null', response: '{"ok":true,"id":"whisk.system/a4ba7c97f93b4bc3acbdc44b1c8cad92","rev":"1-68e0f6bfa1f4fa5e2314433720c25323"}' [marker:database_saveDocument_finish:690808:32] 
+[2017-07-14T13:39:54.139Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:39:54.273Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.run_finish:690953:2329] 
+[2017-07-14T13:39:54.274Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl label pod wsk-6-whisksystem-invokerhealthtestaction invoker=invoker0 [marker:invoker_kubectl.label_start:690954] 
+[2017-07-14T13:39:54.667Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T13:39:55.053Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:76855:3128] 
+[2017-07-14T13:39:55.053Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-4-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:76855] 
+[2017-07-14T13:39:56.030Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T13:39:56.141Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:77894:2847] 
+[2017-07-14T13:39:56.159Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-5-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:77894] 
+[2017-07-14T13:39:59.350Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:81152:4297] 
+[2017-07-14T13:39:59.393Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.label_finish:696063:5109] 
+[2017-07-14T13:39:59.394Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl get pod wsk-6-whisksystem-invokerhealthtestaction --template {{.status.podIP}} [marker:invoker_kubectl.get_start:696072] 
+[2017-07-14T13:39:59.504Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:81299:3405] 
+[2017-07-14T13:39:59.618Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.get_finish:696298:225] 
+[2017-07-14T13:39:59.620Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-6-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:696300] 
+[2017-07-14T13:39:59.771Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:696450:150] 
+[2017-07-14T13:39:59.774Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-6-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:696453] 
+[2017-07-14T13:39:59.794Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:696474:20] 
+[2017-07-14T13:39:59.796Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-6-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.logs_start:696476] 
+[2017-07-14T13:39:59.807Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation f800d594b04f41dc8432f8965862a484 
+[2017-07-14T13:39:59.951Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][5 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T13:39:59.962Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:696632] 
+[2017-07-14T13:39:59.971Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 7329c58e2e084c70a460be4025b40832 
+[2017-07-14T13:39:59.973Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:39:59.973Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:696642] 
+[2017-07-14T13:39:59.982Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:696661:19] 
+[2017-07-14T13:39:59.989Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-1-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:696668] 
+[2017-07-14T13:40:00.007Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:696686:16] 
+[2017-07-14T13:40:00.009Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-1-prewarm-nodejs6 --since-time 2017-07-14T13:39:51.127690433Z [marker:invoker_kubectl.logs_start:696688] 
+[2017-07-14T13:40:00.013Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 7329c58e2e084c70a460be4025b40832 
+[2017-07-14T13:40:00.044Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][6 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T13:40:00.048Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:696726] 
+[2017-07-14T13:40:00.051Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system b162f6f7ae364349ae92cba1b1f2d4dd 
+[2017-07-14T13:40:00.053Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:40:00.054Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:696731] 
+[2017-07-14T13:40:00.066Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:696746:15] 
+[2017-07-14T13:40:00.068Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-3-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:696747] 
+[2017-07-14T13:40:00.076Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:696755:7] 
+[2017-07-14T13:40:00.077Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-3-whisksystem-invokerhealthtestaction --since-time 2017-07-14T13:39:51.204542031Z [marker:invoker_kubectl.logs_start:696756] 
+[2017-07-14T13:40:00.085Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation b162f6f7ae364349ae92cba1b1f2d4dd 
+[2017-07-14T13:40:00.108Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][7 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T13:40:00.110Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:696790] 
+[2017-07-14T13:40:00.115Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system a3228be9c2704f56aa33b20b2acd2f93 
+[2017-07-14T13:40:00.117Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T13:40:00.120Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:696790] 
+[2017-07-14T13:40:00.351Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:696880:90] 
+[2017-07-14T13:40:00.364Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-2-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:696892] 
+[2017-07-14T13:40:00.370Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:697050:157] 
+[2017-07-14T13:40:00.410Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-2-prewarm-nodejs6 --since-time 2017-07-14T13:39:51.530146246Z [marker:invoker_kubectl.logs_start:697058] 
+[2017-07-14T13:40:00.411Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation a3228be9c2704f56aa33b20b2acd2f93 
+[2017-07-14T13:40:00.634Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:697313:837] 
+[2017-07-14T13:40:00.635Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:40:00.636Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/f800d594b04f41dc8432f8965862a484, rev: null' [marker:database_saveDocument_start:697316] 
+[2017-07-14T13:40:00.664Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/f800d594b04f41dc8432f8965862a484, rev: null', response: '{"ok":true,"id":"whisk.system/f800d594b04f41dc8432f8965862a484","rev":"1-1f22e3f525732ec5683e0b15f8df8c32"}' [marker:database_saveDocument_finish:697343:27] 
+[2017-07-14T13:40:00.666Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:40:00.738Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:697416:659] 
+[2017-07-14T13:40:00.750Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:40:00.752Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/b162f6f7ae364349ae92cba1b1f2d4dd, rev: null' [marker:database_saveDocument_start:697432] 
+[2017-07-14T13:40:00.773Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/b162f6f7ae364349ae92cba1b1f2d4dd, rev: null', response: '{"ok":true,"id":"whisk.system/b162f6f7ae364349ae92cba1b1f2d4dd","rev":"1-1789b4e089783104975aade7826e37f8"}' [marker:database_saveDocument_finish:697453:21] 
+[2017-07-14T13:40:00.774Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:40:00.804Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:697483:794] 
+[2017-07-14T13:40:00.806Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:40:00.808Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/7329c58e2e084c70a460be4025b40832, rev: null' [marker:database_saveDocument_start:697487] 
+[2017-07-14T13:40:00.827Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/7329c58e2e084c70a460be4025b40832, rev: null', response: '{"ok":true,"id":"whisk.system/7329c58e2e084c70a460be4025b40832","rev":"1-b2f9292a0a417634c41e0465d1b3f25d"}' [marker:database_saveDocument_finish:697506:19] 
+[2017-07-14T13:40:00.827Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:40:00.860Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:697539:479] 
+[2017-07-14T13:40:00.861Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T13:40:00.873Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a3228be9c2704f56aa33b20b2acd2f93, rev: null' [marker:database_saveDocument_start:697552] 
+[2017-07-14T13:40:00.894Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a3228be9c2704f56aa33b20b2acd2f93, rev: null', response: '{"ok":true,"id":"whisk.system/a3228be9c2704f56aa33b20b2acd2f93","rev":"1-48943fbb2d90cb4e6cf2f1caf14468b3"}' [marker:database_saveDocument_finish:697574:21] 
+[2017-07-14T13:40:00.895Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T13:40:03.164Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T13:40:03.165Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T13:40:03.166Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T13:40:03.166Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T13:50:01.724Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-6-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.delete_start:683518] 
+[2017-07-14T13:50:01.832Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-3-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.delete_start:683634] 
+[2017-07-14T13:50:01.998Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-2-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:683761] 
+[2017-07-14T13:50:02.010Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-1-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:683813] 
+[2017-07-14T13:50:03.631Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:685434:1911] 
+[2017-07-14T13:50:03.676Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:685468:1834] 
+[2017-07-14T13:50:03.705Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:685507:1693] 
+[2017-07-14T13:50:03.767Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:685569:1768] 
+[2017-07-14T15:05:17.532Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][8 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T15:05:18.108Z] [INFO] [#tid_11] [InvokerReactive] [marker:invoker_activation_start:679] 
+[2017-07-14T15:05:18.117Z] [INFO] [#tid_11] [InvokerReactive] whisk.system/hi whisk.system 290977beb58c4dd5aff56dfd0f6b2bc3 
+[2017-07-14T15:05:18.245Z] [INFO] [#tid_11] [WhiskAction] [GET] serving from datastore: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheMiss_count:792] 
+[2017-07-14T15:05:18.246Z] [INFO] [#tid_11] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0' [marker:database_getDocument_start:793] 
+[2017-07-14T15:05:20.360Z] [INFO] [#tid_11] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0' [marker:database_getDocument_finish:2931:2137] 
+[2017-07-14T15:05:20.421Z] [INFO] [#tid_11] [KubernetesContainer] sending initialization to ContainerId(wsk-5-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:2991] 
+[2017-07-14T15:05:20.484Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-7-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:5202264] 
+[2017-07-14T15:05:22.068Z] [INFO] [#tid_11] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:4639:1645] 
+[2017-07-14T15:05:22.071Z] [INFO] [#tid_11] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-5-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:4641] 
+[2017-07-14T15:05:22.188Z] [INFO] [#tid_11] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:4757:115] 
+[2017-07-14T15:05:22.223Z] [INFO] [#tid_11] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-5-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:4794] 
+[2017-07-14T15:05:22.251Z] [INFO] [#tid_11] [InvokerReactive] posted completion of activation 290977beb58c4dd5aff56dfd0f6b2bc3 
+[2017-07-14T15:05:22.439Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:5204241:1977] 
+[2017-07-14T15:05:22.440Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-7-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:5204241] 
+[2017-07-14T15:05:22.603Z] [INFO] [#tid_11] [KubernetesClient] [marker:invoker_kubectl.logs_finish:5174:379] 
+[2017-07-14T15:05:22.607Z] [INFO] [#tid_11] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T15:05:22.609Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/290977beb58c4dd5aff56dfd0f6b2bc3, rev: null' [marker:database_saveDocument_start:5180] 
+[2017-07-14T15:05:22.683Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/290977beb58c4dd5aff56dfd0f6b2bc3, rev: null', response: '{"ok":true,"id":"whisk.system/290977beb58c4dd5aff56dfd0f6b2bc3","rev":"1-f261159ab762edd8518e8576bdf5ec37"}' [marker:database_saveDocument_finish:5253:73] 
+[2017-07-14T15:05:22.683Z] [INFO] [#tid_11] [InvokerReactive] recorded activation 
+[2017-07-14T15:05:22.737Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:5204540:298] 
+[2017-07-14T15:05:22.743Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-7-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:5204543] 
+[2017-07-14T15:05:23.282Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:5205083:539] 
+[2017-07-14T15:05:23.382Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-7-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:5205184] 
+[2017-07-14T15:05:25.136Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:5206937:1753] 
+[2017-07-14T15:05:27.149Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T15:09:05.178Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][9 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T15:09:05.191Z] [INFO] [#tid_12] [InvokerReactive] [marker:invoker_activation_start:95] 
+[2017-07-14T15:09:05.224Z] [INFO] [#tid_12] [InvokerReactive] whisk.system/hi whisk.system 3c14ac9d4d3f405ab760b25428c41e09 
+[2017-07-14T15:09:05.246Z] [INFO] [#tid_12] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:151] 
+[2017-07-14T15:09:05.272Z] [INFO] [#tid_12] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-5-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:174] 
+[2017-07-14T15:09:05.616Z] [INFO] [#tid_12] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:456:272] 
+[2017-07-14T15:09:05.616Z] [INFO] [#tid_12] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-5-prewarm-nodejs6 --since-time 2017-07-14T15:05:22.197016139Z [marker:invoker_kubectl.logs_start:457] 
+[2017-07-14T15:09:05.626Z] [INFO] [#tid_12] [InvokerReactive] posted completion of activation 3c14ac9d4d3f405ab760b25428c41e09 
+[2017-07-14T15:09:07.538Z] [INFO] [#tid_12] [KubernetesClient] [marker:invoker_kubectl.logs_finish:2439:1982] 
+[2017-07-14T15:09:07.538Z] [INFO] [#tid_12] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T15:09:07.540Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3c14ac9d4d3f405ab760b25428c41e09, rev: null' [marker:database_saveDocument_start:2443] 
+[2017-07-14T15:09:07.695Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3c14ac9d4d3f405ab760b25428c41e09, rev: null', response: '{"ok":true,"id":"whisk.system/3c14ac9d4d3f405ab760b25428c41e09","rev":"1-58c90f914275c665bcf279db0ebfd41f"}' [marker:database_saveDocument_finish:2599:154] 
+[2017-07-14T15:09:07.696Z] [INFO] [#tid_12] [InvokerReactive] recorded activation 
+[2017-07-14T15:09:12.258Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T15:19:08.586Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-5-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:6030387] 
+[2017-07-14T15:19:08.822Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:6030623:236] 
+[2017-07-14T16:57:30.247Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][10 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T16:57:30.247Z] [INFO] [#tid_16] [InvokerReactive] [marker:invoker_activation_start:357] 
+[2017-07-14T16:57:30.248Z] [INFO] [#tid_16] [InvokerReactive] whisk.system/hi whisk.system 3e8e269ac3054764a07034e546d687e5 
+[2017-07-14T16:57:30.326Z] [INFO] [#tid_16] [WhiskAction] [GET] serving from datastore: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheMiss_count:459] 
+[2017-07-14T16:57:30.327Z] [INFO] [#tid_16] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0' [marker:database_getDocument_start:459] 
+[2017-07-14T16:57:30.491Z] [INFO] [#tid_16] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0' [marker:database_getDocument_finish:623:164] 
+[2017-07-14T16:57:30.504Z] [INFO] [#tid_16] [KubernetesContainer] sending initialization to ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:637] 
+[2017-07-14T16:57:30.524Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-8-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:11932314] 
+[2017-07-14T16:57:31.117Z] [INFO] [#tid_16] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:1250:613] 
+[2017-07-14T16:57:31.119Z] [INFO] [#tid_16] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:1251] 
+[2017-07-14T16:57:31.205Z] [INFO] [#tid_16] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1339:88] 
+[2017-07-14T16:57:31.207Z] [INFO] [#tid_16] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:1341] 
+[2017-07-14T16:57:31.212Z] [INFO] [#tid_16] [InvokerReactive] posted completion of activation 3e8e269ac3054764a07034e546d687e5 
+[2017-07-14T16:57:31.900Z] [INFO] [#tid_16] [KubernetesClient] [marker:invoker_kubectl.logs_finish:2027:686] 
+[2017-07-14T16:57:31.900Z] [INFO] [#tid_16] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T16:57:31.900Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3e8e269ac3054764a07034e546d687e5, rev: null' [marker:database_saveDocument_start:2030] 
+[2017-07-14T16:57:31.917Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:11933718:1404] 
+[2017-07-14T16:57:31.917Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-8-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:11933720] 
+[2017-07-14T16:57:31.990Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3e8e269ac3054764a07034e546d687e5, rev: null', response: '{"ok":true,"id":"whisk.system/3e8e269ac3054764a07034e546d687e5","rev":"1-1c5e3fd9d6b0f43b869785c471716b4d"}' [marker:database_saveDocument_finish:2123:93] 
+[2017-07-14T16:57:31.991Z] [INFO] [#tid_16] [InvokerReactive] recorded activation 
+[2017-07-14T16:57:32.138Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:11933940:220] 
+[2017-07-14T16:57:32.139Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-8-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:11933941] 
+[2017-07-14T16:57:32.300Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:11934103:162] 
+[2017-07-14T16:57:32.403Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-8-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:11934206] 
+[2017-07-14T16:57:32.916Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:11934718:512] 
+[2017-07-14T16:57:37.306Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T16:57:43.998Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][11 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T16:57:44.005Z] [INFO] [#tid_17] [InvokerReactive] [marker:invoker_activation_start:38] 
+[2017-07-14T16:57:44.006Z] [INFO] [#tid_17] [InvokerReactive] whisk.system/hi whisk.system 8678f2f0ba584b3f9069f9b9d1806801 
+[2017-07-14T16:57:44.006Z] [INFO] [#tid_17] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:39] 
+[2017-07-14T16:57:44.008Z] [INFO] [#tid_17] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:41] 
+[2017-07-14T16:57:44.020Z] [INFO] [#tid_17] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:54:13] 
+[2017-07-14T16:57:44.027Z] [INFO] [#tid_17] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T16:57:31.248109002Z [marker:invoker_kubectl.logs_start:60] 
+[2017-07-14T16:57:44.029Z] [INFO] [#tid_17] [InvokerReactive] posted completion of activation 8678f2f0ba584b3f9069f9b9d1806801 
+[2017-07-14T16:57:44.232Z] [INFO] [#tid_17] [KubernetesClient] [marker:invoker_kubectl.logs_finish:263:202] 
+[2017-07-14T16:57:44.232Z] [INFO] [#tid_17] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T16:57:44.232Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/8678f2f0ba584b3f9069f9b9d1806801, rev: null' [marker:database_saveDocument_start:265] 
+[2017-07-14T16:57:44.249Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/8678f2f0ba584b3f9069f9b9d1806801, rev: null', response: '{"ok":true,"id":"whisk.system/8678f2f0ba584b3f9069f9b9d1806801","rev":"1-7c90a4d87671ce897196947402e3d11c"}' [marker:database_saveDocument_finish:283:17] 
+[2017-07-14T16:57:44.249Z] [INFO] [#tid_17] [InvokerReactive] recorded activation 
+[2017-07-14T16:57:50.016Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T16:59:00.955Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][12 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T16:59:00.956Z] [INFO] [#tid_18] [InvokerReactive] [marker:invoker_activation_start:21] 
+[2017-07-14T16:59:00.958Z] [INFO] [#tid_18] [InvokerReactive] whisk.system/hi whisk.system bf36a485de054852baca0cc79d34ae70 
+[2017-07-14T16:59:00.959Z] [INFO] [#tid_18] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:23] 
+[2017-07-14T16:59:00.969Z] [INFO] [#tid_18] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:33] 
+[2017-07-14T16:59:00.973Z] [INFO] [#tid_18] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:38:5] 
+[2017-07-14T16:59:00.984Z] [INFO] [#tid_18] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T16:57:44.018366827Z [marker:invoker_kubectl.logs_start:49] 
+[2017-07-14T16:59:00.986Z] [INFO] [#tid_18] [InvokerReactive] posted completion of activation bf36a485de054852baca0cc79d34ae70 
+[2017-07-14T16:59:01.306Z] [INFO] [#tid_18] [KubernetesClient] [marker:invoker_kubectl.logs_finish:368:319] 
+[2017-07-14T16:59:01.307Z] [INFO] [#tid_18] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T16:59:01.307Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/bf36a485de054852baca0cc79d34ae70, rev: null' [marker:database_saveDocument_start:369] 
+[2017-07-14T16:59:01.502Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/bf36a485de054852baca0cc79d34ae70, rev: null', response: '{"ok":true,"id":"whisk.system/bf36a485de054852baca0cc79d34ae70","rev":"1-24102406e91c4d1549f72a2b17754bfb"}' [marker:database_saveDocument_finish:566:197] 
+[2017-07-14T16:59:01.504Z] [INFO] [#tid_18] [InvokerReactive] recorded activation 
+[2017-07-14T16:59:07.475Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T17:01:00.262Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][13 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T17:01:00.264Z] [INFO] [#tid_19] [InvokerReactive] [marker:invoker_activation_start:17] 
+[2017-07-14T17:01:00.268Z] [INFO] [#tid_19] [InvokerReactive] whisk.system/hi whisk.system 5e155c78db00448b9a0faa75cd75c794 
+[2017-07-14T17:01:00.269Z] [INFO] [#tid_19] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:20] 
+[2017-07-14T17:01:00.277Z] [INFO] [#tid_19] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:22] 
+[2017-07-14T17:01:00.287Z] [INFO] [#tid_19] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:39:12] 
+[2017-07-14T17:01:00.289Z] [INFO] [#tid_19] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T16:59:00.972412456Z [marker:invoker_kubectl.logs_start:41] 
+[2017-07-14T17:01:00.291Z] [INFO] [#tid_19] [InvokerReactive] posted completion of activation 5e155c78db00448b9a0faa75cd75c794 
+[2017-07-14T17:01:00.616Z] [INFO] [#tid_19] [KubernetesClient] [marker:invoker_kubectl.logs_finish:368:326] 
+[2017-07-14T17:01:00.617Z] [INFO] [#tid_19] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:01:00.620Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/5e155c78db00448b9a0faa75cd75c794, rev: null' [marker:database_saveDocument_start:371] 
+[2017-07-14T17:01:00.703Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/5e155c78db00448b9a0faa75cd75c794, rev: null', response: '{"ok":true,"id":"whisk.system/5e155c78db00448b9a0faa75cd75c794","rev":"1-3c6f8437b626ce2767600e4192a715fc"}' [marker:database_saveDocument_finish:456:85] 
+[2017-07-14T17:01:00.704Z] [INFO] [#tid_19] [InvokerReactive] recorded activation 
+[2017-07-14T17:01:07.281Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T17:01:26.243Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][14 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T17:01:26.245Z] [INFO] [#tid_20] [InvokerReactive] [marker:invoker_activation_start:29] 
+[2017-07-14T17:01:26.245Z] [INFO] [#tid_20] [InvokerReactive] whisk.system/hi whisk.system d6a2e180f55b4949b45e64951ba375f5 
+[2017-07-14T17:01:26.245Z] [INFO] [#tid_20] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:30] 
+[2017-07-14T17:01:26.246Z] [INFO] [#tid_20] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:30] 
+[2017-07-14T17:01:26.270Z] [INFO] [#tid_20] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:54:23] 
+[2017-07-14T17:01:26.270Z] [INFO] [#tid_20] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T17:01:00.284927153Z [marker:invoker_kubectl.logs_start:55] 
+[2017-07-14T17:01:26.291Z] [INFO] [#tid_20] [InvokerReactive] posted completion of activation d6a2e180f55b4949b45e64951ba375f5 
+[2017-07-14T17:01:26.438Z] [INFO] [#tid_20] [KubernetesClient] [marker:invoker_kubectl.logs_finish:222:167] 
+[2017-07-14T17:01:26.438Z] [INFO] [#tid_20] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:01:26.441Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d6a2e180f55b4949b45e64951ba375f5, rev: null' [marker:database_saveDocument_start:224] 
+[2017-07-14T17:01:26.457Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d6a2e180f55b4949b45e64951ba375f5, rev: null', response: '{"ok":true,"id":"whisk.system/d6a2e180f55b4949b45e64951ba375f5","rev":"1-1431be26f409351ecafffcabacffc65f"}' [marker:database_saveDocument_finish:242:18] 
+[2017-07-14T17:01:26.458Z] [INFO] [#tid_20] [InvokerReactive] recorded activation 
+[2017-07-14T17:01:33.766Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T17:01:49.684Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][15 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T17:01:49.693Z] [INFO] [#tid_22] [InvokerReactive] [marker:invoker_activation_start:24] 
+[2017-07-14T17:01:49.694Z] [INFO] [#tid_22] [InvokerReactive] whisk.system/hi whisk.system 24efc71d2367498c85a82b09200c59af 
+[2017-07-14T17:01:49.694Z] [INFO] [#tid_22] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:25] 
+[2017-07-14T17:01:49.698Z] [INFO] [#tid_22] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:26] 
+[2017-07-14T17:01:49.709Z] [INFO] [#tid_22] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:38:12] 
+[2017-07-14T17:01:49.711Z] [INFO] [#tid_22] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T17:01:26.26860026Z [marker:invoker_kubectl.logs_start:41] 
+[2017-07-14T17:01:49.712Z] [INFO] [#tid_22] [InvokerReactive] posted completion of activation 24efc71d2367498c85a82b09200c59af 
+[2017-07-14T17:01:49.713Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][16 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T17:01:49.717Z] [INFO] [#tid_21] [InvokerReactive] [marker:invoker_activation_start:52] 
+[2017-07-14T17:01:49.718Z] [INFO] [#tid_21] [InvokerReactive] whisk.system/hi whisk.system 2af00d84a35a4ecbaf7d6399e8422f58 
+[2017-07-14T17:01:49.719Z] [INFO] [#tid_21] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:54] 
+[2017-07-14T17:01:49.729Z] [INFO] [#tid_21] [KubernetesContainer] sending initialization to ContainerId(wsk-8-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:63] 
+[2017-07-14T17:01:49.730Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-9-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:12191531] 
+[2017-07-14T17:01:49.958Z] [INFO] [#tid_21] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:293:228] 
+[2017-07-14T17:01:49.961Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][17 (2)][pipelineOccupancy=3 (8)] 
+[2017-07-14T17:01:49.963Z] [INFO] [#tid_21] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-8-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:293] 
+[2017-07-14T17:01:49.964Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][18 (2)][pipelineOccupancy=4 (8)] 
+[2017-07-14T17:01:50.102Z] [INFO] [#tid_25] [InvokerReactive] [marker:invoker_activation_start:272] 
+[2017-07-14T17:01:50.106Z] [INFO] [#tid_25] [InvokerReactive] whisk.system/hi whisk.system a90ad9e24a6d4064be49d5ced807a91d 
+[2017-07-14T17:01:50.111Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][19 (6)][pipelineOccupancy=5 (8)] 
+[2017-07-14T17:01:50.116Z] [INFO] [#tid_23] [InvokerReactive] [marker:invoker_activation_start:440] 
+[2017-07-14T17:01:50.117Z] [INFO] [#tid_23] [InvokerReactive] whisk.system/hi whisk.system 88e6545815534953b27c0ae7152ac7c1 
+[2017-07-14T17:01:50.129Z] [INFO] [#tid_25] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:435] 
+[2017-07-14T17:01:50.133Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][20 (6)][pipelineOccupancy=6 (8)] 
+[2017-07-14T17:01:50.134Z] [INFO] [#tid_24] [InvokerReactive] [marker:invoker_activation_start:453] 
+[2017-07-14T17:01:50.135Z] [INFO] [#tid_24] [InvokerReactive] whisk.system/hi whisk.system 208320287a7e4667bc79ff7e5f8167ba 
+[2017-07-14T17:01:50.138Z] [INFO] [#tid_23] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:468] 
+[2017-07-14T17:01:50.147Z] [INFO] [#tid_25] [KubernetesContainer] sending initialization to ContainerId(wsk-7-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:453] 
+[2017-07-14T17:01:50.149Z] [INFO] [#tid_21] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:482:189] 
+[2017-07-14T17:01:50.159Z] [INFO] [#tid_21] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-8-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:483] 
+[2017-07-14T17:01:50.161Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-10-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:12191964] 
+[2017-07-14T17:01:50.166Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][21 (6)][pipelineOccupancy=7 (8)] 
+[2017-07-14T17:01:50.167Z] [INFO] [#tid_24] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:489] 
+[2017-07-14T17:01:50.169Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][22 (6)][pipelineOccupancy=8 (8)] 
+[2017-07-14T17:01:50.171Z] [INFO] [#tid_28] [InvokerReactive] [marker:invoker_activation_start:468] 
+[2017-07-14T17:01:50.171Z] [INFO] [#tid_28] [InvokerReactive] whisk.system/hi whisk.system cc1ac125555f46b684a09a783a5f97bc 
+[2017-07-14T17:01:50.172Z] [INFO] [#tid_28] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:470] 
+[2017-07-14T17:01:50.180Z] [INFO] [#tid_28] [KubernetesClient] running /usr/bin/kubectl run wsk-11-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:479] 
+[2017-07-14T17:01:50.181Z] [INFO] [#tid_24] [KubernetesClient] running /usr/bin/kubectl run wsk-12-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:504] 
+[2017-07-14T17:01:50.187Z] [INFO] [#tid_27] [InvokerReactive] [marker:invoker_activation_start:487] 
+[2017-07-14T17:01:50.188Z] [INFO] [#tid_27] [InvokerReactive] whisk.system/hi whisk.system edda326393c14379a19bdfea33aecf5d 
+[2017-07-14T17:01:50.189Z] [INFO] [#tid_27] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:488] 
+[2017-07-14T17:01:50.401Z] [INFO] [#tid_21] [InvokerReactive] posted completion of activation 2af00d84a35a4ecbaf7d6399e8422f58 
+[2017-07-14T17:01:50.402Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][23 (6)][pipelineOccupancy=9 (8)] 
+[2017-07-14T17:01:50.402Z] [INFO] [#tid_29] [InvokerReactive] [marker:invoker_activation_start:528] 
+[2017-07-14T17:01:50.402Z] [INFO] [#tid_29] [InvokerReactive] whisk.system/hi whisk.system 3f61ac837d934876a1026ae568688ef0 
+[2017-07-14T17:01:50.402Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][24 (6)][pipelineOccupancy=10 (8)] 
+[2017-07-14T17:01:50.403Z] [INFO] [#tid_23] [KubernetesClient] running /usr/bin/kubectl run wsk-13-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:611] 
+[2017-07-14T17:01:50.403Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 10 > 8 
+[2017-07-14T17:01:50.403Z] [INFO] [#tid_30] [InvokerReactive] [marker:invoker_activation_start:591] 
+[2017-07-14T17:01:50.404Z] [INFO] [#tid_30] [InvokerReactive] whisk.system/hi whisk.system 855aafb980484eb7ac1afe952ffa412b 
+[2017-07-14T17:01:50.405Z] [INFO] [#tid_30] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:591] 
+[2017-07-14T17:01:50.405Z] [INFO] [#tid_26] [InvokerReactive] [marker:invoker_activation_start:643] 
+[2017-07-14T17:01:50.406Z] [INFO] [#tid_26] [InvokerReactive] whisk.system/hi whisk.system 0b1c30d279bc4b819cf3b4b56ab2dedf 
+[2017-07-14T17:01:50.406Z] [INFO] [#tid_22] [KubernetesClient] [marker:invoker_kubectl.logs_finish:735:694] 
+[2017-07-14T17:01:50.406Z] [INFO] [#tid_22] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:01:50.408Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/24efc71d2367498c85a82b09200c59af, rev: null' [marker:database_saveDocument_start:740] 
+[2017-07-14T17:01:50.422Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/24efc71d2367498c85a82b09200c59af, rev: null', response: '{"ok":true,"id":"whisk.system/24efc71d2367498c85a82b09200c59af","rev":"1-d7b7507dc9541d15b1431da712e472c4"}' [marker:database_saveDocument_finish:754:14] 
+[2017-07-14T17:01:50.423Z] [INFO] [#tid_22] [InvokerReactive] recorded activation 
+[2017-07-14T17:01:50.424Z] [INFO] [#tid_27] [KubernetesClient] running /usr/bin/kubectl run wsk-14-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:724] 
+[2017-07-14T17:01:50.709Z] [INFO] [#tid_30] [KubernetesClient] running /usr/bin/kubectl run wsk-15-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:713] 
+[2017-07-14T17:01:50.863Z] [INFO] [#tid_26] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:1022] 
+[2017-07-14T17:01:50.864Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=9 / pipelineFillThreshold=8 
+[2017-07-14T17:01:50.865Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T17:01:50.865Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:12192615:650] 
+[2017-07-14T17:01:50.866Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-10-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:12192615] 
+[2017-07-14T17:01:50.905Z] [INFO] [#tid_29] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-74b4023225a5fcc13a8b5602a3c314b0 [marker:database_cacheHit_count:1133] 
+[2017-07-14T17:01:50.906Z] [INFO] [#tid_25] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:1205:752] 
+[2017-07-14T17:01:50.907Z] [INFO] [#tid_25] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-7-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:1208] 
+[2017-07-14T17:01:50.908Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:12192708:1177] 
+[2017-07-14T17:01:50.908Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-9-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:12192708] 
+[2017-07-14T17:01:50.915Z] [INFO] [#tid_29] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-4-prewarm-nodejs6) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:1200] 
+[2017-07-14T17:01:50.916Z] [INFO] [#tid_26] [KubernetesClient] running /usr/bin/kubectl run wsk-16-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:1219] 
+[2017-07-14T17:01:50.941Z] [INFO] [#tid_29] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1205:5] 
+[2017-07-14T17:01:50.941Z] [INFO] [#tid_29] [InvokerReactive] posted completion of activation 3f61ac837d934876a1026ae568688ef0 
+[2017-07-14T17:01:50.951Z] [INFO] [#tid_29] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-4-prewarm-nodejs6 --since-time 2017-07-14T17:01:49.70507194Z [marker:invoker_kubectl.logs_start:1226] 
+[2017-07-14T17:01:50.963Z] [INFO] [#tid_25] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1255:47] 
+[2017-07-14T17:01:51.001Z] [INFO] [#tid_25] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-7-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:1303] 
+[2017-07-14T17:01:51.009Z] [INFO] [#tid_28] [KubernetesClient] [marker:invoker_kubectl.run_finish:1308:829] 
+[2017-07-14T17:01:51.009Z] [INFO] [#tid_28] [KubernetesClient] running /usr/bin/kubectl label pod wsk-11-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:1308] 
+[2017-07-14T17:01:51.151Z] [INFO] [#tid_25] [InvokerReactive] posted completion of activation a90ad9e24a6d4064be49d5ced807a91d 
+[2017-07-14T17:01:56.248Z] [INFO] [#tid_27] [KubernetesClient] [marker:invoker_kubectl.run_finish:6544:5820] 
+[2017-07-14T17:01:56.248Z] [INFO] [#tid_27] [KubernetesClient] running /usr/bin/kubectl label pod wsk-14-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:6544] 
+[2017-07-14T17:01:57.533Z] [INFO] [#tid_23] [KubernetesClient] [marker:invoker_kubectl.run_finish:7855:7244] 
+[2017-07-14T17:01:57.546Z] [INFO] [#tid_23] [KubernetesClient] running /usr/bin/kubectl label pod wsk-13-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:7863] 
+[2017-07-14T17:01:57.549Z] [INFO] [#tid_30] [KubernetesClient] [marker:invoker_kubectl.run_finish:7812:6825] 
+[2017-07-14T17:01:57.549Z] [INFO] [#tid_30] [KubernetesClient] running /usr/bin/kubectl label pod wsk-15-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:7812] 
+[2017-07-14T17:01:57.663Z] [INFO] [#tid_26] [KubernetesClient] [marker:invoker_kubectl.run_finish:7965:6746] 
+[2017-07-14T17:01:57.691Z] [INFO] [#tid_26] [KubernetesClient] running /usr/bin/kubectl label pod wsk-16-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:7966] 
+[2017-07-14T17:01:57.691Z] [INFO] [#tid_21] [KubernetesClient] [marker:invoker_kubectl.logs_finish:8003:7520] 
+[2017-07-14T17:01:57.904Z] [INFO] [#tid_21] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:01:57.937Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/2af00d84a35a4ecbaf7d6399e8422f58, rev: null' [marker:database_saveDocument_start:8266] 
+[2017-07-14T17:01:58.388Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T17:02:00.051Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/2af00d84a35a4ecbaf7d6399e8422f58, rev: null', response: '{"ok":true,"id":"whisk.system/2af00d84a35a4ecbaf7d6399e8422f58","rev":"1-aa049760e2a8340be4da5d6e75becf68"}' [marker:database_saveDocument_finish:10382:2112] 
+[2017-07-14T17:02:00.057Z] [INFO] [#tid_21] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:00.325Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:12202127:9419] 
+[2017-07-14T17:02:00.326Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-9-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:12202127] 
+[2017-07-14T17:02:03.708Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:12205442:12827] 
+[2017-07-14T17:02:03.709Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-10-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:12205510] 
+[2017-07-14T17:02:03.709Z] [INFO] [#tid_28] [KubernetesClient] [marker:invoker_kubectl.label_finish:14007:12699] 
+[2017-07-14T17:02:03.709Z] [INFO] [#tid_28] [KubernetesClient] running /usr/bin/kubectl get pod wsk-11-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:14008] 
+[2017-07-14T17:02:03.881Z] [INFO] [#tid_30] [KubernetesClient] [marker:invoker_kubectl.label_finish:14127:6315] 
+[2017-07-14T17:02:03.882Z] [INFO] [#tid_24] [KubernetesClient] [marker:invoker_kubectl.run_finish:14198:13694] 
+[2017-07-14T17:02:03.886Z] [INFO] [#tid_24] [KubernetesClient] running /usr/bin/kubectl label pod wsk-12-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:14201] 
+[2017-07-14T17:02:03.887Z] [INFO] [#tid_25] [KubernetesClient] [marker:invoker_kubectl.logs_finish:14188:12885] 
+[2017-07-14T17:02:03.895Z] [INFO] [#tid_30] [KubernetesClient] running /usr/bin/kubectl get pod wsk-15-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:14159] 
+[2017-07-14T17:02:03.895Z] [INFO] [#tid_25] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:03.903Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a90ad9e24a6d4064be49d5ced807a91d, rev: null' [marker:database_saveDocument_start:14205] 
+[2017-07-14T17:02:03.935Z] [INFO] [#tid_29] [KubernetesClient] [marker:invoker_kubectl.logs_finish:14167:12941] 
+[2017-07-14T17:02:03.936Z] [INFO] [#tid_29] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:03.947Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3f61ac837d934876a1026ae568688ef0, rev: null' [marker:database_saveDocument_start:14208] 
+[2017-07-14T17:02:03.999Z] [INFO] [#tid_27] [KubernetesClient] [marker:invoker_kubectl.label_finish:14118:7574] 
+[2017-07-14T17:02:04.006Z] [INFO] [#tid_26] [KubernetesClient] [marker:invoker_kubectl.label_finish:14152:6186] 
+[2017-07-14T17:02:04.007Z] [INFO] [#tid_27] [KubernetesClient] running /usr/bin/kubectl get pod wsk-14-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:14267] 
+[2017-07-14T17:02:04.007Z] [INFO] [#tid_23] [KubernetesClient] [marker:invoker_kubectl.label_finish:14298:6435] 
+[2017-07-14T17:02:04.007Z] [INFO] [#tid_23] [KubernetesClient] running /usr/bin/kubectl get pod wsk-13-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:14331] 
+[2017-07-14T17:02:04.009Z] [INFO] [#tid_26] [KubernetesClient] running /usr/bin/kubectl get pod wsk-16-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:14302] 
+[2017-07-14T17:02:04.062Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T17:02:04.099Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T17:02:04.114Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a90ad9e24a6d4064be49d5ced807a91d, rev: null', response: '{"ok":true,"id":"whisk.system/a90ad9e24a6d4064be49d5ced807a91d","rev":"1-237ec9b6aee000b9fdcad36bdf94d0a6"}' [marker:database_saveDocument_finish:14420:214] 
+[2017-07-14T17:02:04.114Z] [INFO] [#tid_25] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:04.412Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:12206173:4045] 
+[2017-07-14T17:02:04.814Z] [INFO] [#tid_28] [KubernetesClient] [marker:invoker_kubectl.get_finish:15109:1101] 
+[2017-07-14T17:02:04.821Z] [INFO] [#tid_28] [KubernetesContainer] sending initialization to ContainerId(wsk-11-whisksystem-hi) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:15117] 
+[2017-07-14T17:02:05.410Z] [INFO] [#tid_27] [KubernetesClient] [marker:invoker_kubectl.get_finish:15684:1385] 
+[2017-07-14T17:02:05.418Z] [INFO] [#tid_27] [KubernetesContainer] sending initialization to ContainerId(wsk-14-whisksystem-hi) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:15709] 
+[2017-07-14T17:02:05.428Z] [INFO] [#tid_28] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:15726:608] 
+[2017-07-14T17:02:05.428Z] [INFO] [#tid_28] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-11-whisksystem-hi) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:15727] 
+[2017-07-14T17:02:05.683Z] [INFO] [#tid_28] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:15977:250] 
+[2017-07-14T17:02:05.689Z] [INFO] [#tid_28] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-11-whisksystem-hi [marker:invoker_kubectl.logs_start:15985] 
+[2017-07-14T17:02:06.092Z] [INFO] [#tid_28] [InvokerReactive] posted completion of activation cc1ac125555f46b684a09a783a5f97bc 
+[2017-07-14T17:02:06.098Z] [INFO] [#tid_27] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:16388:679] 
+[2017-07-14T17:02:06.122Z] [INFO] [#tid_24] [KubernetesClient] [marker:invoker_kubectl.label_finish:16411:2210] 
+[2017-07-14T17:02:06.123Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:12207890:2379] 
+[2017-07-14T17:02:06.125Z] [INFO] [#tid_26] [KubernetesClient] [marker:invoker_kubectl.get_finish:16393:2084] 
+[2017-07-14T17:02:06.129Z] [INFO] [#tid_26] [KubernetesContainer] sending initialization to ContainerId(wsk-16-whisksystem-hi) ContainerIp(172.17.0.18) [marker:invoker_activationInit_start:16394] 
+[2017-07-14T17:02:06.131Z] [INFO] [#tid_30] [KubernetesClient] [marker:invoker_kubectl.get_finish:16368:2206] 
+[2017-07-14T17:02:06.132Z] [INFO] [#tid_30] [KubernetesContainer] sending initialization to ContainerId(wsk-15-whisksystem-hi) ContainerIp(172.17.0.17) [marker:invoker_activationInit_start:16369] 
+[2017-07-14T17:02:06.132Z] [INFO] [#tid_24] [KubernetesClient] running /usr/bin/kubectl get pod wsk-12-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:16413] 
+[2017-07-14T17:02:06.134Z] [INFO] [#tid_27] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-14-whisksystem-hi) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:16392] 
+[2017-07-14T17:02:06.135Z] [INFO] [#tid_27] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:16433:39] 
+[2017-07-14T17:02:06.137Z] [INFO] [#tid_27] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-14-whisksystem-hi [marker:invoker_kubectl.logs_start:16436] 
+[2017-07-14T17:02:06.141Z] [INFO] [#tid_27] [InvokerReactive] posted completion of activation edda326393c14379a19bdfea33aecf5d 
+[2017-07-14T17:02:06.509Z] [INFO] [#tid_23] [KubernetesClient] [marker:invoker_kubectl.get_finish:16840:2509] 
+[2017-07-14T17:02:06.514Z] [INFO] [#tid_23] [KubernetesContainer] sending initialization to ContainerId(wsk-13-whisksystem-hi) ContainerIp(172.17.0.16) [marker:invoker_activationInit_start:16845] 
+[2017-07-14T17:02:06.570Z] [INFO] [#tid_26] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:16873:479] 
+[2017-07-14T17:02:06.577Z] [INFO] [#tid_26] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-16-whisksystem-hi) ContainerIp(172.17.0.18) [marker:invoker_activationRun_start:16873] 
+[2017-07-14T17:02:06.599Z] [INFO] [#tid_26] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:16900:27] 
+[2017-07-14T17:02:06.606Z] [INFO] [#tid_26] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-16-whisksystem-hi [marker:invoker_kubectl.logs_start:16906] 
+[2017-07-14T17:02:06.609Z] [INFO] [#tid_26] [InvokerReactive] posted completion of activation 0b1c30d279bc4b819cf3b4b56ab2dedf 
+[2017-07-14T17:02:06.690Z] [INFO] [#tid_23] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:17017:172] 
+[2017-07-14T17:02:06.691Z] [INFO] [#tid_23] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-13-whisksystem-hi) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:17021] 
+[2017-07-14T17:02:06.723Z] [INFO] [#tid_30] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:16998:629] 
+[2017-07-14T17:02:06.723Z] [INFO] [#tid_30] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-15-whisksystem-hi) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:17000] 
+[2017-07-14T17:02:06.782Z] [INFO] [#tid_23] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:17111:90] 
+[2017-07-14T17:02:06.782Z] [INFO] [#tid_23] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-13-whisksystem-hi [marker:invoker_kubectl.logs_start:17113] 
+[2017-07-14T17:02:06.805Z] [INFO] [#tid_30] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:17082:82] 
+[2017-07-14T17:02:06.873Z] [INFO] [#tid_30] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-15-whisksystem-hi [marker:invoker_kubectl.logs_start:17090] 
+[2017-07-14T17:02:07.013Z] [INFO] [#tid_23] [InvokerReactive] posted completion of activation 88e6545815534953b27c0ae7152ac7c1 
+[2017-07-14T17:02:07.449Z] [INFO] [#tid_30] [InvokerReactive] posted completion of activation 855aafb980484eb7ac1afe952ffa412b 
+[2017-07-14T17:02:08.530Z] [INFO] [#tid_27] [KubernetesClient] [marker:invoker_kubectl.logs_finish:18830:2394] 
+[2017-07-14T17:02:08.535Z] [INFO] [#tid_24] [KubernetesClient] [marker:invoker_kubectl.get_finish:18854:2439] 
+[2017-07-14T17:02:08.535Z] [INFO] [#tid_27] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:08.536Z] [INFO] [#tid_28] [KubernetesClient] [marker:invoker_kubectl.logs_finish:18834:2849] 
+[2017-07-14T17:02:08.536Z] [INFO] [#tid_24] [KubernetesContainer] sending initialization to ContainerId(wsk-12-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationInit_start:18858] 
+[2017-07-14T17:02:08.537Z] [INFO] [#tid_28] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:08.539Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/edda326393c14379a19bdfea33aecf5d, rev: null' [marker:database_saveDocument_start:18838] 
+[2017-07-14T17:02:08.541Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/cc1ac125555f46b684a09a783a5f97bc, rev: null' [marker:database_saveDocument_start:18839] 
+[2017-07-14T17:02:08.678Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/cc1ac125555f46b684a09a783a5f97bc, rev: null', response: '{"ok":true,"id":"whisk.system/cc1ac125555f46b684a09a783a5f97bc","rev":"1-eb323be9bcafc89b0df27ad424573006"}' [marker:database_saveDocument_finish:18874:34] 
+[2017-07-14T17:02:08.678Z] [INFO] [#tid_28] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:08.678Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/edda326393c14379a19bdfea33aecf5d, rev: null', response: '{"ok":true,"id":"whisk.system/edda326393c14379a19bdfea33aecf5d","rev":"1-761d1e2132940f9684c9b822de943054"}' [marker:database_saveDocument_finish:18945:106] 
+[2017-07-14T17:02:08.679Z] [INFO] [#tid_27] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:08.723Z] [INFO] [#tid_26] [KubernetesClient] [marker:invoker_kubectl.logs_finish:19014:2106] 
+[2017-07-14T17:02:08.725Z] [INFO] [#tid_26] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:08.730Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/0b1c30d279bc4b819cf3b4b56ab2dedf, rev: null' [marker:database_saveDocument_start:19032] 
+[2017-07-14T17:02:08.760Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/0b1c30d279bc4b819cf3b4b56ab2dedf, rev: null', response: '{"ok":true,"id":"whisk.system/0b1c30d279bc4b819cf3b4b56ab2dedf","rev":"1-072663dc9a4fe9e0895ce8171fc00b1a"}' [marker:database_saveDocument_finish:19062:30] 
+[2017-07-14T17:02:08.761Z] [INFO] [#tid_26] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:08.802Z] [INFO] [#tid_24] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:19125:266] 
+[2017-07-14T17:02:08.806Z] [INFO] [#tid_24] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-12-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationRun_start:19128] 
+[2017-07-14T17:02:08.808Z] [INFO] [#tid_23] [KubernetesClient] [marker:invoker_kubectl.logs_finish:19138:2025] 
+[2017-07-14T17:02:08.809Z] [INFO] [#tid_23] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:08.810Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/88e6545815534953b27c0ae7152ac7c1, rev: null' [marker:database_saveDocument_start:19141] 
+[2017-07-14T17:02:08.823Z] [INFO] [#tid_24] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:19139:11] 
+[2017-07-14T17:02:08.824Z] [INFO] [#tid_24] [InvokerReactive] posted completion of activation 208320287a7e4667bc79ff7e5f8167ba 
+[2017-07-14T17:02:08.828Z] [INFO] [#tid_24] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-12-whisksystem-hi [marker:invoker_kubectl.logs_start:19141] 
+[2017-07-14T17:02:08.831Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/88e6545815534953b27c0ae7152ac7c1, rev: null', response: '{"ok":true,"id":"whisk.system/88e6545815534953b27c0ae7152ac7c1","rev":"1-dfa9127f16e2e73bf865366b2ae791a0"}' [marker:database_saveDocument_finish:19161:20] 
+[2017-07-14T17:02:08.831Z] [INFO] [#tid_23] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:08.879Z] [INFO] [#tid_30] [KubernetesClient] [marker:invoker_kubectl.logs_finish:19156:2065] 
+[2017-07-14T17:02:08.882Z] [INFO] [#tid_30] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:08.885Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/855aafb980484eb7ac1afe952ffa412b, rev: null' [marker:database_saveDocument_start:19162] 
+[2017-07-14T17:02:08.916Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/855aafb980484eb7ac1afe952ffa412b, rev: null', response: '{"ok":true,"id":"whisk.system/855aafb980484eb7ac1afe952ffa412b","rev":"1-74c9fe0f8e857e0692f2f5da4f2ce918"}' [marker:database_saveDocument_finish:19194:32] 
+[2017-07-14T17:02:08.917Z] [INFO] [#tid_30] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:09.044Z] [INFO] [#tid_24] [KubernetesClient] [marker:invoker_kubectl.logs_finish:19366:219] 
+[2017-07-14T17:02:09.045Z] [INFO] [#tid_24] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:02:09.046Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/208320287a7e4667bc79ff7e5f8167ba, rev: null' [marker:database_saveDocument_start:19369] 
+[2017-07-14T17:02:09.059Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/208320287a7e4667bc79ff7e5f8167ba, rev: null', response: '{"ok":true,"id":"whisk.system/208320287a7e4667bc79ff7e5f8167ba","rev":"1-8bd302ebe3fb9348442af9544adee633"}' [marker:database_saveDocument_finish:19382:13] 
+[2017-07-14T17:02:09.068Z] [INFO] [#tid_24] [InvokerReactive] recorded activation 
+[2017-07-14T17:02:09.803Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T17:02:09.803Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T17:02:09.803Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T17:02:10.304Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T17:02:10.305Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T17:02:10.305Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T17:02:24.171Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3f61ac837d934876a1026ae568688ef0, rev: null', response: '{"ok":true,"id":"whisk.system/3f61ac837d934876a1026ae568688ef0","rev":"1-d68d2b32980e19e2e656733d7fd89726"}' [marker:database_saveDocument_finish:34457:20249] 
+[2017-07-14T17:02:24.172Z] [INFO] [#tid_29] [InvokerReactive] recorded activation 
+[2017-07-14T17:11:59.791Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-8-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:12801568] 
+[2017-07-14T17:12:00.636Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12802439:853] 
+[2017-07-14T17:12:04.995Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-4-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:12806797] 
+[2017-07-14T17:12:05.029Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-7-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:12806827] 
+[2017-07-14T17:12:05.369Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12807172:345] 
+[2017-07-14T17:12:05.374Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12807176:379] 
+[2017-07-14T17:12:09.574Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-11-whisksystem-hi [marker:invoker_kubectl.delete_start:12811376] 
+[2017-07-14T17:12:09.664Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-14-whisksystem-hi [marker:invoker_kubectl.delete_start:12811467] 
+[2017-07-14T17:12:09.772Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-16-whisksystem-hi [marker:invoker_kubectl.delete_start:12811574] 
+[2017-07-14T17:12:09.779Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12811582:205] 
+[2017-07-14T17:12:09.844Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-13-whisksystem-hi [marker:invoker_kubectl.delete_start:12811647] 
+[2017-07-14T17:12:09.924Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-15-whisksystem-hi [marker:invoker_kubectl.delete_start:12811727] 
+[2017-07-14T17:12:09.939Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12811742:275] 
+[2017-07-14T17:12:10.025Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12811828:254] 
+[2017-07-14T17:12:10.084Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-12-whisksystem-hi [marker:invoker_kubectl.delete_start:12811886] 
+[2017-07-14T17:12:10.241Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12812044:397] 
+[2017-07-14T17:12:10.280Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12812083:356] 
+[2017-07-14T17:12:10.395Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:12812198:312] 
+[2017-07-14T17:21:04.330Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][25 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T17:21:04.359Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:62746] 
+[2017-07-14T17:21:04.367Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 981558cbdc4e4fee9276ac0cba7d5302 
+[2017-07-14T17:21:04.369Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:04.372Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:62758] 
+[2017-07-14T17:21:04.703Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:63070:311] 
+[2017-07-14T17:21:04.707Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-9-prewarm-nodejs6) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:63075] 
+[2017-07-14T17:21:04.708Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-17-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:13346493] 
+[2017-07-14T17:21:05.276Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:13347078:585] 
+[2017-07-14T17:21:05.276Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-17-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:13347078] 
+[2017-07-14T17:21:05.344Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:63731:656] 
+[2017-07-14T17:21:05.345Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-9-prewarm-nodejs6) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:63731] 
+[2017-07-14T17:21:05.425Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:63811:80] 
+[2017-07-14T17:21:05.428Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-9-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:63815] 
+[2017-07-14T17:21:05.432Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 981558cbdc4e4fee9276ac0cba7d5302 
+[2017-07-14T17:21:05.494Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][26 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T17:21:05.494Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:63878] 
+[2017-07-14T17:21:05.494Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system fe10843546f8404994e4ebf5d5af4088 
+[2017-07-14T17:21:05.494Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:05.495Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:63881] 
+[2017-07-14T17:21:05.553Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:63940:59] 
+[2017-07-14T17:21:05.559Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-10-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:63946] 
+[2017-07-14T17:21:05.561Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-18-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:13347362] 
+[2017-07-14T17:21:05.912Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:13347715:637] 
+[2017-07-14T17:21:05.916Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-17-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:13347715] 
+[2017-07-14T17:21:06.182Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:64565:619] 
+[2017-07-14T17:21:06.207Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-10-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:64569] 
+[2017-07-14T17:21:06.231Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:64613:43] 
+[2017-07-14T17:21:06.231Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-10-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:64615] 
+[2017-07-14T17:21:06.244Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation fe10843546f8404994e4ebf5d5af4088 
+[2017-07-14T17:21:06.257Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][27 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T17:21:06.258Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:64645] 
+[2017-07-14T17:21:06.258Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system cc31f3a1b062436f8537d5f015c8c999 
+[2017-07-14T17:21:06.258Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:06.259Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:64645] 
+[2017-07-14T17:21:06.593Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:64980:334] 
+[2017-07-14T17:21:06.594Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl run wsk-19-whisksystem-invokerhealthtestaction --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:64981] 
+[2017-07-14T17:21:06.624Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:65011:1196] 
+[2017-07-14T17:21:06.838Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:06.839Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/981558cbdc4e4fee9276ac0cba7d5302, rev: null' [marker:database_saveDocument_start:65224] 
+[2017-07-14T17:21:06.847Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:13348638:1276] 
+[2017-07-14T17:21:06.847Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-18-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:13348650] 
+[2017-07-14T17:21:07.413Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/981558cbdc4e4fee9276ac0cba7d5302, rev: null', response: '{"ok":true,"id":"whisk.system/981558cbdc4e4fee9276ac0cba7d5302","rev":"1-b24f727f86ca2495b096b3e8e93978a8"}' [marker:database_saveDocument_finish:65798:574] 
+[2017-07-14T17:21:07.413Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:08.120Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:13349922:2207] 
+[2017-07-14T17:21:08.223Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-17-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:13350023] 
+[2017-07-14T17:21:09.170Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:67556:2941] 
+[2017-07-14T17:21:09.170Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:09.170Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/fe10843546f8404994e4ebf5d5af4088, rev: null' [marker:database_saveDocument_start:67557] 
+[2017-07-14T17:21:09.250Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/fe10843546f8404994e4ebf5d5af4088, rev: null', response: '{"ok":true,"id":"whisk.system/fe10843546f8404994e4ebf5d5af4088","rev":"1-44bb4583ae6e41262a3e88a796d6c74e"}' [marker:database_saveDocument_finish:67637:80] 
+[2017-07-14T17:21:09.251Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:09.278Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.run_finish:67665:2684] 
+[2017-07-14T17:21:09.279Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl label pod wsk-19-whisksystem-invokerhealthtestaction invoker=invoker0 [marker:invoker_kubectl.label_start:67665] 
+[2017-07-14T17:21:09.892Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:13351687:3037] 
+[2017-07-14T17:21:09.893Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-18-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:13351695] 
+[2017-07-14T17:21:11.434Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.label_finish:69820:2155] 
+[2017-07-14T17:21:11.434Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl get pod wsk-19-whisksystem-invokerhealthtestaction --template {{.status.podIP}} [marker:invoker_kubectl.get_start:69820] 
+[2017-07-14T17:21:11.693Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:13353496:3473] 
+[2017-07-14T17:21:11.751Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:13353554:1859] 
+[2017-07-14T17:21:11.919Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.get_finish:70306:486] 
+[2017-07-14T17:21:11.924Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-19-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:70310] 
+[2017-07-14T17:21:12.101Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:70485:174] 
+[2017-07-14T17:21:12.101Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-19-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:70486] 
+[2017-07-14T17:21:12.111Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:70496:10] 
+[2017-07-14T17:21:12.111Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-19-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.logs_start:70497] 
+[2017-07-14T17:21:12.115Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation cc31f3a1b062436f8537d5f015c8c999 
+[2017-07-14T17:21:12.245Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][28 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T17:21:12.254Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T17:21:12.254Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:70634] 
+[2017-07-14T17:21:12.254Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 496074895f254b89a057e6e985ba05bc 
+[2017-07-14T17:21:12.254Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:12.254Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:70637] 
+[2017-07-14T17:21:12.275Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:70661:24] 
+[2017-07-14T17:21:12.276Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-9-prewarm-nodejs6) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:70663] 
+[2017-07-14T17:21:12.283Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:70670:7] 
+[2017-07-14T17:21:12.289Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-9-prewarm-nodejs6 --since-time 2017-07-14T17:21:05.516708338Z [marker:invoker_kubectl.logs_start:70675] 
+[2017-07-14T17:21:12.295Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 496074895f254b89a057e6e985ba05bc 
+[2017-07-14T17:21:12.326Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][29 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T17:21:12.326Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:70712] 
+[2017-07-14T17:21:12.326Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system c22fdb4ce81d4401b84655f448675c3a 
+[2017-07-14T17:21:12.326Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:12.327Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:70712] 
+[2017-07-14T17:21:12.343Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:70729:17] 
+[2017-07-14T17:21:12.438Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-10-prewarm-nodejs6) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:70823] 
+[2017-07-14T17:21:12.450Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:70835:12] 
+[2017-07-14T17:21:12.528Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-10-prewarm-nodejs6 --since-time 2017-07-14T17:21:06.333315358Z [marker:invoker_kubectl.logs_start:70914] 
+[2017-07-14T17:21:12.544Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation c22fdb4ce81d4401b84655f448675c3a 
+[2017-07-14T17:21:12.549Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][30 (1)][pipelineOccupancy=5 (8)] 
+[2017-07-14T17:21:12.551Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:70938] 
+[2017-07-14T17:21:12.557Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 2d2b8001098d422587d0e81a37c86117 
+[2017-07-14T17:21:12.561Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:12.564Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:70938] 
+[2017-07-14T17:21:12.797Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:71182:244] 
+[2017-07-14T17:21:12.797Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-18-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:71183] 
+[2017-07-14T17:21:12.798Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-20-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:13354600] 
+[2017-07-14T17:21:13.094Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T17:21:13.171Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:71539:356] 
+[2017-07-14T17:21:13.174Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-18-prewarm-nodejs6) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:71541] 
+[2017-07-14T17:21:13.188Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:71574:33] 
+[2017-07-14T17:21:13.189Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-18-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:71576] 
+[2017-07-14T17:21:13.224Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 2d2b8001098d422587d0e81a37c86117 
+[2017-07-14T17:21:13.509Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][31 (1)][pipelineOccupancy=5 (8)] 
+[2017-07-14T17:21:13.512Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:71896] 
+[2017-07-14T17:21:13.614Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system ec5a7337669c4e8aacfc47709e1e2b6c 
+[2017-07-14T17:21:13.615Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:13.616Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:71995] 
+[2017-07-14T17:21:13.668Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:72054:59] 
+[2017-07-14T17:21:13.680Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-17-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:72064] 
+[2017-07-14T17:21:13.686Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-21-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:13355489] 
+[2017-07-14T17:21:13.828Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:72210:145] 
+[2017-07-14T17:21:13.828Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-17-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:72211] 
+[2017-07-14T17:21:13.893Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:72279:68] 
+[2017-07-14T17:21:13.899Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-17-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:72283] 
+[2017-07-14T17:21:13.957Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation ec5a7337669c4e8aacfc47709e1e2b6c 
+[2017-07-14T17:21:14.461Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][32 (1)][pipelineOccupancy=6 (8)] 
+[2017-07-14T17:21:14.461Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:72845] 
+[2017-07-14T17:21:14.462Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system cdf83de3ef624110a0088e9648e0f05d 
+[2017-07-14T17:21:14.462Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T17:21:14.463Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:72846] 
+[2017-07-14T17:21:14.574Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:72960:114] 
+[2017-07-14T17:21:14.576Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl run wsk-22-whisksystem-invokerhealthtestaction --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:72962] 
+[2017-07-14T17:21:14.608Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:72995:2498] 
+[2017-07-14T17:21:14.615Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:14.617Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/cc31f3a1b062436f8537d5f015c8c999, rev: null' [marker:database_saveDocument_start:73003] 
+[2017-07-14T17:21:14.660Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:73047:2132] 
+[2017-07-14T17:21:14.677Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:14.677Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c22fdb4ce81d4401b84655f448675c3a, rev: null' [marker:database_saveDocument_start:73048] 
+[2017-07-14T17:21:14.725Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/cc31f3a1b062436f8537d5f015c8c999, rev: null', response: '{"ok":true,"id":"whisk.system/cc31f3a1b062436f8537d5f015c8c999","rev":"1-a29c22f1f8592308db213c3fcd4db470"}' [marker:database_saveDocument_finish:73109:106] 
+[2017-07-14T17:21:14.727Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:14.751Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c22fdb4ce81d4401b84655f448675c3a, rev: null', response: '{"ok":true,"id":"whisk.system/c22fdb4ce81d4401b84655f448675c3a","rev":"1-31436f45f3a1da14288d916e15ccb2c2"}' [marker:database_saveDocument_finish:73136:88] 
+[2017-07-14T17:21:14.751Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:14.777Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:13356580:1979] 
+[2017-07-14T17:21:14.781Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-20-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:13356580] 
+[2017-07-14T17:21:14.815Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:73201:2525] 
+[2017-07-14T17:21:14.817Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:14.818Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/496074895f254b89a057e6e985ba05bc, rev: null' [marker:database_saveDocument_start:73202] 
+[2017-07-14T17:21:14.832Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/496074895f254b89a057e6e985ba05bc, rev: null', response: '{"ok":true,"id":"whisk.system/496074895f254b89a057e6e985ba05bc","rev":"1-7314b51aa50b2d54e46105643a891761"}' [marker:database_saveDocument_finish:73219:17] 
+[2017-07-14T17:21:14.832Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:15.028Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:73410:1834] 
+[2017-07-14T17:21:15.029Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:15.029Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/2d2b8001098d422587d0e81a37c86117, rev: null' [marker:database_saveDocument_start:73416] 
+[2017-07-14T17:21:15.042Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/2d2b8001098d422587d0e81a37c86117, rev: null', response: '{"ok":true,"id":"whisk.system/2d2b8001098d422587d0e81a37c86117","rev":"1-6cb53aed9a654d6cd890439b32605aec"}' [marker:database_saveDocument_finish:73429:13] 
+[2017-07-14T17:21:15.044Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:15.369Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:73743:1460] 
+[2017-07-14T17:21:15.419Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:15.419Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ec5a7337669c4e8aacfc47709e1e2b6c, rev: null' [marker:database_saveDocument_start:73777] 
+[2017-07-14T17:21:15.536Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ec5a7337669c4e8aacfc47709e1e2b6c, rev: null', response: '{"ok":true,"id":"whisk.system/ec5a7337669c4e8aacfc47709e1e2b6c","rev":"1-3001a0a28b77f08f26d74539315c7f17"}' [marker:database_saveDocument_finish:73920:143] 
+[2017-07-14T17:21:15.537Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:15.822Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:13357591:2102] 
+[2017-07-14T17:21:15.823Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-21-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:13357622] 
+[2017-07-14T17:21:15.831Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.run_finish:74211:1249] 
+[2017-07-14T17:21:15.837Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl label pod wsk-22-whisksystem-invokerhealthtestaction invoker=invoker0 [marker:invoker_kubectl.label_start:74219] 
+[2017-07-14T17:21:16.048Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:13357684:1104] 
+[2017-07-14T17:21:16.049Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-20-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:13357684] 
+[2017-07-14T17:21:21.738Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T17:21:21.754Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T17:21:21.780Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T17:21:22.428Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T17:21:22.651Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T17:21:24.402Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.label_finish:82786:8566] 
+[2017-07-14T17:21:24.404Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl get pod wsk-22-whisksystem-invokerhealthtestaction --template {{.status.podIP}} [marker:invoker_kubectl.get_start:82789] 
+[2017-07-14T17:21:24.408Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:13366210:8584] 
+[2017-07-14T17:21:24.530Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-21-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:13366211] 
+[2017-07-14T17:21:24.532Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:13366321:8637] 
+[2017-07-14T17:21:25.143Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:13366945:734] 
+[2017-07-14T17:21:25.244Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.get_finish:83600:811] 
+[2017-07-14T17:21:25.245Z] [INFO] [#sid_121] [KubernetesContainer] sending initialization to ContainerId(wsk-22-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:83631] 
+[2017-07-14T17:21:25.327Z] [INFO] [#sid_121] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:83713:81] 
+[2017-07-14T17:21:25.328Z] [INFO] [#sid_121] [KubernetesContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(wsk-22-whisksystem-invokerhealthtestaction) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:83714] 
+[2017-07-14T17:21:25.338Z] [INFO] [#sid_121] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:83724:9] 
+[2017-07-14T17:21:25.346Z] [INFO] [#sid_121] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-22-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.logs_start:83727] 
+[2017-07-14T17:21:25.347Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation cdf83de3ef624110a0088e9648e0f05d 
+[2017-07-14T17:21:25.750Z] [INFO] [#sid_121] [KubernetesClient] [marker:invoker_kubectl.logs_finish:84136:402] 
+[2017-07-14T17:21:25.756Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T17:21:25.765Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/cdf83de3ef624110a0088e9648e0f05d, rev: null' [marker:database_saveDocument_start:84150] 
+[2017-07-14T17:21:25.859Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/cdf83de3ef624110a0088e9648e0f05d, rev: null', response: '{"ok":true,"id":"whisk.system/cdf83de3ef624110a0088e9648e0f05d","rev":"1-05fbd2a3b744d96a8bc141ecf85c230d"}' [marker:database_saveDocument_finish:84219:68] 
+[2017-07-14T17:21:25.860Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T17:21:34.059Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T17:31:15.732Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-19-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.delete_start:13957472] 
+[2017-07-14T17:31:15.771Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-10-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:13957570] 
+[2017-07-14T17:31:15.854Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-9-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:13957656] 
+[2017-07-14T17:31:16.217Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-18-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:13958020] 
+[2017-07-14T17:31:16.765Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-17-prewarm-nodejs6 [marker:invoker_kubectl.delete_start:13958568] 
+[2017-07-14T17:31:18.484Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13960287:2716] 
+[2017-07-14T17:31:18.513Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13960315:2295] 
+[2017-07-14T17:31:18.577Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13960367:2711] 
+[2017-07-14T17:31:18.610Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13960413:2908] 
+[2017-07-14T17:31:18.684Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13960487:1919] 
+[2017-07-14T17:31:26.804Z] [INFO] [#sid_102] [KubernetesClient] running /usr/bin/kubectl delete --now pod wsk-22-whisksystem-invokerhealthtestaction [marker:invoker_kubectl.delete_start:13968607] 
+[2017-07-14T17:31:26.948Z] [INFO] [#sid_102] [KubernetesClient] [marker:invoker_kubectl.delete_finish:13968750:143] 
+[2017-07-14T18:01:27.815Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][33 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T18:01:27.838Z] [INFO] [#tid_8] [InvokerReactive] [marker:invoker_activation_start:120] 
+[2017-07-14T18:01:27.839Z] [INFO] [#tid_8] [InvokerReactive] whisk.system/hi whisk.system 1a6e4e6607894a15a0c5d87ef9348488 
+[2017-07-14T18:01:27.846Z] [INFO] [#tid_8] [WhiskAction] [GET] serving from datastore: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheMiss_count:130] 
+[2017-07-14T18:01:27.847Z] [INFO] [#tid_8] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59' [marker:database_getDocument_start:130] 
+[2017-07-14T18:01:28.128Z] [INFO] [#tid_8] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59' [marker:database_getDocument_finish:411:281] 
+[2017-07-14T18:01:28.144Z] [INFO] [#tid_8] [KubernetesContainer] sending initialization to ContainerId(wsk-20-prewarm-nodejs6) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:427] 
+[2017-07-14T18:01:28.149Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-23-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:15769952] 
+[2017-07-14T18:01:28.353Z] [INFO] [#tid_8] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:634:206] 
+[2017-07-14T18:01:28.353Z] [INFO] [#tid_8] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-20-prewarm-nodejs6) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:635] 
+[2017-07-14T18:01:28.416Z] [INFO] [#tid_8] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:697:62] 
+[2017-07-14T18:01:28.418Z] [INFO] [#tid_8] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-20-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:701] 
+[2017-07-14T18:01:28.586Z] [INFO] [#tid_8] [InvokerReactive] posted completion of activation 1a6e4e6607894a15a0c5d87ef9348488 
+[2017-07-14T18:01:29.573Z] [INFO] [#tid_8] [KubernetesClient] [marker:invoker_kubectl.logs_finish:1857:1156] 
+[2017-07-14T18:01:29.576Z] [INFO] [#tid_8] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:01:29.577Z] [INFO] [#tid_8] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1a6e4e6607894a15a0c5d87ef9348488, rev: null' [marker:database_saveDocument_start:1861] 
+[2017-07-14T18:01:29.642Z] [INFO] [#tid_8] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1a6e4e6607894a15a0c5d87ef9348488, rev: null', response: '{"ok":true,"id":"whisk.system/1a6e4e6607894a15a0c5d87ef9348488","rev":"1-eb29cf8fd55687693fee2da3f433f6cb"}' [marker:database_saveDocument_finish:1926:65] 
+[2017-07-14T18:01:29.642Z] [INFO] [#tid_8] [InvokerReactive] recorded activation 
+[2017-07-14T18:01:29.655Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:15771458:1506] 
+[2017-07-14T18:01:29.655Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-23-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:15771458] 
+[2017-07-14T18:01:29.910Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:15771713:255] 
+[2017-07-14T18:01:29.911Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-23-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:15771714] 
+[2017-07-14T18:01:30.168Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:15771971:257] 
+[2017-07-14T18:01:30.279Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-23-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:15772080] 
+[2017-07-14T18:01:31.210Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:15773013:933] 
+[2017-07-14T18:01:37.990Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T18:01:46.151Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][34 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T18:01:46.153Z] [INFO] [#tid_9] [InvokerReactive] [marker:invoker_activation_start:33] 
+[2017-07-14T18:01:46.155Z] [INFO] [#tid_9] [InvokerReactive] whisk.system/hi whisk.system a7bdcf77a9b045dc9fb553b88f52ed14 
+[2017-07-14T18:01:46.156Z] [INFO] [#tid_9] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:36] 
+[2017-07-14T18:01:46.164Z] [INFO] [#tid_9] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-20-prewarm-nodejs6) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:43] 
+[2017-07-14T18:01:46.177Z] [INFO] [#tid_9] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:56:12] 
+[2017-07-14T18:01:46.177Z] [INFO] [#tid_9] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-20-prewarm-nodejs6 --since-time 2017-07-14T18:01:28.419613349Z [marker:invoker_kubectl.logs_start:57] 
+[2017-07-14T18:01:46.179Z] [INFO] [#tid_9] [InvokerReactive] posted completion of activation a7bdcf77a9b045dc9fb553b88f52ed14 
+[2017-07-14T18:01:46.393Z] [INFO] [#tid_9] [KubernetesClient] [marker:invoker_kubectl.logs_finish:272:215] 
+[2017-07-14T18:01:46.395Z] [INFO] [#tid_9] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:01:46.396Z] [INFO] [#tid_9] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a7bdcf77a9b045dc9fb553b88f52ed14, rev: null' [marker:database_saveDocument_start:274] 
+[2017-07-14T18:01:46.411Z] [INFO] [#tid_9] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a7bdcf77a9b045dc9fb553b88f52ed14, rev: null', response: '{"ok":true,"id":"whisk.system/a7bdcf77a9b045dc9fb553b88f52ed14","rev":"1-21ae578262103a3a78cdc298e21630d9"}' [marker:database_saveDocument_finish:291:17] 
+[2017-07-14T18:01:46.412Z] [INFO] [#tid_9] [InvokerReactive] recorded activation 
+[2017-07-14T18:01:55.180Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T18:03:41.143Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][35 (2)][pipelineOccupancy=1 (8)] 
+[2017-07-14T18:03:41.148Z] [INFO] [#tid_11] [InvokerReactive] [marker:invoker_activation_start:77] 
+[2017-07-14T18:03:41.149Z] [INFO] [#tid_11] [InvokerReactive] whisk.system/hi whisk.system 3c95b561b41046fc8e0c3ef5643529f6 
+[2017-07-14T18:03:41.150Z] [INFO] [#tid_11] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:79] 
+[2017-07-14T18:03:41.152Z] [INFO] [#tid_11] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-20-prewarm-nodejs6) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:82] 
+[2017-07-14T18:03:41.158Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][36 (2)][pipelineOccupancy=2 (8)] 
+[2017-07-14T18:03:41.159Z] [INFO] [#tid_11] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:89:7] 
+[2017-07-14T18:03:41.159Z] [INFO] [#tid_11] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-20-prewarm-nodejs6 --since-time 2017-07-14T18:01:46.174874117Z [marker:invoker_kubectl.logs_start:89] 
+[2017-07-14T18:03:41.173Z] [INFO] [#tid_10] [InvokerReactive] [marker:invoker_activation_start:101] 
+[2017-07-14T18:03:41.174Z] [INFO] [#tid_10] [InvokerReactive] whisk.system/hi whisk.system c75151bedefc4478bb5e15fa26dc84ef 
+[2017-07-14T18:03:41.175Z] [INFO] [#tid_10] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:111] 
+[2017-07-14T18:03:41.175Z] [INFO] [#tid_11] [InvokerReactive] posted completion of activation 3c95b561b41046fc8e0c3ef5643529f6 
+[2017-07-14T18:03:41.196Z] [INFO] [#tid_10] [KubernetesContainer] sending initialization to ContainerId(wsk-23-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:134] 
+[2017-07-14T18:03:41.198Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-24-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:15903001] 
+[2017-07-14T18:03:41.982Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][37 (4)][pipelineOccupancy=3 (8)] 
+[2017-07-14T18:03:41.983Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][38 (4)][pipelineOccupancy=4 (8)] 
+[2017-07-14T18:03:41.984Z] [INFO] [#tid_16] [InvokerReactive] [marker:invoker_activation_start:848] 
+[2017-07-14T18:03:41.984Z] [INFO] [#tid_16] [InvokerReactive] whisk.system/hi whisk.system 26d4983ab3e2458999edc92f86f5961f 
+[2017-07-14T18:03:42.003Z] [INFO] [#tid_16] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:849] 
+[2017-07-14T18:03:42.055Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][39 (4)][pipelineOccupancy=5 (8)] 
+[2017-07-14T18:03:42.057Z] [INFO] [#tid_13] [InvokerReactive] [marker:invoker_activation_start:877] 
+[2017-07-14T18:03:42.061Z] [INFO] [#tid_13] [InvokerReactive] whisk.system/hi whisk.system 3b760ecfe02241f8867bf9b2c51e273f 
+[2017-07-14T18:03:42.063Z] [INFO] [#tid_13] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:877] 
+[2017-07-14T18:03:42.070Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl run wsk-25-prewarm-nodejs6 --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:15903793] 
+[2017-07-14T18:03:42.070Z] [INFO] [#tid_16] [KubernetesContainer] sending initialization to ContainerId(wsk-21-prewarm-nodejs6) ContainerIp(172.17.0.16) [marker:invoker_activationInit_start:856] 
+[2017-07-14T18:03:42.072Z] [INFO] [#tid_13] [KubernetesClient] running /usr/bin/kubectl run wsk-26-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:884] 
+[2017-07-14T18:03:42.078Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][40 (4)][pipelineOccupancy=6 (8)] 
+[2017-07-14T18:03:42.083Z] [INFO] [#tid_15] [InvokerReactive] [marker:invoker_activation_start:870] 
+[2017-07-14T18:03:42.084Z] [INFO] [#tid_15] [InvokerReactive] whisk.system/hi whisk.system a3b17dada0f24ffba9b15295813c9687 
+[2017-07-14T18:03:42.084Z] [INFO] [#tid_15] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:873] 
+[2017-07-14T18:03:42.084Z] [INFO] [#tid_15] [KubernetesClient] running /usr/bin/kubectl run wsk-27-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:880] 
+[2017-07-14T18:03:42.195Z] [INFO] [#tid_10] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:1133:999] 
+[2017-07-14T18:03:42.300Z] [INFO] [#tid_10] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-23-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:1133] 
+[2017-07-14T18:03:42.415Z] [INFO] [#tid_18] [InvokerReactive] [marker:invoker_activation_start:1248] 
+[2017-07-14T18:03:42.421Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][41 (1)][pipelineOccupancy=7 (8)] 
+[2017-07-14T18:03:42.424Z] [INFO] [#tid_12] [InvokerReactive] [marker:invoker_activation_start:1348] 
+[2017-07-14T18:03:42.424Z] [INFO] [#tid_12] [InvokerReactive] whisk.system/hi whisk.system 2a929c09c19a4d6a8dcec9d75774b0f6 
+[2017-07-14T18:03:42.424Z] [INFO] [#tid_12] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:1349] 
+[2017-07-14T18:03:42.428Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][42 (3)][pipelineOccupancy=8 (8)] 
+[2017-07-14T18:03:42.925Z] [INFO] [#tid_17] [InvokerReactive] [marker:invoker_activation_start:1276] 
+[2017-07-14T18:03:42.925Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][43 (3)][pipelineOccupancy=9 (8)] 
+[2017-07-14T18:03:42.925Z] [INFO] [#tid_18] [InvokerReactive] whisk.system/hi whisk.system 1a704c1975f144e18f8626f93453241b 
+[2017-07-14T18:03:42.927Z] [INFO] [#tid_18] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:1269] 
+[2017-07-14T18:03:42.927Z] [INFO] [#tid_10] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1546:412] 
+[2017-07-14T18:03:42.928Z] [INFO] [#tid_10] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-23-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:1548] 
+[2017-07-14T18:03:42.928Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][44 (3)][pipelineOccupancy=10 (8)] 
+[2017-07-14T18:03:42.929Z] [INFO] [#tid_19] [InvokerReactive] [marker:invoker_activation_start:1662] 
+[2017-07-14T18:03:42.929Z] [INFO] [#tid_19] [InvokerReactive] whisk.system/hi whisk.system 45b6a9ce674c47169a42a54eda96a5e5 
+[2017-07-14T18:03:42.929Z] [INFO] [#tid_17] [InvokerReactive] whisk.system/hi whisk.system c00b74ca73754d54b34581cd2eda55af 
+[2017-07-14T18:03:43.296Z] [INFO] [#tid_17] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:1753] 
+[2017-07-14T18:03:43.296Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 10 > 8 
+[2017-07-14T18:03:43.296Z] [INFO] [#tid_14] [InvokerReactive] [marker:invoker_activation_start:1811] 
+[2017-07-14T18:03:43.297Z] [INFO] [#tid_14] [InvokerReactive] whisk.system/hi whisk.system ec7825e738e949c8a4e9b8001653bca4 
+[2017-07-14T18:03:43.297Z] [INFO] [#tid_14] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:2164] 
+[2017-07-14T18:03:43.298Z] [INFO] [#tid_16] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:2162:1306] 
+[2017-07-14T18:03:43.299Z] [INFO] [#tid_16] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-21-prewarm-nodejs6) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:2163] 
+[2017-07-14T18:03:43.355Z] [INFO] [#tid_19] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:2057] 
+[2017-07-14T18:03:43.545Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:15905152:2150] 
+[2017-07-14T18:03:43.545Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-24-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:15905153] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_10] [InvokerReactive] posted completion of activation c75151bedefc4478bb5e15fa26dc84ef 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_11] [KubernetesClient] [marker:invoker_kubectl.logs_finish:2302:2213] 
+[2017-07-14T18:03:43.546Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.run_finish:15905236:1443] 
+[2017-07-14T18:03:43.546Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl label pod wsk-25-prewarm-nodejs6 invoker=invoker0 [marker:invoker_kubectl.label_start:15905237] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_11] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_13] [KubernetesClient] [marker:invoker_kubectl.run_finish:2344:1459] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_13] [KubernetesClient] running /usr/bin/kubectl label pod wsk-26-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:2344] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3c95b561b41046fc8e0c3ef5643529f6, rev: null' [marker:database_saveDocument_start:2384] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_18] [KubernetesClient] running /usr/bin/kubectl run wsk-29-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:2318] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_14] [KubernetesClient] running /usr/bin/kubectl run wsk-30-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:2353] 
+[2017-07-14T18:03:43.546Z] [INFO] [#tid_12] [KubernetesClient] running /usr/bin/kubectl run wsk-28-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:2280] 
+[2017-07-14T18:03:43.547Z] [INFO] [#tid_17] [KubernetesClient] running /usr/bin/kubectl run wsk-31-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:2333] 
+[2017-07-14T18:03:43.547Z] [INFO] [#tid_19] [KubernetesClient] running /usr/bin/kubectl run wsk-32-whisksystem-hi --image openwhisk/nodejs6action:latest --restart Never [marker:invoker_kubectl.run_start:2247] 
+[2017-07-14T18:03:43.547Z] [INFO] [#tid_16] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:2383:163] 
+[2017-07-14T18:03:43.572Z] [INFO] [#tid_16] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-21-prewarm-nodejs6 [marker:invoker_kubectl.logs_start:2415] 
+[2017-07-14T18:03:43.573Z] [INFO] [#tid_16] [InvokerReactive] posted completion of activation 26d4983ab3e2458999edc92f86f5961f 
+[2017-07-14T18:03:43.717Z] [INFO] [#tid_15] [KubernetesClient] [marker:invoker_kubectl.run_finish:2561:1681] 
+[2017-07-14T18:03:43.717Z] [INFO] [#tid_15] [KubernetesClient] running /usr/bin/kubectl label pod wsk-27-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:2562] 
+[2017-07-14T18:03:46.478Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=9 / pipelineFillThreshold=8 
+[2017-07-14T18:03:46.479Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T18:03:51.489Z] [INFO] [#tid_14] [KubernetesClient] [marker:invoker_kubectl.run_finish:10355:8002] 
+[2017-07-14T18:03:51.490Z] [INFO] [#tid_14] [KubernetesClient] running /usr/bin/kubectl label pod wsk-30-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:10356] 
+[2017-07-14T18:03:51.515Z] [INFO] [#tid_17] [KubernetesClient] [marker:invoker_kubectl.run_finish:10336:8002] 
+[2017-07-14T18:03:51.516Z] [INFO] [#tid_17] [KubernetesClient] running /usr/bin/kubectl label pod wsk-31-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:10363] 
+[2017-07-14T18:03:52.134Z] [INFO] [#tid_18] [KubernetesClient] [marker:invoker_kubectl.run_finish:10966:8648] 
+[2017-07-14T18:03:52.134Z] [INFO] [#tid_18] [KubernetesClient] running /usr/bin/kubectl label pod wsk-29-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:10966] 
+[2017-07-14T18:03:52.135Z] [INFO] [#tid_15] [KubernetesClient] [marker:invoker_kubectl.label_finish:11000:8438] 
+[2017-07-14T18:03:52.148Z] [INFO] [#tid_15] [KubernetesClient] running /usr/bin/kubectl get pod wsk-27-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:11001] 
+[2017-07-14T18:03:52.149Z] [INFO] [#tid_13] [KubernetesClient] [marker:invoker_kubectl.label_finish:11038:8694] 
+[2017-07-14T18:03:52.152Z] [INFO] [#tid_13] [KubernetesClient] running /usr/bin/kubectl get pod wsk-26-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:11038] 
+[2017-07-14T18:03:52.152Z] [INFO] [#tid_10] [KubernetesClient] [marker:invoker_kubectl.logs_finish:11084:9536] 
+[2017-07-14T18:03:52.160Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:15913963:8726] 
+[2017-07-14T18:03:52.160Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-25-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:15913963] 
+[2017-07-14T18:03:52.226Z] [INFO] [#tid_10] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:03:52.227Z] [INFO] [#tid_10] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c75151bedefc4478bb5e15fa26dc84ef, rev: null' [marker:database_saveDocument_start:11164] 
+[2017-07-14T18:03:52.231Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T18:03:52.272Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.label_finish:15914075:8922] 
+[2017-07-14T18:03:52.272Z] [INFO] [#sid_101] [KubernetesClient] running /usr/bin/kubectl get pod wsk-24-prewarm-nodejs6 --template {{.status.podIP}} [marker:invoker_kubectl.get_start:15914075] 
+[2017-07-14T18:03:52.355Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3c95b561b41046fc8e0c3ef5643529f6, rev: null', response: '{"ok":true,"id":"whisk.system/3c95b561b41046fc8e0c3ef5643529f6","rev":"1-6bf159b4dbfdfa89dbfd14b5b799231f"}' [marker:database_saveDocument_finish:11278:8894] 
+[2017-07-14T18:03:52.355Z] [INFO] [#tid_11] [InvokerReactive] recorded activation 
+[2017-07-14T18:03:52.355Z] [INFO] [#tid_10] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c75151bedefc4478bb5e15fa26dc84ef, rev: null', response: '{"ok":true,"id":"whisk.system/c75151bedefc4478bb5e15fa26dc84ef","rev":"1-af11ec080d7d327278b653e41dee6826"}' [marker:database_saveDocument_finish:11287:123] 
+[2017-07-14T18:03:52.356Z] [INFO] [#tid_10] [InvokerReactive] recorded activation 
+[2017-07-14T18:03:52.667Z] [INFO] [#tid_19] [KubernetesClient] [marker:invoker_kubectl.run_finish:11407:9160] 
+[2017-07-14T18:03:52.667Z] [INFO] [#tid_19] [KubernetesClient] running /usr/bin/kubectl label pod wsk-32-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:11407] 
+[2017-07-14T18:03:52.851Z] [INFO] [#tid_12] [KubernetesClient] [marker:invoker_kubectl.run_finish:11776:9365] 
+[2017-07-14T18:03:52.852Z] [INFO] [#tid_12] [KubernetesClient] running /usr/bin/kubectl label pod wsk-28-whisksystem-hi invoker=invoker0 [marker:invoker_kubectl.label_start:11776] 
+[2017-07-14T18:03:55.458Z] [INFO] [#tid_16] [KubernetesClient] [marker:invoker_kubectl.logs_finish:14318:11903] 
+[2017-07-14T18:03:55.459Z] [INFO] [#tid_16] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:03:55.464Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/26d4983ab3e2458999edc92f86f5961f, rev: null' [marker:database_saveDocument_start:14326] 
+[2017-07-14T18:03:55.969Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T18:03:57.131Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/26d4983ab3e2458999edc92f86f5961f, rev: null', response: '{"ok":true,"id":"whisk.system/26d4983ab3e2458999edc92f86f5961f","rev":"1-ae7892fcad65096f361db584dcb000d0"}' [marker:database_saveDocument_finish:15995:1669] 
+[2017-07-14T18:03:57.135Z] [INFO] [#tid_16] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:08.494Z] [INFO] [#tid_15] [KubernetesClient] [marker:invoker_kubectl.get_finish:27359:16358] 
+[2017-07-14T18:04:08.497Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:15930299:16336] 
+[2017-07-14T18:04:08.502Z] [INFO] [#tid_15] [KubernetesContainer] sending initialization to ContainerId(wsk-27-whisksystem-hi) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:27362] 
+[2017-07-14T18:04:08.510Z] [INFO] [#tid_18] [KubernetesClient] [marker:invoker_kubectl.label_finish:27341:16375] 
+[2017-07-14T18:04:08.511Z] [INFO] [#tid_18] [KubernetesClient] running /usr/bin/kubectl get pod wsk-29-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:27342] 
+[2017-07-14T18:04:08.613Z] [INFO] [#tid_14] [KubernetesClient] [marker:invoker_kubectl.label_finish:27470:17114] 
+[2017-07-14T18:04:08.614Z] [INFO] [#tid_14] [KubernetesClient] running /usr/bin/kubectl get pod wsk-30-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:27471] 
+[2017-07-14T18:04:08.665Z] [INFO] [#tid_19] [KubernetesClient] [marker:invoker_kubectl.label_finish:27422:16015] 
+[2017-07-14T18:04:08.666Z] [INFO] [#tid_19] [KubernetesClient] running /usr/bin/kubectl get pod wsk-32-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:27423] 
+[2017-07-14T18:04:08.667Z] [INFO] [#sid_101] [KubernetesClient] [marker:invoker_kubectl.get_finish:15930469:16394] 
+[2017-07-14T18:04:08.668Z] [INFO] [#tid_17] [KubernetesClient] [marker:invoker_kubectl.label_finish:27514:17151] 
+[2017-07-14T18:04:08.668Z] [INFO] [#tid_17] [KubernetesClient] running /usr/bin/kubectl get pod wsk-31-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:27515] 
+[2017-07-14T18:04:08.676Z] [INFO] [#tid_13] [KubernetesClient] [marker:invoker_kubectl.get_finish:27568:16530] 
+[2017-07-14T18:04:08.676Z] [INFO] [#tid_13] [KubernetesContainer] sending initialization to ContainerId(wsk-26-whisksystem-hi) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:27568] 
+[2017-07-14T18:04:08.683Z] [INFO] [#tid_12] [KubernetesClient] [marker:invoker_kubectl.label_finish:27608:15832] 
+[2017-07-14T18:04:08.684Z] [INFO] [#tid_12] [KubernetesClient] running /usr/bin/kubectl get pod wsk-28-whisksystem-hi --template {{.status.podIP}} [marker:invoker_kubectl.get_start:27608] 
+[2017-07-14T18:04:08.792Z] [INFO] [#tid_15] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:27653:284] 
+[2017-07-14T18:04:08.795Z] [INFO] [#tid_15] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-27-whisksystem-hi) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:27654] 
+[2017-07-14T18:04:08.845Z] [INFO] [#tid_13] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:27735:167] 
+[2017-07-14T18:04:08.846Z] [INFO] [#tid_13] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-26-whisksystem-hi) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:27736] 
+[2017-07-14T18:04:08.908Z] [INFO] [#tid_13] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:27798:61] 
+[2017-07-14T18:04:08.951Z] [INFO] [#tid_15] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:27773:119] 
+[2017-07-14T18:04:08.954Z] [INFO] [#tid_13] [InvokerReactive] posted completion of activation 3b760ecfe02241f8867bf9b2c51e273f 
+[2017-07-14T18:04:08.954Z] [INFO] [#tid_13] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-26-whisksystem-hi [marker:invoker_kubectl.logs_start:27845] 
+[2017-07-14T18:04:08.957Z] [INFO] [#tid_15] [InvokerReactive] posted completion of activation a3b17dada0f24ffba9b15295813c9687 
+[2017-07-14T18:04:08.959Z] [INFO] [#tid_15] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-27-whisksystem-hi [marker:invoker_kubectl.logs_start:27822] 
+[2017-07-14T18:04:09.315Z] [INFO] [#tid_17] [KubernetesClient] [marker:invoker_kubectl.get_finish:28162:647] 
+[2017-07-14T18:04:09.317Z] [INFO] [#tid_17] [KubernetesContainer] sending initialization to ContainerId(wsk-31-whisksystem-hi) ContainerIp(172.17.0.17) [marker:invoker_activationInit_start:28162] 
+[2017-07-14T18:04:09.319Z] [INFO] [#tid_19] [KubernetesClient] [marker:invoker_kubectl.get_finish:28076:653] 
+[2017-07-14T18:04:09.321Z] [INFO] [#tid_19] [KubernetesContainer] sending initialization to ContainerId(wsk-32-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationInit_start:28077] 
+[2017-07-14T18:04:09.373Z] [INFO] [#tid_17] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:28217:55] 
+[2017-07-14T18:04:09.374Z] [INFO] [#tid_17] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-31-whisksystem-hi) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:28218] 
+[2017-07-14T18:04:09.389Z] [INFO] [#tid_17] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:28235:17] 
+[2017-07-14T18:04:09.391Z] [INFO] [#tid_17] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-31-whisksystem-hi [marker:invoker_kubectl.logs_start:28236] 
+[2017-07-14T18:04:09.395Z] [INFO] [#tid_17] [InvokerReactive] posted completion of activation c00b74ca73754d54b34581cd2eda55af 
+[2017-07-14T18:04:09.395Z] [INFO] [#tid_19] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:28152:72] 
+[2017-07-14T18:04:09.395Z] [INFO] [#tid_19] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-32-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationRun_start:28152] 
+[2017-07-14T18:04:09.422Z] [INFO] [#tid_19] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:28176:24] 
+[2017-07-14T18:04:09.422Z] [INFO] [#tid_19] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-32-whisksystem-hi [marker:invoker_kubectl.logs_start:28178] 
+[2017-07-14T18:04:09.422Z] [INFO] [#tid_19] [InvokerReactive] posted completion of activation 45b6a9ce674c47169a42a54eda96a5e5 
+[2017-07-14T18:04:09.471Z] [INFO] [#tid_18] [KubernetesClient] [marker:invoker_kubectl.get_finish:28303:961] 
+[2017-07-14T18:04:09.471Z] [INFO] [#tid_18] [KubernetesContainer] sending initialization to ContainerId(wsk-29-whisksystem-hi) ContainerIp(172.17.0.18) [marker:invoker_activationInit_start:28304] 
+[2017-07-14T18:04:09.550Z] [INFO] [#tid_18] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:28382:78] 
+[2017-07-14T18:04:09.556Z] [INFO] [#tid_18] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-29-whisksystem-hi) ContainerIp(172.17.0.18) [marker:invoker_activationRun_start:28382] 
+[2017-07-14T18:04:09.563Z] [INFO] [#tid_18] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:28396:14] 
+[2017-07-14T18:04:09.564Z] [INFO] [#tid_18] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-29-whisksystem-hi [marker:invoker_kubectl.logs_start:28396] 
+[2017-07-14T18:04:09.567Z] [INFO] [#tid_18] [InvokerReactive] posted completion of activation 1a704c1975f144e18f8626f93453241b 
+[2017-07-14T18:04:09.594Z] [INFO] [#tid_12] [KubernetesClient] [marker:invoker_kubectl.get_finish:28519:911] 
+[2017-07-14T18:04:09.595Z] [INFO] [#tid_12] [KubernetesContainer] sending initialization to ContainerId(wsk-28-whisksystem-hi) ContainerIp(172.17.0.20) [marker:invoker_activationInit_start:28520] 
+[2017-07-14T18:04:09.661Z] [INFO] [#tid_12] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:28585:65] 
+[2017-07-14T18:04:09.661Z] [INFO] [#tid_12] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-28-whisksystem-hi) ContainerIp(172.17.0.20) [marker:invoker_activationRun_start:28586] 
+[2017-07-14T18:04:09.684Z] [INFO] [#tid_12] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:28608:22] 
+[2017-07-14T18:04:09.686Z] [INFO] [#tid_12] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-28-whisksystem-hi [marker:invoker_kubectl.logs_start:28609] 
+[2017-07-14T18:04:09.687Z] [INFO] [#tid_12] [InvokerReactive] posted completion of activation 2a929c09c19a4d6a8dcec9d75774b0f6 
+[2017-07-14T18:04:09.790Z] [INFO] [#tid_14] [KubernetesClient] [marker:invoker_kubectl.get_finish:28656:1185] 
+[2017-07-14T18:04:09.790Z] [INFO] [#tid_14] [KubernetesContainer] sending initialization to ContainerId(wsk-30-whisksystem-hi) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:28656] 
+[2017-07-14T18:04:09.900Z] [INFO] [#tid_14] [KubernetesContainer] initialization result: ok [marker:invoker_activationInit_finish:28766:110] 
+[2017-07-14T18:04:09.906Z] [INFO] [#tid_14] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-30-whisksystem-hi) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:28766] 
+[2017-07-14T18:04:09.920Z] [INFO] [#tid_14] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:28786:20] 
+[2017-07-14T18:04:09.922Z] [INFO] [#tid_14] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-30-whisksystem-hi [marker:invoker_kubectl.logs_start:28788] 
+[2017-07-14T18:04:09.934Z] [INFO] [#tid_14] [InvokerReactive] posted completion of activation ec7825e738e949c8a4e9b8001653bca4 
+[2017-07-14T18:04:10.194Z] [INFO] [#tid_13] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29085:1239] 
+[2017-07-14T18:04:10.195Z] [INFO] [#tid_13] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.203Z] [INFO] [#tid_13] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3b760ecfe02241f8867bf9b2c51e273f, rev: null' [marker:database_saveDocument_start:29095] 
+[2017-07-14T18:04:10.389Z] [INFO] [#tid_13] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3b760ecfe02241f8867bf9b2c51e273f, rev: null', response: '{"ok":true,"id":"whisk.system/3b760ecfe02241f8867bf9b2c51e273f","rev":"1-c810c381a5f876c46bba29f9732a64b7"}' [marker:database_saveDocument_finish:29281:186] 
+[2017-07-14T18:04:10.390Z] [INFO] [#tid_13] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.422Z] [INFO] [#tid_15] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29288:1464] 
+[2017-07-14T18:04:10.441Z] [INFO] [#tid_15] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.441Z] [INFO] [#tid_15] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a3b17dada0f24ffba9b15295813c9687, rev: null' [marker:database_saveDocument_start:29307] 
+[2017-07-14T18:04:10.461Z] [INFO] [#tid_15] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a3b17dada0f24ffba9b15295813c9687, rev: null', response: '{"ok":true,"id":"whisk.system/a3b17dada0f24ffba9b15295813c9687","rev":"1-c37ada9547930a210379575251a5af2f"}' [marker:database_saveDocument_finish:29326:19] 
+[2017-07-14T18:04:10.461Z] [INFO] [#tid_15] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.479Z] [INFO] [#tid_17] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29326:1090] 
+[2017-07-14T18:04:10.480Z] [INFO] [#tid_17] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.480Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c00b74ca73754d54b34581cd2eda55af, rev: null' [marker:database_saveDocument_start:29327] 
+[2017-07-14T18:04:10.538Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c00b74ca73754d54b34581cd2eda55af, rev: null', response: '{"ok":true,"id":"whisk.system/c00b74ca73754d54b34581cd2eda55af","rev":"1-f4d8725d2e232118e327491013a5c762"}' [marker:database_saveDocument_finish:29385:58] 
+[2017-07-14T18:04:10.538Z] [INFO] [#tid_17] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.585Z] [INFO] [#tid_19] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29341:1162] 
+[2017-07-14T18:04:10.585Z] [INFO] [#tid_19] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.585Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/45b6a9ce674c47169a42a54eda96a5e5, rev: null' [marker:database_saveDocument_start:29342] 
+[2017-07-14T18:04:10.603Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/45b6a9ce674c47169a42a54eda96a5e5, rev: null', response: '{"ok":true,"id":"whisk.system/45b6a9ce674c47169a42a54eda96a5e5","rev":"1-95b7294ace7ca70ae51e9b0dd6660635"}' [marker:database_saveDocument_finish:29361:19] 
+[2017-07-14T18:04:10.603Z] [INFO] [#tid_19] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.686Z] [INFO] [#tid_18] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29519:1123] 
+[2017-07-14T18:04:10.687Z] [INFO] [#tid_18] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.688Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1a704c1975f144e18f8626f93453241b, rev: null' [marker:database_saveDocument_start:29520] 
+[2017-07-14T18:04:10.724Z] [INFO] [#tid_12] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29649:1038] 
+[2017-07-14T18:04:10.724Z] [INFO] [#tid_12] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.726Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/2a929c09c19a4d6a8dcec9d75774b0f6, rev: null' [marker:database_saveDocument_start:29650] 
+[2017-07-14T18:04:10.727Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1a704c1975f144e18f8626f93453241b, rev: null', response: '{"ok":true,"id":"whisk.system/1a704c1975f144e18f8626f93453241b","rev":"1-dcc5d60982b1a0f1e16af7bbc0787614"}' [marker:database_saveDocument_finish:29560:40] 
+[2017-07-14T18:04:10.727Z] [INFO] [#tid_18] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.773Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/2a929c09c19a4d6a8dcec9d75774b0f6, rev: null', response: '{"ok":true,"id":"whisk.system/2a929c09c19a4d6a8dcec9d75774b0f6","rev":"1-ca71d3103bfb88f37882a4817269eed7"}' [marker:database_saveDocument_finish:29698:48] 
+[2017-07-14T18:04:10.773Z] [INFO] [#tid_12] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:10.787Z] [INFO] [#tid_14] [KubernetesClient] [marker:invoker_kubectl.logs_finish:29654:866] 
+[2017-07-14T18:04:10.788Z] [INFO] [#tid_14] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:10.789Z] [INFO] [#tid_14] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ec7825e738e949c8a4e9b8001653bca4, rev: null' [marker:database_saveDocument_start:29655] 
+[2017-07-14T18:04:10.834Z] [INFO] [#tid_14] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ec7825e738e949c8a4e9b8001653bca4, rev: null', response: '{"ok":true,"id":"whisk.system/ec7825e738e949c8a4e9b8001653bca4","rev":"1-7894c796b870e3461ee28e205967dfba"}' [marker:database_saveDocument_finish:29701:46] 
+[2017-07-14T18:04:10.834Z] [INFO] [#tid_14] [InvokerReactive] recorded activation 
+[2017-07-14T18:04:11.205Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.205Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.205Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.205Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.205Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.706Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T18:04:11.706Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T18:04:56.615Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][45 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T18:04:56.624Z] [INFO] [#tid_20] [InvokerReactive] [marker:invoker_activation_start:151] 
+[2017-07-14T18:04:56.624Z] [INFO] [#tid_20] [InvokerReactive] whisk.system/hi whisk.system 1a2e44de85ed4830b0b172369ab31153 
+[2017-07-14T18:04:56.630Z] [INFO] [#tid_20] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:157] 
+[2017-07-14T18:04:56.641Z] [INFO] [#tid_20] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-32-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationRun_start:167] 
+[2017-07-14T18:04:56.746Z] [INFO] [#tid_20] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:272:104] 
+[2017-07-14T18:04:56.747Z] [INFO] [#tid_20] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-32-whisksystem-hi --since-time 2017-07-14T18:04:09.415438344Z [marker:invoker_kubectl.logs_start:273] 
+[2017-07-14T18:04:56.758Z] [INFO] [#tid_20] [InvokerReactive] posted completion of activation 1a2e44de85ed4830b0b172369ab31153 
+[2017-07-14T18:04:57.368Z] [INFO] [#tid_20] [KubernetesClient] [marker:invoker_kubectl.logs_finish:894:621] 
+[2017-07-14T18:04:57.370Z] [INFO] [#tid_20] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:04:57.372Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1a2e44de85ed4830b0b172369ab31153, rev: null' [marker:database_saveDocument_start:899] 
+[2017-07-14T18:04:57.705Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1a2e44de85ed4830b0b172369ab31153, rev: null', response: '{"ok":true,"id":"whisk.system/1a2e44de85ed4830b0b172369ab31153","rev":"1-2092467975d9f4fb1b4b0ba93ce9d24f"}' [marker:database_saveDocument_finish:1231:332] 
+[2017-07-14T18:04:57.705Z] [INFO] [#tid_20] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:01.715Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T18:05:16.755Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][46 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T18:05:16.759Z] [INFO] [#tid_22] [InvokerReactive] [marker:invoker_activation_start:35] 
+[2017-07-14T18:05:16.760Z] [INFO] [#tid_22] [InvokerReactive] whisk.system/hi whisk.system 4dcb272795bc45a1a46a409b0e916a55 
+[2017-07-14T18:05:16.766Z] [INFO] [#tid_22] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:41] 
+[2017-07-14T18:05:16.777Z] [INFO] [#tid_22] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-32-whisksystem-hi) ContainerIp(172.17.0.19) [marker:invoker_activationRun_start:47] 
+[2017-07-14T18:05:16.785Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][47 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T18:05:16.787Z] [INFO] [#tid_21] [InvokerReactive] [marker:invoker_activation_start:64] 
+[2017-07-14T18:05:16.787Z] [INFO] [#tid_21] [InvokerReactive] whisk.system/hi whisk.system 64b47c6b698b4c1f9263f6a3d456ec8c 
+[2017-07-14T18:05:16.788Z] [INFO] [#tid_21] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:66] 
+[2017-07-14T18:05:16.790Z] [INFO] [#tid_21] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-21-prewarm-nodejs6) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:68] 
+[2017-07-14T18:05:16.864Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][48 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T18:05:16.866Z] [INFO] [#tid_23] [InvokerReactive] [marker:invoker_activation_start:139] 
+[2017-07-14T18:05:16.867Z] [INFO] [#tid_23] [InvokerReactive] whisk.system/hi whisk.system 76ffffcc4b214fbd9d7d46bf12dad83e 
+[2017-07-14T18:05:16.904Z] [INFO] [#tid_23] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:178] 
+[2017-07-14T18:05:16.907Z] [INFO] [#tid_23] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-27-whisksystem-hi) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:180] 
+[2017-07-14T18:05:16.927Z] [INFO] [#tid_22] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:204:157] 
+[2017-07-14T18:05:16.936Z] [INFO] [#tid_23] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:207:25] 
+[2017-07-14T18:05:16.936Z] [INFO] [#tid_23] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-27-whisksystem-hi --since-time 2017-07-14T18:04:08.905990085Z [marker:invoker_kubectl.logs_start:209] 
+[2017-07-14T18:05:16.940Z] [INFO] [#tid_22] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-32-whisksystem-hi --since-time 2017-07-14T18:04:56.756815141Z [marker:invoker_kubectl.logs_start:216] 
+[2017-07-14T18:05:16.978Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][49 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T18:05:17.075Z] [INFO] [#tid_29] [InvokerReactive] [marker:invoker_activation_start:197] 
+[2017-07-14T18:05:17.076Z] [INFO] [#tid_23] [InvokerReactive] posted completion of activation 76ffffcc4b214fbd9d7d46bf12dad83e 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_22] [InvokerReactive] posted completion of activation 4dcb272795bc45a1a46a409b0e916a55 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_29] [InvokerReactive] whisk.system/hi whisk.system b496b282da4c440a8a7c70ee8f549e9a 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_29] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:291] 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_29] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-26-whisksystem-hi) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:291] 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_29] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:307:15] 
+[2017-07-14T18:05:17.135Z] [INFO] [#tid_29] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-26-whisksystem-hi --since-time 2017-07-14T18:04:08.949201315Z [marker:invoker_kubectl.logs_start:307] 
+[2017-07-14T18:05:17.185Z] [INFO] [#tid_29] [InvokerReactive] posted completion of activation b496b282da4c440a8a7c70ee8f549e9a 
+[2017-07-14T18:05:17.230Z] [INFO] [#tid_21] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:467:399] 
+[2017-07-14T18:05:17.230Z] [INFO] [#tid_21] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-21-prewarm-nodejs6 --since-time 2017-07-14T18:03:43.493663147Z [marker:invoker_kubectl.logs_start:469] 
+[2017-07-14T18:05:17.232Z] [INFO] [#tid_21] [InvokerReactive] posted completion of activation 64b47c6b698b4c1f9263f6a3d456ec8c 
+[2017-07-14T18:05:17.346Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][50 (1)][pipelineOccupancy=5 (8)] 
+[2017-07-14T18:05:17.349Z] [INFO] [#tid_24] [InvokerReactive] [marker:invoker_activation_start:603] 
+[2017-07-14T18:05:17.350Z] [INFO] [#tid_24] [InvokerReactive] whisk.system/hi whisk.system 741c5fe8e38948d29ba5465aacedf679 
+[2017-07-14T18:05:17.358Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][51 (1)][pipelineOccupancy=6 (8)] 
+[2017-07-14T18:05:17.362Z] [INFO] [#tid_30] [InvokerReactive] [marker:invoker_activation_start:511] 
+[2017-07-14T18:05:17.363Z] [INFO] [#tid_30] [InvokerReactive] whisk.system/hi whisk.system 1f3ba9e2efe3407f9afd095309eed74a 
+[2017-07-14T18:05:17.363Z] [INFO] [#tid_30] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:512] 
+[2017-07-14T18:05:17.366Z] [INFO] [#tid_30] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-23-prewarm-nodejs6) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:514] 
+[2017-07-14T18:05:17.374Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][52 (1)][pipelineOccupancy=7 (8)] 
+[2017-07-14T18:05:17.381Z] [INFO] [#tid_26] [InvokerReactive] [marker:invoker_activation_start:619] 
+[2017-07-14T18:05:17.381Z] [INFO] [#tid_26] [InvokerReactive] whisk.system/hi whisk.system ceb322fb08aa4feea5c88f06545e02b8 
+[2017-07-14T18:05:17.664Z] [INFO] [#tid_26] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:903] 
+[2017-07-14T18:05:17.673Z] [INFO] [#tid_26] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-28-whisksystem-hi) ContainerIp(172.17.0.20) [marker:invoker_activationRun_start:911] 
+[2017-07-14T18:05:17.675Z] [INFO] [#tid_24] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:929] 
+[2017-07-14T18:05:17.695Z] [INFO] [#tid_24] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-30-whisksystem-hi) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:931] 
+[2017-07-14T18:05:17.876Z] [INFO] [#tid_24] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1127:196] 
+[2017-07-14T18:05:17.876Z] [INFO] [#tid_24] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-30-whisksystem-hi --since-time 2017-07-14T18:04:09.917174503Z [marker:invoker_kubectl.logs_start:1128] 
+[2017-07-14T18:05:17.877Z] [INFO] [#tid_24] [InvokerReactive] posted completion of activation 741c5fe8e38948d29ba5465aacedf679 
+[2017-07-14T18:05:17.945Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][53 (2)][pipelineOccupancy=8 (8)] 
+[2017-07-14T18:05:17.946Z] [INFO] [#tid_27] [InvokerReactive] [marker:invoker_activation_start:1173] 
+[2017-07-14T18:05:17.946Z] [INFO] [#tid_27] [InvokerReactive] whisk.system/hi whisk.system c55c8926d9bb4da3a36dff0fd9f44bea 
+[2017-07-14T18:05:17.947Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][54 (2)][pipelineOccupancy=9 (8)] 
+[2017-07-14T18:05:18.006Z] [INFO] [#tid_27] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:1174] 
+[2017-07-14T18:05:18.014Z] [INFO] [#tid_26] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:1253:342] 
+[2017-07-14T18:05:19.064Z] [INFO] [#tid_26] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-28-whisksystem-hi --since-time 2017-07-14T18:04:09.681893388Z [marker:invoker_kubectl.logs_start:1254] 
+[2017-07-14T18:05:19.069Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T18:05:19.071Z] [INFO] [#tid_28] [InvokerReactive] [marker:invoker_activation_start:1988] 
+[2017-07-14T18:05:19.071Z] [INFO] [#tid_28] [InvokerReactive] whisk.system/hi whisk.system 563dbd3d50a04afdbaa4d2e2fdbb16d3 
+[2017-07-14T18:05:19.071Z] [INFO] [#tid_30] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:2100:1585] 
+[2017-07-14T18:05:19.111Z] [INFO] [#tid_30] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-23-prewarm-nodejs6 --since-time 2017-07-14T18:03:42.602937468Z [marker:invoker_kubectl.logs_start:2161] 
+[2017-07-14T18:05:19.112Z] [INFO] [#tid_26] [InvokerReactive] posted completion of activation ceb322fb08aa4feea5c88f06545e02b8 
+[2017-07-14T18:05:19.112Z] [INFO] [#tid_30] [InvokerReactive] posted completion of activation 1f3ba9e2efe3407f9afd095309eed74a 
+[2017-07-14T18:05:19.112Z] [INFO] [#tid_28] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:2330] 
+[2017-07-14T18:05:19.113Z] [INFO] [#tid_28] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-31-whisksystem-hi) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:2331] 
+[2017-07-14T18:05:19.113Z] [INFO] [#tid_27] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-29-whisksystem-hi) ContainerIp(172.17.0.18) [marker:invoker_activationRun_start:2340] 
+[2017-07-14T18:05:19.351Z] [INFO] [#tid_27] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:2538:197] 
+[2017-07-14T18:05:19.407Z] [INFO] [#tid_28] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:2627:296] 
+[2017-07-14T18:05:19.422Z] [INFO] [#tid_28] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-31-whisksystem-hi --since-time 2017-07-14T18:04:09.38442414Z [marker:invoker_kubectl.logs_start:2641] 
+[2017-07-14T18:05:19.423Z] [INFO] [#tid_28] [InvokerReactive] posted completion of activation 563dbd3d50a04afdbaa4d2e2fdbb16d3 
+[2017-07-14T18:05:20.677Z] [INFO] [#tid_27] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-29-whisksystem-hi --since-time 2017-07-14T18:04:09.56089861Z [marker:invoker_kubectl.logs_start:3904] 
+[2017-07-14T18:05:20.678Z] [INFO] [#tid_27] [InvokerReactive] posted completion of activation c55c8926d9bb4da3a36dff0fd9f44bea 
+[2017-07-14T18:05:20.977Z] [INFO] [#tid_21] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4238:3769] 
+[2017-07-14T18:05:20.977Z] [INFO] [#tid_21] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:20.977Z] [INFO] [#tid_22] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4245:4027] 
+[2017-07-14T18:05:20.977Z] [INFO] [#tid_23] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4242:4033] 
+[2017-07-14T18:05:20.978Z] [INFO] [#tid_23] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:20.978Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/76ffffcc4b214fbd9d7d46bf12dad83e, rev: null' [marker:database_saveDocument_start:4243] 
+[2017-07-14T18:05:20.978Z] [INFO] [#tid_22] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:20.979Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T18:05:20.979Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/64b47c6b698b4c1f9263f6a3d456ec8c, rev: null' [marker:database_saveDocument_start:4252] 
+[2017-07-14T18:05:20.980Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][55 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T18:05:20.980Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T18:05:20.981Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T18:05:20.981Z] [INFO] [#tid_25] [InvokerReactive] [marker:invoker_activation_start:4226] 
+[2017-07-14T18:05:20.981Z] [INFO] [#tid_25] [InvokerReactive] whisk.system/hi whisk.system 85b7332dfdeb47df9650e3647e10bae6 
+[2017-07-14T18:05:20.981Z] [INFO] [#tid_25] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-7d0713c8f3d2ccc43d09646f1024ca59 [marker:database_cacheHit_count:4228] 
+[2017-07-14T18:05:20.992Z] [INFO] [#tid_25] [KubernetesContainer] sending arguments to /whisk.system/hi at ContainerId(wsk-21-prewarm-nodejs6) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:4231] 
+[2017-07-14T18:05:20.993Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/4dcb272795bc45a1a46a409b0e916a55, rev: null' [marker:database_saveDocument_start:4260] 
+[2017-07-14T18:05:21.117Z] [INFO] [#tid_25] [KubernetesContainer] running result: ok [marker:invoker_activationRun_finish:4365:131] 
+[2017-07-14T18:05:21.177Z] [INFO] [#tid_25] [KubernetesClient] running /usr/bin/kubectl logs --timestamps wsk-21-prewarm-nodejs6 --since-time 2017-07-14T18:05:17.175125122Z [marker:invoker_kubectl.logs_start:4368] 
+[2017-07-14T18:05:21.192Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/4dcb272795bc45a1a46a409b0e916a55, rev: null', response: '{"ok":true,"id":"whisk.system/4dcb272795bc45a1a46a409b0e916a55","rev":"1-0481b9882fe457f0cbaa471297c0d077"}' [marker:database_saveDocument_finish:4464:203] 
+[2017-07-14T18:05:21.192Z] [INFO] [#tid_22] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.192Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/64b47c6b698b4c1f9263f6a3d456ec8c, rev: null', response: '{"ok":true,"id":"whisk.system/64b47c6b698b4c1f9263f6a3d456ec8c","rev":"1-c559dba9e9edb0880c9058e67041d042"}' [marker:database_saveDocument_finish:4468:216] 
+[2017-07-14T18:05:21.192Z] [INFO] [#tid_21] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.194Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/76ffffcc4b214fbd9d7d46bf12dad83e, rev: null', response: '{"ok":true,"id":"whisk.system/76ffffcc4b214fbd9d7d46bf12dad83e","rev":"1-ed30f099a36124df1be746411f21d453"}' [marker:database_saveDocument_finish:4468:225] 
+[2017-07-14T18:05:21.195Z] [INFO] [#tid_23] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.314Z] [INFO] [#tid_29] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4532:4224] 
+[2017-07-14T18:05:21.315Z] [INFO] [#tid_24] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4568:3440] 
+[2017-07-14T18:05:21.315Z] [INFO] [#tid_25] [InvokerReactive] posted completion of activation 85b7332dfdeb47df9650e3647e10bae6 
+[2017-07-14T18:05:21.389Z] [INFO] [#tid_24] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.389Z] [INFO] [#tid_29] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.484Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/b496b282da4c440a8a7c70ee8f549e9a, rev: null' [marker:database_saveDocument_start:4702] 
+[2017-07-14T18:05:21.487Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/741c5fe8e38948d29ba5465aacedf679, rev: null' [marker:database_saveDocument_start:4739] 
+[2017-07-14T18:05:21.489Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T18:05:21.499Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/741c5fe8e38948d29ba5465aacedf679, rev: null', response: '{"ok":true,"id":"whisk.system/741c5fe8e38948d29ba5465aacedf679","rev":"1-1c1eed27361f753ff63f055fb7854391"}' [marker:database_saveDocument_finish:4753:14] 
+[2017-07-14T18:05:21.500Z] [INFO] [#tid_24] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.549Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T18:05:21.551Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T18:05:21.560Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/b496b282da4c440a8a7c70ee8f549e9a, rev: null', response: '{"ok":true,"id":"whisk.system/b496b282da4c440a8a7c70ee8f549e9a","rev":"1-4d5e24995a202583cc36c12a5c54b213"}' [marker:database_saveDocument_finish:4778:76] 
+[2017-07-14T18:05:21.560Z] [INFO] [#tid_29] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.720Z] [INFO] [#tid_30] [KubernetesClient] [marker:invoker_kubectl.logs_finish:4778:2617] 
+[2017-07-14T18:05:21.773Z] [INFO] [#tid_30] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.774Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1f3ba9e2efe3407f9afd095309eed74a, rev: null' [marker:database_saveDocument_start:4909] 
+[2017-07-14T18:05:21.774Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1f3ba9e2efe3407f9afd095309eed74a, rev: null', response: '{"ok":true,"id":"whisk.system/1f3ba9e2efe3407f9afd095309eed74a","rev":"1-f791b620bd9d997ad0c1abb1d51b7ae7"}' [marker:database_saveDocument_finish:4920:11] 
+[2017-07-14T18:05:21.774Z] [INFO] [#tid_30] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.848Z] [INFO] [#tid_27] [KubernetesClient] [marker:invoker_kubectl.logs_finish:5075:1171] 
+[2017-07-14T18:05:21.852Z] [INFO] [#tid_27] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.852Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c55c8926d9bb4da3a36dff0fd9f44bea, rev: null' [marker:database_saveDocument_start:5078] 
+[2017-07-14T18:05:21.868Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c55c8926d9bb4da3a36dff0fd9f44bea, rev: null', response: '{"ok":true,"id":"whisk.system/c55c8926d9bb4da3a36dff0fd9f44bea","rev":"1-5aae3ab9d3c770c77081921ee8a81c52"}' [marker:database_saveDocument_finish:5096:18] 
+[2017-07-14T18:05:21.868Z] [INFO] [#tid_27] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.914Z] [INFO] [#tid_25] [KubernetesClient] [marker:invoker_kubectl.logs_finish:5163:795] 
+[2017-07-14T18:05:21.950Z] [INFO] [#tid_25] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.952Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/85b7332dfdeb47df9650e3647e10bae6, rev: null' [marker:database_saveDocument_start:5200] 
+[2017-07-14T18:05:21.953Z] [INFO] [#tid_26] [KubernetesClient] [marker:invoker_kubectl.logs_finish:5192:2890] 
+[2017-07-14T18:05:21.954Z] [INFO] [#tid_26] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:21.955Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ceb322fb08aa4feea5c88f06545e02b8, rev: null' [marker:database_saveDocument_start:5193] 
+[2017-07-14T18:05:21.966Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ceb322fb08aa4feea5c88f06545e02b8, rev: null', response: '{"ok":true,"id":"whisk.system/ceb322fb08aa4feea5c88f06545e02b8","rev":"1-6ddac19200de8df0c778d34f02a00428"}' [marker:database_saveDocument_finish:5205:12] 
+[2017-07-14T18:05:21.966Z] [INFO] [#tid_26] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:21.967Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/85b7332dfdeb47df9650e3647e10bae6, rev: null', response: '{"ok":true,"id":"whisk.system/85b7332dfdeb47df9650e3647e10bae6","rev":"1-cb388456979c8f67871f75ffdce2d46e"}' [marker:database_saveDocument_finish:5216:16] 
+[2017-07-14T18:05:21.968Z] [INFO] [#tid_25] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:22.006Z] [INFO] [#tid_28] [KubernetesClient] [marker:invoker_kubectl.logs_finish:5224:2583] 
+[2017-07-14T18:05:22.006Z] [INFO] [#tid_28] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T18:05:22.006Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/563dbd3d50a04afdbaa4d2e2fdbb16d3, rev: null' [marker:database_saveDocument_start:5225] 
+[2017-07-14T18:05:22.016Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/563dbd3d50a04afdbaa4d2e2fdbb16d3, rev: null', response: '{"ok":true,"id":"whisk.system/563dbd3d50a04afdbaa4d2e2fdbb16d3","rev":"1-932ecf656d880bd2126c0ff1aafda4a7"}' [marker:database_saveDocument_finish:5236:11] 
+[2017-07-14T18:05:22.016Z] [INFO] [#tid_28] [InvokerReactive] recorded activation 
+[2017-07-14T18:05:23.561Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T18:05:23.562Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T18:05:23.562Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T18:05:23.562Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T18:05:23.562Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 

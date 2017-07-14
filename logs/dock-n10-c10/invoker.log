@@ -1,0 +1,1004 @@
+Waiting for controller to be available
+................................................................[2017-07-14T19:53:45.145Z] [INFO] Slf4jLogger started 
+[2017-07-14T19:53:45.382Z] [INFO] [??] [Config] environment set value for db.whisk.actions 
+[2017-07-14T19:53:45.400Z] [INFO] [??] [Config] environment set value for db.protocol 
+[2017-07-14T19:53:45.402Z] [INFO] [??] [Config] environment set value for consulserver.host 
+[2017-07-14T19:53:45.405Z] [INFO] [??] [Config] environment set value for docker.image.prefix 
+[2017-07-14T19:53:45.406Z] [INFO] [??] [Config] environment set value for invoker.container.network 
+[2017-07-14T19:53:45.408Z] [INFO] [??] [Config] environment set value for whisk.version.date 
+[2017-07-14T19:53:45.411Z] [INFO] [??] [Config] environment set value for whisk.api.host.name 
+[2017-07-14T19:53:45.414Z] [INFO] [??] [Config] environment set value for db.port 
+[2017-07-14T19:53:45.416Z] [INFO] [??] [Config] environment set value for whisk.version.buildno 
+[2017-07-14T19:53:45.417Z] [INFO] [??] [Config] environment set value for db.username 
+[2017-07-14T19:53:45.419Z] [INFO] [??] [Config] environment set value for db.whisk.activations 
+[2017-07-14T19:53:45.420Z] [INFO] [??] [Config] environment set value for docker.registry 
+[2017-07-14T19:53:45.420Z] [INFO] [??] [Config] environment set value for invoker.useReactivePool 
+[2017-07-14T19:53:45.421Z] [INFO] [??] [Config] environment set value for db.whisk.auths 
+[2017-07-14T19:53:45.423Z] [INFO] [??] [Config] environment set value for whisk.logs.dir 
+[2017-07-14T19:53:45.426Z] [INFO] [??] [Config] environment set value for invoker.useKubernetes 
+[2017-07-14T19:53:45.426Z] [INFO] [??] [Config] environment set value for runtimes.manifest 
+[2017-07-14T19:53:45.426Z] [INFO] [??] [Config] environment set value for kafka.host.port 
+[2017-07-14T19:53:45.426Z] [INFO] [??] [Config] environment set value for consul.host.port4 
+[2017-07-14T19:53:45.427Z] [INFO] [??] [Config] environment set value for db.host 
+[2017-07-14T19:53:45.432Z] [INFO] [??] [Config] environment set value for port 
+[2017-07-14T19:53:45.433Z] [INFO] [??] [Config] environment set value for db.provider 
+[2017-07-14T19:53:45.436Z] [INFO] [??] [Config] environment set value for db.password 
+[2017-07-14T19:53:45.436Z] [INFO] [??] [Config] environment set value for kafka.host 
+[2017-07-14T19:53:45.437Z] [INFO] [??] [WhiskConfig] reading properties from consul at consul.openwhisk:8500 
+[2017-07-14T19:54:50.572Z] [WARN] [??] [WhiskConfig] failed to read properties from consul: Futures timed out after [1 minute] 
+[2017-07-14T19:54:51.959Z] [INFO] [??] [InvokerReactive] using whisk.core.containerpool.docker.DockerContainerFactory@676f0a60 
+[2017-07-14T19:54:51.972Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker ps --quiet --no-trunc --filter name=wsk_ [marker:invoker_docker.ps_start:66662] 
+[2017-07-14T19:54:52.214Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.ps_finish:66909:240] 
+[2017-07-14T19:54:52.229Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc resume ee6d5c967d0a57523e25b56d278dde168aa1ba77dba1a426e250f6d0a2bb5e26 [marker:invoker_runc.resume_start:66925] 
+[2017-07-14T19:54:52.271Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc resume 75c39b5d8a43532574f648c633fe246f78b108aa346a9f276a8e416d67a86f5d [marker:invoker_runc.resume_start:66963] 
+[2017-07-14T19:54:52.393Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not paused [marker:invoker_runc.resume_error:67055:123] 
+[2017-07-14T19:54:52.395Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f ee6d5c967d0a57523e25b56d278dde168aa1ba77dba1a426e250f6d0a2bb5e26 [marker:invoker_docker.rm_start:67080] 
+[2017-07-14T19:54:52.407Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not paused [marker:invoker_runc.resume_error:67102:139] 
+[2017-07-14T19:54:52.407Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 75c39b5d8a43532574f648c633fe246f78b108aa346a9f276a8e416d67a86f5d [marker:invoker_docker.rm_start:67102] 
+[2017-07-14T19:54:52.684Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:67380:277] 
+[2017-07-14T19:54:52.790Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:67485:405] 
+[2017-07-14T19:54:52.800Z] [INFO] [??] [ContainerPool] pre-warming 2 nodejs:6 containers 
+[2017-07-14T19:54:52.811Z] [INFO] [??] [Invoker] using whisk.core.invoker.InvokerReactive@49298ce7 
+[2017-07-14T19:54:53.822Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_1_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:67734] 
+[2017-07-14T19:54:53.822Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_2_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:67760] 
+[2017-07-14T19:54:54.930Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:69625:1864] 
+[2017-07-14T19:54:55.071Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:69709:1961] 
+[2017-07-14T19:55:00.883Z] [INFO] Bound to /0.0.0.0:8080 
+[2017-07-14T19:55:00.937Z] [INFO] Message [akka.io.Tcp$Bound] from Actor[akka://invoker-actor-system/user/IO-HTTP/listener-0#-504635762] to Actor[akka://invoker-actor-system/deadLetters] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'. 
+[2017-07-14T19:55:01.942Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][0 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T19:55:02.771Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:163619] 
+[2017-07-14T19:55:02.947Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 07df787725934f1fa49860328e1b531b 
+[2017-07-14T19:55:02.954Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:03.618Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:164465] 
+[2017-07-14T19:55:06.731Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:167569:3086] 
+[2017-07-14T19:55:07.139Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_3_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:81823] 
+[2017-07-14T19:55:07.139Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(1bead48d573e255daa60534b7dc72a646795190bf6231b137c4bd72adb619e10) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:167986] 
+[2017-07-14T19:55:08.178Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:82874:1051] 
+[2017-07-14T19:55:08.569Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:169410:1421] 
+[2017-07-14T19:55:08.581Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(1bead48d573e255daa60534b7dc72a646795190bf6231b137c4bd72adb619e10) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:169420] 
+[2017-07-14T19:55:08.667Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:169515:90] 
+[2017-07-14T19:55:09.062Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 07df787725934f1fa49860328e1b531b 
+[2017-07-14T19:55:09.537Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][1 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T19:55:09.540Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:170389] 
+[2017-07-14T19:55:09.541Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system cdd2b091fed04278801ed27076e94b3c 
+[2017-07-14T19:55:09.543Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:09.544Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:170389] 
+[2017-07-14T19:55:09.592Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:170441:49] 
+[2017-07-14T19:55:09.616Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:09.640Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(5e596eb447abb23a1288668e7898f13439d0ed03fdee2a179139cfbbabbe3f7b) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:170489] 
+[2017-07-14T19:55:09.640Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_4_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:84337] 
+[2017-07-14T19:55:09.713Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/07df787725934f1fa49860328e1b531b, rev: null' [marker:database_saveDocument_start:170560] 
+[2017-07-14T19:55:09.890Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:170736:242] 
+[2017-07-14T19:55:09.900Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(5e596eb447abb23a1288668e7898f13439d0ed03fdee2a179139cfbbabbe3f7b) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:170741] 
+[2017-07-14T19:55:09.904Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:170751:10] 
+[2017-07-14T19:55:09.915Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:09.915Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/cdd2b091fed04278801ed27076e94b3c, rev: null' [marker:database_saveDocument_start:170765] 
+[2017-07-14T19:55:09.926Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation cdd2b091fed04278801ed27076e94b3c 
+[2017-07-14T19:55:09.956Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][2 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T19:55:09.961Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:170807] 
+[2017-07-14T19:55:09.964Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system b85d8906aa04487f85a2ec626b858ab0 
+[2017-07-14T19:55:09.965Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:09.965Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:170815] 
+[2017-07-14T19:55:10.014Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:170860:45] 
+[2017-07-14T19:55:10.028Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_5_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:84724] 
+[2017-07-14T19:55:10.037Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:170880] 
+[2017-07-14T19:55:10.314Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:171164:282] 
+[2017-07-14T19:55:10.315Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:171165] 
+[2017-07-14T19:55:10.993Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:171226:60] 
+[2017-07-14T19:55:10.993Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:10.993Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/b85d8906aa04487f85a2ec626b858ab0, rev: null' [marker:database_saveDocument_start:171230] 
+[2017-07-14T19:55:11.009Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T19:55:11.009Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T19:55:11.012Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T19:55:11.202Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation b85d8906aa04487f85a2ec626b858ab0 
+[2017-07-14T19:55:11.202Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 5e596eb447abb23a1288668e7898f13439d0ed03fdee2a179139cfbbabbe3f7b [marker:invoker_runc.pause_start:85896] 
+[2017-07-14T19:55:11.212Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 1bead48d573e255daa60534b7dc72a646795190bf6231b137c4bd72adb619e10 [marker:invoker_runc.pause_start:85898] 
+[2017-07-14T19:55:11.238Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/07df787725934f1fa49860328e1b531b, rev: null', response: '{"ok":true,"id":"whisk.system/07df787725934f1fa49860328e1b531b","rev":"1-dd384549300465bd1865f9707c77f120"}' [marker:database_saveDocument_finish:172087:1523] 
+[2017-07-14T19:55:11.238Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:11.250Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/cdd2b091fed04278801ed27076e94b3c, rev: null', response: '{"ok":true,"id":"whisk.system/cdd2b091fed04278801ed27076e94b3c","rev":"1-79209235e57ee131446ef9d8d14ae1c1"}' [marker:database_saveDocument_finish:172099:1334] 
+[2017-07-14T19:55:11.251Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:11.281Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:85974:1637] 
+[2017-07-14T19:55:11.318Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/b85d8906aa04487f85a2ec626b858ab0, rev: null', response: '{"ok":true,"id":"whisk.system/b85d8906aa04487f85a2ec626b858ab0","rev":"1-cc4ba47cd6a24efa03168c6f9548219f"}' [marker:database_saveDocument_finish:172167:937] 
+[2017-07-14T19:55:11.319Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:11.448Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][3 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T19:55:11.544Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:172299] 
+[2017-07-14T19:55:11.544Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system eb34ade336d94fe89ae6111a856b2e45 
+[2017-07-14T19:55:11.544Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:11.546Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:172299] 
+[2017-07-14T19:55:11.570Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:86258:360] 
+[2017-07-14T19:55:11.571Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 1bead48d573e255daa60534b7dc72a646795190bf6231b137c4bd72adb619e10 [marker:invoker_docker.rm_start:86264] 
+[2017-07-14T19:55:11.658Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:86354:457] 
+[2017-07-14T19:55:11.665Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 5e596eb447abb23a1288668e7898f13439d0ed03fdee2a179139cfbbabbe3f7b [marker:invoker_docker.rm_start:86356] 
+[2017-07-14T19:55:11.673Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:172521:222] 
+[2017-07-14T19:55:11.689Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:86386:1662] 
+[2017-07-14T19:55:11.696Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:172544] 
+[2017-07-14T19:55:11.704Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:172552:7] 
+[2017-07-14T19:55:11.706Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:11.707Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/eb34ade336d94fe89ae6111a856b2e45, rev: null' [marker:database_saveDocument_start:172556] 
+[2017-07-14T19:55:11.710Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation eb34ade336d94fe89ae6111a856b2e45 
+[2017-07-14T19:55:11.961Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][4 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T19:55:11.962Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:172811] 
+[2017-07-14T19:55:11.962Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 1909e7aee8894e79a16ef5d984bfd61f 
+[2017-07-14T19:55:11.963Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:11.963Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:172812] 
+[2017-07-14T19:55:11.998Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/eb34ade336d94fe89ae6111a856b2e45, rev: null', response: '{"ok":true,"id":"whisk.system/eb34ade336d94fe89ae6111a856b2e45","rev":"1-11abdf6a467255bc0792cc1f5968f508"}' [marker:database_saveDocument_finish:172694:137] 
+[2017-07-14T19:55:11.998Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:12.001Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:172850:38] 
+[2017-07-14T19:55:12.092Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:172937] 
+[2017-07-14T19:55:12.096Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:172944:7] 
+[2017-07-14T19:55:12.099Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:12.102Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1909e7aee8894e79a16ef5d984bfd61f, rev: null' [marker:database_saveDocument_start:172950] 
+[2017-07-14T19:55:12.105Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 1909e7aee8894e79a16ef5d984bfd61f 
+[2017-07-14T19:55:12.128Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1909e7aee8894e79a16ef5d984bfd61f, rev: null', response: '{"ok":true,"id":"whisk.system/1909e7aee8894e79a16ef5d984bfd61f","rev":"1-11b984479d98cdc50efbfd93c7608aee"}' [marker:database_saveDocument_finish:172975:25] 
+[2017-07-14T19:55:12.136Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:12.140Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][5 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T19:55:12.144Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:172992] 
+[2017-07-14T19:55:12.144Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system ab7043961df445cda936b3306008b524 
+[2017-07-14T19:55:12.144Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:12.145Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:172992] 
+[2017-07-14T19:55:12.192Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:173041:49] 
+[2017-07-14T19:55:12.194Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:173043] 
+[2017-07-14T19:55:12.200Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:173046:3] 
+[2017-07-14T19:55:12.208Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation ab7043961df445cda936b3306008b524 
+[2017-07-14T19:55:12.231Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:12.231Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ab7043961df445cda936b3306008b524, rev: null' [marker:database_saveDocument_start:173063] 
+[2017-07-14T19:55:12.245Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][6 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T19:55:12.245Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:173095] 
+[2017-07-14T19:55:12.246Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system dcb0dec028654080bc1cb89ec97c6246 
+[2017-07-14T19:55:12.246Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:12.246Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:173096] 
+[2017-07-14T19:55:12.274Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:173121:25] 
+[2017-07-14T19:55:12.277Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:173123] 
+[2017-07-14T19:55:12.283Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:86979:714] 
+[2017-07-14T19:55:12.297Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:173147:24] 
+[2017-07-14T19:55:12.304Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:12.313Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/dcb0dec028654080bc1cb89ec97c6246, rev: null' [marker:database_saveDocument_start:173156] 
+[2017-07-14T19:55:12.315Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ab7043961df445cda936b3306008b524, rev: null', response: '{"ok":true,"id":"whisk.system/ab7043961df445cda936b3306008b524","rev":"1-1695db9ecb1c12b66f22b3f244ccd1e5"}' [marker:database_saveDocument_finish:173162:99] 
+[2017-07-14T19:55:12.326Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:12.326Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation dcb0dec028654080bc1cb89ec97c6246 
+[2017-07-14T19:55:12.359Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][7 (1)][pipelineOccupancy=5 (8)] 
+[2017-07-14T19:55:12.362Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:173211] 
+[2017-07-14T19:55:12.365Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T19:55:12.374Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 2f2dee1b8d2c4b1fb93404294c280c02 
+[2017-07-14T19:55:12.380Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T19:55:12.384Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:173216] 
+[2017-07-14T19:55:12.391Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/dcb0dec028654080bc1cb89ec97c6246, rev: null', response: '{"ok":true,"id":"whisk.system/dcb0dec028654080bc1cb89ec97c6246","rev":"1-cb2b793cf02d2fee1044e93a07bee513"}' [marker:database_saveDocument_finish:173241:78] 
+[2017-07-14T19:55:12.396Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:12.460Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:173308:92] 
+[2017-07-14T19:55:12.462Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:173311] 
+[2017-07-14T19:55:12.468Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:173317:5] 
+[2017-07-14T19:55:12.487Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T19:55:12.491Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 2f2dee1b8d2c4b1fb93404294c280c02 
+[2017-07-14T19:55:12.503Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/2f2dee1b8d2c4b1fb93404294c280c02, rev: null' [marker:database_saveDocument_start:173328] 
+[2017-07-14T19:55:12.507Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/2f2dee1b8d2c4b1fb93404294c280c02, rev: null', response: '{"ok":true,"id":"whisk.system/2f2dee1b8d2c4b1fb93404294c280c02","rev":"1-7145afee7d544391d2246020c63da060"}' [marker:database_saveDocument_finish:173357:29] 
+[2017-07-14T19:55:12.508Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T19:55:12.573Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:87270:914] 
+[2017-07-14T19:55:12.872Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T19:55:13.385Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T19:55:13.497Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536 [marker:invoker_runc.pause_start:88193] 
+[2017-07-14T19:55:13.604Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:88301:107] 
+[2017-07-14T19:55:13.605Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f fd82e86b45372b466d4ded73b6f3520d95ff44972eaba142590c8b7670d53536 [marker:invoker_docker.rm_start:88302] 
+[2017-07-14T19:55:13.798Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:88495:193] 
+[2017-07-14T19:55:13.888Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T19:55:14.892Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:11:04.001Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][8 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:11:04.211Z] [INFO] [#tid_6] [InvokerReactive] [marker:invoker_activation_start:592] 
+[2017-07-14T20:11:04.224Z] [INFO] [#tid_6] [InvokerReactive] whisk.system/hi whisk.system d1bde34fb3ad4f819fcfd4e00ae722c2 
+[2017-07-14T20:11:04.567Z] [INFO] [#tid_6] [WhiskAction] [GET] serving from datastore: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheMiss_count:949] 
+[2017-07-14T20:11:04.579Z] [INFO] [#tid_6] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5' [marker:database_getDocument_start:951] 
+[2017-07-14T20:11:05.822Z] [INFO] [#tid_6] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5' [marker:database_getDocument_finish:2204:1243] 
+[2017-07-14T20:11:05.850Z] [INFO] [#tid_6] [DockerContainer] sending initialization to ContainerId(fcbb4f2bf248815142e226d8c6611837502564ae5740b56486df82306fea5349) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:2231] 
+[2017-07-14T20:11:05.854Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_6_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1040550] 
+[2017-07-14T20:11:06.895Z] [INFO] [#tid_6] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:3272:1041] 
+[2017-07-14T20:11:06.897Z] [INFO] [#tid_6] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(fcbb4f2bf248815142e226d8c6611837502564ae5740b56486df82306fea5349) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:3279] 
+[2017-07-14T20:11:07.290Z] [INFO] [#tid_6] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:3660:381] 
+[2017-07-14T20:11:07.315Z] [INFO] [#tid_6] [InvokerReactive] posted completion of activation d1bde34fb3ad4f819fcfd4e00ae722c2 
+[2017-07-14T20:11:07.542Z] [INFO] [#tid_6] [DockerContainer] log cursor advanced but missing sentinel, trying 15 more times 
+[2017-07-14T20:11:07.652Z] [INFO] [#tid_6] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:11:07.662Z] [INFO] [#tid_6] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d1bde34fb3ad4f819fcfd4e00ae722c2, rev: null' [marker:database_saveDocument_start:4043] 
+[2017-07-14T20:11:07.739Z] [INFO] [#tid_6] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d1bde34fb3ad4f819fcfd4e00ae722c2, rev: null', response: '{"ok":true,"id":"whisk.system/d1bde34fb3ad4f819fcfd4e00ae722c2","rev":"1-92186f3291d204894ded866f46b33fec"}' [marker:database_saveDocument_finish:4120:74] 
+[2017-07-14T20:11:07.740Z] [INFO] [#tid_6] [InvokerReactive] recorded activation 
+[2017-07-14T20:11:08.700Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause fcbb4f2bf248815142e226d8c6611837502564ae5740b56486df82306fea5349 [marker:invoker_runc.pause_start:1043395] 
+[2017-07-14T20:11:10.218Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1044782:4231] 
+[2017-07-14T20:11:10.757Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1044917:1521] 
+[2017-07-14T20:11:10.819Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f fcbb4f2bf248815142e226d8c6611837502564ae5740b56486df82306fea5349 [marker:invoker_docker.rm_start:1045476] 
+[2017-07-14T20:11:12.392Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:11:12.460Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1047157:1680] 
+[2017-07-14T20:11:44.665Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][9 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:11:44.696Z] [INFO] [#tid_7] [InvokerReactive] [marker:invoker_activation_start:103] 
+[2017-07-14T20:11:44.699Z] [INFO] [#tid_7] [InvokerReactive] whisk.system/hi whisk.system a6a5bcaf0a0448fab259a224258bc42a 
+[2017-07-14T20:11:44.738Z] [INFO] [#tid_7] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:147] 
+[2017-07-14T20:11:44.746Z] [INFO] [#tid_7] [DockerContainer] sending initialization to ContainerId(0688613cf2c47504e7f86ca680e5f9488cff323b75f3092b25c3e279f74b061b) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:153] 
+[2017-07-14T20:11:44.749Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_7_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1079445] 
+[2017-07-14T20:11:45.134Z] [INFO] [#tid_7] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:529:375] 
+[2017-07-14T20:11:45.141Z] [INFO] [#tid_7] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(0688613cf2c47504e7f86ca680e5f9488cff323b75f3092b25c3e279f74b061b) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:530] 
+[2017-07-14T20:11:45.170Z] [INFO] [#tid_7] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:575:44] 
+[2017-07-14T20:11:45.269Z] [INFO] [#tid_7] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:11:45.309Z] [INFO] [#tid_7] [InvokerReactive] posted completion of activation a6a5bcaf0a0448fab259a224258bc42a 
+[2017-07-14T20:11:45.337Z] [INFO] [#tid_7] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/a6a5bcaf0a0448fab259a224258bc42a, rev: null' [marker:database_saveDocument_start:719] 
+[2017-07-14T20:11:46.237Z] [INFO] [#tid_7] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/a6a5bcaf0a0448fab259a224258bc42a, rev: null', response: '{"ok":true,"id":"whisk.system/a6a5bcaf0a0448fab259a224258bc42a","rev":"1-c0ccb094f9642f01832efa93e07ebf0c"}' [marker:database_saveDocument_finish:1647:927] 
+[2017-07-14T20:11:46.240Z] [INFO] [#tid_7] [InvokerReactive] recorded activation 
+[2017-07-14T20:11:46.471Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 0688613cf2c47504e7f86ca680e5f9488cff323b75f3092b25c3e279f74b061b [marker:invoker_runc.pause_start:1081167] 
+[2017-07-14T20:11:46.808Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1081502:335] 
+[2017-07-14T20:11:46.814Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 0688613cf2c47504e7f86ca680e5f9488cff323b75f3092b25c3e279f74b061b [marker:invoker_docker.rm_start:1081510] 
+[2017-07-14T20:11:47.287Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1081983:2538] 
+[2017-07-14T20:11:47.405Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1082102:592] 
+[2017-07-14T20:11:50.403Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:12:01.829Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][10 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:12:01.835Z] [INFO] [#tid_8] [InvokerReactive] [marker:invoker_activation_start:116] 
+[2017-07-14T20:12:01.837Z] [INFO] [#tid_8] [InvokerReactive] whisk.system/hi whisk.system 792808db29214d12bde2cc94174991df 
+[2017-07-14T20:12:01.852Z] [INFO] [#tid_8] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:119] 
+[2017-07-14T20:12:01.853Z] [INFO] [#tid_8] [DockerContainer] sending initialization to ContainerId(8236c1222da0223a52def3303c05ee669453e6e112f1f8662c9b8453ee89eb23) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:127] 
+[2017-07-14T20:12:01.864Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_8_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1096560] 
+[2017-07-14T20:12:02.262Z] [INFO] [#tid_8] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:528:394] 
+[2017-07-14T20:12:02.276Z] [INFO] [#tid_8] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(8236c1222da0223a52def3303c05ee669453e6e112f1f8662c9b8453ee89eb23) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:529] 
+[2017-07-14T20:12:02.315Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][11 (2)][pipelineOccupancy=2 (8)] 
+[2017-07-14T20:12:02.317Z] [INFO] [#tid_11] [InvokerReactive] [marker:invoker_activation_start:315] 
+[2017-07-14T20:12:02.317Z] [INFO] [#tid_11] [InvokerReactive] whisk.system/hi whisk.system ced9b5ce90d749f8995fce34bbdf2de2 
+[2017-07-14T20:12:02.835Z] [INFO] [#tid_11] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:327] 
+[2017-07-14T20:12:02.835Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][12 (2)][pipelineOccupancy=3 (8)] 
+[2017-07-14T20:12:02.837Z] [INFO] [#tid_10] [InvokerReactive] [marker:invoker_activation_start:425] 
+[2017-07-14T20:12:02.839Z] [INFO] [#tid_10] [InvokerReactive] whisk.system/hi whisk.system 0bcec6f966b64451b1ed089beeeb6466 
+[2017-07-14T20:12:02.840Z] [INFO] [#tid_10] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:427] 
+[2017-07-14T20:12:02.843Z] [INFO] [#tid_8] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:622:88] 
+[2017-07-14T20:12:02.844Z] [INFO] [#tid_11] [DockerContainer] sending initialization to ContainerId(71c1ce905be6365bd09024470ecd71583a3c93f68684ec34873537e7587c4e20) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:431] 
+[2017-07-14T20:12:02.844Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][13 (3)][pipelineOccupancy=4 (8)] 
+[2017-07-14T20:12:02.845Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][14 (3)][pipelineOccupancy=5 (8)] 
+[2017-07-14T20:12:02.845Z] [INFO] [#tid_13] [InvokerReactive] [marker:invoker_activation_start:551] 
+[2017-07-14T20:12:04.118Z] [INFO] [#tid_13] [InvokerReactive] whisk.system/hi whisk.system bcb01cc6fa93444185e6706a965a6fd5 
+[2017-07-14T20:12:04.120Z] [INFO] [#tid_13] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:606] 
+[2017-07-14T20:12:04.126Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_9_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1097393] 
+[2017-07-14T20:12:04.127Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][15 (3)][pipelineOccupancy=6 (8)] 
+[2017-07-14T20:12:04.128Z] [INFO] [#tid_12] [InvokerReactive] [marker:invoker_activation_start:786] 
+[2017-07-14T20:12:04.131Z] [INFO] [#tid_12] [InvokerReactive] whisk.system/hi whisk.system 995138473de54e928b8d6092f3772b8d 
+[2017-07-14T20:12:04.133Z] [INFO] [#tid_9] [InvokerReactive] [marker:invoker_activation_start:1074] 
+[2017-07-14T20:12:04.134Z] [INFO] [#tid_9] [InvokerReactive] whisk.system/hi whisk.system e770354201b44349bf27823b6bc22d23 
+[2017-07-14T20:12:04.135Z] [INFO] [#tid_9] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1086] 
+[2017-07-14T20:12:04.135Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][16 (4)][pipelineOccupancy=7 (8)] 
+[2017-07-14T20:12:04.136Z] [INFO] [#tid_15] [InvokerReactive] [marker:invoker_activation_start:734] 
+[2017-07-14T20:12:04.162Z] [INFO] [#tid_15] [InvokerReactive] whisk.system/hi whisk.system 6bf7844da9a849c88bb35686fe7f74d1 
+[2017-07-14T20:12:04.163Z] [INFO] [#tid_8] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:04.220Z] [INFO] [#tid_15] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:735] 
+[2017-07-14T20:12:04.228Z] [INFO] [#tid_8] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/792808db29214d12bde2cc94174991df, rev: null' [marker:database_saveDocument_start:1118] 
+[2017-07-14T20:12:04.233Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][17 (4)][pipelineOccupancy=8 (8)] 
+[2017-07-14T20:12:04.234Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][18 (4)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:12:04.234Z] [INFO] [#tid_17] [InvokerReactive] [marker:invoker_activation_start:678] 
+[2017-07-14T20:12:04.235Z] [INFO] [#tid_17] [InvokerReactive] whisk.system/hi whisk.system cc44e7a054814aada5cff59580df0056 
+[2017-07-14T20:12:04.235Z] [INFO] [#tid_17] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:679] 
+[2017-07-14T20:12:04.344Z] [INFO] [#tid_14] [InvokerReactive] [marker:invoker_activation_start:783] 
+[2017-07-14T20:12:04.346Z] [INFO] [#tid_14] [InvokerReactive] whisk.system/hi whisk.system ce938fdc19554a798f9727889a0453ba 
+[2017-07-14T20:12:04.349Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][19 (4)][pipelineOccupancy=10 (8)] 
+[2017-07-14T20:12:04.349Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 10 > 8 
+[2017-07-14T20:12:04.350Z] [INFO] [#tid_16] [InvokerReactive] [marker:invoker_activation_start:840] 
+[2017-07-14T20:12:04.395Z] [INFO] [#tid_16] [InvokerReactive] whisk.system/hi whisk.system 326a1c1cb8354e62843afd3b7f4ee43a 
+[2017-07-14T20:12:04.416Z] [INFO] [#tid_16] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:842] 
+[2017-07-14T20:12:04.417Z] [INFO] [#tid_12] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:984] 
+[2017-07-14T20:12:04.420Z] [INFO] [#tid_11] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1201:769] 
+[2017-07-14T20:12:04.420Z] [INFO] [#tid_11] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(71c1ce905be6365bd09024470ecd71583a3c93f68684ec34873537e7587c4e20) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:1201] 
+[2017-07-14T20:12:04.426Z] [INFO] [#tid_8] [InvokerReactive] posted completion of activation 792808db29214d12bde2cc94174991df 
+[2017-07-14T20:12:04.498Z] [INFO] [#tid_9] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_12_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2307] 
+[2017-07-14T20:12:04.518Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=9 / pipelineFillThreshold=8 
+[2017-07-14T20:12:04.523Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:12:04.525Z] [INFO] [#tid_17] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(8236c1222da0223a52def3303c05ee669453e6e112f1f8662c9b8453ee89eb23) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:1923] 
+[2017-07-14T20:12:04.527Z] [INFO] [#tid_16] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_13_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1980] 
+[2017-07-14T20:12:10.157Z] [INFO] [#tid_12] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_14_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2082] 
+[2017-07-14T20:12:10.191Z] [INFO] [#tid_14] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:2028] 
+[2017-07-14T20:12:10.192Z] [INFO] [#tid_13] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_10_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2069] 
+[2017-07-14T20:12:10.192Z] [INFO] [#tid_14] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_16_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2048] 
+[2017-07-14T20:12:10.192Z] [INFO] [#tid_15] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_15_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2289] 
+[2017-07-14T20:12:10.195Z] [INFO] [#tid_17] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:2228:301] 
+[2017-07-14T20:12:10.205Z] [INFO] [#tid_10] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_11_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:2544] 
+[2017-07-14T20:12:10.219Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1099133:2573] 
+[2017-07-14T20:12:10.220Z] [INFO] [#tid_17] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:10.222Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/cc44e7a054814aada5cff59580df0056, rev: null' [marker:database_saveDocument_start:2333] 
+[2017-07-14T20:12:10.222Z] [INFO] [#tid_8] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/792808db29214d12bde2cc94174991df, rev: null', response: '{"ok":true,"id":"whisk.system/792808db29214d12bde2cc94174991df","rev":"1-54c79af5f84dc8ea4b79800c4b9f9bf7"}' [marker:database_saveDocument_finish:2805:1687] 
+[2017-07-14T20:12:10.223Z] [INFO] [#tid_8] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:10.223Z] [INFO] [#tid_11] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:3043:1842] 
+[2017-07-14T20:12:10.223Z] [INFO] [#tid_11] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:10.387Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ced9b5ce90d749f8995fce34bbdf2de2, rev: null' [marker:database_saveDocument_start:3063] 
+[2017-07-14T20:12:10.388Z] [INFO] [#tid_11] [InvokerReactive] posted completion of activation ced9b5ce90d749f8995fce34bbdf2de2 
+[2017-07-14T20:12:10.388Z] [INFO] [#tid_17] [InvokerReactive] posted completion of activation cc44e7a054814aada5cff59580df0056 
+[2017-07-14T20:12:11.991Z] [INFO] [#tid_17] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/cc44e7a054814aada5cff59580df0056, rev: null', response: '{"ok":true,"id":"whisk.system/cc44e7a054814aada5cff59580df0056","rev":"1-0f6ce988796493e24af3e7a345ea7637"}' [marker:database_saveDocument_finish:9802:7469] 
+[2017-07-14T20:12:12.005Z] [INFO] [#tid_17] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:12.094Z] [INFO] [#tid_11] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ced9b5ce90d749f8995fce34bbdf2de2, rev: null', response: '{"ok":true,"id":"whisk.system/ced9b5ce90d749f8995fce34bbdf2de2","rev":"1-d4bb287c922efba9f657ee32d915e093"}' [marker:database_saveDocument_finish:10119:7056] 
+[2017-07-14T20:12:12.095Z] [INFO] [#tid_11] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:15.481Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:12:15.481Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T20:12:15.571Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 8236c1222da0223a52def3303c05ee669453e6e112f1f8662c9b8453ee89eb23 [marker:invoker_runc.pause_start:1110248] 
+[2017-07-14T20:12:16.604Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 71c1ce905be6365bd09024470ecd71583a3c93f68684ec34873537e7587c4e20 [marker:invoker_runc.pause_start:1111187] 
+[2017-07-14T20:12:18.877Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][20 (1)][pipelineOccupancy=8 (8)] 
+[2017-07-14T20:12:18.897Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1199735] 
+[2017-07-14T20:12:18.899Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 031864a6832744149c81be1fb727111f 
+[2017-07-14T20:12:18.909Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:12:18.921Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1199742] 
+[2017-07-14T20:12:20.538Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1201388:1646] 
+[2017-07-14T20:12:20.583Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(350bceaf7e40b869201b86b10f11e126f19bb9520b37610717478e40ee3eba7d) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:1201395] 
+[2017-07-14T20:12:20.584Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_17_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1115280] 
+[2017-07-14T20:12:20.642Z] [INFO] [#tid_16] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:18533:16552] 
+[2017-07-14T20:12:20.662Z] [INFO] [#tid_16] [DockerContainer] sending initialization to ContainerId(4d45b70f053728712ef7efe0cf36af33c85eae854525ed16cd8fae3b227aef02) ContainerIp(172.17.0.16) [marker:invoker_activationInit_start:18553] 
+[2017-07-14T20:12:21.111Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1201731:336] 
+[2017-07-14T20:12:21.111Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(350bceaf7e40b869201b86b10f11e126f19bb9520b37610717478e40ee3eba7d) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:1201731] 
+[2017-07-14T20:12:27.376Z] [INFO] [#tid_16] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:23833:5280] 
+[2017-07-14T20:12:28.001Z] [INFO] [#tid_16] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(4d45b70f053728712ef7efe0cf36af33c85eae854525ed16cd8fae3b227aef02) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:25695] 
+[2017-07-14T20:12:44.532Z] [INFO] [#tid_9] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:42770:40462] 
+[2017-07-14T20:12:44.712Z] [INFO] [#tid_10] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:42753:40200] 
+[2017-07-14T20:12:44.722Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1139336:24056] 
+[2017-07-14T20:12:45.607Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1225983:23749] 
+[2017-07-14T20:12:45.650Z] [INFO] [#tid_16] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:43496:16788] 
+[2017-07-14T20:12:45.652Z] [INFO] [#tid_10] [DockerContainer] sending initialization to ContainerId(414e0aebfccdac65b4f6a76cd117426a2b0556cb45e4c96270fdede9f60ad97c) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:43756] 
+[2017-07-14T20:12:45.659Z] [INFO] [#tid_9] [DockerContainer] sending initialization to ContainerId(f2e417bcd78e45218d68906a2d783b6c239f58880a4f8023ee1be06446ca3250) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:43929] 
+[2017-07-14T20:12:46.017Z] [INFO] [#tid_14] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:43932:41884] 
+[2017-07-14T20:12:46.049Z] [INFO] [#tid_14] [DockerContainer] sending initialization to ContainerId(86c2153e388ff931ceaa19733d9a93025e33b55700ad9418f7a83fc5a4e9451c) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:43948] 
+[2017-07-14T20:12:46.051Z] [INFO] [#tid_16] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:46.079Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/326a1c1cb8354e62843afd3b7f4ee43a, rev: null' [marker:database_saveDocument_start:43967] 
+[2017-07-14T20:12:46.792Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:55.412Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1142437:44482] 
+[2017-07-14T20:12:55.412Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/031864a6832744149c81be1fb727111f, rev: null' [marker:database_saveDocument_start:1229099] 
+[2017-07-14T20:12:55.413Z] [INFO] [#tid_16] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/326a1c1cb8354e62843afd3b7f4ee43a, rev: null', response: '{"ok":true,"id":"whisk.system/326a1c1cb8354e62843afd3b7f4ee43a","rev":"1-31a2a708be0ab1390266c2f5848237c5"}' [marker:database_saveDocument_finish:46331:2361] 
+[2017-07-14T20:12:55.442Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 031864a6832744149c81be1fb727111f 
+[2017-07-14T20:12:55.476Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 350bceaf7e40b869201b86b10f11e126f19bb9520b37610717478e40ee3eba7d [marker:invoker_runc.pause_start:1144760] 
+[2017-07-14T20:12:55.477Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 4d45b70f053728712ef7efe0cf36af33c85eae854525ed16cd8fae3b227aef02 [marker:invoker_runc.pause_start:1144760] 
+[2017-07-14T20:12:55.478Z] [INFO] [#tid_16] [InvokerReactive] posted completion of activation 326a1c1cb8354e62843afd3b7f4ee43a 
+[2017-07-14T20:12:55.479Z] [INFO] [#tid_16] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:55.481Z] [INFO] [#tid_9] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:49765:5836] 
+[2017-07-14T20:12:55.483Z] [INFO] [#tid_9] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(f2e417bcd78e45218d68906a2d783b6c239f58880a4f8023ee1be06446ca3250) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:49776] 
+[2017-07-14T20:12:55.485Z] [INFO] [#tid_9] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:50341:560] 
+[2017-07-14T20:12:55.485Z] [INFO] [#tid_9] [InvokerReactive] posted completion of activation e770354201b44349bf27823b6bc22d23 
+[2017-07-14T20:12:55.485Z] [INFO] [#tid_9] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:55.485Z] [INFO] [#tid_9] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/e770354201b44349bf27823b6bc22d23, rev: null' [marker:database_saveDocument_start:50857] 
+[2017-07-14T20:12:55.485Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1150101:38801] 
+[2017-07-14T20:12:55.487Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 71c1ce905be6365bd09024470ecd71583a3c93f68684ec34873537e7587c4e20 [marker:invoker_docker.rm_start:1150107] 
+[2017-07-14T20:12:55.489Z] [INFO] [#tid_13] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:53369:51292] 
+[2017-07-14T20:12:55.491Z] [INFO] [#tid_13] [DockerContainer] sending initialization to ContainerId(ac6230ba8e448176d3936d69bcbb525c09d72b8231ec3638e4cbe610d61fd220) ContainerIp(172.17.0.17) [marker:invoker_activationInit_start:53379] 
+[2017-07-14T20:12:55.499Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][21 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:12:55.515Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:12:55.515Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/031864a6832744149c81be1fb727111f, rev: null', response: '{"ok":true,"id":"whisk.system/031864a6832744149c81be1fb727111f","rev":"1-e83e764070036af0d8afd58aae40f3ae"}' [marker:database_saveDocument_finish:1236363:7177] 
+[2017-07-14T20:12:55.516Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:12:55.516Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:55.517Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1236366] 
+[2017-07-14T20:12:55.518Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 4a40f843e67c457a8757d7ba88b39a83 
+[2017-07-14T20:12:55.518Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:12:55.523Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1236372] 
+[2017-07-14T20:12:55.535Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][22 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:12:55.536Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:12:55.537Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:12:55.538Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T20:12:55.544Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1236377] 
+[2017-07-14T20:12:55.552Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system dd0c4d2dbd204649bcb2dcfa265697ec 
+[2017-07-14T20:12:55.553Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:12:55.563Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1236386] 
+[2017-07-14T20:12:56.558Z] [INFO] [#tid_10] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:54638:10881] 
+[2017-07-14T20:12:56.612Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause f2e417bcd78e45218d68906a2d783b6c239f58880a4f8023ee1be06446ca3250 [marker:invoker_runc.pause_start:1151282] 
+[2017-07-14T20:12:56.623Z] [INFO] [#tid_10] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(414e0aebfccdac65b4f6a76cd117426a2b0556cb45e4c96270fdede9f60ad97c) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:54680] 
+[2017-07-14T20:12:56.648Z] [INFO] [#tid_13] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:54572:1191] 
+[2017-07-14T20:12:56.883Z] [INFO] [#tid_13] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(ac6230ba8e448176d3936d69bcbb525c09d72b8231ec3638e4cbe610d61fd220) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:54593] 
+[2017-07-14T20:12:57.613Z] [INFO] [#tid_12] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:55111:53028] 
+[2017-07-14T20:12:57.649Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1151836:41587] 
+[2017-07-14T20:12:57.651Z] [INFO] [#tid_15] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:55041:52745] 
+[2017-07-14T20:12:57.652Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 8236c1222da0223a52def3303c05ee669453e6e112f1f8662c9b8453ee89eb23 [marker:invoker_docker.rm_start:1151843] 
+[2017-07-14T20:12:57.653Z] [INFO] [#tid_13] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:55168:575] 
+[2017-07-14T20:12:57.655Z] [INFO] [#tid_10] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:55324:602] 
+[2017-07-14T20:12:57.658Z] [INFO] [#tid_15] [DockerContainer] sending initialization to ContainerId(e93f597edf41ff471e4ec6ccf070a8646d25b5013815af1b5f922f84e699333a) ContainerIp(172.17.0.20) [marker:invoker_activationInit_start:55136] 
+[2017-07-14T20:12:57.658Z] [INFO] [#tid_13] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:57.659Z] [INFO] [#tid_13] [InvokerReactive] posted completion of activation bcb01cc6fa93444185e6706a965a6fd5 
+[2017-07-14T20:12:57.659Z] [INFO] [#tid_13] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/bcb01cc6fa93444185e6706a965a6fd5, rev: null' [marker:database_saveDocument_start:55399] 
+[2017-07-14T20:12:57.808Z] [INFO] [#tid_10] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:12:57.849Z] [INFO] [#tid_10] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/0bcec6f966b64451b1ed089beeeb6466, rev: null' [marker:database_saveDocument_start:55638] 
+[2017-07-14T20:12:57.851Z] [INFO] [#tid_10] [InvokerReactive] posted completion of activation 0bcec6f966b64451b1ed089beeeb6466 
+[2017-07-14T20:12:58.175Z] [INFO] [#tid_12] [DockerContainer] sending initialization to ContainerId(1d012f9a553c0505df3ab6dfc3355e247a4097007bd3e4325866da167f1af43e) ContainerIp(172.17.0.19) [marker:invoker_activationInit_start:55608] 
+[2017-07-14T20:12:58.272Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1238551:2175] 
+[2017-07-14T20:12:58.339Z] [INFO] [#tid_9] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/e770354201b44349bf27823b6bc22d23, rev: null', response: '{"ok":true,"id":"whisk.system/e770354201b44349bf27823b6bc22d23","rev":"1-1e422632308dc77a24db541b98e029ad"}' [marker:database_saveDocument_finish:56158:5300] 
+[2017-07-14T20:12:58.340Z] [INFO] [#tid_9] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:58.631Z] [INFO] [#tid_13] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/bcb01cc6fa93444185e6706a965a6fd5, rev: null', response: '{"ok":true,"id":"whisk.system/bcb01cc6fa93444185e6706a965a6fd5","rev":"1-4cf3861a22acefe969fed3cec9c519a6"}' [marker:database_saveDocument_finish:56588:1175] 
+[2017-07-14T20:12:58.659Z] [INFO] [#tid_13] [InvokerReactive] recorded activation 
+[2017-07-14T20:12:58.746Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1239596:3210] 
+[2017-07-14T20:13:00.107Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(ea61e5ec688ba81d58379a41df8b73323ea16b00bd72c13a3960d2009e5bb75d) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:1239601] 
+[2017-07-14T20:13:00.174Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_18_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1153543] 
+[2017-07-14T20:13:00.205Z] [INFO] [#tid_12] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:57217:1609] 
+[2017-07-14T20:13:00.239Z] [INFO] [#tid_14] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:57149:13198] 
+[2017-07-14T20:13:00.247Z] [INFO] [#tid_12] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(1d012f9a553c0505df3ab6dfc3355e247a4097007bd3e4325866da167f1af43e) ContainerIp(172.17.0.19) [marker:invoker_activationRun_start:57220] 
+[2017-07-14T20:13:00.438Z] [INFO] [#tid_14] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(86c2153e388ff931ceaa19733d9a93025e33b55700ad9418f7a83fc5a4e9451c) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:57154] 
+[2017-07-14T20:13:00.504Z] [INFO] [#tid_12] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:58057:831] 
+[2017-07-14T20:13:00.509Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause ac6230ba8e448176d3936d69bcbb525c09d72b8231ec3638e4cbe610d61fd220 [marker:invoker_runc.pause_start:1154778] 
+[2017-07-14T20:13:00.509Z] [INFO] [#tid_14] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:58065:891] 
+[2017-07-14T20:13:00.585Z] [INFO] [#tid_12] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:00.615Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/995138473de54e928b8d6092f3772b8d, rev: null' [marker:database_saveDocument_start:58485] 
+[2017-07-14T20:13:00.642Z] [INFO] [#tid_14] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:00.736Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1155276:3972] 
+[2017-07-14T20:13:00.749Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f f2e417bcd78e45218d68906a2d783b6c239f58880a4f8023ee1be06446ca3250 [marker:invoker_docker.rm_start:1155280] 
+[2017-07-14T20:13:00.916Z] [INFO] [#tid_14] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/ce938fdc19554a798f9727889a0453ba, rev: null' [marker:database_saveDocument_start:58682] 
+[2017-07-14T20:13:00.919Z] [INFO] [#tid_14] [InvokerReactive] posted completion of activation ce938fdc19554a798f9727889a0453ba 
+[2017-07-14T20:13:01.050Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T20:13:01.137Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T20:13:01.146Z] [INFO] [#tid_12] [InvokerReactive] posted completion of activation 995138473de54e928b8d6092f3772b8d 
+[2017-07-14T20:13:01.149Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1155791:11027] 
+[2017-07-14T20:13:01.161Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 4d45b70f053728712ef7efe0cf36af33c85eae854525ed16cd8fae3b227aef02 [marker:invoker_docker.rm_start:1155842] 
+[2017-07-14T20:13:01.863Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1155886:11126] 
+[2017-07-14T20:13:01.885Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 350bceaf7e40b869201b86b10f11e126f19bb9520b37610717478e40ee3eba7d [marker:invoker_docker.rm_start:1156546] 
+[2017-07-14T20:13:01.964Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 414e0aebfccdac65b4f6a76cd117426a2b0556cb45e4c96270fdede9f60ad97c [marker:invoker_runc.pause_start:1156547] 
+[2017-07-14T20:13:01.977Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 1d012f9a553c0505df3ab6dfc3355e247a4097007bd3e4325866da167f1af43e [marker:invoker_runc.pause_start:1156582] 
+[2017-07-14T20:13:02.039Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1242718:3116] 
+[2017-07-14T20:13:02.046Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 86c2153e388ff931ceaa19733d9a93025e33b55700ad9418f7a83fc5a4e9451c [marker:invoker_runc.pause_start:1156548] 
+[2017-07-14T20:13:02.143Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1156529:1776] 
+[2017-07-14T20:13:02.146Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f ac6230ba8e448176d3936d69bcbb525c09d72b8231ec3638e4cbe610d61fd220 [marker:invoker_docker.rm_start:1156609] 
+[2017-07-14T20:13:02.148Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(ea61e5ec688ba81d58379a41df8b73323ea16b00bd72c13a3960d2009e5bb75d) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:1242813] 
+[2017-07-14T20:13:02.149Z] [INFO] [#tid_10] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/0bcec6f966b64451b1ed089beeeb6466, rev: null', response: '{"ok":true,"id":"whisk.system/0bcec6f966b64451b1ed089beeeb6466","rev":"1-dc9e44ab02365ce6d20c2c38f178f2e5"}' [marker:database_saveDocument_finish:60245:4604] 
+[2017-07-14T20:13:02.150Z] [INFO] [#tid_10] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:02.151Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(2a3d3fb2344cac640ce0f0e70a03e45ec6fd6c2828f64f1bff583940d1227056) ContainerIp(172.17.0.18) [marker:invoker_activationInit_start:1242989] 
+[2017-07-14T20:13:02.154Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_19_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1156844] 
+[2017-07-14T20:13:02.444Z] [INFO] [#tid_12] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/995138473de54e928b8d6092f3772b8d, rev: null', response: '{"ok":true,"id":"whisk.system/995138473de54e928b8d6092f3772b8d","rev":"1-518842ccc7bbc658e70d3b3e14536c2d"}' [marker:database_saveDocument_finish:60426:1937] 
+[2017-07-14T20:13:02.450Z] [INFO] [#tid_12] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:02.467Z] [INFO] [#tid_14] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/ce938fdc19554a798f9727889a0453ba, rev: null', response: '{"ok":true,"id":"whisk.system/ce938fdc19554a798f9727889a0453ba","rev":"1-146a6e447245aec033082433e3e7178e"}' [marker:database_saveDocument_finish:60364:1682] 
+[2017-07-14T20:13:02.484Z] [INFO] [#tid_14] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:02.744Z] [INFO] [#tid_15] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:60624:5484] 
+[2017-07-14T20:13:02.763Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T20:13:02.776Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T20:13:02.787Z] [INFO] [#tid_15] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(e93f597edf41ff471e4ec6ccf070a8646d25b5013815af1b5f922f84e699333a) ContainerIp(172.17.0.20) [marker:invoker_activationRun_start:60664] 
+[2017-07-14T20:13:03.905Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1244722:1833] 
+[2017-07-14T20:13:03.959Z] [INFO] [#sid_121] [DockerContainer] log cursor advanced but missing sentinel, trying 15 more times 
+[2017-07-14T20:13:04.061Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:04.108Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation dd0c4d2dbd204649bcb2dcfa265697ec 
+[2017-07-14T20:13:04.110Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/dd0c4d2dbd204649bcb2dcfa265697ec, rev: null' [marker:database_saveDocument_start:1244959] 
+[2017-07-14T20:13:04.162Z] [INFO] [#tid_15] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:62059:1395] 
+[2017-07-14T20:13:04.168Z] [INFO] [#tid_15] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:04.180Z] [INFO] [#tid_15] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/6bf7844da9a849c88bb35686fe7f74d1, rev: null' [marker:database_saveDocument_start:62074] 
+[2017-07-14T20:13:04.783Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1159458:3616] 
+[2017-07-14T20:13:05.055Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1159482:7613] 
+[2017-07-14T20:13:05.055Z] [ERROR] [#sid_102] [DockerClientWithFileAccess] code: 1, stdout: , stderr: Error response from daemon: Driver overlay failed to remove root filesystem 71c1ce905be6365bd09024470ecd71583a3c93f68684ec34873537e7587c4e20: remove /mnt/sda1/var/lib/docker/overlay/07ce20efa9833e3c59f397d261ca47fb3d0fa2cc9c926efd26cfc9d4c888c857/merged/nodejsAction/node_modules: directory not empty [marker:invoker_docker.rm_error:1159522:9415] 
+[2017-07-14T20:13:05.055Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1159654:2810] 
+[2017-07-14T20:13:05.205Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1159891:4610] 
+[2017-07-14T20:13:05.563Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1160256:3674] 
+[2017-07-14T20:13:05.717Z] [INFO] [#tid_15] [InvokerReactive] posted completion of activation 6bf7844da9a849c88bb35686fe7f74d1 
+[2017-07-14T20:13:05.721Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 1d012f9a553c0505df3ab6dfc3355e247a4097007bd3e4325866da167f1af43e [marker:invoker_docker.rm_start:1160408] 
+[2017-07-14T20:13:05.768Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1160462:3859] 
+[2017-07-14T20:13:05.769Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 86c2153e388ff931ceaa19733d9a93025e33b55700ad9418f7a83fc5a4e9451c [marker:invoker_docker.rm_start:1160465] 
+[2017-07-14T20:13:05.781Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1160457:6914] 
+[2017-07-14T20:13:05.838Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/dd0c4d2dbd204649bcb2dcfa265697ec, rev: null', response: '{"ok":true,"id":"whisk.system/dd0c4d2dbd204649bcb2dcfa265697ec","rev":"1-ab47c0299c2f31e279fdef28c130acf5"}' [marker:database_saveDocument_finish:1246677:1717] 
+[2017-07-14T20:13:06.032Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:06.863Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1246904:3915] 
+[2017-07-14T20:13:06.866Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(2a3d3fb2344cac640ce0f0e70a03e45ec6fd6c2828f64f1bff583940d1227056) ContainerIp(172.17.0.18) [marker:invoker_activationRun_start:1246937] 
+[2017-07-14T20:13:06.868Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause ea61e5ec688ba81d58379a41df8b73323ea16b00bd72c13a3960d2009e5bb75d [marker:invoker_runc.pause_start:1161379] 
+[2017-07-14T20:13:06.873Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause e93f597edf41ff471e4ec6ccf070a8646d25b5013815af1b5f922f84e699333a [marker:invoker_runc.pause_start:1161379] 
+[2017-07-14T20:13:06.904Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1161569:4959] 
+[2017-07-14T20:13:06.917Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1161548:5000] 
+[2017-07-14T20:13:06.961Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1247807:757] 
+[2017-07-14T20:13:07.029Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:07.049Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 4a40f843e67c457a8757d7ba88b39a83 
+[2017-07-14T20:13:07.186Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/4a40f843e67c457a8757d7ba88b39a83, rev: null' [marker:database_saveDocument_start:1248035] 
+[2017-07-14T20:13:07.289Z] [INFO] [#tid_15] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/6bf7844da9a849c88bb35686fe7f74d1, rev: null', response: '{"ok":true,"id":"whisk.system/6bf7844da9a849c88bb35686fe7f74d1","rev":"1-2f535672f34328296ccae736680f23a5"}' [marker:database_saveDocument_finish:65188:3114] 
+[2017-07-14T20:13:07.303Z] [INFO] [#tid_15] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:07.377Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][23 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T20:13:07.398Z] [INFO] [#tid_18] [InvokerReactive] [marker:invoker_activation_start:1523] 
+[2017-07-14T20:13:08.129Z] [INFO] [#tid_18] [InvokerReactive] whisk.system/hi whisk.system 0342d3eabb664f249a3535989af596ac 
+[2017-07-14T20:13:08.137Z] [INFO] [#tid_18] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1538] 
+[2017-07-14T20:13:08.138Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1162402:1989] 
+[2017-07-14T20:13:08.299Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1162403:1021] 
+[2017-07-14T20:13:08.319Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f e93f597edf41ff471e4ec6ccf070a8646d25b5013815af1b5f922f84e699333a [marker:invoker_docker.rm_start:1162413] 
+[2017-07-14T20:13:08.320Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/4a40f843e67c457a8757d7ba88b39a83, rev: null', response: '{"ok":true,"id":"whisk.system/4a40f843e67c457a8757d7ba88b39a83","rev":"1-31b9cf5fcfbebccefa7dabc0b009727d"}' [marker:database_saveDocument_finish:1248574:538] 
+[2017-07-14T20:13:08.420Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:08.424Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1162828:6263] 
+[2017-07-14T20:13:08.430Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 2a3d3fb2344cac640ce0f0e70a03e45ec6fd6c2828f64f1bff583940d1227056 [marker:invoker_runc.pause_start:1162993] 
+[2017-07-14T20:13:08.432Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1162992:1613] 
+[2017-07-14T20:13:08.433Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1163111:2646] 
+[2017-07-14T20:13:08.436Z] [INFO] [#tid_18] [DockerContainer] sending initialization to ContainerId(8280b3f44995e05b24db8c7cd773853ec4dd4ad1448f8151d8c1c7af214ed273) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:2461] 
+[2017-07-14T20:13:08.437Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 414e0aebfccdac65b4f6a76cd117426a2b0556cb45e4c96270fdede9f60ad97c [marker:invoker_docker.rm_start:1163116] 
+[2017-07-14T20:13:08.437Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f ea61e5ec688ba81d58379a41df8b73323ea16b00bd72c13a3960d2009e5bb75d [marker:invoker_docker.rm_start:1163116] 
+[2017-07-14T20:13:08.730Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1163326:333] 
+[2017-07-14T20:13:08.734Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_20_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1163387] 
+[2017-07-14T20:13:08.736Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 2a3d3fb2344cac640ce0f0e70a03e45ec6fd6c2828f64f1bff583940d1227056 [marker:invoker_docker.rm_start:1163397] 
+[2017-07-14T20:13:09.167Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1163817:1402] 
+[2017-07-14T20:13:09.314Z] [INFO] [#tid_18] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:3377:825] 
+[2017-07-14T20:13:09.340Z] [INFO] [#tid_18] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(8280b3f44995e05b24db8c7cd773853ec4dd4ad1448f8151d8c1c7af214ed273) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:3378] 
+[2017-07-14T20:13:09.402Z] [INFO] [#tid_18] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:3478:62] 
+[2017-07-14T20:13:09.480Z] [INFO] [#tid_18] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:09.593Z] [INFO] [#tid_18] [InvokerReactive] posted completion of activation 0342d3eabb664f249a3535989af596ac 
+[2017-07-14T20:13:09.594Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/0342d3eabb664f249a3535989af596ac, rev: null' [marker:database_saveDocument_start:3666] 
+[2017-07-14T20:13:09.839Z] [INFO] [#tid_18] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/0342d3eabb664f249a3535989af596ac, rev: null', response: '{"ok":true,"id":"whisk.system/0342d3eabb664f249a3535989af596ac","rev":"1-38c1735979a671ab28e4676aaca1d457"}' [marker:database_saveDocument_finish:3966:281] 
+[2017-07-14T20:13:09.954Z] [INFO] [#tid_18] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:09.992Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1164678:1558] 
+[2017-07-14T20:13:10.187Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1164868:1481] 
+[2017-07-14T20:13:10.485Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1165126:1727] 
+[2017-07-14T20:13:10.520Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1164991:1872] 
+[2017-07-14T20:13:10.521Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T20:13:10.624Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 8280b3f44995e05b24db8c7cd773853ec4dd4ad1448f8151d8c1c7af214ed273 [marker:invoker_runc.pause_start:1165319] 
+[2017-07-14T20:13:11.004Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1165697:378] 
+[2017-07-14T20:13:11.078Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T20:13:11.144Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 8280b3f44995e05b24db8c7cd773853ec4dd4ad1448f8151d8c1c7af214ed273 [marker:invoker_docker.rm_start:1165745] 
+[2017-07-14T20:13:11.717Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T20:13:11.840Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1166440:693] 
+[2017-07-14T20:13:13.497Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:13:20.530Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][24 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:13:20.534Z] [INFO] [#tid_20] [InvokerReactive] [marker:invoker_activation_start:44] 
+[2017-07-14T20:13:20.536Z] [INFO] [#tid_20] [InvokerReactive] whisk.system/hi whisk.system d7a9635f6a3a4250b46dd2f50e219e8a 
+[2017-07-14T20:13:20.547Z] [INFO] [#tid_20] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:47] 
+[2017-07-14T20:13:20.562Z] [INFO] [#tid_20] [DockerContainer] sending initialization to ContainerId(abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:67] 
+[2017-07-14T20:13:20.568Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_21_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1175264] 
+[2017-07-14T20:13:20.679Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][25 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T20:13:20.706Z] [INFO] [#tid_19] [InvokerReactive] [marker:invoker_activation_start:209] 
+[2017-07-14T20:13:20.707Z] [INFO] [#tid_19] [InvokerReactive] whisk.system/hi whisk.system b1ace4059fc94fdf8804e7638e499b47 
+[2017-07-14T20:13:20.707Z] [INFO] [#tid_19] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:222] 
+[2017-07-14T20:13:20.721Z] [INFO] [#tid_19] [DockerContainer] sending initialization to ContainerId(981b07ef1b7d55067203ab325cd44e5098d159a2272d5234548c2e911e0dd137) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:241] 
+[2017-07-14T20:13:20.736Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_22_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1175416] 
+[2017-07-14T20:13:21.020Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][26 (1)][pipelineOccupancy=3 (8)] 
+[2017-07-14T20:13:21.365Z] [INFO] [#tid_20] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:518:442] 
+[2017-07-14T20:13:23.562Z] [INFO] [#tid_22] [InvokerReactive] [marker:invoker_activation_start:446] 
+[2017-07-14T20:13:23.604Z] [INFO] [#tid_20] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:603] 
+[2017-07-14T20:13:23.644Z] [INFO] [#tid_22] [InvokerReactive] whisk.system/hi whisk.system d84e44cd238646c7a9bf4ba78d3f7e39 
+[2017-07-14T20:13:23.653Z] [INFO] [#tid_22] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:800] 
+[2017-07-14T20:13:23.659Z] [INFO] [#tid_19] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:974:733] 
+[2017-07-14T20:13:23.671Z] [INFO] [#tid_19] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(981b07ef1b7d55067203ab325cd44e5098d159a2272d5234548c2e911e0dd137) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:974] 
+[2017-07-14T20:13:23.737Z] [INFO] [#tid_20] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1473:843] 
+[2017-07-14T20:13:23.737Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][27 (1)][pipelineOccupancy=4 (8)] 
+[2017-07-14T20:13:23.764Z] [INFO] [#tid_20] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:23.808Z] [INFO] [#tid_20] [InvokerReactive] posted completion of activation d7a9635f6a3a4250b46dd2f50e219e8a 
+[2017-07-14T20:13:23.823Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d7a9635f6a3a4250b46dd2f50e219e8a, rev: null' [marker:database_saveDocument_start:1759] 
+[2017-07-14T20:13:23.845Z] [INFO] [#tid_22] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_23_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1739] 
+[2017-07-14T20:13:23.854Z] [INFO] [#tid_19] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:2979:2004] 
+[2017-07-14T20:13:23.955Z] [INFO] [#tid_21] [InvokerReactive] [marker:invoker_activation_start:2861] 
+[2017-07-14T20:13:23.965Z] [INFO] [#tid_19] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:23.990Z] [INFO] [#tid_19] [InvokerReactive] posted completion of activation b1ace4059fc94fdf8804e7638e499b47 
+[2017-07-14T20:13:24.138Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/b1ace4059fc94fdf8804e7638e499b47, rev: null' [marker:database_saveDocument_start:3036] 
+[2017-07-14T20:13:24.168Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1178182:2918] 
+[2017-07-14T20:13:24.278Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][28 (1)][pipelineOccupancy=5 (8)] 
+[2017-07-14T20:13:24.279Z] [INFO] [#tid_21] [InvokerReactive] whisk.system/hi whisk.system 4b29c10f4c9b4054a18383268ba84ecd 
+[2017-07-14T20:13:24.279Z] [INFO] [#tid_21] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3040] 
+[2017-07-14T20:13:24.281Z] [INFO] [#tid_21] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:3044] 
+[2017-07-14T20:13:24.282Z] [INFO] [#tid_23] [InvokerReactive] [marker:invoker_activation_start:2951] 
+[2017-07-14T20:13:24.347Z] [INFO] [#tid_23] [InvokerReactive] whisk.system/hi whisk.system d4df420da4db4ee0ab018b4f15a8d58f 
+[2017-07-14T20:13:24.487Z] [INFO] [#tid_21] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:3067:22] 
+[2017-07-14T20:13:24.509Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][29 (3)][pipelineOccupancy=6 (8)] 
+[2017-07-14T20:13:24.516Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][30 (3)][pipelineOccupancy=7 (8)] 
+[2017-07-14T20:13:24.534Z] [INFO] [#tid_24] [InvokerReactive] [marker:invoker_activation_start:2980] 
+[2017-07-14T20:13:24.551Z] [INFO] [#tid_24] [InvokerReactive] whisk.system/hi whisk.system d7affb96fddb4411a1ae3735665edde6 
+[2017-07-14T20:13:24.551Z] [INFO] [#tid_24] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:2985] 
+[2017-07-14T20:13:24.553Z] [INFO] [#tid_24] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(981b07ef1b7d55067203ab325cd44e5098d159a2272d5234548c2e911e0dd137) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:2988] 
+[2017-07-14T20:13:24.553Z] [INFO] [#tid_21] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:24.553Z] [INFO] [#tid_20] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d7a9635f6a3a4250b46dd2f50e219e8a, rev: null', response: '{"ok":true,"id":"whisk.system/d7a9635f6a3a4250b46dd2f50e219e8a","rev":"1-b28600b7924b018c2c51f1ab9d9a17a9"}' [marker:database_saveDocument_finish:3156:1397] 
+[2017-07-14T20:13:24.554Z] [INFO] [#tid_20] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:24.572Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/4b29c10f4c9b4054a18383268ba84ecd, rev: null' [marker:database_saveDocument_start:3152] 
+[2017-07-14T20:13:24.578Z] [INFO] [#tid_21] [InvokerReactive] posted completion of activation 4b29c10f4c9b4054a18383268ba84ecd 
+[2017-07-14T20:13:24.673Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][31 (3)][pipelineOccupancy=8 (8)] 
+[2017-07-14T20:13:25.435Z] [INFO] [#tid_23] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3108] 
+[2017-07-14T20:13:25.686Z] [INFO] [#tid_25] [InvokerReactive] [marker:invoker_activation_start:3049] 
+[2017-07-14T20:13:25.926Z] [INFO] [#tid_23] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:3113] 
+[2017-07-14T20:13:25.967Z] [INFO] [#tid_25] [InvokerReactive] whisk.system/hi whisk.system 98501c08eaac4171a4a558f16aa7f1c0 
+[2017-07-14T20:13:25.967Z] [INFO] [#tid_19] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/b1ace4059fc94fdf8804e7638e499b47, rev: null', response: '{"ok":true,"id":"whisk.system/b1ace4059fc94fdf8804e7638e499b47","rev":"1-df77574110aa972b83b49545f915d39f"}' [marker:database_saveDocument_finish:3309:272] 
+[2017-07-14T20:13:25.977Z] [INFO] [#tid_25] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3142] 
+[2017-07-14T20:13:25.986Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_24_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1178525] 
+[2017-07-14T20:13:27.708Z] [INFO] [#tid_19] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:27.717Z] [INFO] [#tid_26] [InvokerReactive] [marker:invoker_activation_start:3150] 
+[2017-07-14T20:13:27.717Z] [INFO] [#tid_26] [InvokerReactive] whisk.system/hi whisk.system aa5f43ef793c410ebd051a81765f1b30 
+[2017-07-14T20:13:27.718Z] [INFO] [#tid_26] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3158] 
+[2017-07-14T20:13:27.718Z] [INFO] [#tid_25] [DockerContainer] sending initialization to ContainerId(22ac0751e0e3781402ddb05f66b19736155031ae058f8b02ea3d5dad075bc45d) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:3191] 
+[2017-07-14T20:13:27.718Z] [INFO] [#tid_26] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_25_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:3292] 
+[2017-07-14T20:13:27.718Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][32 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:13:27.718Z] [INFO] [#tid_27] [InvokerReactive] [marker:invoker_activation_start:3296] 
+[2017-07-14T20:13:27.718Z] [INFO] [#tid_27] [InvokerReactive] whisk.system/hi whisk.system 1aaa7d85237e4ea5b8876488cb0dee62 
+[2017-07-14T20:13:27.720Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:13:27.721Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:13:27.721Z] [INFO] [#tid_27] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3357] 
+[2017-07-14T20:13:27.721Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][33 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:13:27.722Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:13:27.722Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:13:27.723Z] [INFO] [#tid_28] [InvokerReactive] [marker:invoker_activation_start:3319] 
+[2017-07-14T20:13:27.724Z] [INFO] [#tid_28] [InvokerReactive] whisk.system/hi whisk.system 79c9be8627814a1fa9c33aa80ccac4f2 
+[2017-07-14T20:13:27.725Z] [INFO] [#tid_28] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:3336] 
+[2017-07-14T20:13:27.727Z] [INFO] [#tid_23] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:3557:427] 
+[2017-07-14T20:13:27.736Z] [INFO] [#tid_27] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_26_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:3406] 
+[2017-07-14T20:13:27.737Z] [INFO] [#tid_28] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_27_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:3473] 
+[2017-07-14T20:13:27.738Z] [INFO] [#tid_21] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/4b29c10f4c9b4054a18383268ba84ecd, rev: null', response: '{"ok":true,"id":"whisk.system/4b29c10f4c9b4054a18383268ba84ecd","rev":"1-5ef60c49d362931a90d5a40ba5d40518"}' [marker:database_saveDocument_finish:3863:689] 
+[2017-07-14T20:13:27.793Z] [INFO] [#tid_21] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:27.831Z] [INFO] [#tid_23] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:28.889Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T20:13:28.896Z] [INFO] [#tid_25] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:4009:816] 
+[2017-07-14T20:13:28.896Z] [INFO] [#tid_25] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(22ac0751e0e3781402ddb05f66b19736155031ae058f8b02ea3d5dad075bc45d) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:4099] 
+[2017-07-14T20:13:28.896Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d4df420da4db4ee0ab018b4f15a8d58f, rev: null' [marker:database_saveDocument_start:4164] 
+[2017-07-14T20:13:28.897Z] [INFO] [#tid_24] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:4800:1811] 
+[2017-07-14T20:13:28.913Z] [INFO] [#tid_25] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:6253:2154] 
+[2017-07-14T20:13:28.914Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376 [marker:invoker_runc.pause_start:1181828] 
+[2017-07-14T20:13:28.914Z] [INFO] [#tid_25] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:28.914Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/98501c08eaac4171a4a558f16aa7f1c0, rev: null' [marker:database_saveDocument_start:7014] 
+[2017-07-14T20:13:28.915Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 22ac0751e0e3781402ddb05f66b19736155031ae058f8b02ea3d5dad075bc45d [marker:invoker_runc.pause_start:1183611] 
+[2017-07-14T20:13:29.055Z] [INFO] [#tid_23] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d4df420da4db4ee0ab018b4f15a8d58f, rev: null', response: '{"ok":true,"id":"whisk.system/d4df420da4db4ee0ab018b4f15a8d58f","rev":"1-086ef79cae2314d9e022f9e386ed5765"}' [marker:database_saveDocument_finish:8334:4170] 
+[2017-07-14T20:13:29.062Z] [INFO] [#tid_23] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:29.069Z] [INFO] [#tid_25] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/98501c08eaac4171a4a558f16aa7f1c0, rev: null', response: '{"ok":true,"id":"whisk.system/98501c08eaac4171a4a558f16aa7f1c0","rev":"1-c5496b0425884db2fa7fe54df4037b48"}' [marker:database_saveDocument_finish:8393:1377] 
+[2017-07-14T20:13:29.102Z] [INFO] [#tid_25] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:29.124Z] [INFO] [#tid_24] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:29.304Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d7affb96fddb4411a1ae3735665edde6, rev: null' [marker:database_saveDocument_start:8669] 
+[2017-07-14T20:13:29.727Z] [INFO] [#tid_24] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d7affb96fddb4411a1ae3735665edde6, rev: null', response: '{"ok":true,"id":"whisk.system/d7affb96fddb4411a1ae3735665edde6","rev":"1-f1bc25245d60148d8073bc8bcf816cff"}' [marker:database_saveDocument_finish:9109:420] 
+[2017-07-14T20:13:29.728Z] [INFO] [#tid_24] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:30.474Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 981b07ef1b7d55067203ab325cd44e5098d159a2272d5234548c2e911e0dd137 [marker:invoker_runc.pause_start:1185077] 
+[2017-07-14T20:13:32.057Z] [INFO] [#tid_23] [InvokerReactive] posted completion of activation d4df420da4db4ee0ab018b4f15a8d58f 
+[2017-07-14T20:13:33.123Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1187820:2742] 
+[2017-07-14T20:13:33.135Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 981b07ef1b7d55067203ab325cd44e5098d159a2272d5234548c2e911e0dd137 [marker:invoker_docker.rm_start:1187830] 
+[2017-07-14T20:13:33.407Z] [INFO] [#tid_22] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:12779:11039] 
+[2017-07-14T20:13:33.608Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1188242:12824] 
+[2017-07-14T20:13:33.610Z] [INFO] [#tid_22] [DockerContainer] sending initialization to ContainerId(d9965d893e85d67e56b0fb16521e2929508f3d245c16c1544f3b3516cbba2911) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:12991] 
+[2017-07-14T20:13:34.972Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T20:13:34.992Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T20:13:34.996Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T20:13:37.127Z] [INFO] [#tid_22] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:16485:3494] 
+[2017-07-14T20:13:37.128Z] [INFO] [#tid_22] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(d9965d893e85d67e56b0fb16521e2929508f3d245c16c1544f3b3516cbba2911) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:16486] 
+[2017-07-14T20:13:38.336Z] [INFO] [#tid_25] [InvokerReactive] posted completion of activation 98501c08eaac4171a4a558f16aa7f1c0 
+[2017-07-14T20:13:38.336Z] [INFO] [#tid_24] [InvokerReactive] posted completion of activation d7affb96fddb4411a1ae3735665edde6 
+[2017-07-14T20:13:38.344Z] [INFO] [#tid_22] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:17703:1217] 
+[2017-07-14T20:13:38.680Z] [INFO] [#tid_22] [InvokerReactive] posted completion of activation d84e44cd238646c7a9bf4ba78d3f7e39 
+[2017-07-14T20:13:38.743Z] [INFO] [#tid_22] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:38.768Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39, rev: null' [marker:database_saveDocument_start:18190] 
+[2017-07-14T20:13:38.907Z] [INFO] [#tid_22] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39, rev: null', response: '{"ok":true,"id":"whisk.system/d84e44cd238646c7a9bf4ba78d3f7e39","rev":"1-ce3f236638a3bde4edbd6dbc3ff286a2"}' [marker:database_saveDocument_finish:18343:139] 
+[2017-07-14T20:13:38.911Z] [INFO] [#tid_22] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:40.116Z] [INFO] [#tid_26] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:18854:15562] 
+[2017-07-14T20:13:40.117Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1194319:15794] 
+[2017-07-14T20:13:40.265Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1194584:10972] 
+[2017-07-14T20:13:41.084Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][34 (2)][pipelineOccupancy=5 (8)] 
+[2017-07-14T20:13:41.090Z] [INFO] [#tid_28] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:19299:15826] 
+[2017-07-14T20:13:41.427Z] [INFO] [#tid_28] [DockerContainer] sending initialization to ContainerId(32b93fabe6ba0a2dc54fe339918a9c2a638c380dca55944998c06e2c7b808c35) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:19355] 
+[2017-07-14T20:13:41.427Z] [INFO] [#tid_27] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:19423:16017] 
+[2017-07-14T20:13:41.427Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 22ac0751e0e3781402ddb05f66b19736155031ae058f8b02ea3d5dad075bc45d [marker:invoker_docker.rm_start:1194871] 
+[2017-07-14T20:13:41.433Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1281916] 
+[2017-07-14T20:13:41.437Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][35 (2)][pipelineOccupancy=6 (8)] 
+[2017-07-14T20:13:41.442Z] [INFO] [#tid_26] [DockerContainer] sending initialization to ContainerId(3ef1f87967ce9c47f329936465334276c79eebfde72f9b24e17995dc8181b96a) ContainerIp(172.17.0.17) [marker:invoker_activationInit_start:20438] 
+[2017-07-14T20:13:41.500Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause d9965d893e85d67e56b0fb16521e2929508f3d245c16c1544f3b3516cbba2911 [marker:invoker_runc.pause_start:1196157] 
+[2017-07-14T20:13:41.527Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 15a047aa47214323b032d5f3b7e2b286 
+[2017-07-14T20:13:41.581Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:13:42.980Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1282319] 
+[2017-07-14T20:13:42.989Z] [INFO] [#tid_27] [DockerContainer] sending initialization to ContainerId(b0cbfaa52f10f8250e9cefb5af12cb1211f881b4342b424bb8b8947b2eff46fc) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:20723] 
+[2017-07-14T20:13:44.766Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1282665] 
+[2017-07-14T20:13:44.974Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 1ae62f04fbe745ceb02a0794fc0f6f1e 
+[2017-07-14T20:13:45.031Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:13:45.046Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1282665] 
+[2017-07-14T20:13:45.164Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1195798:13970] 
+[2017-07-14T20:13:45.184Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f abd06f6a1ee37264bc7ea5397960596740e8f702ff45fc7cf646a38dbc5b4376 [marker:invoker_docker.rm_start:1196518] 
+[2017-07-14T20:13:46.133Z] [INFO] [#tid_28] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:25284:5929] 
+[2017-07-14T20:13:46.138Z] [INFO] [#tid_28] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(32b93fabe6ba0a2dc54fe339918a9c2a638c380dca55944998c06e2c7b808c35) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:25305] 
+[2017-07-14T20:13:46.428Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1200866:13036] 
+[2017-07-14T20:13:47.101Z] [INFO] [#tid_28] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:26260:949] 
+[2017-07-14T20:13:47.119Z] [INFO] [#tid_28] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:47.544Z] [INFO] [#tid_28] [InvokerReactive] posted completion of activation 79c9be8627814a1fa9c33aa80ccac4f2 
+[2017-07-14T20:13:47.810Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1288620:6301] 
+[2017-07-14T20:13:47.826Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2, rev: null' [marker:database_saveDocument_start:26984] 
+[2017-07-14T20:13:47.826Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(f39dbd7c84a75b179f360d63ef612d12f8079df6ac48204091e289fb5d1a437d) ContainerIp(172.17.0.16) [marker:invoker_activationInit_start:1288663] 
+[2017-07-14T20:13:47.897Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_28_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1202590] 
+[2017-07-14T20:13:51.695Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 32b93fabe6ba0a2dc54fe339918a9c2a638c380dca55944998c06e2c7b808c35 [marker:invoker_runc.pause_start:1206386] 
+[2017-07-14T20:13:52.425Z] [INFO] [#tid_26] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:31727:11289] 
+[2017-07-14T20:13:52.454Z] [INFO] [#tid_26] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(3ef1f87967ce9c47f329936465334276c79eebfde72f9b24e17995dc8181b96a) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:31750] 
+[2017-07-14T20:13:52.460Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1293101:10436] 
+[2017-07-14T20:13:52.634Z] [INFO] [#tid_26] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:31932:165] 
+[2017-07-14T20:13:52.695Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(c2b011ac03eec57afd26b69119a99c3ab1c982d9ae90e6479cb2ce273dbd2a1b) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:1293471] 
+[2017-07-14T20:13:52.807Z] [INFO] [#tid_28] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/79c9be8627814a1fa9c33aa80ccac4f2, rev: null', response: '{"ok":true,"id":"whisk.system/79c9be8627814a1fa9c33aa80ccac4f2","rev":"1-6d90278964a1c4540172b9433b7514c3"}' [marker:database_saveDocument_finish:31866:4868] 
+[2017-07-14T20:13:52.822Z] [INFO] [#tid_28] [InvokerReactive] recorded activation 
+[2017-07-14T20:13:52.842Z] [INFO] [#tid_26] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:13:52.842Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_29_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1207474] 
+[2017-07-14T20:13:52.912Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30, rev: null' [marker:database_saveDocument_start:32198] 
+[2017-07-14T20:13:55.007Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1208842:12685] 
+[2017-07-14T20:13:55.023Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f d9965d893e85d67e56b0fb16521e2929508f3d245c16c1544f3b3516cbba2911 [marker:invoker_docker.rm_start:1208850] 
+[2017-07-14T20:13:55.038Z] [INFO] [#tid_26] [InvokerReactive] posted completion of activation aa5f43ef793c410ebd051a81765f1b30 
+[2017-07-14T20:13:56.497Z] [INFO] [#tid_27] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:35463:14738] 
+[2017-07-14T20:13:56.752Z] [INFO] [#tid_27] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(b0cbfaa52f10f8250e9cefb5af12cb1211f881b4342b424bb8b8947b2eff46fc) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:35555] 
+[2017-07-14T20:13:56.824Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T20:13:57.166Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1211208:4817] 
+[2017-07-14T20:13:57.186Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 32b93fabe6ba0a2dc54fe339918a9c2a638c380dca55944998c06e2c7b808c35 [marker:invoker_docker.rm_start:1211863] 
+[2017-07-14T20:13:59.675Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T20:14:01.408Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1302247:13508] 
+[2017-07-14T20:14:01.425Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(f39dbd7c84a75b179f360d63ef612d12f8079df6ac48204091e289fb5d1a437d) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:1302258] 
+[2017-07-14T20:14:01.622Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 3ef1f87967ce9c47f329936465334276c79eebfde72f9b24e17995dc8181b96a [marker:invoker_runc.pause_start:1216133] 
+[2017-07-14T20:14:01.624Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1216113:19524] 
+[2017-07-14T20:14:01.662Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T20:14:02.610Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1209485:14213] 
+[2017-07-14T20:14:02.715Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1217162:14569] 
+[2017-07-14T20:14:02.716Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1217188:8329] 
+[2017-07-14T20:14:02.731Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1303348:9831] 
+[2017-07-14T20:14:02.801Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(c2b011ac03eec57afd26b69119a99c3ab1c982d9ae90e6479cb2ce273dbd2a1b) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:1303360] 
+[2017-07-14T20:14:02.807Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1217274:5411] 
+[2017-07-14T20:14:02.810Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1217279:9774] 
+[2017-07-14T20:14:02.847Z] [INFO] [#tid_27] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:41898:6102] 
+[2017-07-14T20:14:02.849Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1303665:1407] 
+[2017-07-14T20:14:02.935Z] [INFO] [#tid_27] [InvokerReactive] posted completion of activation 1aaa7d85237e4ea5b8876488cb0dee62 
+[2017-07-14T20:14:02.953Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1303753:365] 
+[2017-07-14T20:14:02.959Z] [INFO] [#tid_27] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:02.967Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:02.980Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62, rev: null' [marker:database_saveDocument_start:42133] 
+[2017-07-14T20:14:02.980Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/1ae62f04fbe745ceb02a0794fc0f6f1e, rev: null' [marker:database_saveDocument_start:1303765] 
+[2017-07-14T20:14:02.995Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 1ae62f04fbe745ceb02a0794fc0f6f1e 
+[2017-07-14T20:14:03.039Z] [INFO] [#tid_26] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/aa5f43ef793c410ebd051a81765f1b30, rev: null', response: '{"ok":true,"id":"whisk.system/aa5f43ef793c410ebd051a81765f1b30","rev":"1-e85ba729d59edcaff69cf9254b908c8d"}' [marker:database_saveDocument_finish:42269:10071] 
+[2017-07-14T20:14:03.050Z] [INFO] [#tid_26] [InvokerReactive] recorded activation 
+[2017-07-14T20:14:03.095Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:03.098Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/15a047aa47214323b032d5f3b7e2b286, rev: null' [marker:database_saveDocument_start:1303831] 
+[2017-07-14T20:14:03.100Z] [INFO] [#tid_27] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1aaa7d85237e4ea5b8876488cb0dee62, rev: null', response: '{"ok":true,"id":"whisk.system/1aaa7d85237e4ea5b8876488cb0dee62","rev":"1-d43027dd831c08dd2ca9b648263c5036"}' [marker:database_saveDocument_finish:42230:97] 
+[2017-07-14T20:14:03.105Z] [INFO] [#tid_27] [InvokerReactive] recorded activation 
+[2017-07-14T20:14:03.105Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 15a047aa47214323b032d5f3b7e2b286 
+[2017-07-14T20:14:03.129Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/1ae62f04fbe745ceb02a0794fc0f6f1e, rev: null', response: '{"ok":true,"id":"whisk.system/1ae62f04fbe745ceb02a0794fc0f6f1e","rev":"1-d054f30cc559a6c44dc973948d9ee2c0"}' [marker:database_saveDocument_finish:1303897:132] 
+[2017-07-14T20:14:03.133Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:14:03.170Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/15a047aa47214323b032d5f3b7e2b286, rev: null', response: '{"ok":true,"id":"whisk.system/15a047aa47214323b032d5f3b7e2b286","rev":"1-c3be649c5e9c821a6cb8b25ef5cae192"}' [marker:database_saveDocument_finish:1304009:174] 
+[2017-07-14T20:14:03.170Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:14:03.462Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1218154:2021] 
+[2017-07-14T20:14:03.462Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 3ef1f87967ce9c47f329936465334276c79eebfde72f9b24e17995dc8181b96a [marker:invoker_docker.rm_start:1218156] 
+[2017-07-14T20:14:03.948Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause b0cbfaa52f10f8250e9cefb5af12cb1211f881b4342b424bb8b8947b2eff46fc [marker:invoker_runc.pause_start:1218643] 
+[2017-07-14T20:14:03.979Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause c2b011ac03eec57afd26b69119a99c3ab1c982d9ae90e6479cb2ce273dbd2a1b [marker:invoker_runc.pause_start:1218673] 
+[2017-07-14T20:14:04.034Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause f39dbd7c84a75b179f360d63ef612d12f8079df6ac48204091e289fb5d1a437d [marker:invoker_runc.pause_start:1218726] 
+[2017-07-14T20:14:04.434Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1219131:486] 
+[2017-07-14T20:14:04.436Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f b0cbfaa52f10f8250e9cefb5af12cb1211f881b4342b424bb8b8947b2eff46fc [marker:invoker_docker.rm_start:1219132] 
+[2017-07-14T20:14:04.487Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1219176:502] 
+[2017-07-14T20:14:04.488Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f c2b011ac03eec57afd26b69119a99c3ab1c982d9ae90e6479cb2ce273dbd2a1b [marker:invoker_docker.rm_start:1219183] 
+[2017-07-14T20:14:04.647Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1219322:1166] 
+[2017-07-14T20:14:04.650Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1219322:596] 
+[2017-07-14T20:14:04.652Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f f39dbd7c84a75b179f360d63ef612d12f8079df6ac48204091e289fb5d1a437d [marker:invoker_docker.rm_start:1219348] 
+[2017-07-14T20:14:05.082Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1219776:644] 
+[2017-07-14T20:14:05.294Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1219984:800] 
+[2017-07-14T20:14:05.495Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1220189:841] 
+[2017-07-14T20:14:08.458Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T20:14:08.460Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T20:14:08.465Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:14:39.801Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][36 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:14:39.802Z] [INFO] [#tid_29] [InvokerReactive] [marker:invoker_activation_start:386] 
+[2017-07-14T20:14:39.806Z] [INFO] [#tid_29] [InvokerReactive] whisk.system/hi whisk.system 6d322449955d40e5935756a1a4991355 
+[2017-07-14T20:14:39.807Z] [INFO] [#tid_29] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:402] 
+[2017-07-14T20:14:39.833Z] [INFO] [#tid_29] [DockerContainer] sending initialization to ContainerId(b9796e2a444a0c6133fc9ffc28b76d4535a74bf2a5250068af462cdd8e8c287b) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:427] 
+[2017-07-14T20:14:39.838Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_30_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1254530] 
+[2017-07-14T20:14:40.003Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][37 (4)][pipelineOccupancy=2 (8)] 
+[2017-07-14T20:14:40.010Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][38 (4)][pipelineOccupancy=3 (8)] 
+[2017-07-14T20:14:40.012Z] [INFO] [#tid_30] [InvokerReactive] [marker:invoker_activation_start:569] 
+[2017-07-14T20:14:40.016Z] [INFO] [#tid_30] [InvokerReactive] whisk.system/hi whisk.system df2ebfeac5c84b7796befa0dd1218205 
+[2017-07-14T20:14:40.036Z] [INFO] [#tid_30] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:589] 
+[2017-07-14T20:14:40.037Z] [INFO] [#tid_30] [DockerContainer] sending initialization to ContainerId(f39342350be89f2399d5cd198316576113b17ce3d2e28a66b8119a2da62c8b68) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:600] 
+[2017-07-14T20:14:40.058Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_31_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1254752] 
+[2017-07-14T20:14:40.361Z] [INFO] [#tid_29] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:957:529] 
+[2017-07-14T20:14:40.363Z] [INFO] [#tid_29] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(b9796e2a444a0c6133fc9ffc28b76d4535a74bf2a5250068af462cdd8e8c287b) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:958] 
+[2017-07-14T20:14:40.393Z] [INFO] [#tid_31] [InvokerReactive] [marker:invoker_activation_start:910] 
+[2017-07-14T20:14:40.419Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][39 (4)][pipelineOccupancy=4 (8)] 
+[2017-07-14T20:14:40.428Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][40 (4)][pipelineOccupancy=5 (8)] 
+[2017-07-14T20:14:40.431Z] [INFO] [#tid_35] [InvokerReactive] [marker:invoker_activation_start:825] 
+[2017-07-14T20:14:40.439Z] [INFO] [#tid_32] [InvokerReactive] [marker:invoker_activation_start:877] 
+[2017-07-14T20:14:40.439Z] [INFO] [#tid_32] [InvokerReactive] whisk.system/hi whisk.system c951e1292e1c4e8ca12bb7e566393381 
+[2017-07-14T20:14:40.440Z] [INFO] [#tid_32] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:891] 
+[2017-07-14T20:14:40.440Z] [INFO] [#tid_31] [InvokerReactive] whisk.system/hi whisk.system 2365d6b4f17a4401973af03d5ee24803 
+[2017-07-14T20:14:40.440Z] [INFO] [#tid_31] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:962] 
+[2017-07-14T20:14:40.464Z] [INFO] [#tid_32] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_32_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:927] 
+[2017-07-14T20:14:40.466Z] [INFO] [#tid_31] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_33_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:977] 
+[2017-07-14T20:14:40.487Z] [INFO] [#tid_35] [InvokerReactive] whisk.system/hi whisk.system 3df919717a7d4a48b31ca7cc75305602 
+[2017-07-14T20:14:40.495Z] [INFO] [#tid_29] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1079:119] 
+[2017-07-14T20:14:40.503Z] [INFO] [#tid_35] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:931] 
+[2017-07-14T20:14:40.549Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][41 (5)][pipelineOccupancy=6 (8)] 
+[2017-07-14T20:14:40.551Z] [INFO] [#tid_30] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1112:512] 
+[2017-07-14T20:14:40.629Z] [INFO] [#tid_30] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(f39342350be89f2399d5cd198316576113b17ce3d2e28a66b8119a2da62c8b68) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:1113] 
+[2017-07-14T20:14:40.658Z] [INFO] [#tid_35] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_34_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1013] 
+[2017-07-14T20:14:40.674Z] [INFO] [#tid_30] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1176:63] 
+[2017-07-14T20:14:40.689Z] [INFO] [#tid_29] [InvokerReactive] posted completion of activation 6d322449955d40e5935756a1a4991355 
+[2017-07-14T20:14:40.690Z] [INFO] [#tid_29] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:40.690Z] [INFO] [#tid_30] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:40.935Z] [INFO] [#tid_30] [InvokerReactive] posted completion of activation df2ebfeac5c84b7796befa0dd1218205 
+[2017-07-14T20:14:41.086Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/df2ebfeac5c84b7796befa0dd1218205, rev: null' [marker:database_saveDocument_start:1203] 
+[2017-07-14T20:14:41.089Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/6d322449955d40e5935756a1a4991355, rev: null' [marker:database_saveDocument_start:1271] 
+[2017-07-14T20:14:41.127Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][42 (5)][pipelineOccupancy=7 (8)] 
+[2017-07-14T20:14:41.134Z] [INFO] [#tid_33] [InvokerReactive] [marker:invoker_activation_start:1190] 
+[2017-07-14T20:14:41.136Z] [INFO] [#tid_33] [InvokerReactive] whisk.system/hi whisk.system c5d0898b214648ec9d8c846944fe88bc 
+[2017-07-14T20:14:41.137Z] [INFO] [#tid_36] [InvokerReactive] [marker:invoker_activation_start:1133] 
+[2017-07-14T20:14:41.305Z] [INFO] [#tid_36] [InvokerReactive] whisk.system/hi whisk.system 551c8ac3882c479aa99262ecb3474d49 
+[2017-07-14T20:14:41.309Z] [INFO] [#tid_33] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1195] 
+[2017-07-14T20:14:41.310Z] [INFO] [#tid_36] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1140] 
+[2017-07-14T20:14:41.314Z] [INFO] [#tid_33] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(f39342350be89f2399d5cd198316576113b17ce3d2e28a66b8119a2da62c8b68) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:1213] 
+[2017-07-14T20:14:41.314Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][43 (5)][pipelineOccupancy=8 (8)] 
+[2017-07-14T20:14:41.315Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][44 (5)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:14:41.315Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][45 (5)][pipelineOccupancy=10 (8)] 
+[2017-07-14T20:14:41.327Z] [INFO] [#tid_34] [InvokerReactive] [marker:invoker_activation_start:1225] 
+[2017-07-14T20:14:41.363Z] [INFO] [#tid_34] [InvokerReactive] whisk.system/hi whisk.system 512a19a4ff13439c80846500144492ef 
+[2017-07-14T20:14:41.365Z] [INFO] [#tid_34] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1229] 
+[2017-07-14T20:14:41.370Z] [INFO] [#tid_34] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(b9796e2a444a0c6133fc9ffc28b76d4535a74bf2a5250068af462cdd8e8c287b) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:1235] 
+[2017-07-14T20:14:41.372Z] [INFO] [#tid_37] [InvokerReactive] [marker:invoker_activation_start:1159] 
+[2017-07-14T20:14:41.373Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 10 > 8 
+[2017-07-14T20:14:41.375Z] [INFO] [#tid_38] [InvokerReactive] [marker:invoker_activation_start:1130] 
+[2017-07-14T20:14:41.377Z] [INFO] [#tid_36] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_35_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1189] 
+[2017-07-14T20:14:41.380Z] [INFO] [#tid_37] [InvokerReactive] whisk.system/hi whisk.system 15d8e32f10e84ddabe24bf4b9914dd9b 
+[2017-07-14T20:14:41.381Z] [INFO] [#tid_38] [InvokerReactive] whisk.system/hi whisk.system e02e139c5a9e4d189264d6ffff5d2e9a 
+[2017-07-14T20:14:41.382Z] [INFO] [#tid_38] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1138] 
+[2017-07-14T20:14:41.382Z] [INFO] [#tid_37] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:1184] 
+[2017-07-14T20:14:41.382Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=9 / pipelineFillThreshold=8 
+[2017-07-14T20:14:41.386Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:14:41.389Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:14:41.392Z] [INFO] [#tid_38] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_36_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1278] 
+[2017-07-14T20:14:41.392Z] [INFO] [#tid_34] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1403:167] 
+[2017-07-14T20:14:41.395Z] [INFO] [#tid_34] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:14:41.398Z] [INFO] [#tid_37] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_37_whisksystem_hi openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1332] 
+[2017-07-14T20:14:41.402Z] [INFO] [#tid_34] [InvokerReactive] posted completion of activation 512a19a4ff13439c80846500144492ef 
+[2017-07-14T20:14:41.403Z] [INFO] [#tid_34] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/512a19a4ff13439c80846500144492ef, rev: null' [marker:database_saveDocument_start:1427] 
+[2017-07-14T20:14:41.404Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T20:14:42.026Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause b9796e2a444a0c6133fc9ffc28b76d4535a74bf2a5250068af462cdd8e8c287b [marker:invoker_runc.pause_start:1256723] 
+[2017-07-14T20:15:02.010Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1275985:21454] 
+[2017-07-14T20:15:02.010Z] [INFO] [#tid_37] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:21675:20331] 
+[2017-07-14T20:15:02.010Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1276018:21264] 
+[2017-07-14T20:15:02.010Z] [INFO] [#tid_36] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:21727:20534] 
+[2017-07-14T20:15:02.010Z] [INFO] [#tid_31] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:22270:21273] 
+[2017-07-14T20:15:02.011Z] [INFO] [#tid_36] [DockerContainer] sending initialization to ContainerId(c6d68460cb543937432659042b7d4b726c4a1448b8167872472d0d6a4021c645) ContainerIp(172.17.0.14) [marker:invoker_activationInit_start:22394] 
+[2017-07-14T20:15:02.011Z] [INFO] [#tid_33] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:22463:21248] 
+[2017-07-14T20:15:02.250Z] [INFO] [#tid_33] [InvokerReactive] posted completion of activation c5d0898b214648ec9d8c846944fe88bc 
+[2017-07-14T20:15:02.281Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][46 (1)][pipelineOccupancy=8 (8)] 
+[2017-07-14T20:15:02.315Z] [INFO] [#tid_33] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:02.334Z] [INFO] [#tid_33] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c5d0898b214648ec9d8c846944fe88bc, rev: null' [marker:database_saveDocument_start:22804] 
+[2017-07-14T20:15:02.392Z] [INFO] [#tid_37] [DockerContainer] sending initialization to ContainerId(68a51ad4a447602177e1c06a14d7b1119a46c2afe9f3034d182baa9d21b9976a) ContainerIp(172.17.0.11) [marker:invoker_activationInit_start:22775] 
+[2017-07-14T20:15:02.432Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1363248] 
+[2017-07-14T20:15:03.047Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system 8e74f60cea494f3ea7cc3f5eb50294ef 
+[2017-07-14T20:15:03.119Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:15:03.130Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1363252] 
+[2017-07-14T20:15:03.151Z] [INFO] [#tid_38] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:23268:21990] 
+[2017-07-14T20:15:03.151Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][47 (1)][pipelineOccupancy=9 (8)] 
+[2017-07-14T20:15:03.168Z] [INFO] [#tid_38] [DockerContainer] sending initialization to ContainerId(ca21d24ff07a834521502932975ce64cd0129c6a47366353e6e151448d99642f) ContainerIp(172.17.0.18) [marker:invoker_activationInit_start:23454] 
+[2017-07-14T20:15:03.172Z] [INFO] [#sid_110] [ActivationFeed] waiting for activation pipeline to drain: 9 > 8 
+[2017-07-14T20:15:03.173Z] [INFO] [#sid_121] [InvokerReactive] [marker:invoker_activation_start:1363968] 
+[2017-07-14T20:15:03.203Z] [INFO] [#sid_121] [InvokerReactive] whisk.system/invokerHealthTestAction whisk.system c115016f05bf4129a91690b1a6e04799 
+[2017-07-14T20:15:03.219Z] [WARN] [#sid_121] [InvokerReactive] revision was not provided for whisk.system/invokerHealthTestAction 
+[2017-07-14T20:15:03.334Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' finding document: 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_start:1363968] 
+[2017-07-14T20:15:06.598Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=8 / pipelineFillThreshold=8 
+[2017-07-14T20:15:06.782Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause f39342350be89f2399d5cd198316576113b17ce3d2e28a66b8119a2da62c8b68 [marker:invoker_runc.pause_start:1278161] 
+[2017-07-14T20:15:10.321Z] [INFO] [#tid_32] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:30733:29800] 
+[2017-07-14T20:15:14.479Z] [INFO] [#tid_31] [DockerContainer] sending initialization to ContainerId(735651b642eb0101c5c6f54c31e13d7039ddd9c91d7e186c75199250f86c1d3c) ContainerIp(172.17.0.15) [marker:invoker_activationInit_start:32514] 
+[2017-07-14T20:15:14.559Z] [INFO] [#tid_36] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:34500:12106] 
+[2017-07-14T20:15:14.559Z] [INFO] [#tid_32] [DockerContainer] sending initialization to ContainerId(d11a8c6c06718948cfbb0fe7534d091db8e1ef459fe9fb40303762a64d7b4041) ContainerIp(172.17.0.13) [marker:invoker_activationInit_start:34979] 
+[2017-07-14T20:15:14.594Z] [INFO] [#tid_36] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(c6d68460cb543937432659042b7d4b726c4a1448b8167872472d0d6a4021c645) ContainerIp(172.17.0.14) [marker:invoker_activationRun_start:34914] 
+[2017-07-14T20:15:19.244Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1289176:32453] 
+[2017-07-14T20:15:21.095Z] [INFO] [#tid_35] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:34792:33778] 
+[2017-07-14T20:15:21.106Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f b9796e2a444a0c6133fc9ffc28b76d4535a74bf2a5250068af462cdd8e8c287b [marker:invoker_docker.rm_start:1289260] 
+[2017-07-14T20:15:21.173Z] [INFO] [#tid_37] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:34866:12079] 
+[2017-07-14T20:15:21.337Z] [INFO] [#tid_37] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(68a51ad4a447602177e1c06a14d7b1119a46c2afe9f3034d182baa9d21b9976a) ContainerIp(172.17.0.11) [marker:invoker_activationRun_start:35210] 
+[2017-07-14T20:15:21.338Z] [INFO] [#tid_38] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:35626:12164] 
+[2017-07-14T20:15:21.350Z] [INFO] [#tid_38] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(ca21d24ff07a834521502932975ce64cd0129c6a47366353e6e151448d99642f) ContainerIp(172.17.0.18) [marker:invoker_activationRun_start:35729] 
+[2017-07-14T20:15:21.363Z] [INFO] [#tid_35] [DockerContainer] sending initialization to ContainerId(af3a485550d82f79eee17f7ee8a7e454868fad0853df342e21357e3ab91a8128) ContainerIp(172.17.0.16) [marker:invoker_activationInit_start:39165] 
+[2017-07-14T20:15:21.383Z] [INFO] [#tid_37] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:41477:5793] 
+[2017-07-14T20:15:21.470Z] [INFO] [#tid_36] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:41507:6573] 
+[2017-07-14T20:15:21.488Z] [INFO] [#tid_38] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:41492:5761] 
+[2017-07-14T20:15:21.509Z] [INFO] [#tid_36] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:21.528Z] [INFO] [#tid_38] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:21.530Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1296126:17964] 
+[2017-07-14T20:15:21.542Z] [INFO] [#tid_38] [InvokerReactive] posted completion of activation e02e139c5a9e4d189264d6ffff5d2e9a 
+[2017-07-14T20:15:21.546Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f f39342350be89f2399d5cd198316576113b17ce3d2e28a66b8119a2da62c8b68 [marker:invoker_docker.rm_start:1296133] 
+[2017-07-14T20:15:21.548Z] [INFO] [#tid_36] [InvokerReactive] posted completion of activation 551c8ac3882c479aa99262ecb3474d49 
+[2017-07-14T20:15:21.548Z] [INFO] [#tid_37] [InvokerReactive] posted completion of activation 15d8e32f10e84ddabe24bf4b9914dd9b 
+[2017-07-14T20:15:21.548Z] [INFO] [#tid_36] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/551c8ac3882c479aa99262ecb3474d49, rev: null' [marker:database_saveDocument_start:41857] 
+[2017-07-14T20:15:21.550Z] [INFO] [#tid_37] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:21.554Z] [INFO] [#tid_38] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/e02e139c5a9e4d189264d6ffff5d2e9a, rev: null' [marker:database_saveDocument_start:41809] 
+[2017-07-14T20:15:21.555Z] [INFO] [#tid_37] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/15d8e32f10e84ddabe24bf4b9914dd9b, rev: null' [marker:database_saveDocument_start:41878] 
+[2017-07-14T20:15:22.716Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 68a51ad4a447602177e1c06a14d7b1119a46c2afe9f3034d182baa9d21b9976a [marker:invoker_runc.pause_start:1297397] 
+[2017-07-14T20:15:23.171Z] [INFO] [#tid_31] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:43670:9171] 
+[2017-07-14T20:15:23.275Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause c6d68460cb543937432659042b7d4b726c4a1448b8167872472d0d6a4021c645 [marker:invoker_runc.pause_start:1297937] 
+[2017-07-14T20:15:23.632Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause ca21d24ff07a834521502932975ce64cd0129c6a47366353e6e151448d99642f [marker:invoker_runc.pause_start:1297962] 
+[2017-07-14T20:15:23.641Z] [INFO] [#tid_31] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(735651b642eb0101c5c6f54c31e13d7039ddd9c91d7e186c75199250f86c1d3c) ContainerIp(172.17.0.15) [marker:invoker_activationRun_start:43783] 
+[2017-07-14T20:15:23.699Z] [INFO] [#tid_32] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:44184:9172] 
+[2017-07-14T20:15:24.560Z] [INFO] [#tid_32] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(d11a8c6c06718948cfbb0fe7534d091db8e1ef459fe9fb40303762a64d7b4041) ContainerIp(172.17.0.13) [marker:invoker_activationRun_start:44734] 
+[2017-07-14T20:15:24.913Z] [INFO] [#tid_31] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:45423:1624] 
+[2017-07-14T20:15:26.061Z] [INFO] [#tid_31] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:27.774Z] [INFO] [#tid_31] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/2365d6b4f17a4401973af03d5ee24803, rev: null' [marker:database_saveDocument_start:48291] 
+[2017-07-14T20:15:28.630Z] [INFO] [#tid_35] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:49051:9882] 
+[2017-07-14T20:15:28.977Z] [INFO] [#tid_35] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(af3a485550d82f79eee17f7ee8a7e454868fad0853df342e21357e3ab91a8128) ContainerIp(172.17.0.16) [marker:invoker_activationRun_start:49052] 
+[2017-07-14T20:15:30.249Z] [INFO] [#tid_31] [InvokerReactive] posted completion of activation 2365d6b4f17a4401973af03d5ee24803 
+[2017-07-14T20:15:33.045Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=7 / pipelineFillThreshold=8 
+[2017-07-14T20:15:33.049Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=6 / pipelineFillThreshold=8 
+[2017-07-14T20:15:33.059Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=5 / pipelineFillThreshold=8 
+[2017-07-14T20:15:35.243Z] [INFO] [#tid_35] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:55568:6516] 
+[2017-07-14T20:15:35.251Z] [INFO] [#tid_32] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:55737:10999] 
+[2017-07-14T20:15:35.257Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 735651b642eb0101c5c6f54c31e13d7039ddd9c91d7e186c75199250f86c1d3c [marker:invoker_runc.pause_start:1309953] 
+[2017-07-14T20:15:35.270Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=4 / pipelineFillThreshold=8 
+[2017-07-14T20:15:35.518Z] [INFO] [#tid_35] [InvokerReactive] posted completion of activation 3df919717a7d4a48b31ca7cc75305602 
+[2017-07-14T20:15:35.611Z] [INFO] [#tid_35] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:35.691Z] [INFO] [#tid_32] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:35.694Z] [INFO] [#tid_32] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c951e1292e1c4e8ca12bb7e566393381, rev: null' [marker:database_saveDocument_start:56027] 
+[2017-07-14T20:15:35.755Z] [INFO] [#tid_35] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/3df919717a7d4a48b31ca7cc75305602, rev: null' [marker:database_saveDocument_start:56046] 
+[2017-07-14T20:15:35.775Z] [INFO] [#tid_32] [InvokerReactive] posted completion of activation c951e1292e1c4e8ca12bb7e566393381 
+[2017-07-14T20:15:35.817Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1310432:12470] 
+[2017-07-14T20:15:35.820Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f ca21d24ff07a834521502932975ce64cd0129c6a47366353e6e151448d99642f [marker:invoker_docker.rm_start:1310435] 
+[2017-07-14T20:15:35.821Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1310436:12499] 
+[2017-07-14T20:15:35.823Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1310436:483] 
+[2017-07-14T20:15:35.879Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 735651b642eb0101c5c6f54c31e13d7039ddd9c91d7e186c75199250f86c1d3c [marker:invoker_docker.rm_start:1310442] 
+[2017-07-14T20:15:35.892Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f c6d68460cb543937432659042b7d4b726c4a1448b8167872472d0d6a4021c645 [marker:invoker_docker.rm_start:1310442] 
+[2017-07-14T20:15:35.896Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1310449:13052] 
+[2017-07-14T20:15:35.974Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 68a51ad4a447602177e1c06a14d7b1119a46c2afe9f3034d182baa9d21b9976a [marker:invoker_docker.rm_start:1310470] 
+[2017-07-14T20:15:36.595Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1311165:21901] 
+[2017-07-14T20:15:36.601Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1311281:15145] 
+[2017-07-14T20:15:36.667Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause d11a8c6c06718948cfbb0fe7534d091db8e1ef459fe9fb40303762a64d7b4041 [marker:invoker_runc.pause_start:1311357] 
+[2017-07-14T20:15:36.713Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause af3a485550d82f79eee17f7ee8a7e454868fad0853df342e21357e3ab91a8128 [marker:invoker_runc.pause_start:1311409] 
+[2017-07-14T20:15:37.026Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1311711:347] 
+[2017-07-14T20:15:37.041Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f d11a8c6c06718948cfbb0fe7534d091db8e1ef459fe9fb40303762a64d7b4041 [marker:invoker_docker.rm_start:1311723] 
+[2017-07-14T20:15:37.046Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1311736:327] 
+[2017-07-14T20:15:37.047Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f af3a485550d82f79eee17f7ee8a7e454868fad0853df342e21357e3ab91a8128 [marker:invoker_docker.rm_start:1311737] 
+[2017-07-14T20:15:37.293Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1311987:1550] 
+[2017-07-14T20:15:37.527Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1312222:1780] 
+[2017-07-14T20:15:37.963Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1312590:2145] 
+[2017-07-14T20:15:38.105Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1312688:2218] 
+[2017-07-14T20:15:38.205Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1312898:1160] 
+[2017-07-14T20:15:38.318Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1312905:1168] 
+[2017-07-14T20:15:38.404Z] [INFO] [#tid_30] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/df2ebfeac5c84b7796befa0dd1218205, rev: null', response: '{"ok":true,"id":"whisk.system/df2ebfeac5c84b7796befa0dd1218205","rev":"1-d0a0e46ab57d93adb703250d3b9693fb"}' [marker:database_saveDocument_finish:58968:57765] 
+[2017-07-14T20:15:38.409Z] [INFO] [#tid_30] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.452Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1399283:36031] 
+[2017-07-14T20:15:38.484Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(a15a8d39b59a9b50695fe5681c222252c95f60acec773763c55967d375d1cc5c) ContainerIp(172.17.0.17) [marker:invoker_activationInit_start:1399332] 
+[2017-07-14T20:15:38.504Z] [INFO] [#tid_32] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c951e1292e1c4e8ca12bb7e566393381, rev: null', response: '{"ok":true,"id":"whisk.system/c951e1292e1c4e8ca12bb7e566393381","rev":"1-d8049f1ab3c89e30367ba455036720f5"}' [marker:database_saveDocument_finish:58988:2947] 
+[2017-07-14T20:15:38.507Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_38_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1313203] 
+[2017-07-14T20:15:38.690Z] [INFO] [#tid_35] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/3df919717a7d4a48b31ca7cc75305602, rev: null', response: '{"ok":true,"id":"whisk.system/3df919717a7d4a48b31ca7cc75305602","rev":"1-6cf7478ef7598e66a753bef88c182f89"}' [marker:database_saveDocument_finish:58961:2903] 
+[2017-07-14T20:15:38.694Z] [INFO] [#tid_35] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.699Z] [INFO] [#tid_32] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.700Z] [INFO] [#tid_29] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/6d322449955d40e5935756a1a4991355, rev: null', response: '{"ok":true,"id":"whisk.system/6d322449955d40e5935756a1a4991355","rev":"1-7632217b89b4b3fc56a0e0b3aae2c1ba"}' [marker:database_saveDocument_finish:59291:57998] 
+[2017-07-14T20:15:38.703Z] [INFO] [#tid_29] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.708Z] [INFO] [#tid_37] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/15d8e32f10e84ddabe24bf4b9914dd9b, rev: null', response: '{"ok":true,"id":"whisk.system/15d8e32f10e84ddabe24bf4b9914dd9b","rev":"1-d0b4b00592defdd0b8d31c5c0173919a"}' [marker:database_saveDocument_finish:59095:17182] 
+[2017-07-14T20:15:38.711Z] [INFO] [#tid_37] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.720Z] [INFO] [#tid_33] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c5d0898b214648ec9d8c846944fe88bc, rev: null', response: '{"ok":true,"id":"whisk.system/c5d0898b214648ec9d8c846944fe88bc","rev":"1-7f083839cca489e6210c7f39f4dedd6f"}' [marker:database_saveDocument_finish:59182:36376] 
+[2017-07-14T20:15:38.726Z] [INFO] [#tid_33] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.738Z] [INFO] [#tid_31] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/2365d6b4f17a4401973af03d5ee24803, rev: null', response: '{"ok":true,"id":"whisk.system/2365d6b4f17a4401973af03d5ee24803","rev":"1-215b83acacf2a5f54242bf00a740561c"}' [marker:database_saveDocument_finish:59265:10948] 
+[2017-07-14T20:15:38.742Z] [INFO] [#tid_31] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.812Z] [INFO] [#tid_36] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/551c8ac3882c479aa99262ecb3474d49, rev: null', response: '{"ok":true,"id":"whisk.system/551c8ac3882c479aa99262ecb3474d49","rev":"1-054b4f6bae9e4389a3c06707606a94d9"}' [marker:database_saveDocument_finish:59158:17301] 
+[2017-07-14T20:15:38.817Z] [INFO] [#tid_36] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.818Z] [INFO] [#tid_38] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/e02e139c5a9e4d189264d6ffff5d2e9a, rev: null', response: '{"ok":true,"id":"whisk.system/e02e139c5a9e4d189264d6ffff5d2e9a","rev":"1-c1bedd3167644e10a5ef542eb6aabd5b"}' [marker:database_saveDocument_finish:59090:17271] 
+[2017-07-14T20:15:38.821Z] [INFO] [#tid_38] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:38.821Z] [INFO] [#sid_121] [CouchDbRestStore] [GET] 'openwhisk_kube_whisks' completed: found document 'id: whisk.system/invokerHealthTestAction' [marker:database_getDocument_finish:1399606:35638] 
+[2017-07-14T20:15:38.826Z] [INFO] [#sid_121] [DockerContainer] sending initialization to ContainerId(371a7739a7ecc0259f54ecd82282096131d0da58805c3909d7b28a384cf2bd35) ContainerIp(172.17.0.12) [marker:invoker_activationInit_start:1399670] 
+[2017-07-14T20:15:38.881Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=3 / pipelineFillThreshold=8 
+[2017-07-14T20:15:38.934Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=2 / pipelineFillThreshold=8 
+[2017-07-14T20:15:38.940Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_39_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1313570] 
+[2017-07-14T20:15:39.055Z] [INFO] [#tid_34] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/512a19a4ff13439c80846500144492ef, rev: null', response: '{"ok":true,"id":"whisk.system/512a19a4ff13439c80846500144492ef","rev":"1-cc3e9ae0233e010c6f264fa8c31c869b"}' [marker:database_saveDocument_finish:59494:58062] 
+[2017-07-14T20:15:39.057Z] [INFO] [#tid_34] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:39.499Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1400339:660] 
+[2017-07-14T20:15:39.506Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(371a7739a7ecc0259f54ecd82282096131d0da58805c3909d7b28a384cf2bd35) ContainerIp(172.17.0.12) [marker:invoker_activationRun_start:1400355] 
+[2017-07-14T20:15:39.663Z] [INFO] [#sid_121] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:1400369:1001] 
+[2017-07-14T20:15:39.692Z] [INFO] [#sid_121] [DockerContainer] sending arguments to /whisk.system/invokerHealthTestAction at ContainerId(a15a8d39b59a9b50695fe5681c222252c95f60acec773763c55967d375d1cc5c) ContainerIp(172.17.0.17) [marker:invoker_activationRun_start:1400502] 
+[2017-07-14T20:15:39.751Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1400541:146] 
+[2017-07-14T20:15:39.755Z] [INFO] [#sid_121] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:1400604:95] 
+[2017-07-14T20:15:39.775Z] [INFO] [#sid_121] [DockerContainer] log cursor advanced but missing sentinel, trying 15 more times 
+[2017-07-14T20:15:39.818Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:39.834Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/c115016f05bf4129a91690b1a6e04799, rev: null' [marker:database_saveDocument_start:1400663] 
+[2017-07-14T20:15:39.865Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/c115016f05bf4129a91690b1a6e04799, rev: null', response: '{"ok":true,"id":"whisk.system/c115016f05bf4129a91690b1a6e04799","rev":"1-94d78205f58277033b5140bc921ebd1b"}' [marker:database_saveDocument_finish:1400713:48] 
+[2017-07-14T20:15:39.869Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:39.891Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation 8e74f60cea494f3ea7cc3f5eb50294ef 
+[2017-07-14T20:15:39.975Z] [INFO] [#sid_121] [DockerContainer] log cursor advanced but missing sentinel, trying 14 more times 
+[2017-07-14T20:15:40.016Z] [INFO] [#sid_121] [InvokerReactive] posted completion of activation c115016f05bf4129a91690b1a6e04799 
+[2017-07-14T20:15:40.051Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1314720:1150] 
+[2017-07-14T20:15:40.057Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1314748:1545] 
+[2017-07-14T20:15:40.101Z] [INFO] [#sid_121] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:40.413Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/8e74f60cea494f3ea7cc3f5eb50294ef, rev: null' [marker:database_saveDocument_start:1401139] 
+[2017-07-14T20:15:40.771Z] [INFO] [#sid_121] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/8e74f60cea494f3ea7cc3f5eb50294ef, rev: null', response: '{"ok":true,"id":"whisk.system/8e74f60cea494f3ea7cc3f5eb50294ef","rev":"1-8cf7a2311e40c650c24fa95784b453a4"}' [marker:database_saveDocument_finish:1401576:437] 
+[2017-07-14T20:15:40.772Z] [INFO] [#sid_121] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:40.858Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 371a7739a7ecc0259f54ecd82282096131d0da58805c3909d7b28a384cf2bd35 [marker:invoker_runc.pause_start:1315553] 
+[2017-07-14T20:15:41.417Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause a15a8d39b59a9b50695fe5681c222252c95f60acec773763c55967d375d1cc5c [marker:invoker_runc.pause_start:1316113] 
+[2017-07-14T20:15:41.874Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1316562:1008] 
+[2017-07-14T20:15:41.874Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1316562:448] 
+[2017-07-14T20:15:41.875Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f a15a8d39b59a9b50695fe5681c222252c95f60acec773763c55967d375d1cc5c [marker:invoker_docker.rm_start:1316562] 
+[2017-07-14T20:15:41.875Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 371a7739a7ecc0259f54ecd82282096131d0da58805c3909d7b28a384cf2bd35 [marker:invoker_docker.rm_start:1316563] 
+[2017-07-14T20:15:43.813Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T20:15:44.316Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 
+[2017-07-14T20:15:45.219Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1319681:3119] 
+[2017-07-14T20:15:45.361Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1320057:3494] 
+[2017-07-14T20:15:47.870Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][48 (1)][pipelineOccupancy=1 (8)] 
+[2017-07-14T20:15:47.871Z] [INFO] [#sid_110] [ActivationFeed] processing invoker0[0][49 (1)][pipelineOccupancy=2 (8)] 
+[2017-07-14T20:15:47.874Z] [INFO] [#tid_40] [InvokerReactive] [marker:invoker_activation_start:11757] 
+[2017-07-14T20:15:47.876Z] [INFO] [#tid_39] [InvokerReactive] [marker:invoker_activation_start:14702] 
+[2017-07-14T20:15:47.876Z] [INFO] [#tid_39] [InvokerReactive] whisk.system/hi whisk.system 65a7b1fb05064b55a7e38212c1906b25 
+[2017-07-14T20:15:47.877Z] [INFO] [#tid_40] [InvokerReactive] whisk.system/hi whisk.system 8ae10b2f441440ee8918879d4df49b28 
+[2017-07-14T20:15:47.877Z] [INFO] [#tid_40] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:11773] 
+[2017-07-14T20:15:47.877Z] [INFO] [#tid_39] [WhiskAction] [GET] serving from cache: id: whisk.system/hi, rev: 1-3f21277e95c4bfab85a5bb7b58c08cd5 [marker:database_cacheHit_count:14716] 
+[2017-07-14T20:15:47.878Z] [INFO] [#tid_40] [DockerContainer] sending initialization to ContainerId(eec791892029dc3fc43de95a2c67d818223fb4807dbc172907c006a731660e3c) ContainerIp(172.17.0.9) [marker:invoker_activationInit_start:11775] 
+[2017-07-14T20:15:47.878Z] [INFO] [#tid_39] [DockerContainer] sending initialization to ContainerId(315df98af4bfed1c6fe2f7f73da1257275031b2e49f9c3411378563d13676235) ContainerIp(172.17.0.10) [marker:invoker_activationInit_start:14724] 
+[2017-07-14T20:15:47.884Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_40_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1322577] 
+[2017-07-14T20:15:47.885Z] [INFO] [#sid_101] [DockerClientWithFileAccess] running /usr/bin/docker run -d --cap-drop NET_RAW --cap-drop NET_ADMIN --ulimit nofile=1024:1024 --pids-limit 1024 --cpu-shares 128 --memory 256m --memory-swap 256m --network bridge -e __OW_API_HOST=https://nginx.openwhisk:443 -e SERVICE_IGNORE=true --name wsk_41_prewarm_nodejs6 openwhisk/nodejs6action:latest [marker:invoker_docker.run_start:1322578] 
+[2017-07-14T20:15:48.154Z] [INFO] [#tid_40] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:12029:248] 
+[2017-07-14T20:15:48.263Z] [INFO] [#tid_40] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(eec791892029dc3fc43de95a2c67d818223fb4807dbc172907c006a731660e3c) ContainerIp(172.17.0.9) [marker:invoker_activationRun_start:12029] 
+[2017-07-14T20:15:48.301Z] [INFO] [#tid_40] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:12209:180] 
+[2017-07-14T20:15:48.309Z] [INFO] [#tid_40] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:48.314Z] [INFO] [#tid_40] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/8ae10b2f441440ee8918879d4df49b28, rev: null' [marker:database_saveDocument_start:12223] 
+[2017-07-14T20:15:48.881Z] [INFO] [#tid_39] [DockerContainer] initialization result: ok [marker:invoker_activationInit_finish:15422:697] 
+[2017-07-14T20:15:48.889Z] [INFO] [#tid_39] [DockerContainer] sending arguments to /whisk.system/hi at ContainerId(315df98af4bfed1c6fe2f7f73da1257275031b2e49f9c3411378563d13676235) ContainerIp(172.17.0.10) [marker:invoker_activationRun_start:15499] 
+[2017-07-14T20:15:48.890Z] [INFO] [#tid_40] [InvokerReactive] posted completion of activation 8ae10b2f441440ee8918879d4df49b28 
+[2017-07-14T20:15:49.445Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1324142:1565] 
+[2017-07-14T20:15:49.667Z] [INFO] [#tid_39] [DockerContainer] running result: ok [marker:invoker_activationRun_finish:16515:999] 
+[2017-07-14T20:15:49.675Z] [INFO] [#tid_39] [InvokerReactive] recording the activation result to the data store 
+[2017-07-14T20:15:49.679Z] [INFO] [#tid_39] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' saving document: 'id: whisk.system/65a7b1fb05064b55a7e38212c1906b25, rev: null' [marker:database_saveDocument_start:16527] 
+[2017-07-14T20:15:49.703Z] [INFO] [#sid_101] [DockerClientWithFileAccess] [marker:invoker_docker.run_finish:1324394:1816] 
+[2017-07-14T20:15:49.735Z] [INFO] [#tid_39] [InvokerReactive] posted completion of activation 65a7b1fb05064b55a7e38212c1906b25 
+[2017-07-14T20:15:49.808Z] [INFO] [#tid_40] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/8ae10b2f441440ee8918879d4df49b28, rev: null', response: '{"ok":true,"id":"whisk.system/8ae10b2f441440ee8918879d4df49b28","rev":"1-3872e49e2d9c04f330cfd97c8887401f"}' [marker:database_saveDocument_finish:13653:1429] 
+[2017-07-14T20:15:49.826Z] [INFO] [#tid_39] [CouchDbRestStore] [PUT] 'openwhisk_kube_activations' completed document: 'id: whisk.system/65a7b1fb05064b55a7e38212c1906b25, rev: null', response: '{"ok":true,"id":"whisk.system/65a7b1fb05064b55a7e38212c1906b25","rev":"1-d52ddcbcf212fa3362b2da6ee08c7d04"}' [marker:database_saveDocument_finish:16651:121] 
+[2017-07-14T20:15:49.826Z] [INFO] [#tid_39] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:49.826Z] [INFO] [#tid_40] [InvokerReactive] recorded activation 
+[2017-07-14T20:15:50.686Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause eec791892029dc3fc43de95a2c67d818223fb4807dbc172907c006a731660e3c [marker:invoker_runc.pause_start:1325383] 
+[2017-07-14T20:15:50.803Z] [INFO] [#sid_102] [RuncClient] running /usr/bin/docker-runc pause 315df98af4bfed1c6fe2f7f73da1257275031b2e49f9c3411378563d13676235 [marker:invoker_runc.pause_start:1325496] 
+[2017-07-14T20:15:50.823Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1325519:136] 
+[2017-07-14T20:15:50.829Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f eec791892029dc3fc43de95a2c67d818223fb4807dbc172907c006a731660e3c [marker:invoker_docker.rm_start:1325520] 
+[2017-07-14T20:15:50.845Z] [ERROR] [#sid_102] [RuncClient] code: 1, stdout: , stderr: container not running: stopped [marker:invoker_runc.pause_error:1325538:39] 
+[2017-07-14T20:15:50.847Z] [INFO] [#sid_102] [DockerClientWithFileAccess] running /usr/bin/docker rm -f 315df98af4bfed1c6fe2f7f73da1257275031b2e49f9c3411378563d13676235 [marker:invoker_docker.rm_start:1325543] 
+[2017-07-14T20:15:51.242Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1325936:412] 
+[2017-07-14T20:15:51.389Z] [INFO] [#sid_102] [DockerClientWithFileAccess] [marker:invoker_docker.rm_finish:1326085:542] 
+[2017-07-14T20:15:53.973Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=1 / pipelineFillThreshold=8 
+[2017-07-14T20:15:54.478Z] [INFO] [#sid_110] [ActivationFeed] received ActivationNotification: ContainerReleased / pipelineOccupancy=0 / pipelineFillThreshold=8 

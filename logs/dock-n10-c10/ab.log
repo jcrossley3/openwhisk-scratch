@@ -1,0 +1,271 @@
+[jim@localhost hello]$ wsk action create hi hello.js 
+ok: created action hi
+[jim@localhost hello]$ wsk action invoke hi -p name Jim -r -d
+[mmands.parseQualifiedName]:124:[Inf] Qualified pkg+entity (EntityName): hi
+[mmands.parseQualifiedName]:125:[Inf] Qualified namespace: _
+[mmands.parseQualifiedName]:126:[Inf] Qualified package: 
+[mmands.parseQualifiedName]:127:[Inf] Qualified entity: hi
+[mmands.getJSONFromStrings]:179:[Inf] Convert content to JSON: []string{"{\"name\": \"Jim\"}"}
+[mmands.getJSONFromStrings]:189:[Inf] Created map 'map[name:Jim]' from '{"name": "Jim"}'
+[k.(*ActionService).Invoke]:193:[Inf] HTTP route: actions/hi?blocking=true&result=true
+[k.(*Client).addAuthHeader]:202:[Inf] Adding basic auth header; using authkey
+REQUEST:
+[POST]	http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Req Headers
+{
+  "Authorization": [
+    "Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A="
+  ],
+  "Content-Type": [
+    "application/json"
+  ]
+}
+Req Body
+{{"name":"Jim"}
+}
+[-whisk/whisk.(*Client).Do]:232:[Inf] Req Body (ASCII quoted string):
+{"{\"name\":\"Jim\"}\n"}
+RESPONSE:Got response with code 200
+Resp Headers
+{
+  "Access-Control-Allow-Headers": [
+    "Authorization, Content-Type"
+  ],
+  "Access-Control-Allow-Origin": [
+    "*"
+  ],
+  "Content-Length": [
+    "30"
+  ],
+  "Content-Type": [
+    "application/json; charset=UTF-8"
+  ],
+  "Date": [
+    "Fri, 14 Jul 2017 20:11:07 GMT"
+  ],
+  "Server": [
+    "spray-can/1.3.4"
+  ]
+}
+Response body size is 30 bytes
+Response body received:
+{
+  "greeting": "Hello Jim!"
+}
+[-whisk/whisk.(*Client).Do]:261:[Inf] Response body received (ASCII quoted string):
+"{\n  \"greeting\": \"Hello Jim!\"\n}"
+[k.IsResponseResultSuccess]:473:[Wrn] IsResponseResultSuccess: failed to parse response result: <nil>
+[hisk.parseSuccessResponse]:398:[Inf] Parsing HTTP response into struct type: *map[string]interface {}
+[hisk.parseSuccessResponse]:407:[Inf] Successful parse of HTTP response into struct type: *map[string]interface {}
+{
+    "greeting": "Hello Jim!"
+}
+[jim@localhost hello]$ ab -n1 -c1 -v2 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:32358/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 16
+Content-type: application/json
+Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.99.100:32358
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+apr_socket_recv: Connection refused (111)
+[jim@localhost hello]$ ab -n1 -c1 -v2 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 16
+Content-type: application/json
+Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.99.100:31135
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+LOG: header received:
+HTTP/1.1 200 OK
+Server: spray-can/1.3.4
+Date: Fri, 14 Jul 2017 20:11:45 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type
+Content-Type: application/json; charset=UTF-8
+Content-Length: 31
+
+{
+  "greeting": "Hello Jimi!"
+}
+..done
+
+
+Server Software:        spray-can/1.3.4
+Server Hostname:        192.168.99.100
+Server Port:            31135
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      1
+Time taken for tests:   1.178 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      270 bytes
+Total body sent:        372
+HTML transferred:       31 bytes
+Requests per second:    0.85 [#/sec] (mean)
+Time per request:       1178.204 [ms] (mean)
+Time per request:       1178.204 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.22 [Kbytes/sec] received
+                        0.31 kb/s sent
+                        0.53 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        1    1   0.0      1       1
+Processing:  1177 1177   0.0   1177    1177
+Waiting:      814  814   0.0    814     814
+Total:       1178 1178   0.0   1178    1178
+[jim@localhost hello]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...apr_pollset_poll: The timeout specified has expired (70007)
+Total of 3 requests completed
+[jim@localhost hello]$ ab -n1 -c1 -v2 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 16
+Content-type: application/json
+Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.99.100:31135
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+LOG: header received:
+HTTP/1.1 200 OK
+Server: spray-can/1.3.4
+Date: Fri, 14 Jul 2017 20:13:09 GMT
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type
+Content-Type: application/json; charset=UTF-8
+Content-Length: 31
+
+{
+  "greeting": "Hello Jimi!"
+}
+..done
+
+
+Server Software:        spray-can/1.3.4
+Server Hostname:        192.168.99.100
+Server Port:            31135
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      1
+Time taken for tests:   6.074 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      270 bytes
+Total body sent:        372
+HTML transferred:       31 bytes
+Requests per second:    0.16 [#/sec] (mean)
+Time per request:       6073.999 [ms] (mean)
+Time per request:       6073.999 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.04 [Kbytes/sec] received
+                        0.06 kb/s sent
+                        0.10 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:  6074 6074   0.0   6074    6074
+Waiting:     6057 6057   0.0   6057    6057
+Total:       6074 6074   0.0   6074    6074
+[jim@localhost hello]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient).....done
+
+
+Server Software:        spray-can/1.3.4
+Server Hostname:        192.168.99.100
+Server Port:            31135
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      10
+Time taken for tests:   42.846 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      2700 bytes
+Total body sent:        3720
+HTML transferred:       310 bytes
+Requests per second:    0.23 [#/sec] (mean)
+Time per request:       42846.316 [ms] (mean)
+Time per request:       4284.632 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.06 [Kbytes/sec] received
+                        0.08 kb/s sent
+                        0.15 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       11   16   2.8     17      17
+Processing:  2073 19741 16032.7  21774   42828
+Waiting:     2059 19738 16035.1  21770   42828
+Total:       2085 19757 16034.3  21791   42846
+
+Percentage of the requests served within a certain time (ms)
+  50%  21791
+  66%  25343
+  75%  32952
+  80%  42268
+  90%  42846
+  95%  42846
+  98%  42846
+  99%  42846
+ 100%  42846 (longest request)
+[jim@localhost hello]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...apr_pollset_poll: The timeout specified has expired (70007)
+Total of 3 requests completed
+[jim@localhost hello]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...apr_socket_recv: Connection reset by peer (104)
+[jim@localhost hello]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic Nzg5YzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOmFiY3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "http://192.168.99.100:31135/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.99.100 (be patient)...apr_socket_recv: Connection reset by peer (104)
+[jim@localhost hello]$ 
