@@ -1,0 +1,505 @@
+[jim@localhost vagrant]$ wsk -i list
+Entities in namespace: default
+packages
+actions
+/guest/hi                                                              private nodejs:6
+/guest/hellop                                                          private python:2
+/guest/date                                                            private nodejs:6
+/guest/helloj                                                          private java
+triggers
+rules
+[jim@localhost vagrant]$ ab -n1 -c1 -v2 -p /dev/null -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 0
+Content-type: application/json
+Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.33.13
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+
+Peer certificate
+Certificate version: 1
+Valid from: Jun 14 14:43:52 2017 GMT
+Valid to  : Jun 14 14:43:52 2018 GMT
+Public key is 2048 bits
+The issuer name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+The subject name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+Extension Count: 0
+Transport Protocol      :TLSv1.2
+Cipher Suite Protocol   :TLSv1/SSLv3
+Cipher Suite Name       :ECDHE-RSA-AES256-GCM-SHA384
+Cipher Suite Cipher Bits:256 (256)
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 4CC9A9AA51092D3B27FD6BBFD5AB35E3DF5F8A274C43A8A3F0009696CE30D9F2
+    Session-ID-ctx: 
+    Master-Key: 66E75CA1F988C83B806EE11FFE9BABE3F7FECF6BF2B512583B39FB6E43FE6F8B0DA08AA332EB15A4A59C1B0FC1E9D25B
+    Key-Arg   : None
+    Krb5 Principal: None
+    PSK identity: None
+    PSK identity hint: None
+    TLS session ticket lifetime hint: 600 (seconds)
+    TLS session ticket:
+    0000 - 4b 9b 70 53 1a 94 dd 3f-6e 30 ce 41 19 1a 0c dd   K.pS...?n0.A....
+    0010 - 8b 11 0e 23 f7 d2 db ce-93 8e 25 38 46 0b 01 ae   ...#......%8F...
+    0020 - b9 59 2d 75 9b 03 fd f1-6a 25 90 2b a5 29 71 24   .Y-u....j%.+.)q$
+    0030 - eb 22 8e 3e 6e e2 61 44-d7 0b 39 ff 43 28 d9 11   .".>n.aD..9.C(..
+    0040 - df 7b ec f1 1d 20 c1 fb-69 57 51 f1 54 a4 2c 42   .{... ..iWQ.T.,B
+    0050 - 3c 9d 20 a9 de 8f eb 8e-75 74 b7 b7 c4 c8 27 eb   <. .....ut....'.
+    0060 - c3 62 86 56 dd 4e 98 12-19 a8 b4 19 ad 2a 65 60   .b.V.N.......*e`
+    0070 - ca 5d c9 f9 dc 81 da ed-29 be 45 7f e0 1c ca f9   .]......).E.....
+    0080 - e0 8e 70 c6 c9 fb 10 b9-a2 14 4f 27 da 39 e9 7e   ..p.......O'.9.~
+    0090 - 31 84 18 33 80 f0 24 dc-15 7f b4 a6 e9 42 d8 0a   1..3..$......B..
+    00a0 - 93 40 c7 33 c8 c7 ca 11-1e 2a 07 f4 66 ac ba 90   .@.3.....*..f...
+
+    Start Time: 1500065729
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+LOG: header received:
+HTTP/1.1 200 OK
+Server: nginx/1.11.13
+Date: Fri, 14 Jul 2017 20:55:29 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 35
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type
+
+{
+  "greeting": "Hello stranger!"
+}
+..done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        35 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.214 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      291 bytes
+Total body sent:        348
+HTML transferred:       35 bytes
+Requests per second:    4.67 [#/sec] (mean)
+Time per request:       213.988 [ms] (mean)
+Time per request:       213.988 [ms] (mean, across all concurrent requests)
+Transfer rate:          1.33 [Kbytes/sec] received
+                        1.59 kb/s sent
+                        2.92 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        5    5   0.0      5       5
+Processing:   209  209   0.0    209     209
+Waiting:      199  199   0.0    199     199
+Total:        214  214   0.0    214     214
+[jim@localhost vagrant]$ ab -n1 -c1 -v2 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 16
+Content-type: application/json
+Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.33.13
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+
+Peer certificate
+Certificate version: 1
+Valid from: Jun 14 14:43:52 2017 GMT
+Valid to  : Jun 14 14:43:52 2018 GMT
+Public key is 2048 bits
+The issuer name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+The subject name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+Extension Count: 0
+Transport Protocol      :TLSv1.2
+Cipher Suite Protocol   :TLSv1/SSLv3
+Cipher Suite Name       :ECDHE-RSA-AES256-GCM-SHA384
+Cipher Suite Cipher Bits:256 (256)
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 0480B2E8C271960F7AE8D1D06355850776C119CC6CF0D458DECC1C40DE529EB6
+    Session-ID-ctx: 
+    Master-Key: E4BD266C031D64C2B2AECFF0C7FF52D7B10A1EC58A020C21B6D992CD9FBA4F34319767F4E26F916ADE11C0441F30C04E
+    Key-Arg   : None
+    Krb5 Principal: None
+    PSK identity: None
+    PSK identity hint: None
+    TLS session ticket lifetime hint: 600 (seconds)
+    TLS session ticket:
+    0000 - 4b 9b 70 53 1a 94 dd 3f-6e 30 ce 41 19 1a 0c dd   K.pS...?n0.A....
+    0010 - 31 d4 8b 8a e5 53 f3 dd-4f 3e e3 1c 48 d8 39 30   1....S..O>..H.90
+    0020 - 35 88 27 b1 45 7d 32 ae-cc 8c ee b6 79 76 60 b5   5.'.E}2.....yv`.
+    0030 - c4 c1 c6 37 42 d8 41 3c-ac 9f 22 d1 f7 8c 3b 0a   ...7B.A<.."...;.
+    0040 - dd 07 3e eb 6e 24 c7 10-7c 38 be f6 ab d8 79 8b   ..>.n$..|8....y.
+    0050 - 89 37 3a e8 ba 98 48 ed-6f ee 21 90 75 64 ab ff   .7:...H.o.!.ud..
+    0060 - 89 9a c2 99 db d3 5b 70-89 00 82 d1 17 34 22 c1   ......[p.....4".
+    0070 - 0e be 58 4a 5d 2d 81 fe-ff 0d 81 fc bc dd 99 5b   ..XJ]-.........[
+    0080 - 19 e2 b9 2c 18 77 60 53-ac 61 46 b0 bc c8 d6 53   ...,.w`S.aF....S
+    0090 - 12 14 a2 f3 f3 5d fa d0-84 76 34 fc 14 b5 9d a5   .....]...v4.....
+    00a0 - eb 11 49 25 f9 cb 00 43-d7 d2 d4 ee 7d ff 25 32   ..I%...C....}.%2
+
+    Start Time: 1500065751
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+LOG: header received:
+HTTP/1.1 200 OK
+Server: nginx/1.11.13
+Date: Fri, 14 Jul 2017 20:55:52 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 31
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type
+
+{
+  "greeting": "Hello Jimi!"
+}
+..done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.102 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      287 bytes
+Total body sent:        365
+HTML transferred:       31 bytes
+Requests per second:    9.79 [#/sec] (mean)
+Time per request:       102.098 [ms] (mean)
+Time per request:       102.098 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.75 [Kbytes/sec] received
+                        3.49 kb/s sent
+                        6.24 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        5    5   0.0      5       5
+Processing:    97   97   0.0     97      97
+Waiting:       96   96   0.0     96      96
+Total:        102  102   0.0    102     102
+[jim@localhost vagrant]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient).....done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      10
+Time taken for tests:   1.308 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      2870 bytes
+Total body sent:        3650
+HTML transferred:       310 bytes
+Requests per second:    7.64 [#/sec] (mean)
+Time per request:       1308.457 [ms] (mean)
+Time per request:       130.846 [ms] (mean, across all concurrent requests)
+Transfer rate:          2.14 [Kbytes/sec] received
+                        2.72 kb/s sent
+                        4.87 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       12   30  13.6     32      48
+Processing:   102  768 464.3    806    1270
+Waiting:      102  767 464.2    806    1270
+Total:        118  797 475.3    840    1308
+
+Percentage of the requests served within a certain time (ms)
+  50%    840
+  66%   1200
+  75%   1226
+  80%   1284
+  90%   1308
+  95%   1308
+  98%   1308
+  99%   1308
+ 100%   1308 (longest request)
+[jim@localhost vagrant]$ ab -n100 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient).....done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2.028 seconds
+Complete requests:      100
+Failed requests:        50
+   (Connect: 0, Receive: 0, Length: 50, Exceptions: 0)
+Non-2xx responses:      50
+Total transferred:      32450 bytes
+Total body sent:        36500
+HTML transferred:       6100 bytes
+Requests per second:    49.31 [#/sec] (mean)
+Time per request:       202.785 [ms] (mean)
+Time per request:       20.279 [ms] (mean, across all concurrent requests)
+Transfer rate:          15.63 [Kbytes/sec] received
+                        17.58 kb/s sent
+                        33.20 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        4    9   7.2      6      39
+Processing:     3  185 188.7     69     513
+Waiting:        3  185 188.7     69     513
+Total:          8  194 187.3     88     520
+
+Percentage of the requests served within a certain time (ms)
+  50%     88
+  66%    349
+  75%    381
+  80%    400
+  90%    438
+  95%    475
+  98%    509
+  99%    520
+ 100%    520 (longest request)
+[jim@localhost vagrant]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient).....done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        91 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.065 seconds
+Complete requests:      10
+Failed requests:        0
+Non-2xx responses:      10
+Total transferred:      3620 bytes
+Total body sent:        3650
+HTML transferred:       910 bytes
+Requests per second:    154.42 [#/sec] (mean)
+Time per request:       64.757 [ms] (mean)
+Time per request:       6.476 [ms] (mean, across all concurrent requests)
+Transfer rate:          54.59 [Kbytes/sec] received
+                        55.04 kb/s sent
+                        109.63 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       10   25  10.8     25      42
+Processing:    20   26   5.9     25      37
+Waiting:       19   26   5.7     25      36
+Total:         34   51  12.2     60      64
+
+Percentage of the requests served within a certain time (ms)
+  50%     60
+  66%     62
+  75%     62
+  80%     63
+  90%     64
+  95%     64
+  98%     64
+  99%     64
+ 100%     64 (longest request)
+[jim@localhost vagrant]$ ab -n1 -c1 -v2 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient)...INFO: POST header == 
+---
+POST /api/v1/namespaces/_/actions/hi?blocking=true&result=true HTTP/1.0
+Content-length: 16
+Content-type: application/json
+Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=
+Host: 192.168.33.13
+User-Agent: ApacheBench/2.3
+Accept: */*
+
+
+---
+
+Peer certificate
+Certificate version: 1
+Valid from: Jun 14 14:43:52 2017 GMT
+Valid to  : Jun 14 14:43:52 2018 GMT
+Public key is 2048 bits
+The issuer name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+The subject name is /C=US/ST=NY/L=Yorktown/O=OpenWhisk/CN=*.localhost
+Extension Count: 0
+Transport Protocol      :TLSv1.2
+Cipher Suite Protocol   :TLSv1/SSLv3
+Cipher Suite Name       :ECDHE-RSA-AES256-GCM-SHA384
+Cipher Suite Cipher Bits:256 (256)
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: EAD0186C0F1A84F6DC71668E045567DF96D7AD00D3DFF673D61E8542FDAD8485
+    Session-ID-ctx: 
+    Master-Key: D47980F2CC472FC7A252003D7943D12D1B3E82874487D39C466D91AF1388F353F9B7888E4D02B33C4C85BD461C7AEF08
+    Key-Arg   : None
+    Krb5 Principal: None
+    PSK identity: None
+    PSK identity hint: None
+    TLS session ticket lifetime hint: 600 (seconds)
+    TLS session ticket:
+    0000 - 4b 9b 70 53 1a 94 dd 3f-6e 30 ce 41 19 1a 0c dd   K.pS...?n0.A....
+    0010 - b5 b4 09 0e bb 81 d9 24-1a 06 1b 45 45 d4 84 b0   .......$...EE...
+    0020 - 7d dd 75 c6 48 10 ab bb-f7 36 7a 89 f9 12 f6 21   }.u.H....6z....!
+    0030 - a5 7f d9 67 15 31 03 6c-7e d5 c6 33 3b b4 3f a2   ...g.1.l~..3;.?.
+    0040 - 7a 0f 13 34 a7 49 d9 b0-5c 71 74 49 23 7f 7b 28   z..4.I..\qtI#.{(
+    0050 - 7f e0 c0 69 4c 4a 24 98-1b f3 aa 47 58 68 3e c4   ...iLJ$....GXh>.
+    0060 - 13 e4 50 df 6a 9c 1a e7-f8 f0 0c 04 ca fc bb e0   ..P.j...........
+    0070 - 58 ba 19 5e 07 08 17 5f-18 d0 73 fe 7c 26 7e 9e   X..^..._..s.|&~.
+    0080 - e4 91 37 23 92 77 08 9c-82 ac 1e d1 e0 8b e0 64   ..7#.w.........d
+    0090 - 9c 96 e1 0a 99 52 e8 86-b2 cd f6 80 6f 94 c6 02   .....R......o...
+    00a0 - 88 19 3c ba 6d 12 ba 00-a0 c5 15 a7 96 f3 ed b6   ..<.m...........
+
+    Start Time: 1500065831
+    Timeout   : 300 (sec)
+    Verify return code: 18 (self signed certificate)
+LOG: header received:
+HTTP/1.1 200 OK
+Server: nginx/1.11.13
+Date: Fri, 14 Jul 2017 20:57:11 GMT
+Content-Type: application/json; charset=UTF-8
+Content-Length: 31
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Headers: Authorization, Content-Type
+
+{
+  "greeting": "Hello Jimi!"
+}
+..done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      1
+Time taken for tests:   0.065 seconds
+Complete requests:      1
+Failed requests:        0
+Total transferred:      287 bytes
+Total body sent:        365
+HTML transferred:       31 bytes
+Requests per second:    15.47 [#/sec] (mean)
+Time per request:       64.650 [ms] (mean)
+Time per request:       64.650 [ms] (mean, across all concurrent requests)
+Transfer rate:          4.34 [Kbytes/sec] received
+                        5.51 kb/s sent
+                        9.85 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        8    8   0.0      8       8
+Processing:    57   57   0.0     57      57
+Waiting:       57   57   0.0     57      57
+Total:         65   65   0.0     65      65
+[jim@localhost vagrant]$ ab -n10 -c10 -p /tmp/json -T "application/json" -H "Authorization: Basic MjNiYzQ2YjEtNzFmNi00ZWQ1LThjNTQtODE2YWE0ZjhjNTAyOjEyM3pPM3haQ0xyTU42djJCS0sxZFhZRnBYbFBrY2NPRnFtMTJDZEFzTWdSVTRWck5aOWx5R1ZDR3VNREdJd1A=" "https://192.168.33.13/api/v1/namespaces/_/actions/hi?blocking=true&result=true"
+This is ApacheBench, Version 2.3 <$Revision: 1757674 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 192.168.33.13 (be patient).....done
+
+
+Server Software:        nginx/1.11.13
+Server Hostname:        192.168.33.13
+Server Port:            443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+
+Document Path:          /api/v1/namespaces/_/actions/hi?blocking=true&result=true
+Document Length:        31 bytes
+
+Concurrency Level:      10
+Time taken for tests:   0.394 seconds
+Complete requests:      10
+Failed requests:        0
+Total transferred:      2870 bytes
+Total body sent:        3650
+HTML transferred:       310 bytes
+Requests per second:    25.39 [#/sec] (mean)
+Time per request:       393.838 [ms] (mean)
+Time per request:       39.384 [ms] (mean, across all concurrent requests)
+Transfer rate:          7.12 [Kbytes/sec] received
+                        9.05 kb/s sent
+                        16.17 kb/s total
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:       16   30   9.4     31      43
+Processing:    87  208  92.9    220     364
+Waiting:       87  208  92.9    220     364
+Total:        104  238  99.4    258     394
+
+Percentage of the requests served within a certain time (ms)
+  50%    258
+  66%    291
+  75%    314
+  80%    344
+  90%    394
+  95%    394
+  98%    394
+  99%    394
+ 100%    394 (longest request)
+[jim@localhost vagrant]$ 
