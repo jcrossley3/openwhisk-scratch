@@ -1,0 +1,50 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: BuildTemplate
+metadata:
+  name: java-fn
+spec:
+  parameters:
+  - name: IMAGE
+    description: Where to publish the resulting image
+  - name: CMD
+    description: Command to build the fn-containing jar
+  - name: SRC
+    description: The workspace-relative path to the jar file
+  - name: TGT
+    description: The runtime-absolute path to the jar file
+  - name: MAIN
+    description: The "ClassName[#methodName]" entry point
+  steps:
+  - name: compile
+    image: docker.io/jcrossley3/java8action
+    command: ["/bin/bash"]
+    args: ["-c", "${CMD}"]
+
+  - name: dockerfile
+    image: ubuntu:latest
+    command: ["/bin/bash"]
+    args: ["-c", "echo -e 'FROM jcrossley3/java8action\n
+                           COPY ${SRC} ${TGT}\n
+                           ENV ACTION_JAR_PATH=${TGT} ACTION_JAR_MAIN=${MAIN}' > /workspace/Dockerfile"]
+
+  - name: docker-build
+    image: gcr.io/cloud-builders/docker
+    command: ["sh"]
+    args: ["-c", "docker build --no-cache -t ${IMAGE} ."]
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run/docker.sock
+      
+  - name: docker-push
+    image: gcr.io/cloud-builders/docker
+    command: ["sh"]
+    args: ["-c", "docker push ${IMAGE}"]
+    volumeMounts:
+    - name: docker-socket
+      mountPath: /var/run/docker.sock
+
+  volumes:
+  - name: docker-socket
+    hostPath:
+      path: /var/run/docker.sock
+      type: Socket

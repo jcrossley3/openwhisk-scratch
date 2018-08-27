@@ -1,0 +1,23 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: Build
+metadata:
+  name: hello-fn
+spec:
+  serviceAccountName: build-bot
+  source:
+    git:
+      url: https://github.com/jcrossley3/openwhisk-scratch.git
+      revision: master
+  template:
+    name: java-fn
+    arguments:
+    - name: IMAGE
+      value: jcrossley3/hello-java
+    - name: CMD
+      value: "cd java/hello && ./build.sh"
+    - name: SRC
+      value: java/hello/hello.jar
+    - name: TGT
+      value: /javaAction/hello.jar
+    - name: MAIN
+      value: Hello
