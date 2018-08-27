@@ -8,15 +8,16 @@ spec:
     description: Where to publish the resulting image
   - name: CMD
     description: Command to build the fn-containing jar
-  - name: SRC
+  - name: JAR
     description: The workspace-relative path to the jar file
-  - name: TGT
-    description: The runtime-absolute path to the jar file
   - name: MAIN
     description: The "ClassName[#methodName]" entry point
+  - name: BUILD_IMAGE
+    description: The image used to compile the jar
+    default: docker.io/jcrossley3/java8action
   steps:
   - name: compile
-    image: docker.io/jcrossley3/java8action
+    image: ${BUILD_IMAGE}
     command: ["/bin/bash"]
     args: ["-c", "${CMD}"]
 
@@ -24,8 +25,8 @@ spec:
     image: ubuntu:latest
     command: ["/bin/bash"]
     args: ["-c", "echo -e 'FROM jcrossley3/java8action\n
-                           COPY ${SRC} ${TGT}\n
-                           ENV ACTION_JAR_PATH=${TGT} ACTION_JAR_MAIN=${MAIN}' > /workspace/Dockerfile"]
+                           COPY ${JAR} /javaAction/action.jar\n
+                           ENV ACTION_JAR_PATH=/javaAction/action.jar ACTION_JAR_MAIN=${MAIN}' > /workspace/Dockerfile"]
 
   - name: docker-build
     image: gcr.io/cloud-builders/docker

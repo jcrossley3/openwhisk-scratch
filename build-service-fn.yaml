@@ -18,10 +18,8 @@ spec:
             value: &image jcrossley3/hello-java
           - name: CMD
             value: "cd java/hello && ./build.sh"
-          - name: SRC
+          - name: JAR
             value: java/hello/hello.jar
-          - name: TGT
-            value: /javaAction/hello.jar
           - name: MAIN
             value: Hello
       revisionTemplate:
